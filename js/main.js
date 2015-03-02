@@ -71,23 +71,84 @@ $(document).ready(function(){
     var $window = $(window); //You forgot this line in the above example
 
     $('section.parallax').each(function(){
-        var $bgobj = $(this); // assigning the object
-
-        if($(this).index() > 0) {
-            $(window).scroll(function() {
+        
+        var $bgobj = $(this);
+        
+        $(window).scroll(function() {
+            // moving first bg position    
+            if($(this).index() == 0) {
                 var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
                 // Put together our final background position
                 var coords = '50% '+ yPos + 'px';
                 // Move the background
-
-
                 $bgobj.css({ backgroundPosition: coords });
-            });
-        }
-        
+            }
+        });
+                
     });
 
+    // creating html 5 element for IE 
     document.createElement("section");
+
+    // adding background to header after first scroll
+    var scrolled = false;
+    $(window).on('scroll resize', function() {
+
+        // detect first scroll
+        var scrollPos = $(window).scrollTop();       
+
+        if( ( scrollPos != 0 ) ) {
+            console.log('scrolling')
+            if(scrolled==false) {
+                scrolled = true;             
+               $('#main-header').toggleClass('header-bg');
+            } 
+        } else if( ( scrollPos === 0 ) && (scrolled == true) ) {
+            scrolled = false;
+            console.log('scrolled')
+            $('#main-header').toggleClass('header-bg');
+        }
+
+    });
+
+    // function getRandom(min, max) {
+    //     if (min > max) {
+    //         return -1;
+    //     }
+
+    //     if (min == max) {
+    //         return min;
+    //     }
+
+    //     var r;
+    //     r = Math.random();
+
+    //     return min + parseInt(r * (max - min + 1));
+    // }
+
+    // change background
+    // function changeBG()
+    // {
+    //     setTimeout( function () {
+    //         changeBG();
+    //     }, 5000);
+
+    //     var images = new Array('../images/content/slider-1.png','../images/content/slider-2.jpg');
+
+    //     console.log(images[getRandom(0, images.length - 1)]);
+
+    //     $('.parallax-1').css("background-image", "url("+ images[getRandom(0, images.length - 1)] +")");
+    // }
+
+    // changeBG();
+
+    $("html").niceScroll({cursorcolor:"#575961", autohidemode: false, cursorwidth: 8});
+
+    $('.parallax-1').bgswitcher({
+        images: ['../images/content/slider-1.png','../images/content/slider-1.png'],
+        effect: "drop",
+        interval: 8000
+    });    
 
 });

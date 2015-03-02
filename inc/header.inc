@@ -3,7 +3,7 @@
 		<header id="main-header" class="container-fluid">
 			<div class="row">
 				<div id="logo-container" class="col-md-2">
-					<a href="index.html" class="logo"><img src="images/logo/main-logo.png" alt="main logo"></a>
+					<a href="index.html" class="logo"></a>
 				</div>
 				<div id="menu-container" class="col-md-7 col-md-offset-3">
 					<nav class="main-menu">
