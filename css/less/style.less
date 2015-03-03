@@ -436,13 +436,16 @@ body, html{
     }
 
     #content-wrapper {
-      height: 100%;      
+      height: 100%;     
+
 
       /*  
       /////////////////////////////////
       //////// HOME PARALLAX //////////
       /////////////////////////////////
       */
+
+
     
       section.module.parallax {
         height: 100%;
@@ -599,30 +602,7 @@ body, html{
               font-size: 8px;
             }
           }
-        }
-        .cta-container {
-          position: absolute;
-          bottom: 15px;
-          right: 0px;
-          text-align: right;
-          a.booking {
-            .brandon-medium;            
-            font-size: 14px;
-            color: @white;
-            text-decoration: underline;
-            padding-bottom: 10px;
-            line-height: 40px;
-          }
-          ul {
-            li {
-              a {
-                .brandon-medium;
-                font-size: 10px;
-                color: @white;
-              }
-            }
-          }
-        }
+        }        
       }
       section.module.parallax-2 {
         background-image: url("../images/content/slider-2.jpg");
@@ -770,13 +750,65 @@ body, html{
             }
           }
         }
+        .cta-container {
+          a.booking {
+            color: @dark-brown;            
+            &:hover {
+              color: @light-brown;
+            }
+          }
+          ul {
+            li {
+              a {                
+                color: @dark-brown;
+                &:hover {
+                  color: @light-brown;
+                }
+              }
+            }
+          }
+        }
       }
       section.module.last-content {
         background: url("../images/content/slider-4.png") center center;
         position: relative;
         height: 100%;
         background-repeat: no-repeat;        
-        .cover;
+        .cover;        
+
+        .map-container {
+          position: absolute;
+          left: 45%;
+          top: 20%;
+
+          .map-img-container {
+            position: relative;
+            left: -40%;
+          
+            img {
+              
+            }
+
+            .caption-1 {
+              position: absolute;
+              top: 44px;
+              right: -116px;
+              width: 230px;
+              h5 {
+                color: @white;
+                .brandon-black;
+                font-size: 13px;
+                line-height: 24px;
+              }
+              p {
+                color: @white;
+                .brandon-medium;
+                font-size: 13px;
+                line-height: 15px;
+              }
+            }
+          }
+        }
 
         .caption-container {          
           position: absolute;
@@ -856,6 +888,36 @@ body, html{
         }
       }
 
+    }
+
+    .cta-container {
+      position: absolute;
+      bottom: 15px;
+      right: 0px;
+      text-align: right;
+      a.booking {
+        .brandon-medium;            
+        font-size: 14px;
+        color: @white;
+        text-decoration: underline;
+        padding-bottom: 10px;
+        line-height: 40px;
+        &:hover {
+          color: @dark-brown;
+        }
+      }
+      ul {
+        li {
+          a {
+            .brandon-medium;
+            font-size: 10px;
+            color: @white;
+            &:hover {
+              color: @dark-brown;
+            }
+          }
+        }
+      }
     }
       
     div.dropdown {
