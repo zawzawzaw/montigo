@@ -117,6 +117,11 @@ $(document).ready(function(){
 
     });
 
+    $('.post').addClass("hidden").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 100
+    });
+
     // $('.circle-1').hover(function(e){
     //     $('.outline-1').addClass('pulsate');
     // }, function() {
