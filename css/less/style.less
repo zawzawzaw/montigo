@@ -781,7 +781,7 @@ body, html{
         .caption-container {          
           position: absolute;
           left: 12%;
-          top: 75%;
+          top: 70%;
 
           @media all and (max-width: 1280px) {
             top: 50%;
@@ -819,6 +819,8 @@ body, html{
               letter-spacing: 1.3px;
               text-align: left;
               color: @white;
+              position: relative;
+              top: 52px;
               /*margin-bottom: 10px;
               margin-top: 90px;*/
             }
@@ -1213,6 +1215,11 @@ div#copyright-wrapper {
         padding-left: 11px;
         &:hover {
           color: @dark-brown;
+        }
+      }
+      &:last-child {
+        a {
+          border-right: 0px;
         }
       }
     }
