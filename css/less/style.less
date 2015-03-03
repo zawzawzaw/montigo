@@ -459,9 +459,16 @@ body, html{
         }
         .image-container {
           margin-top: 45px;
+          @media all and (max-width: 1280px) {
+            margin-top: 65px;
+          }
           img {
             display: inline-block;
             margin-right: 25px;
+            @media all and (max-width: 1280px) {
+              width: 50%;
+              margin-right: 0px;
+            }
           }
         }
         .text-container-left {
@@ -481,6 +488,9 @@ body, html{
           vertical-align: middle;
           display: table-cell;
           height: 425px;
+          @media all and (max-width: 1280px) {
+            height: 355px;
+          }
 
           h1 {
             .mrsheffield;
