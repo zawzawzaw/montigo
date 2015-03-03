@@ -74,16 +74,21 @@ $(document).ready(function(){
         
         var $bgobj = $(this);
         
-        $(window).scroll(function() {
-            // moving first bg position    
-            if($(this).index() == 0) {
+        $('.parallax').scroll(function() {
+            // moving first bg position  
+
+            console.log('scrolling p2');
+
+            // if($bgobj.index() == 1) {
                 var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
                 // Put together our final background position
                 var coords = '50% '+ yPos + 'px';
+                console.log(coords)
+
                 // Move the background
                 $bgobj.css({ backgroundPosition: coords });
-            }
+            // }
         });
                 
     });
@@ -111,6 +116,18 @@ $(document).ready(function(){
         }
 
     });
+
+    // $('.circle-1').hover(function(e){
+    //     $('.outline-1').addClass('pulsate');
+    // }, function() {
+    //     $('.outline-1').removeClass( "pulsate" );
+    // });
+
+    // $('.outline-1').hover(function(e){
+    //     $(this).addClass('pulsate');
+    // }, function() {
+    //     $(this).removeClass( "pulsate" );
+    // });
 
     // function getRandom(min, max) {
     //     if (min > max) {
