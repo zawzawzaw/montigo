@@ -146,7 +146,7 @@ $(document).ready(function(){
     $("html").niceScroll({cursorcolor:"#575961", autohidemode: false, cursorwidth: 8});
 
     $('.parallax-1').bgswitcher({
-        images: ['../images/content/slider-1.png','../images/content/slider-1.png'],
+        images: ['images/content/slider-1.png','images/content/slider-1.png'],
         effect: "drop",
         interval: 8000
     });    
