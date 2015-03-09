@@ -354,6 +354,10 @@ body, html{
   /*overflow-x: hidden;*/
 }
 
+.nicescroll-rails {
+  z-index: 999999999!important;
+}
+
 #page-wrapper{
     height: 100%;
     position:relative;
@@ -368,9 +372,11 @@ body, html{
       #main-header {
         #logo-container {
           display: table;
+          float: left;
           .logo {
             display: table-cell;
             vertical-align: middle;
+            width: 159px;
             height: 70px;
             background: url('../images/logo/main-logo.png') no-repeat left center;
 
@@ -381,12 +387,14 @@ body, html{
         }
         #menu-container {
           display: table;
+          float: right;
           text-align: right;
+          margin-right: 145px;
 
           .main-menu {
             display: table-cell;
             vertical-align: middle;
-            height: 80px;
+            height: 75px;
 
             @media all and (max-width: 1280px) {
               height: 57px;  
@@ -411,18 +419,177 @@ body, html{
                   &:hover {
                     color: @dark-brown;
                   }
-                }
+                }                
               }
             }
           }
         }
       }
 
+      .cta-book {
+        position: absolute;
+        top: 0px;
+        right: 8px;
+        background-color: rgba(255,255,255,0.5);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 25px;
+        padding-bottom: 24px;
+        cursor: pointer;
+        @media all and (max-width: 1280px) {
+          padding-left: 16px;
+          padding-right: 15px;
+          padding-top: 15px;
+          padding-bottom: 16px;
+        }
+        &:hover {
+          background-color: rgba(255,255,255,0.8);
+          a#book {
+            color: @dark-brown;
+          }          
+        }
+
+        a#book {        
+          display: inline-block;        
+          text-align: right;
+          color: @white;
+          text-transform: uppercase;
+          .brandon-black;
+          font-size: 10px;
+          line-height: 26px;
+          text-decoration: underline;
+          letter-spacing: 1.2px;        
+        }
+      }   
+
+      .booking-form {
+        /*display: none;*/
+        position: absolute;
+        top: 84px;
+        right: 7px;
+        background-color: rgba(255, 255, 255, 0.19);  
+        .transition();
+
+        .booking {
+          margin-right: -820px;
+        }
+
+        .small-inputs {
+          /*margin: 0 auto;
+          display: block;*/
+          text-align: center;
+        }
+
+        .inputs {
+          display: inline-block;
+          margin-left: 15px;
+          vertical-align: middle;
+          padding-bottom: 10px;
+          label {
+            display: block;
+            color: @white;
+            .brandon-black;
+            font-size: 10px;
+            line-height: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+          }
+
+          input, select {
+            background: none;
+            border: 1px solid @white;
+            .brandon-bold;
+            font-size: 8px;          
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: @white;
+            height: 20px;
+            width: 125px;
+          }
+          select option { color: #000; }
+          select option:first-child{
+            color: @white;
+          }
+
+          .small-input {
+            width: 30px;
+          }
+        }
+
+        .btn-container {
+          background-color: rgba(255,255,255,1);
+          padding-left: 16px;
+          padding-right: 10px;
+          padding-top: 25px;
+          padding-bottom: 24px;
+          cursor: pointer;
+          @media all and (max-width: 1280px) {
+            padding-left: 16px;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 16px;
+          }
+          &:hover {
+            background-color: rgba(255,255,255,1);
+            a#find-villa-btn {
+              color: @dark-brown;
+            }          
+          }
+
+          a#find-villa-btn {        
+            display: inline-block;        
+            text-align: right;
+            color: @light-brown;
+            text-transform: uppercase;
+            .brandon-black;
+            font-size: 10px;
+            line-height: 26px;
+            letter-spacing: 1.2px;        
+          }
+        }
+      }
+      
       .header-bg {
         background: @white;
         color: @dark-brown;
         .transition();
-        height: 80px;
+        height: 75px;
+        @media all and (max-width: 1280px) {
+          height: 57px;
+        }
+
+        &.cta-book {
+          background-color: @light-brown;
+          a#book {
+            color: @white;            
+          }
+          &:hover {
+            a#book {
+              color: @dark-brown!important;
+            }            
+          }   
+        }
+
+        &.booking-form {
+          background-color: @white;
+          label {
+            color: @dark-brown;
+          }
+          input,select {
+            color: @dark-brown;
+            border: 1px solid @dark-brown;
+          }
+          div.dropdown {            
+            &:before {
+              background: url(../images/icons/calendar-hover.png) no-repeat 0 6px;
+            }            
+          }
+          div.dropdown-2 {            
+            &:before {
+              background: url(../images/icons/dropdown-hover.png) no-repeat 2px 9px;
+            }            
+          }
+        }
 
         .logo {
           background: url('../images/logo/main-logo-hover.png') no-repeat left center!important;
@@ -503,6 +670,7 @@ body, html{
           width: 80%;
         }
         .text-container {
+          position: relative;
           text-align: center;
           vertical-align: middle;
           display: table-cell;
@@ -511,6 +679,27 @@ body, html{
           @media all and (max-width: 1280px) {
             /*height: 410px;*/
             /*width: 440px;*/
+          }
+
+          .first-text {
+            position: relative;
+            opacity: 0;
+            top: 120px;
+          }
+          .second-text {
+            position: relative;
+            opacity: 0;
+            top: 60px;
+          }
+          .third-text {
+            position: relative;
+            opacity: 0;
+            top: 120px;
+          }
+          .fourth-text {
+            position: relative;
+            opacity: 0;
+            top: 60px;
           }
 
           h1 {
@@ -522,7 +711,7 @@ body, html{
             text-shadow: none;
           }
           h2 {
-            .brandon-black;
+            .brandon-bold;
             font-size: 20px;
             line-height: 18px;
             letter-spacing: 1.8px;
@@ -536,7 +725,7 @@ body, html{
             text-transform: uppercase;
           }
           p {
-            .brandon-light-italic;
+            .brandon-regular;
             font-size: 15px;
             line-height: 19px;
             margin-top: 13px;
@@ -573,6 +762,12 @@ body, html{
         .caption-text {
           position: relative;
           left: -40%;
+          .first-text {
+            position: relative;
+          }
+          .second-text {
+            position: relative;
+          }
           h1 {
             .mrsheffield;
             color: @white;
@@ -589,13 +784,13 @@ body, html{
             margin-bottom: 120px;
           }
           h2 {
-            .brandon-black;
+            .brandon-bold;
             font-size: 17px;
             line-height: 36px;
             letter-spacing: 1.3px;
           }
           p {
-            .brandon-light-italic;
+            .brandon-regular;
             font-size: 15px;
           }
           a {
@@ -620,6 +815,7 @@ body, html{
       section.module.parallax-2 {
         background-image: url("../images/content/slider-2.jpg");
         position: relative;
+        height: 120%!important;
 
         .caption-container {          
           position: absolute;
@@ -629,6 +825,16 @@ body, html{
           .caption-text {
             position: relative;
             left: -40%;
+            .first-text {
+              position: relative;
+              opacity: 0;              
+              left: -450px;
+            }
+            .second-text {
+              position: relative;              
+              opacity: 0;
+              right: -450px;
+            }
             h1 {
               .mrsheffield;
               color: @white;
@@ -655,7 +861,7 @@ body, html{
               margin-top: -45px;
             }
             h2 {
-              .brandon-black;
+              .brandon-bold;
               font-size: 17px;
               line-height: 36px;
               letter-spacing: 1.3px;
@@ -665,7 +871,7 @@ body, html{
               margin-top: 90px;
             }
             p {
-              .brandon-light-italic;
+              .brandon-regular;
               font-size: 15px;
               line-height: 18px;
               text-align: center;
@@ -696,6 +902,7 @@ body, html{
       section.module.parallax-3 {
         background-image: url("../images/content/slider-3.png");
         position: relative;
+        height: 120%!important;
 
         .caption-container {          
           position: absolute;
@@ -705,6 +912,16 @@ body, html{
           .caption-text {
             position: relative;
             left: -40%;
+            .first-text {
+              position: relative;
+              opacity: 0;              
+              left: -450px;
+            }
+            .second-text {
+              position: relative;
+              opacity: 0;              
+              right: -450px;
+            }
             h1 {
               .mrsheffield;
               color: @dark-brown;
@@ -726,7 +943,7 @@ body, html{
               margin-right: -245px;
             }
             h2 {
-              .brandon-black;
+              .brandon-bold;
               font-size: 17px;
               line-height: 36px;
               letter-spacing: 1.3px;
@@ -736,7 +953,7 @@ body, html{
               margin-top: 90px;
             }
             p {
-              .brandon-light-italic;
+              .brandon-regular;
               font-size: 15px;
               line-height: 18px;
               text-align: center;
@@ -785,7 +1002,7 @@ body, html{
       section.module.last-content {
         background: url("../images/content/slider-4.png") center center;
         position: relative;
-        height: 100%;
+        height: 110%;
         background-repeat: no-repeat;        
         .cover;        
 
@@ -889,10 +1106,12 @@ body, html{
           }
         }
 
-        .caption-container {          
+        .final-content {          
           position: absolute;
           left: 150px;
           bottom: 17px;
+
+
 
           @media all and (max-width: 1280px) {
             /*top: 50%;*/
@@ -901,6 +1120,17 @@ body, html{
           .caption-text {
             position: relative;
             /*left: -40%;*/
+            .first-text {
+              position: relative;
+              opacity: 0;              
+              top: -450px;
+            }
+            .second-text {
+              position: relative;
+              opacity: 0;              
+              bottom: -450px;
+            }
+
             h1 {
               .mrsheffield;
               color: @white;
@@ -924,7 +1154,7 @@ body, html{
               margin-top: -45px;
             }
             h2 {
-              .brandon-black;
+              .brandon-bold;
               font-size: 17px;
               line-height: 36px;
               letter-spacing: 1.3px;
@@ -936,7 +1166,7 @@ body, html{
               margin-top: 90px;*/
             }
             p {
-              .brandon-light-italic;
+              .brandon-regular;
               font-size: 15px;
               line-height: 18px;
               text-align: left;
@@ -963,6 +1193,219 @@ body, html{
                 font-size: 8px;
               }
             }
+          }
+        }
+      }
+
+      section.module.room-parallax-1 {
+        background-image: url("../images/content/room-slider-1.png");
+        position: relative;
+
+        .carousel-caption {
+          width: 477px;
+          position: absolute;
+          left: 45%;
+          top: 33%;
+        }
+        .caption-text {
+          position: relative;
+          left: -40%;
+          .first-text {
+            position: relative;
+          }
+          .second-text {
+            position: relative;
+            left: 126px;
+          }
+          h1 {
+            .mrsheffield;
+            color: @white;
+            font-size: 150px;
+            line-height: 70px;
+            text-transform: none;
+            display: block;
+            text-align: center;
+            text-shadow: none;
+          }
+          h2 {
+            .brandon-bold;
+            font-size: 20px;
+            line-height: 18px;
+            letter-spacing: 1.2px;
+            text-align: left;
+          }
+          p {
+            .brandon-regular;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: left;
+            width: 392px;
+            margin-left: 100px;            
+          }
+        }        
+      }
+
+      section.module.room-parallax-2 {
+        background-image: url("../images/content/room-slider-2.png");
+        position: relative;
+      }
+
+      section.module.room-parallax-3 {
+        background-image: url("../images/content/room-slider-3.png");
+        position: relative;
+      }
+
+      section.module.room-parallax-4 {
+        background-image: url("../images/content/room-slider-4.png");
+        position: relative;
+      }
+
+      section.module.room-parallax-5 {
+        background-image: url("../images/content/room-slider-5.png");
+        position: relative;
+      }
+
+      section.module.room-parallax-6 {
+        background-image: url("../images/content/room-slider-6.png");
+        position: relative;
+      }
+
+      section.module.room-content {
+        padding: 140px 0px; 
+        padding-bottom: 100px;       
+        text-align: center;
+        .left-col {
+          display: inline-block;
+          text-align: center;
+          vertical-align: top;
+          width: 600px;
+          /*margin-right: 80px;*/
+        }
+        .right-col {
+          display: inline-block;
+          text-align: center;
+          vertical-align: top;
+          width: 620px;
+        }
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+        .image-container {
+          text-align: center;   
+          vertical-align: middle;
+          display: table-cell;
+          margin: 0 auto;
+          @media all and (max-width: 1280px) {
+            margin-top: 27px;
+          }
+          img {
+            display: inline-block;
+            margin-right: 8px;
+            @media all and (max-width: 1280px) {
+              /*width: 42%;*/
+              margin-right: 0px;
+            }
+          }
+        }
+        .text-wrapper {
+          margin: 0 auto;
+          width: 55%;
+        }
+        .text-img-container {
+          margin: 0 auto;
+          display: block;
+          text-align: center;
+        }
+        .text-container {
+          position: relative;
+          text-align: center;
+          vertical-align: middle;
+          display: table-cell;
+          height: 425px;
+          /*width: 545px;*/
+          @media all and (max-width: 1280px) {
+            /*height: 410px;*/
+            /*width: 440px;*/
+          }
+
+          .first-text {
+            position: relative;
+            /*opacity: 0;*/
+            /*top: 120px;*/
+          }
+          .second-text {
+            position: relative;
+            /*opacity: 0;*/
+            /*top: 60px;*/
+          }
+          .third-text {
+            position: relative;
+            /*opacity: 0;*/
+            /*top: 120px;*/
+          }
+          .fourth-text {
+            position: relative;
+            /*opacity: 0;*/
+            /*top: 60px;*/
+          }
+
+          h1 {
+            .mrsheffield;
+            font-size: 120px;
+            line-height: 65px;
+            color: @light-brown;
+            text-transform: none;
+            text-shadow: none;
+          }
+          h2 {
+            .brandon-bold;
+            font-size: 20px;
+            line-height: 16px;
+            letter-spacing: 1.2px;
+            color: @light-brown;
+          }
+          h3 {
+            .brandon-medium;
+            font-size: 15px;
+            line-height: 19px;
+            letter-spacing: 1.8px;
+            margin-top: 20px;
+            text-transform: uppercase;
+          }
+          p {
+            .brandon-regular;
+            font-size: 15px;
+            line-height: 19px;
+            margin-top: 13px;
+          }
+          a {
+            color: @dark-brown;
+            .brandon-bold;
+            font-size: 10px;
+            line-height: 40px;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            &:hover {
+              color: @light-brown;
+            }
+            i {
+              font-size: 8px;
+            }
+          }
+        }
+      }
+
+      section.module.room-content-2 {
+        .text-container {
+          h2 {
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 1.2px;
+            color: @dark-brown;
           }
         }
       }
@@ -1004,16 +1447,34 @@ body, html{
       position: relative;
       &:before {
         content: '';
-        width:20px; 
-        height:20px;
-        background:url(../images/icons/dropdown.png) no-repeat 0px 11px;
+        width: 14px;
+        height: 21px;
+        background: url(../images/icons/calendar.png) no-repeat 0 6px;
         position:absolute;
         display:block;
         right: 0px;
         pointer-events:none;
       }
       select {
-        
+        .appearance(none);
+        .round(0px);
+      }
+    }
+
+    div.dropdown-2 {
+      display: inline-block;
+      position: relative;
+      &:before {
+        content: '';
+        width: 14px;
+        height: 21px;
+        background: url(../images/icons/dropdown.png) no-repeat 2px 9px;
+        position:absolute;
+        display:block;
+        right: 0px;
+        pointer-events:none;
+      }
+      select {
         .appearance(none);
         .round(0px);
       }
@@ -1067,18 +1528,21 @@ h1 {
   /*.brandon-bold;*/
   font-size: 18px;
   text-transform: uppercase;
+  text-shadow: none;
 }
 
 h2{
   /*.brandon-medium;*/
   font-size: 13px;
   text-transform: uppercase;
+  text-shadow: none;
 }
 
 h3{
   /*.brandon-thin;*/
   font-size: 21px;
   line-height: 27px;
+  text-shadow: none;
 }
 
 h4{
@@ -1086,18 +1550,25 @@ h4{
   font-size: 21px;
   line-height: 25px;
   text-transform: uppercase;
+  text-shadow: none;
 }
 
 h5 {
   /*.brandon-medium;*/
   font-size: 9px;
   line-height: 16px;
+  text-shadow: none;
 }
 
 p {
   /*.brandon-book;*/
   font-size: 11px;
   line-height: 18px;
+  text-shadow: none;
+}
+
+a {
+  text-shadow: none;
 }
 
 #return-to-top {
@@ -1222,6 +1693,7 @@ div#footer-wrapper {
       line-height: 20px;
       text-transform: none;
       text-align: center;
+      margin-bottom: 5px;
     }
     h2 {
       .brandon-black;
@@ -1276,7 +1748,7 @@ div#footer-wrapper {
       p {
         margin-top: 20px;
         margin-bottom: 20px;
-        .brandon-light-italic;
+        .brandon-regular;
         font-size: 14px;
         line-height: 17px;
       }
@@ -1380,4 +1852,32 @@ div#copyright-wrapper {
     letter-spacing: 1.2px;
     text-transform: uppercase;
   }
+}
+
+/* 
+/////////////////////////////////
+////////// PRELOADER ////////////
+/////////////////////////////////
+*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%; }
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100px 0 0 -100px;
+  color: #fff;
+  text-align: center; 
 }

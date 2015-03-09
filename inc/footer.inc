@@ -3,7 +3,7 @@
 	        <div class="container-fluid">
 	        	<div class="row">
 		        	<div class="col-md-3 first-col">
-		        		<h1>Our Resorts</h1>
+		        		<!-- <h1>Our Resorts</h1> -->
 		        		<img src="images/logo/footer-logo.png" class="img-responsive" alt="footer logo">
 		        		<ul>
 		        			<li>

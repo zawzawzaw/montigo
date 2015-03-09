@@ -19,6 +19,7 @@
 <script type="text/javascript" src="js/vendors/jquery/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/vendors/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/vendors/modernizr-2.7.1.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.waypoints.min.js"></script>
 <script type="text/javascript" src="js/plugins/jquery.bgswitcher.js"></script>
 <script type="text/javascript" src="js/plugins/jquery.nicescroll.min.js"></script>
 <!-- <script type="text/javascript" src="js/plugins/imagesloaded.js"></script> -->
