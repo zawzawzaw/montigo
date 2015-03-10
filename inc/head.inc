@@ -22,6 +22,7 @@
 <script type="text/javascript" src="js/plugins/jquery.waypoints.min.js"></script>
 <script type="text/javascript" src="js/plugins/jquery.bgswitcher.js"></script>
 <script type="text/javascript" src="js/plugins/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.ba-hashchange.min.js"></script>
 <!-- <script type="text/javascript" src="js/plugins/imagesloaded.js"></script> -->
 <!-- <script type="text/javascript" src="js/plugins/skrollr.js"></script> -->
 <script type="text/javascript" src="js/main.js"></script>

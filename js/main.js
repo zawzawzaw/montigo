@@ -82,7 +82,7 @@ $(document).ready(function(){
 
     /// for parallax content
 
-    // parallex 1
+    ///// parallex 1
     $('.content-1').waypoint(function(direction) {
         if(direction==="up") {
             $('.parallax-1').find('.first-text').animate({ top : '0', opacity: '1'}, 300)
@@ -125,7 +125,7 @@ $(document).ready(function(){
         }
     }, {offset: "75%"});  
 
-    // parallex 3
+    ///// parallex 3
     $('.content-2').waypoint(function(direction){
         if(direction==="up") {
             $('.parallax-3').find('.first-text').animate({ left : '-450', opacity: '0'}, 500)
@@ -157,7 +157,7 @@ $(document).ready(function(){
         }
     }, {offset: "90%"});  
 
-    /// for normal content
+    ///// for normal content
     $('.content-1').waypoint(function(direction) {
         if(direction==="up") {        
             $('.content-1').find('.first-text').animate({ top: '120', opacity: '0'}, 800);
@@ -189,16 +189,53 @@ $(document).ready(function(){
         }
     }, {offset: "1%"});
 
+    ///// room parallax 1
+    $('.room-content-1').waypoint(function(direction) {
+        if(direction==="up") {
+            $('.room-parallax-1').find('.first-text').animate({ top : '0', opacity: '1'}, 300)
+            $('.room-parallax-1').find('.second-text').animate({ bottom : '0', opacity: '1'}, 300)
+        }else {
+            $('.room-parallax-1').find('.first-text').animate({ top : '-75', opacity: '0.5'}, 300)
+            $('.room-parallax-1').find('.second-text').animate({ bottom : '-75', opacity: '0.5'}, 300)
+        }
+    }, {offset: "95%"});
+
+    $('.room-content-1').waypoint(function(direction) {
+        if(direction==="up") {
+            $('.room-parallax-1').find('.first-text').animate({ top : '-75', opacity: '0.5'}, 300)
+            $('.room-parallax-1').find('.second-text').animate({ bottom : '-75', opacity: '0.5'}, 300)
+        }else {
+            $('.room-parallax-1').find('.first-text').animate({ top : '-150', opacity: '0'}, 300)
+            $('.room-parallax-1').find('.second-text').animate({ bottom : '-150', opacity: '0'}, 300)
+        }
+    }, {offset: "80%"});
+
+    $('.room-content-1').waypoint(function(direction) {
+        if(direction==="up") {        
+            // $('.room-content-1').find('.first-text').animate({ top: '120', opacity: '0'}, 800);
+            // $('.room-content-1').find('.second-text').animate({ top: '60', opacity: '0'}, 800);            
+            animation.stop_animation();
+        }else {
+            // $('.room-content-1').find('.first-text').animate({ top: '0', opacity: '1'}, 800);
+            // $('.room-content-1').find('.second-text').animate({ top: '0', opacity: '1'}, 800);
+            animation.start_animation();
+        }
+    }, {offset: "60%"});  
+
+
+    /// room booking slides in/out
     var slider_width = $('.booking').width();//get width automaticly
+
+    slider_width -= 8;
 
     console.log(slider_width)
 
     $('.cta-book').click(function() {
         console.log($('.booking').css("margin-right"))
-        if($('.booking').css("margin-right") == "0px" && !$('.booking').is(':animated'))
+        if($('.booking').css("margin-right") == "-8px" && !$('.booking').is(':animated'))
         {
             console.log('hide')
-            $('.booking').animate({ "margin-right": '-'+slider_width });
+            $('.booking').animate({ "margin-right": '-='+slider_width });
         }
         else
         {
@@ -211,57 +248,98 @@ $(document).ready(function(){
         }
     });
 
+    ///// hover pulse effect on home page's last content map test
 
+    /*$('.circle-1').hover(function(e){
+        $('.outline-1').addClass('pulsate');
+    }, function() {
+        $('.outline-1').removeClass( "pulsate" );
+    });
 
-    // $('.circle-1').hover(function(e){
-    //     $('.outline-1').addClass('pulsate');
-    // }, function() {
-    //     $('.outline-1').removeClass( "pulsate" );
-    // });
+    $('.outline-1').hover(function(e){
+        $(this).addClass('pulsate');
+    }, function() {
+        $(this).removeClass( "pulsate" );
+    });*/
+    
 
-    // $('.outline-1').hover(function(e){
-    //     $(this).addClass('pulsate');
-    // }, function() {
-    //     $(this).removeClass( "pulsate" );
-    // });
+    ///// main bg background changer test
 
-    // function getRandom(min, max) {
-    //     if (min > max) {
-    //         return -1;
-    //     }
+    /*function getRandom(min, max) {
+        if (min > max) {
+            return -1;
+        }
 
-    //     if (min == max) {
-    //         return min;
-    //     }
+        if (min == max) {
+            return min;
+        }
 
-    //     var r;
-    //     r = Math.random();
+        var r;
+        r = Math.random();
 
-    //     return min + parseInt(r * (max - min + 1));
-    // }
+        return min + parseInt(r * (max - min + 1));
+    }
 
-    // change background
-    // function changeBG()
-    // {
-    //     setTimeout( function () {
-    //         changeBG();
-    //     }, 5000);
+    change background
+    function changeBG()
+    {
+        setTimeout( function () {
+            changeBG();
+        }, 5000);
 
-    //     var images = new Array('../images/content/slider-1.png','../images/content/slider-2.jpg');
+        var images = new Array('../images/content/slider-1.png','../images/content/slider-2.jpg');
 
-    //     console.log(images[getRandom(0, images.length - 1)]);
+        console.log(images[getRandom(0, images.length - 1)]);
 
-    //     $('.parallax-1').css("background-image", "url("+ images[getRandom(0, images.length - 1)] +")");
-    // }
+        $('.parallax-1').css("background-image", "url("+ images[getRandom(0, images.length - 1)] +")");
+    }
 
-    // changeBG();
+    changeBG();*/
 
+    // scroller
     $("html").niceScroll({cursorcolor:"#575961", autohidemode: false, cursorwidth: 8});
 
+    // main bg slider
     $('.parallax-1').bgswitcher({
         images: ['images/content/slider-1.png','images/content/slider-1.png'],
         effect: "drop",
         interval: 8000
     });    
+
+    // content slider 
+    $('.carousel').carousel({
+        interval: false
+    });
+
+
+    // scroll to
+    $('.scroll-to-content').on('click', function(e){
+        e.preventDefault();
+        var currentId = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(currentId).offset().top - 125
+        }, 800);
+    });
+
+    // $(window).bind( 'hashchange', function(e) { 
+    //     e.preventDefault();
+    //     var anchor = document.location.hash;
+    //     if( anchor === '#hilltop' || anchor == '#hillside' || anchor == '#spa' || anchor == '#seaview' ) {
+    //         $('html, body').animate({
+    //             scrollTop: $(anchor).offset().top - 75
+    //         },  800);
+    //     }
+    // });
+
+    $(window).hashchange( function(e){
+        // Alerts every time the hash changes!
+        e.preventDefault();
+        var anchor = location.hash;
+        if( anchor === '#hilltop' || anchor == '#hillside' || anchor == '#spa' || anchor == '#seaview' ) {
+            $('html, body').animate({
+                scrollTop: $(anchor).offset().top - 125
+            },  800);
+        }
+    });
 
 });

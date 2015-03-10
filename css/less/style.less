@@ -264,6 +264,7 @@ strong {
 
 @light-brown: #dbaf7d;
 @dark-brown: #514947;
+@dark-brown-2: #7a5946;
 @white: #fff;
 @skin: #fbf7f2;
 
@@ -358,6 +359,11 @@ body, html{
   z-index: 999999999!important;
 }
 
+#swiffycontainer{
+  /*width: 1170px;*/
+  height: 735px;
+}
+
 #page-wrapper{
     height: 100%;
     position:relative;
@@ -368,6 +374,7 @@ body, html{
       top: 0px;
       z-index: 999;
       width: 100%;
+      background-color: rgba(255,255,255,0.2);
 
       #main-header {
         #logo-container {
@@ -379,6 +386,10 @@ body, html{
             width: 159px;
             height: 70px;
             background: url('../images/logo/main-logo.png') no-repeat left center;
+
+            @media all and (min-width: 1920px) {
+              height: 85px;
+            }
 
             @media all and (max-width: 1280px) {
               height: 57px;
@@ -396,6 +407,10 @@ body, html{
             vertical-align: middle;
             height: 75px;
 
+            @media all and (min-width: 1920px) {
+              height: 80px;
+            }
+
             @media all and (max-width: 1280px) {
               height: 57px;  
             }
@@ -412,7 +427,7 @@ body, html{
                 a {
                   color: @white;
                   .brandon-black;
-                  font-size: 10px;
+                  font-size: 11px;
                   line-height: 26px;
                   text-transform: uppercase;
                   letter-spacing: 1.2px;
@@ -429,13 +444,14 @@ body, html{
       .cta-book {
         position: absolute;
         top: 0px;
-        right: 8px;
+        right: 0px;
         background-color: rgba(255,255,255,0.5);
         padding-left: 24px;
         padding-right: 24px;
         padding-top: 25px;
         padding-bottom: 24px;
         cursor: pointer;
+        height: 100%; 
         @media all and (max-width: 1280px) {
           padding-left: 16px;
           padding-right: 15px;
@@ -455,7 +471,7 @@ body, html{
           color: @white;
           text-transform: uppercase;
           .brandon-black;
-          font-size: 10px;
+          font-size: 11px;
           line-height: 26px;
           text-decoration: underline;
           letter-spacing: 1.2px;        
@@ -466,12 +482,17 @@ body, html{
         /*display: none;*/
         position: absolute;
         top: 84px;
+
+        @media all and (min-width: 1920px) {
+          top: 95px;
+        }
+
         right: 7px;
         background-color: rgba(255, 255, 255, 0.19);  
         .transition();
 
         .booking {
-          margin-right: -820px;
+          margin-right: -840px;
         }
 
         .small-inputs {
@@ -489,7 +510,7 @@ body, html{
             display: block;
             color: @white;
             .brandon-black;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 20px;
             text-transform: uppercase;
             letter-spacing: 1.2px;
@@ -505,6 +526,7 @@ body, html{
             color: @white;
             height: 20px;
             width: 125px;
+            padding-left: 5px;
           }
           select option { color: #000; }
           select option:first-child{
@@ -542,7 +564,7 @@ body, html{
             color: @light-brown;
             text-transform: uppercase;
             .brandon-black;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 26px;
             letter-spacing: 1.2px;        
           }
@@ -554,6 +576,15 @@ body, html{
         color: @dark-brown;
         .transition();
         height: 75px;
+
+        @media all and (min-width: 1920px) {
+          height: 85px;
+
+          &.booking-form {
+            height: auto!important;
+          }
+        }
+
         @media all and (max-width: 1280px) {
           height: 57px;
         }
@@ -587,6 +618,15 @@ body, html{
           div.dropdown-2 {            
             &:before {
               background: url(../images/icons/dropdown-hover.png) no-repeat 2px 9px;
+            }            
+          }
+          .btn-container {
+            background-color: @light-brown;
+            a#find-villa-btn {
+              color: @white;
+              &:hover {
+                color: @dark-brown;
+              }
             }            
           }
         }
@@ -733,7 +773,7 @@ body, html{
           a {
             color: @dark-brown;
             .brandon-bold;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 40px;
             letter-spacing: 1.3px;
             text-transform: uppercase;
@@ -791,12 +831,13 @@ body, html{
           }
           p {
             .brandon-regular;
-            font-size: 15px;
+            font-size: 18px;
+            line-height: 22px;
           }
           a {
             color: @white;
             .brandon-bold;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 40px;
             letter-spacing: 1.3px;
             text-transform: uppercase;
@@ -813,7 +854,7 @@ body, html{
         }        
       }
       section.module.parallax-2 {
-        background-image: url("../images/content/slider-2.jpg");
+        background-image: url("../images/content/slider-2.png");
         position: relative;
         height: 120%!important;
 
@@ -872,8 +913,8 @@ body, html{
             }
             p {
               .brandon-regular;
-              font-size: 15px;
-              line-height: 18px;
+              font-size: 18px;
+              line-height: 22px;
               text-align: center;
               max-width: 400px;
               margin: 0 auto;
@@ -882,7 +923,7 @@ body, html{
             a {
               color: @white;
               .brandon-bold;
-              font-size: 10px;
+              font-size: 11px;
               line-height: 40px;
               letter-spacing: 1.3px;
               text-transform: uppercase;
@@ -954,8 +995,8 @@ body, html{
             }
             p {
               .brandon-regular;
-              font-size: 15px;
-              line-height: 18px;
+              font-size: 18px;
+              line-height: 22px;
               text-align: center;
               max-width: 400px;
               margin: 0 auto;
@@ -964,7 +1005,7 @@ body, html{
             a {
               color: @dark-brown;
               .brandon-bold;
-              font-size: 10px;
+              font-size: 11px;
               line-height: 40px;
               letter-spacing: 1.3px;
               text-transform: uppercase;
@@ -1167,8 +1208,8 @@ body, html{
             }
             p {
               .brandon-regular;
-              font-size: 15px;
-              line-height: 18px;
+              font-size: 18px;
+              line-height: 22px;
               text-align: left;
               max-width: 400px;
               margin-left: 145px;
@@ -1178,7 +1219,7 @@ body, html{
             a {
               color: @white;
               .brandon-bold;
-              font-size: 10px;
+              font-size: 11px;
               line-height: 40px;
               letter-spacing: 1.3px;
               text-transform: uppercase;
@@ -1205,7 +1246,7 @@ body, html{
           width: 477px;
           position: absolute;
           left: 45%;
-          top: 33%;
+          top: 40%;
         }
         .caption-text {
           position: relative;
@@ -1221,11 +1262,12 @@ body, html{
             .mrsheffield;
             color: @white;
             font-size: 150px;
-            line-height: 70px;
+            line-height: 100px;
             text-transform: none;
             display: block;
             text-align: center;
             text-shadow: none;
+            padding-bottom: 12px;
           }
           h2 {
             .brandon-bold;
@@ -1256,30 +1298,33 @@ body, html{
       }
 
       section.module.room-parallax-4 {
-        background-image: url("../images/content/room-slider-4.png");
-        position: relative;
-      }
-
-      section.module.room-parallax-5 {
         background-image: url("../images/content/room-slider-5.png");
         position: relative;
       }
 
-      section.module.room-parallax-6 {
+      section.module.room-parallax-5 {
         background-image: url("../images/content/room-slider-6.png");
         position: relative;
       }
 
+      section.module.room-parallax-6 {
+        background-image: url("../images/content/room-slider-3.png");
+        position: relative;
+      }
+
       section.module.room-content {
-        padding: 140px 0px; 
+        padding: 50px 0px; 
         padding-bottom: 100px;       
         text-align: center;
         .left-col {
           display: inline-block;
           text-align: center;
           vertical-align: top;
-          width: 600px;
+          width: 620px;
           /*margin-right: 80px;*/
+        }
+        .left-col-img {
+          /*width: 37%;*/
         }
         .right-col {
           display: inline-block;
@@ -1310,19 +1355,20 @@ body, html{
         }
         .text-wrapper {
           margin: 0 auto;
-          width: 55%;
+          width: 80%;         
         }
         .text-img-container {
           margin: 0 auto;
           display: block;
           text-align: center;
+          padding-top: 100px;
         }
         .text-container {
           position: relative;
           text-align: center;
           vertical-align: middle;
           display: table-cell;
-          height: 425px;
+          height: 628px;
           /*width: 545px;*/
           @media all and (max-width: 1280px) {
             /*height: 410px;*/
@@ -1349,63 +1395,286 @@ body, html{
             /*opacity: 0;*/
             /*top: 60px;*/
           }
-
-          h1 {
-            .mrsheffield;
-            font-size: 120px;
-            line-height: 65px;
-            color: @light-brown;
-            text-transform: none;
-            text-shadow: none;
+          img {
+            margin-top: 30px;
+            margin-bottom: 40px;
           }
           h2 {
-            .brandon-bold;
-            font-size: 20px;
-            line-height: 16px;
+            font-size: 24px;
+            line-height: 30px;
             letter-spacing: 1.2px;
-            color: @light-brown;
-          }
-          h3 {
-            .brandon-medium;
-            font-size: 15px;
-            line-height: 19px;
-            letter-spacing: 1.8px;
-            margin-top: 20px;
-            text-transform: uppercase;
+            color: @dark-brown-2;
           }
           p {
-            .brandon-regular;
-            font-size: 15px;
-            line-height: 19px;
-            margin-top: 13px;
+            color: @dark-brown-2;
           }
-          a {
-            color: @dark-brown;
-            .brandon-bold;
-            font-size: 10px;
-            line-height: 40px;
-            letter-spacing: 1.3px;
-            text-transform: uppercase;
-            text-align: center;
-            display: block;
-            margin-top: 10px;
-            &:hover {
-              color: @light-brown;
+          ul {
+            li {
+              display: inline-block;
+              border-left: 1px solid #f1dfcb;
+              margin-bottom: 94px;
+              a {
+                color: @dark-brown-2;
+                font-size: 13px;
+                line-height: 17px;
+                vertical-align: middle;
+                display: table-cell;
+                padding-left: 18px;
+                padding-right: 18px;
+                &:hover {
+                  color: @light-brown;
+                }
+              }
+
+              &:first-child {
+                border-left: none;
+              }
             }
-            i {
-              font-size: 8px;
+          }
+          hr.tiny {
+            border-top: 2px solid #f4e7d8;
+            width: 12px;
+            margin: 30px auto;
+          }
+          a.others {
+            span {
+              .brandon-black;
+              margin-top: 0px;
+              font-size: 12px;
+              line-height: 12px;
+              letter-spacing: 1.2px;
+              color: @light-brown;              
+            }
+            span.link-to {
+              width: 16px;
+              height: 16px;
+              display: inline-block;
+              background: @light-brown;
+              .round(50px);
+              display: table;
+              margin: 0px auto;
+              i {
+                display: table-cell;
+                font-size: 6px;
+                color: @white;
+                vertical-align: middle;
+                text-align: center;
+                padding-left: 1px;
+              }
+            }
+
+            &:hover {
+              span {
+                color: @dark-brown-2;  
+              }
+              span.link-to {
+                background: @dark-brown-2;
+              }
+              
+            }
+          }         
+        }
+        .img-container {
+          .carousel-indicators {
+            bottom: -50px;          
+            li {
+              background-color: #f1dfcb!important;
+              border: none!important;
+              width: 7px!important;
+              height: 7px!important;
+              &.active {
+                background-color: @light-brown!important;
+                width: 7px!important;
+                height: 7px!important;
+                margin: 1px!important;
+              }
+            }            
+          }
+          .carousel-control {
+            background: none!important;
+            text-shadow: none!important;
+            opacity: 1!important;
+            top: auto!important;
+            bottom: -45px!important;
+            width: auto!important;
+            line-height: 10px!important;
+            font-size: 13px!important;
+            color: @light-brown!important;
+          }
+        }
+        h1 {
+          .mrsheffield;
+          font-size: 120px;
+          line-height: 65px;
+          color: @light-brown;
+          text-transform: none;
+          text-shadow: none;
+        }
+        h2 {
+          .brandon-bold;
+          font-size: 20px;
+          line-height: 16px;
+          letter-spacing: 1.2px;
+          color: @light-brown;
+        }
+        h3 {
+          .brandon-medium;
+          font-size: 15px;
+          line-height: 19px;
+          letter-spacing: 1.8px;
+          margin-top: 20px;
+          text-transform: uppercase;
+        }
+        p {
+          .brandon-regular;
+          font-size: 15px;
+          line-height: 19px;
+          margin-top: 13px;
+        }
+        a {
+          color: @dark-brown;
+          .brandon-bold;
+          font-size: 11px;
+          line-height: 40px;
+          letter-spacing: 1.3px;
+          text-transform: uppercase;
+          text-align: center;
+          display: block;
+          &:hover {
+            color: @light-brown;
+          }
+          i {
+            font-size: 8px;
+          }
+        }
+      }
+
+      section.module.room-content-1 {
+        .text-wrapper {
+          /*width: 72%;*/
+        }
+      }
+
+      section.module.room-content-6 {
+        border-bottom: 5px solid #DBAF7D;
+        padding-bottom: 50px!important;
+        .text-container {
+          height: auto!important;
+          margin-top: 50px;
+          display: block!important;
+          text-align: left;
+          h1 {
+            font-size: 90px;
+            line-height: 52px;
+            text-align: left;
+          }
+          h2 {
+            font-size: 18px;
+            line-height: 28px;
+            color: @light-brown;
+            text-align: center;
+            margin-left: 165px;
+          } 
+          ul {
+            list-style: none!important;
+            padding-left: 20px;
+            padding-top: 30px;
+            li {
+              display: block;
+              list-style: none!important;
+              border: none;
+              margin: 0px;
+              text-align: left;
+              list-style: disc;
+              position: relative;
+              padding-left: 20px;
+              margin-bottom: 5px;
+              .brandon-regular;
+              font-size: 16px;
+              line-height: 20px;
+              &:before {    
+                font-family: 'FontAwesome';
+                content: '\f00c';
+                margin:0 5px 0 -15px;
+                font-size: 10px;    
+                position: absolute;
+                top: 0;
+                left: 0;   
+              }
             }
           }
         }
       }
 
-      section.module.room-content-2 {
+      section.module.room-content-7 {
+        border-bottom: 5px solid #DBAF7D;
+        padding-bottom: 100px!important;    
+        .text-img-container {
+          h1 {
+            margin-bottom: 30px;
+            line-height: 105px;
+          }
+          .carousel {
+          .carousel-indicators {
+            li {
+              background: none!important;
+              width: 140px!important;
+              border-right: 1px solid @light-brown!important;
+              text-indent: 0!important;
+              display: inline-block;
+              height: 18px!important;
+              border-radius: 0px;
+              .brandon-bold;
+              font-size: 13px;
+              line-height: 17px;
+              text-transform: uppercase;
+              &:last-child {
+                border: none!important;
+              }
+              &.active {
+                background: none!important;
+                width: 140px!important;
+              }
+              &:hover {
+                color: @light-brown;
+              }
+            }
+          }
+          }
+        }
+      }
+
+      section.module.room-content-8 {
+        background-color: #f7f6f5;
+        border-bottom: 5px solid #DBAF7D;
+        padding-bottom: 50px!important;
         .text-container {
+          height: 440px;
+          h1 {
+            font-size: 80px;
+            line-height: 80px;
+          }
           h2 {
-            font-size: 24px;
-            line-height: 30px;
-            letter-spacing: 1.2px;
-            color: @dark-brown;
+            .brandon-medium;
+            font-size: 20px;
+            line-height: 18px;
+            color: @light-brown;
+          } 
+          hr.tiny {
+            margin: 20px auto;
+            border-top: 2px solid #d1c7c0;
+          }
+          h5 {
+            .brandon-medium;
+            font-size: 16px;
+            line-height: 19px;
+            color: #7a5946;
+          }
+          p {
+            .brandon-regular;
+            font-size: 16px;
+            line-height: 19px;
+            color: #7a5946;
           }
         }
       }
@@ -1422,7 +1691,7 @@ body, html{
         font-size: 15px;
         color: @white;
         text-decoration: underline;
-        padding-bottom: 10px;
+        padding-bottom: 11px;
         line-height: 40px;
         &:hover {
           color: @dark-brown;
@@ -1719,7 +1988,7 @@ div#footer-wrapper {
             text-transform: uppercase;
           }
           p {
-            font-size: 10px;
+            font-size: 11px;
             line-height: 15px;
             text-transform: uppercase;
           }
@@ -1733,7 +2002,7 @@ div#footer-wrapper {
           margin-bottom: 5px;
           a {
             .brandon-medium;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 17px;
             text-transform: uppercase;        
             color: @dark-brown;
