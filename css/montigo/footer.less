@@ -1,0 +1,284 @@
+#main-page-footer{
+
+  // general
+  .footer-item{
+    text-align: center;
+
+    padding-top: 64px;
+    min-height: 323px;
+
+    h3{
+      font-size: 20px;
+      line-height: 20px;
+      color: @light-blue;
+      letter-spacing: -0.02em;
+
+      margin-bottom: 7px;
+    }
+    h4{
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0.13em;
+
+      margin-bottom: 4px;
+    }
+
+    a{
+      color: @dark-brown;
+      &:hover{
+        color: @light-blue;
+      }
+    }
+  } // .footer-item
+
+
+  #footer-montigo-logo{
+    color: transparent;
+    .logo_montigo_footer_grey;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #footer-locations{
+
+    #footer-montigo-logo{
+      margin-bottom: 16px;
+    }
+
+    .footer-location{
+      display: block;
+      margin-bottom: 13px;
+
+      h6{
+        .brandon-bold;
+        font-size: 13px;
+        line-height: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      p{
+        .brandon-regular;
+        font-size: 10px;
+        line-height: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+    }
+
+
+  } // #footer-locations
+
+  #footer-links{
+    nav{
+      padding-top: 3px;
+
+      ul{
+        li{
+          display: block;
+          line-height: 17px;
+
+          a{
+            .brandon-medium;
+            font-size: 10px;
+            line-height: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+
+            display: block;
+
+          }
+        }
+      }
+    }
+  }
+
+  #footer-signup{
+
+    p{
+      .brandon-light-italic;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0em;
+
+      padding-top: 6px;
+      margin-bottom: 24px;
+    }
+
+
+    #footer-mailing-form{
+
+      input[type=text]{
+        .brandon-regular-italic;
+        font-size: 12px;
+        line-height: 22px;
+        color: #7a5946;
+        text-align: center;
+
+        height: 22px;
+        width: 156px;
+        border: 1px solid #dbaf7d;
+
+        &::-webkit-input-placeholder{ color: #7a5946; .transition-in(); }
+        &:-moz-placeholder{ color: #7a5946; .transition-in(); }
+        &::-moz-placeholder{ color: #7a5946; .transition-in(); }
+
+        &:focus{
+          &::-webkit-input-placeholder{ color: transparent; }
+          &:-moz-placeholder{ color: transparent; }
+          &::-moz-placeholder{ color: transparent; }
+        }
+
+      } // input[type=text]
+
+      /*
+      input[type=submit]{
+        position: relative;
+      }
+      */
+     
+
+      #footer-mailing-form-submit{
+        color: @light-blue;
+        font-size: 12px;
+
+        .display-inline-block;
+        position: relative;
+        background: none;
+        border: none;
+
+
+        top: 4px;
+        left: 1px;
+        .transition-in();
+
+
+        .fa-angle-right{
+          font-size: 10px;
+          color: @white;
+
+          display: block;
+          position: absolute;
+          top: 2px;
+          left: 10px;
+        }
+
+        &:hover{
+          color: @dark-brown;
+        }
+
+      } // #footer-mailing-form-submit
+
+
+    } // #footer-mailing-form
+
+  } // #footer-signup
+
+  #footer-instagram{
+    .image-container{
+      padding-top: 9px;
+      padding-left: 10px;
+      font-size: 0;
+
+      img{
+        .display-inline-block();
+        margin-right: 10px;
+        .transition-in();
+
+        &:hover{
+          .opacity(0.7);
+        }
+      }
+    }
+
+    .social-container{
+      padding-top: 24px;
+
+      .fa{
+        font-size: 14px;
+        margin-right: 7px;
+        color: @light-blue;
+
+        &:hover{
+          color: @dark-brown;
+        }
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+
+  #footer-copyright{
+    background: #514947;
+    text-align: center;
+
+    padding-top: 5px;
+    padding-bottom: 3px;
+
+    ul{
+      display: block;
+      
+      margin-bottom: -4px;
+
+      li{
+        .display-inline-block;
+        margin-right: 26px;
+        position: relative;
+
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 3px;
+          right: -15px;
+          width: 0px;
+          height: 12px;
+          border-right: 1px solid @white;
+          .opacity(0.4);
+        }
+
+        &:last-child{
+          margin-right: 0;
+
+          &:after{
+            display: none;
+          }
+        }
+
+        a{
+          display: block;
+
+          .brandon-regular;
+          font-size: 10px;
+          line-height: 20px;
+          color: @white;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+
+
+          .opacity(0.4);
+
+          &:hover{
+            .opacity(1);
+          }
+        }
+
+      }
+    }
+    p{
+      .brandon-regular;
+      font-size: 10px;
+      line-height: 20px;
+      color: @white;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+
+      .opacity(0.4);
+
+      
+    }
+  }
+
+} // #main-page-footer

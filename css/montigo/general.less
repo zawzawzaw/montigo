@@ -1,0 +1,75 @@
+@light-brown: #dbaf7d;
+@dark-brown: #514947;
+@dark-brown-2: #7a5946;
+@white: #fff;
+@skin: #fbf7f2;
+
+
+@light-blue: #9acaff;
+
+
+html, body{
+  .brandon-light;
+  color: @dark-brown;
+  font-size: 16px;
+  line-height: 20px;
+  background: #fff;
+  letter-spacing: -0.01em;
+}
+
+
+a{
+  color: @light-blue;
+  text-decoration: none !important;
+  .transition-in();
+}
+
+
+
+
+h3{
+  .dearjoe;
+  font-size: 30px;
+  line-height: 40px;
+}
+h4{
+  .brandon-black;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arrow-link{
+  &:after{
+    margin-left: 7px;
+    .fa;
+    content: "\f105";       //.fa-angle-right;
+
+    .transition-in(0.3s);
+  }
+
+  &:hover{
+    &:after{
+      margin-left: 11px;
+    }
+  }
+}

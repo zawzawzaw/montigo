@@ -1,0 +1,40 @@
+   _   _  ___ _____ _____ ____  
+  | \ | |/ _ \_   _| ____/ ___| 
+  |  \| | | | || | |  _| \___ \ 
+  | |\  | |_| || | | |___ ___) |
+  |_| \_|\___/ |_| |_____|____/ 
+                                
+
+possible slider:
+http://localhost/prototype/easel/02/picture_canvas.html
+
+nice effect:
+http://cssslider.com/html5-slider-20.html
+ - simple cross fade
+ - constant scaling movement
+
+
+http://kenwheeler.github.io/slick/
+https://github.com/kenwheeler/slick/
+
+
+still use flash to svg
+
+http://www.tbyrne.org/export-flash-to-animated-svg
+http://www.tbyrne.org/smil-test-page
+
+if (!Modernizr.svg) {
+  $(".logo img").attr("src", "images/logo.png");
+}
+
+// not today.
+
+
+
+i want the slider image to have a 'parallax' effect.
+ as the site is going down
+
+
+
+http://janpaepke.github.io/ScrollMagic/
+
