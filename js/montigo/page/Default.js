@@ -23,6 +23,8 @@ montigo.page.Default = function(options) {
   //   |___|_| \_|___| |_|
   //
 
+  this.check_svg_smil();
+
   console.log('init');
 };
 goog.inherits(montigo.page.Default, manic.page.Page);
@@ -64,7 +66,23 @@ montigo.page.Default.EVENT_02 = '';
 //
 
 
-montigo.page.Default.prototype.private_method_01 = function() {};
+montigo.page.Default.prototype.check_svg_smil = function() {
+  console.log('check_svg_smil');
+
+  if (!Modernizr.smil) {
+
+    console.log('no svg smil capabilities');
+
+    var arr = $('.svg-graphic');
+    var fallback_src = "";
+    var item = null;
+    for (var i = 0, l = arr.length; i < l; i++) {
+      item = $(arr[i]);
+      fallback_src = item.attr('data-fallback');
+      item.attr('src',fallback_src);
+    }
+  }
+};
 montigo.page.Default.prototype.private_method_02 = function() {};
 montigo.page.Default.prototype.private_method_03 = function() {};
 montigo.page.Default.prototype.private_method_04 = function() {};

@@ -2,10 +2,27 @@
 
   // general
   .footer-item{
+    position: relative;
     text-align: center;
 
     padding-top: 64px;
     min-height: 323px;
+
+    
+    &.has-border{
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 37px;
+        bottom: 49px;
+        right: -15px;
+
+        border-right: 1px solid @dark-brown-10;
+      }
+    }
+
+    
 
     h3{
       font-size: 20px;

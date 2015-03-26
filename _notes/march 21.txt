@@ -38,3 +38,28 @@ i want the slider image to have a 'parallax' effect.
 
 http://janpaepke.github.io/ScrollMagic/
 
+
+
+-------------------------------------------------
+
+
+// line spacing of first half of text
+// still missing lines in the footer.
+// the gradient of parallax 01 is wrong.
+
+
+tilo animated.
+fullpage.js
+
+
+revisions:
+
+
+1. sticking out animation of the sidebar
+2. include 'tilo treasure hunt' in the snapping sidebar
+3. vertical center of home slider image
+4. fullscreen height of home slider image
+
+
+
+USE BASE 64 SVG for animations ?
