@@ -37,7 +37,11 @@
       margin-top: 183px;
 
       text-align: center;
-      color: @light-blue;
+      color: @white;
+
+      &.alternative{
+        color: @light-blue;
+      }
 
       h3{
         font-size: 60px;
@@ -112,7 +116,7 @@
         margin-top: 16px;
         margin-bottom: 40px;
         background: @light-blue;
-        .opacity(0.5);
+        //.opacity(0.5);
       }
     }
     .promotion-image{
@@ -743,7 +747,8 @@
       line-height: 60px;
       margin-bottom: -9px;
 
-      letter-spacing: 0.025em;
+      //letter-spacing: 0.025em;      // due to copy change
+      letter-spacing: -0.05em;
       margin-left: -10px;
     }
     p{
