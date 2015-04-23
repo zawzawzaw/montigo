@@ -63,3 +63,18 @@ revisions:
 
 
 USE BASE 64 SVG for animations ?
+
+
+
+1. blue bg on the 'book now' btn
+2. make them appear faster :D
+
+---------------------------------------------
+
+based on height 100% + cropping on sides
+ - use same formula from distillery
+
+
+http://clients.manic.com.sg/montigo/
+http://clients.manic.com.sg/montigo/alternative.html
+http://clients.manic.com.sg/montigo/distillery.html

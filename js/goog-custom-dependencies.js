@@ -8,6 +8,7 @@ goog.addDependency('../../../../js/manic/framework/Fullpage.js', ['manic.framewo
 goog.addDependency('../../../../js/manic/framework/FullpageEvent.js', ['manic.framework.FullpageEvent'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/google/Map.js', ['manic.google.Map'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/page/Page.js', ['manic.page.Page'], ['goog.events.Event', 'goog.events.EventTarget']);
+goog.addDependency('../../../../js/manic/ui/ImageContainer.js', ['manic.ui.ImageContainer'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/ui/ImageSlider.js', ['manic.ui.ImageSlider'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/ui/Masonry.js', ['manic.ui.Masonry'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/ui/PanelContainer.js', ['manic.ui.PanelContainer'], ['goog.events.Event', 'goog.events.EventTarget']);
@@ -18,5 +19,11 @@ goog.addDependency('../../../../js/manic/util/JsonImagePreloaderMobile.js', ['ma
 goog.addDependency('../../../../js/manic/util/JsonParser.js', ['manic.util.JsonParser'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/util/StringUtil.js', ['manic.util.StringUtil'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/video/VideoJSPlayer.js', ['manic.video.VideoJSPlayer'], ['goog.events.Event', 'goog.events.EventTarget']);
-goog.addDependency('../../../../js/montigo/page/Default.js', ['montigo.page.Default'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.page.Page']);
-goog.addDependency('../../../../js/montigo/page/Home.js', ['montigo.page.Home'], ['goog.events.Event', 'goog.events.EventTarget', 'montigo.page.Default']);
+goog.addDependency('../../../../js/montigo/component/InstagramSidebar.js', ['montigo.component.InstagramSidebar'], ['goog.events.Event', 'goog.events.EventTarget']);
+goog.addDependency('../../../../js/montigo/component/MainImage.js', ['montigo.component.MainImage'], ['goog.events.Event', 'goog.events.EventTarget', 'montigo.component.ScrollMagicUtil']);
+goog.addDependency('../../../../js/montigo/component/Menu.js', ['montigo.component.Menu'], ['goog.events.Event', 'goog.events.EventTarget']);
+goog.addDependency('../../../../js/montigo/component/ParallaxImage.js', ['montigo.component.ParallaxImage'], ['goog.events.Event', 'goog.events.EventTarget', 'montigo.component.ScrollMagicUtil']);
+goog.addDependency('../../../../js/montigo/component/ScrollMagicUtil.js', ['montigo.component.ScrollMagicUtil'], []);
+goog.addDependency('../../../../js/montigo/page/Activities.js', ['montigo.page.Activities'], ['goog.events.Event', 'goog.events.EventTarget', 'montigo.component.MainImage', 'montigo.component.ParallaxImage', 'montigo.page.Default']);
+goog.addDependency('../../../../js/montigo/page/Default.js', ['montigo.page.Default'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.page.Page', 'manic.ui.ImageContainer', 'montigo.component.Menu']);
+goog.addDependency('../../../../js/montigo/page/Home.js', ['montigo.page.Home'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.ui.ImageContainer', 'montigo.component.InstagramSidebar', 'montigo.component.MainImage', 'montigo.component.ParallaxImage', 'montigo.component.ScrollMagicUtil', 'montigo.page.Default']);
