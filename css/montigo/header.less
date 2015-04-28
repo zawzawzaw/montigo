@@ -1,5 +1,15 @@
 @desktop-header-height: 62px;
 
+
+
+#main-page-header{
+  .container-fluid{
+    max-width: none !important;
+  }
+}
+
+
+
 #main-page-header{
 
   position: fixed;
@@ -16,6 +26,8 @@
     width: 100%;
     height: 167px;
     //background: transparent url("../images/bg/header_blue_gradient.png") center center repeat-x;
+    
+    pointer-events: none;
 
     .transition-in();
     .opacity(1);

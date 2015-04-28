@@ -2,8 +2,10 @@
 
 // emulate wordpress functions.php
 
-//define('DEBUG', true);
-define('DEBUG', false);
+define('DEBUG', true);
+//define('DEBUG', false);
+
+
 ?>
 
 <!doctype html>
@@ -39,7 +41,7 @@ define('DEBUG', false);
     <script>try{Typekit.load();}catch(e){}</script>
 
     <link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="library/jquery/jquery-1.9.1.min.js"></script>

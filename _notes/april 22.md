@@ -9,7 +9,6 @@ Karen's List
 
 1. Body font add 1px.
 
-
 =============================
 
 Jairus List
@@ -99,20 +98,25 @@ http://clients.manic.com.sg/montigo/03/
 http://clients.manic.com.sg/montigo/03/activities.php
 
 
+create images from psd
+ - cause sizes are now different.
+
+//1. icons
+// from old one 1.5 x
+
+//2. add 30 px column/ left margin to all things on the left
+//  - parallax text
+//  - sports and fitness
 
 
 
 
+breakpoint is just a url query variable 
+?breakpoint=true
 
 
 
+?breakpoint=false
 
-
-1. icons
- from old one 1.5 x
-
-2. add 30 px column/ left margin to all things on the left
-  - parallax text
-  - sports and fitness
 
 

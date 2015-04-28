@@ -1,0 +1,468 @@
+//    ____  _     ___ ____  _____ ____  
+//   / ___|| |   |_ _|  _ \| ____|  _ \ 
+//   \___ \| |    | || | | |  _| | |_) |
+//    ___) | |___ | || |_| | |___|  _ < 
+//   |____/|_____|___|____/|_____|_| \_\
+//               
+
+#rooms-slider{
+
+}
+
+#rooms-slider-text{
+  text-align: center;
+  color: @white;
+
+  position: relative;
+
+  .bg-black-gradient{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -501px;
+    margin-left: -415px;
+    .bg_main_image_black_gradient;
+    .opacity(0.9);
+  }
+  h3, h4, hr.short-hr, p{
+    position: relative;
+  }
+
+  h3{
+    font-size: 94px;
+    line-height: 89px;
+    letter-spacing: -0.01em;
+    margin-bottom: 38px;
+  }
+
+  h4{
+    font-size: 17px;
+    line-height: 26px;
+    //letter-spacing: 0.13em;
+    letter-spacing: 0.10em;
+    //margin-bottom: 12px;
+    
+    // suyeon
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+
+  }
+  hr.short-hr{
+    background: @white;
+    margin-top: 12px;
+    margin-bottom: 17px;
+  }
+
+  p{
+    .brandon-light;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    //max-width: 500px;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    // suyeon
+    //font-size: 17px;
+    //line-height: 20px;
+    //letter-spacing: 0.1em;
+  }
+}
+
+// temporary
+#rooms-slider{
+  .text{
+    margin-top: 10%;
+  }
+}
+
+//    __  __    _    ____  ____  
+//   |  \/  |  / \  |  _ \/ ___| 
+//   | |\/| | / _ \ | |_) \___ \ 
+//   | |  | |/ ___ \|  __/ ___) |
+//   |_|  |_/_/   \_\_|   |____/ 
+//                               
+
+#rooms-map-section{
+
+  height: 850px;
+  position: relative;
+
+  #rooms-map-interactive{
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 1280px;
+    height: 850px;
+    margin-left: -640px;
+
+    img{
+      display: block;
+    }
+  }
+
+  #rooms-map-text{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+    text-align: center;
+
+    width: 380px;
+    height: 280px;
+
+    margin-left: -140px;
+
+    padding-top: 64px;
+
+
+
+
+    h3{
+      color: @light-blue;
+      font-size: 60px;
+      line-height: 60px;
+      letter-spacing: -0.06em;
+
+      margin-bottom: -1px;
+    }
+    hr.short-hr{
+      background: @light-blue;
+      .opacity(0.1);
+      margin-bottom: 24px;
+    }
+    h4{
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+}
+
+
+
+//   __     _____ _     _        _    ____  
+//   \ \   / /_ _| |   | |      / \  / ___| 
+//    \ \ / / | || |   | |     / _ \ \___ \ 
+//     \ V /  | || |___| |___ / ___ \ ___) |
+//      \_/  |___|_____|_____/_/   \_\____/ 
+//                                          
+
+
+#rooms-villas-section{
+
+  #room-villas-image-panel-container{
+    height: 520px;
+
+    .manic-image-container{
+      width: 100%;
+      height: 520px;
+    }
+    
+  }
+
+  #room-villas-button-container{
+    margin-bottom: 20px;
+  }
+
+
+
+  #room-villas-sidebar{
+    text-align: center;
+    padding-top: 50px;
+
+
+    h3{
+      color: @light-blue;
+      letter-spacing: -0.06em;
+    }
+    hr.short-hr{
+      background: @light-blue;
+      .opacity(0.1);
+
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+  }
+
+  #room-villas-text-panel-container{
+    height: 280px;
+    position: relative;
+
+    .panel{
+      padding: 0 15%;
+    }
+
+
+
+    .next-panel-button, .prev-panel-button{
+      position: absolute;
+      z-index: 10;
+      width: 20px;
+      height: 20px;
+
+      line-height: 20px;
+      font-size: 20px;
+      text-align: center;
+
+      color: @light-blue;
+      .opacity(0.4);
+
+      top: 126px;
+
+      cursor: pointer;
+      .transition-in();
+
+      &:hover{
+        .opacity(1.0);
+      }
+      
+    }
+
+    .next-panel-button{
+      right: 0px;
+    }
+    .prev-panel-button{
+      left: 0px;
+    }
+
+
+    h4{
+      font-size: 20px;
+      line-height: 29px;
+      letter-spacing: 0.1em;
+
+      margin-bottom: 17px;
+    }
+    p{
+      .brandon-light;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0em;
+      margin-bottom: 22px;
+    }
+  }
+
+}
+
+
+//       _    __  __ _____ _   _ ___ _____ ___ _____ ____  
+//      / \  |  \/  | ____| \ | |_ _|_   _|_ _| ____/ ___| 
+//     / _ \ | |\/| |  _| |  \| || |  | |  | ||  _| \___ \ 
+//    / ___ \| |  | | |___| |\  || |  | |  | || |___ ___) |
+//   /_/   \_\_|  |_|_____|_| \_|___| |_| |___|_____|____/ 
+//                                                         
+
+#rooms-amenities-header-image{
+  width: 100%;
+  height: 570px;
+}
+
+
+#rooms-amenities-image-01{
+  width: 100%;
+  height: 260px;
+
+  margin-bottom: 30px;
+}
+#rooms-amenities-image-02{
+  width: 100%;
+  height: 260px;
+}
+#rooms-amenities-image-03{
+  width: 100%;
+  height: 240px;
+}
+
+
+// HEADER
+
+
+#rooms-amenities-header-section{
+  margin-bottom: 50px;
+
+}
+#rooms-amenities-header-text{
+  text-align: center;
+  padding: 0 15%;
+  padding-top: 99px;
+
+  h3{
+    color: @light-blue;
+    letter-spacing: -0.09em;
+  }
+  hr.short-hr{
+    background: @light-blue;
+    .opacity(0.1);
+
+    margin-top: 18px;
+    margin-bottom: 19px;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 15px;
+  }
+  p{
+    .brandon-light;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    margin-bottom: 22px;
+  }
+  
+}
+
+
+
+// NORMAL
+
+
+#rooms-amenities-section{
+  margin-bottom: 50px;
+}
+
+
+#rooms-amenities-text-01,
+#rooms-amenities-text-02 {
+
+  ul{
+    font-size: 0;
+
+    li{
+      //.display-inline-block;
+      //width: 50%;
+
+      .brandon-light;
+      //font-size: 14px;
+      //line-height: 20px;
+      letter-spacing: 0em;
+
+      // suyeon
+      font-size: 15px;
+      line-height: 22px;
+      //margin-bottom: 15px;
+      
+      span{
+        .opacity(0.3);
+        letter-spacing: 0.01em;
+        font-size: 11px;
+      }
+    }
+  }
+
+}
+
+#rooms-amenities-text-01{
+  padding-top: 37px;
+  
+
+  h4{
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+
+    margin-right: -300px;
+  }
+
+  ul{
+    padding-right: 70px;
+    margin-bottom: 29px;
+  }
+
+  hr.short-hr{
+    background: @light-blue;
+    .opacity(0.2);
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 22px;
+  }
+
+
+}
+#rooms-amenities-text-02{ 
+  height: 310px;
+
+  ul{
+    padding-top: 104px;
+    padding-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+//    ____  _____ ____ ___ ____  _____ _   _  ____ _____ ____  
+//   |  _ \| ____/ ___|_ _|  _ \| ____| \ | |/ ___| ____/ ___| 
+//   | |_) |  _| \___ \| || | | |  _| |  \| | |   |  _| \___ \ 
+//   |  _ <| |___ ___) | || |_| | |___| |\  | |___| |___ ___) |
+//   |_| \_\_____|____/___|____/|_____|_| \_|\____|_____|____/ 
+//                                                             
+
+#rooms-residences-section{
+  margin-bottom: -80px;
+  
+
+}
+
+#rooms-residences-text{
+  text-align: center;
+  color: @dark-brown;
+
+  .circle-button-container{
+    margin-bottom: 28px;
+  }
+
+  h3{
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.05em;
+    color: @light-blue;
+
+
+    margin: 0 -15px;
+
+    //.alpha-in-top;                // animation
+  }
+  hr.short-hr{
+    background: @light-blue;
+    .opacity(0.2);
+    margin-top: 27px;
+    margin-bottom: 20px;
+  }
+  h4{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 17px;
+
+    //.alpha-in-top;
+  }
+  p{
+    .brandon-light;
+    letter-spacing: .005em;
+    font-size: 14.5px;
+    line-height: 18px;
+
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 17px;
+
+    //.alpha-in-top;
+  }
+
+  .cta-button{
+  }
+
+} // #rooms-residences-text

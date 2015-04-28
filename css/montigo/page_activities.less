@@ -1,63 +1,4 @@
 
-@parallax-height: 953px;
-
-.parallax-section{
-  position: relative;
-  width: 100%;
-  height: @parallax-height;
-  overflow: hidden;
-  .add-clearfix();
-
-  .text-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: table;
-    width: 100%;
-    height: @parallax-height;
-
-    .text{
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-    }
-  }
-
-  .image-container{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-    background: url('../images/bg/white.jpg') no-repeat center center;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-} // .parallax-section
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //    ____  _     ___ ____  _____ ____  
 //   / ___|| |   |_ _|  _ \| ____|  _ \ 
 //   \___ \| |    | || | | |  _| | |_) |
@@ -65,85 +6,67 @@
 //   |____/|_____|___|____/|_____|_| \_\
 //                                      
 
-@activities-slider-height: 834px;
-
 #activities-slider{
-  width: 100%;
-  height: @activities-slider-height;
-  overflow: hidden;
-  position: relative;
-
-  .text-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: @activities-slider-height;
-    z-index: 100;
-
-    .text{
-      text-align: center;
-      color: @white;
-
-      h3{
-        font-size: 94px;
-        line-height: 94px;
-        letter-spacing: 0.05em;
-        margin-bottom: 13px;
-        .rotation(-15deg);
-      }
-
-      .foot-icon{
-        .activities_shoe_icon;
-        margin: 0 auto;
-        margin-bottom: 23px;
-        position: relative;
-        left: 7px;
-      }
-
-      h4{
-        font-size: 17px;
-        line-height: 26px;
-        //letter-spacing: 0.13em;
-        letter-spacing: 0.10em;
-        //margin-bottom: 12px;
-        
-        // suyeon
-        font-size: 17px;
-        line-height: 26px;
-        letter-spacing: 0.1em;
-
-      }
-      hr.short-hr{
-        background: @white;
-        margin-top: 12px;
-        margin-bottom: 17px;
-      }
-
-      p{
-        .brandon-light;
-        font-size: 17px;
-        line-height: 20px;
-        letter-spacing: 0;
-
-        //max-width: 500px;
-        max-width: 420px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-
-        // suyeon
-        //font-size: 17px;
-        //line-height: 20px;
-        //letter-spacing: 0.1em;
-      }
-
-    } // .text
-  }
-
 }
 
+#activities-slider-text{
+  text-align: center;
+  color: @white;
 
+  h3{
+    font-size: 94px;
+    line-height: 94px;
+    letter-spacing: 0.05em;
+    margin-bottom: 13px;
+    .rotation(-15deg);
+  }
 
+  .foot-icon{
+    .activities_shoe_icon;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    position: relative;
+    left: 7px;
+  }
+
+  h4{
+    font-size: 17px;
+    line-height: 26px;
+    //letter-spacing: 0.13em;
+    letter-spacing: 0.10em;
+    //margin-bottom: 12px;
+    
+    // suyeon
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+
+  }
+  hr.short-hr{
+    background: @white;
+    margin-top: 12px;
+    margin-bottom: 17px;
+  }
+
+  p{
+    .brandon-light;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    //max-width: 500px;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    // suyeon
+    //font-size: 17px;
+    //line-height: 20px;
+    //letter-spacing: 0.1em;
+  }
+}
+
+// temporary
 #activities-slider .text-container#specific-copy-03{
   .text{
     //margin-top: unit( ((50 / @image_height * 100) ) , ~"%");
@@ -214,8 +137,11 @@
   } // #activities-favorites-title
 
   #activities-favorite-item-container{
-    padding-left: 16px;
-    padding-right: 16px;
+    //padding-left: 16px;
+    //padding-right: 16px;
+
+    padding-left: 5px;
+    padding-right: 5px;
     padding-bottom: 101px;
   }
 
@@ -277,7 +203,8 @@
 }
 #activities-sea-image-02{
   width: 100%;
-  height: 520px;
+  //height: 520px;
+  height: 290px;
 }
 #activities-sea-image-03{
   width: 100%;
@@ -285,7 +212,8 @@
 }
 #activities-sea-image-04{
   width: 100%;
-  height: 520px;
+  //height: 520px;
+  height: 290px;
 }
 
 
@@ -294,11 +222,24 @@
 #activities-sea-section{
   padding-bottom: 50px;
 
+  #activities-sea-row-01{
+    padding-bottom: 50px;
+  }
+
   #activities-sea-text-01{
     text-align: center;
-    padding: 0 40px;
-    padding-top: 61px;
+    //padding: 0 40px;
+    //padding-top: 61px;
     height: 570px;
+
+
+    padding: 0 30px;
+    display: table;
+
+    .activities-sea-text-01-container{
+      display: table-cell;
+      vertical-align: middle;
+    }
 
     h6{
       .brandon-bold;
@@ -355,6 +296,10 @@
       font-size: 15px;
       line-height: 22px;
       margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
     }
 
   }
@@ -364,7 +309,15 @@
     //padding-top: 36px;
 
     // suyeon
-    padding: 30px 25px;
+    //padding: 30px 25px;
+    //padding: 0 30px;
+    padding: 0 15px;          // cause there is already a col-md padding
+    display: table;
+
+    .activities-sea-text-02-container{
+      display: table-cell;
+      vertical-align: middle;
+    }
 
     h4{
       //font-size: 14px;
@@ -418,7 +371,7 @@
 
 #activities-parallax-01{
   .text{
-    vertical-align: bottom !important;
+    //vertical-align: bottom !important;
   }
 
   #activities-parallax-01-text{
@@ -475,7 +428,10 @@
 
 #activities-fitness-image-01{
   width: 100%;
-  height: 570px;
+  //height: 570px;
+  height: 360px;
+
+  margin-bottom: 30px;
 }
 #activities-fitness-image-02{
   width: 100%;
@@ -483,7 +439,8 @@
 }
 #activities-fitness-image-03{
   width: 100%;
-  height: 520px;
+  //height: 520px;
+  height: 280px;
 }
 
 
@@ -496,11 +453,15 @@
   #activities-fitness-text-01{
     text-align: center;
     //padding: 0 40px;
-    padding: 0 35px;
+    //padding: 0 35px;
     //padding-top: 54px;
     //height: 570px;
-    height: 1090px;
+    //height: 1090px;
+    height: 670px;
 
+    //padding: 0 15px;
+    padding: 0 50px;
+    //padding: 0 110px;
     display: table;
 
     .activities-fitness-text-01-container{
@@ -546,12 +507,16 @@
       line-height: 17px;
       letter-spacing: -0.01em;
 
+      //max-width: 500px;
+      //margin: 0 auto;
       margin-bottom: 17px;
 
       // suyeon
       font-size: 15px;
       line-height: 22px;
       letter-spacing: 0;
+
+
     }
   } // #activities-fitness-text-01
 
@@ -560,7 +525,17 @@
     //padding: 0 24px;
     //padding-top: 35px;
 
-    padding: 30px 25px;
+    //padding: 30px 25px;
+
+    //padding: 0 30px;
+    padding: 0 15px;
+    display: table;
+
+    .activities-fitness-text-02-container{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
 
     h4{
       //font-size: 14px;
@@ -618,7 +593,7 @@
     h3{
       font-size: 70px;
       line-height: 70px;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.05em;
 
       .alpha-in-top;                // animation
     }
@@ -753,6 +728,168 @@
   }
 }
 
+//    ____  ____   _         _    _   _ ____    _  _____ ____  ____  
+//   / ___||  _ \ / \       / \  | \ | |  _ \  | |/ /_ _|  _ \/ ___| 
+//   \___ \| |_) / _ \     / _ \ |  \| | | | | | ' / | || | | \___ \ 
+//    ___) |  __/ ___ \   / ___ \| |\  | |_| | | . \ | || |_| |___) |
+//   |____/|_| /_/   \_\ /_/   \_\_| \_|____/  |_|\_\___|____/|____/ 
+//                                                                   
+
+
+#activities-spa-and-kids-image-01{
+  width: 100%;
+  height: 300px;
+}
+#activities-spa-and-kids-image-02{
+  width: 100%;
+  height: 300px;
+}
+
+#new-activities-tilo-icon{
+  .activities_kids_and_spa_tillo_icon;
+  .display-inline-block();
+
+  margin-right: 23px;
+  position: relative;
+  top: -8px;
+}
+
+
+
+#activities-spa-and-kids{
+
+
+  hr.grey-hr{
+    border: none;
+    border-bottom: 1px solid @dark-brown-10;
+  }
+}
+
+
+#activities-spa-and-kids-text-01{
+
+  height: 470px;
+  //display: table;
+
+  text-align: center;
+  padding: 0 50px;
+
+  position: relative;
+
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    //top: 37px;
+    top: 29px;
+    bottom: 21px;
+    right: -15px;
+
+    border-right: 1px solid @dark-brown-10;
+  }
+
+  .activities-spa-and-kids-text-01-container{
+    //display: table-cell;
+    //vertical-align: middle;
+    padding-top: 60px;
+  }
+  h3{
+    font-size: 55px;
+    line-height: 50px;
+    color: @light-blue;
+
+    letter-spacing: -0.05em;
+  }
+  hr.short-hr{
+    background: @light-blue;
+    .opacity(0.2);
+
+    margin-top: 13px;
+    margin-bottom: 19px;
+  }
+  h4{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 9px;
+  }
+  p{
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0;
+
+    margin-bottom: 22px;
+
+
+
+  }
+
+  .circle-arrow-link{
+    text-transform: none;
+    letter-spacing: 0em;
+
+    font-size: 13px;
+  }
+  .first-link{
+    margin-top: 29px;
+    margin-bottom: 11px;
+  }
+
+}
+
+
+
+#activities-spa-and-kids-text-02{
+
+  height: 470px;
+  //display: table;
+
+  text-align: center;
+  padding: 0 50px;
+
+
+
+  .activities-spa-and-kids-text-02-container{
+    //display: table-cell;
+    //vertical-align: middle;
+    padding-top: 60px;
+  }
+  h3{
+    font-size: 55px;
+    line-height: 50px;
+    color: @light-blue;
+
+    letter-spacing: -0.03em;
+  }
+  hr.short-hr{
+    background: @light-blue;
+    .opacity(0.2);
+
+    margin-top: 13px;
+    margin-bottom: 19px;
+  }
+  h4{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 9px;
+  }
+  p{
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0;
+
+    margin-bottom: 22px;
+
+
+
+  }
+
+}
+
+
 
 //     ___ _____ _   _ _____ ____  ____  
 //    / _ \_   _| | | | ____|  _ \/ ___| 
@@ -764,6 +901,7 @@
 #activities-others{
   .activities-other-title{
     padding-top: 86px;
+    padding-top: 43px;
     //padding-bottom: 58px;
 
     // suyeon

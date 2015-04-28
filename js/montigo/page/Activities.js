@@ -113,15 +113,17 @@ montigo.page.Activities.prototype.create_parallax = function() {
   this.parallax_01 = new montigo.component.ParallaxImage({
   },$('#activities-parallax-01'));
 
+  this.parallax_01.create_text_scene_2(this.controller);
+  this.parallax_01.create_parallax_scene(this.controller2);
+
+  /*
   this.parallax_02 = new montigo.component.ParallaxImage({
   },$('#activities-parallax-02'));
 
-
-  this.parallax_01.create_text_scene_2(this.controller);
   this.parallax_02.create_text_scene_2(this.controller);
-
-  this.parallax_01.create_parallax_scene(this.controller2);
   this.parallax_02.create_parallax_scene(this.controller2);
+  */
+
 };
 
 montigo.page.Activities.prototype.private_method_04 = function() {};

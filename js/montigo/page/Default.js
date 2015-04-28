@@ -47,6 +47,10 @@ montigo.page.Default = function(options) {
   //   |___|_| \_|___| |_|
   //
 
+
+  this.check_query_variables();
+
+
   this.check_svg_smil();
   this.create_manic_image_container();
   this.create_controller();     // needed by menu
@@ -96,6 +100,14 @@ montigo.page.Default.EVENT_02 = '';
 //   |  __/|  _ < | |  \ V / ___ \| | | |___
 //   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 
+
+montigo.page.Default.prototype.check_query_variables = function(){
+  var breakpoint = this.getQueryVariable('breakpoint');
+
+  if(breakpoint != false){
+    $('.container-fluid.has-breakpoint').removeClass('has-breakpoint');
+  }
+};
 
 montigo.page.Default.prototype.check_svg_smil = function() {
   console.log('check_svg_smil');
@@ -180,6 +192,23 @@ montigo.page.Default.prototype.hide_preloader = function() {
 montigo.page.Default.prototype.on_hide_preloader_complete = function() {
   $('body').removeClass('preload-complete');
 };
+
+
+/**
+ * getQueryVariable description
+ * @param  {string} variable
+ * @return {string}
+ */
+montigo.page.Default.prototype.getQueryVariable = function(variable){
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+         var pair = vars[i].split("=");
+         if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+};
+
 
 
 montigo.page.Default.prototype.public_method_03 = function() {};

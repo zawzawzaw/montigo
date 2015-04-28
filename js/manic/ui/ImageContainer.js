@@ -28,10 +28,13 @@ manic.ui.ImageContainer = function(options, element) {
 
   var load_array = [this.current_image];
 
+  //console.log('bbb: ' + this.options['image_src']);
+
   if (this.options['image_src'] != '') {
     this.image_element.attr('src',this.options['image_src']);
 
     this.current_image = this.options['image_src'];
+    //console.log('aaa: ' + this.current_image);
     load_array = [this.current_image];
   }
 
@@ -83,7 +86,7 @@ manic.ui.ImageContainer = function(options, element) {
   //   |___|_| \_|___| |_|
   //
 
-  console.log('init');
+  //console.log('init');
 };
 goog.inherits(manic.ui.ImageContainer, goog.events.EventTarget);
 
@@ -406,8 +409,10 @@ manic.ui.ImageContainer.prototype.on_window_resize = function(event) {
 manic.ui.ImageContainer.prototype.on_image_load_complete = function(event) {
 
   console.log('on_image_load_complete');
+  //console.log(this.element);
 
   var loaded_image_element = $(this.preloader.getResult(this.current_image));
+
 
 
   //var temp_image = 
@@ -419,28 +424,32 @@ manic.ui.ImageContainer.prototype.on_image_load_complete = function(event) {
   //this.original_image_width = this.image_element[0].naturalWidth;
   //this.original_image_height = this.image_element[0].naturalHeight;
   
-  console.log(this.element)
-  console.log('this.current_image: ' + this.current_image);
-  console.log(this.current_image)
+  //console.log(this.element)
+  //console.log('this.current_image: ' + this.current_image);
+  //console.log(this.current_image)
   
-  console.log('loaded_image_element');
-  console.log(loaded_image_element);
-  console.log('loaded_image_element 0');
-  console.log(loaded_image_element[0]);
+  //console.log('loaded_image_element');
+  //console.log(loaded_image_element);
+  //console.log('loaded_image_element 0');
+  //console.log(loaded_image_element[0]);
 
-  this.original_image_width = loaded_image_element[0]['naturalWidth'];
-  this.original_image_height = loaded_image_element[0]['naturalHeight'];
+  if(loaded_image_element.length != 0){
+    //console.log('got here.');
+    this.original_image_width = loaded_image_element[0]['naturalWidth'];
+    this.original_image_height = loaded_image_element[0]['naturalHeight'];
 
-  this.image_aspect_ratio = this.original_image_width / this.original_image_height;
+    this.image_aspect_ratio = this.original_image_width / this.original_image_height;
 
-  console.log('this.original_image_width: ' + this.original_image_width);
-  console.log('this.original_image_height: ' + this.original_image_height);
-  console.log('this.image_aspect_ratio: ' + this.image_aspect_ratio);
+    //console.log('this.original_image_width: ' + this.original_image_width);
+    //console.log('this.original_image_height: ' + this.original_image_height);
+    //console.log('this.image_aspect_ratio: ' + this.image_aspect_ratio);
 
 
-  this.update_layout();
+    this.update_layout();
 
-  this.dispatchEvent(new goog.events.Event(manic.ui.ImageContainer.ON_IMAGE_LOAD_COMPLETE));
+    this.dispatchEvent(new goog.events.Event(manic.ui.ImageContainer.ON_IMAGE_LOAD_COMPLETE));
+  }
+
 };
 
 /**

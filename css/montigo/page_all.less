@@ -1,0 +1,107 @@
+
+
+
+#main-page-content{
+  min-height: 100%;
+}
+
+#page-fold{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  #below-page-fold{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+  }
+}
+
+
+
+
+
+
+//    ____   _    ____      _    _     _        _    __  __
+//   |  _ \ / \  |  _ \    / \  | |   | |      / \   \ \/ /
+//   | |_) / _ \ | |_) |  / _ \ | |   | |     / _ \   \  / 
+//   |  __/ ___ \|  _ <  / ___ \| |___| |___ / ___ \  /  \ 
+//   |_| /_/   \_\_| \_\/_/   \_\_____|_____/_/   \_\/_/\_\
+//                                                         
+
+
+
+
+@parallax-height: 953px;
+
+.parallax-section{
+  position: relative;
+  width: 100%;
+  height: @parallax-height;
+  overflow: hidden;
+  .add-clearfix();
+
+  .data-container{
+    display: none;
+  }
+
+  .text-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: table;
+    width: 100%;
+    height: @parallax-height;
+
+    .text{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  .image-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: url('../images/bg/white.jpg') no-repeat center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+} // .parallax-section
+
+
+//    __  __    _    ___ _   _   ____  _     ___ ____  _____ ____  
+//   |  \/  |  / \  |_ _| \ | | / ___|| |   |_ _|  _ \| ____|  _ \ 
+//   | |\/| | / _ \  | ||  \| | \___ \| |    | || | | |  _| | |_) |
+//   | |  | |/ ___ \ | || |\  |  ___) | |___ | || |_| | |___|  _ < 
+//   |_|  |_/_/   \_\___|_| \_| |____/|_____|___|____/|_____|_| \_\
+//                                                                 
+
+
+@main-slider-height: 834px;
+
+.main-slider{
+  width: 100%;
+  height: @main-slider-height;
+  overflow: hidden;
+  position: relative;
+
+  .text-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @main-slider-height;
+    z-index: 100;
+  }
+}

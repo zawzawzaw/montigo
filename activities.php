@@ -12,16 +12,20 @@
    -->
 
 
-  <div id="activities-slider" data-image="images/activities_slider/activities_slider_image_01.jpg">
+  <div id="activities-slider" class="main-slider" data-image="images/activities_slider/activities_slider_image_01.jpg">
     <div class="text-container" id="specific-copy-03">
       <div class="one-long-text">
         <div class="text">
-          <h3>New <br>Adventures!</h3>
-          <div class="foot-icon"></div>
-          <h4>There’s never a dull moment <br>at Montigo Resorts, Nongsa.</h4>
-          <hr class="short-hr">
-          <p>That’s because our team’s been handpicked to include spirited pros who love nothing more than perfecting the perfect family getaway. Activities include a leisurely sunset cruise, exhilarating aquatic adventures, exciting terrestrial explorations, sporty challenges, innovative fitness workouts, and even a treasure trove of surprises for youngsters.</p>
-          <p>Joy, ahoy!</p>
+
+          <div id="activities-slider-text">
+            <h3>New <br>Adventures!</h3>
+            <div class="foot-icon"></div>
+            <h4>There’s never a dull moment <br>at Montigo Resorts, Nongsa.</h4>
+            <hr class="short-hr">
+            <p>That’s because our team’s been handpicked to include spirited pros who love nothing more than perfecting the perfect family getaway. Activities include a leisurely sunset cruise, exhilarating aquatic adventures, exciting terrestrial explorations, sporty challenges, innovative fitness workouts, and even a treasure trove of surprises for youngsters.</p>
+            <p>Joy, ahoy!</p>
+          </div>
+
 
 
         </div>
@@ -138,7 +142,7 @@
 
   <div id="activities-sea-section">
     <div class="container-fluid has-breakpoint">
-      <div class="row">
+      <div class="row" id="activities-sea-row-01">
         <div class="col-md-7">
           <div class="margin-less-image">
             <div class="manic-image-container" id="activities-sea-image-01">
@@ -149,68 +153,77 @@
         <div class="col-md-5">
 
           <div id="activities-sea-text-01">
+
+            <div class="activities-sea-text-01-container">
+              <h6>Sea Activities &amp; Water Sports</h6>
+              <hr class="short-hr">
+              
+              <h3>Aquatic<br>adventures</h3>
+              <hr class="short-hr">
+              <h4>Sea Activities &amp; Water Sports</h4>
+              <p>What’s an internationally acclaimed seaside resort without some truly world class aquatic adventure? You could opt for some of our more laid back excursions, like the mangrove tour, firefly sighting and fishing trip. Or turbo charge your adrenaline with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving. </p>
+              <p>Certified instructors are at hand, should you need them. And the equipment’s comparable with what you can expect to find in other leading resorts of the world. So come on in, the water’s fine!</p>
+            </div>
             
-            <h6>Sea Activities &amp; Water Sports</h6>
-            <hr class="short-hr">
-            
-            <h3>Aquatic<br>adventures</h3>
-            <hr class="short-hr">
-            <h4>Sea Activities &amp; Water Sports</h4>
-            <p>What’s an internationally acclaimed seaside resort without some truly world class aquatic adventure? You could opt for some of our more laid back excursions, like the mangrove tour, firefly sighting and fishing trip. Or turbo charge your adrenaline with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving. </p>
-            <p>Certified instructors are at hand, should you need them. And the equipment’s comparable with what you can expect to find in other leading resorts of the world. So come on in, the water’s fine!</p>
-            <!-- 
-            <h4>What’s a seaside resort without some aquatic adventure?</h4>
-            <p>Montigo Resorts, Nongsa, offers thrilling water sports like parasailing, jet skiing, windsurfing, kayaking, snorkelling and scuba diving. Certified instructors are at hand, should you need them. And the equipment’s comparable with what you can expect to find in other leading resorts of the world. </p>
-            <p>So come on in, the water’s fine!</p>
-             -->
           </div> <!-- #activities-sea-text-01 -->
 
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="margin-less-image">
+
+
+      <div class="row" id="activities-sea-row-02">
+
+        <div class="col-md-4">
+
+          <div id="activities-sea-text-02">
+
+            <div class="activities-sea-text-02-container">
+              <h4>Sea activities to list</h4>
+              <hr class="short-hr">
+              <ul>
+                <li>Fishing trip </li>
+                <li>Wake boarding </li>
+                <li>Mangrove tour </li>
+                <li>Water skiing </li>
+                <li>Firefly sighting </li>
+                <li>Kayaking </li>
+                <li>Sunset cruise </li>
+                <li>Knee boarding</li>
+                <li>Jet ski</li>
+
+                
+              </ul>
+              <a href="#" class="small-circle-arrow-link">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-angle-right"></span></a>
+            </div>
+            
+          </div> <!-- #activities-sea-text-02 -->
+
+        </div>
+        <div class="col-md-4">
+
+          <div class="margin-less-image-fake">
             <div class="manic-image-container" id="activities-sea-image-02">
               <img src="images/activities/sea_activities_02.jpg">
             </div>
           </div>
+
         </div>
         <div class="col-md-4">
 
-          <div id="activities-sea-text-02">
-            <h4>Sea activities to list</h4>
-            <hr class="short-hr">
-            <ul>
-              <li>Fishing trip </li>
-              <li>Wake boarding </li>
-              <li>Mangrove tour </li>
-              <li>Water skiing </li>
-              <li>Firefly sighting </li>
-              <li>Kayaking </li>
-              <li>Sunset cruise </li>
-              <li>Knee boarding</li>
-              <li>Jet ski</li>
-
-              
-            </ul>
-            <a href="#" class="small-circle-arrow-link">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-angle-right"></span></a>
-            
-          </div> <!-- #activities-sea-text-02 -->
-
-          <div class="margin-less-image">
-            <div class="manic-image-container" id="activities-sea-image-03">
-              <img src="images/activities/sea_activities_03.jpg">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="margin-less-image">
+          <div class="margin-less-image-fake">
             <div class="manic-image-container" id="activities-sea-image-04">
               <img src="images/activities/sea_activities_04.jpg">
             </div>
           </div>
+
         </div>
+
+
+
+
       </div>
+
+
     </div>
   </div> <!-- #activities-sea -->
 
@@ -268,7 +281,7 @@
   <div id="activities-fitness">
     <div class="container-fluid has-breakpoint">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
 
           <div class="margin-less-image">
             <div class="manic-image-container" id="activities-fitness-image-01">
@@ -280,21 +293,17 @@
             <div class="col-md-6">
 
               <div id="activities-fitness-text-02">
-                <h4>sport &amp; fitness activities</h4>
-                <hr class="short-hr">
-                <ul>
-                  <li>Yoga </li>
-                  <li>Water polo </li>
-                  <li>Tennis </li>
-                  <li>Gym</li>
-                  <li>Sand soccer</li>
-                </ul>
-                <a href="#" class="small-circle-arrow-link">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-angle-right"></span></a>
-              </div>
-
-              <div class="margin-less-image">
-                <div class="manic-image-container" id="activities-fitness-image-02">
-                  <img src="images/activities/fitness_activities_02.jpg">
+                <div class="activities-fitness-text-02-container">
+                  <h4>sport &amp; fitness activities</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Yoga </li>
+                    <li>Water polo </li>
+                    <li>Tennis </li>
+                    <li>Gym</li>
+                    <li>Sand soccer</li>
+                  </ul>
+                  <a href="#" class="small-circle-arrow-link">Please get in touch with the resort <br>concierge or info@montigoresorts.com <br>for rates and schedules.<span class="fa fa-angle-right"></span></a>
                 </div>
               </div>
 
@@ -311,7 +320,7 @@
           </div>
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div id="activities-fitness-text-01">
 
             <div class="activities-fitness-text-01-container">
@@ -343,15 +352,90 @@
   </div> <!-- #activities-fitness -->
 
   
+
   <!-- 
-     ____  ____   _    
-    / ___||  _ \ / \   
-    \___ \| |_) / _ \  
-     ___) |  __/ ___ \ 
-    |____/|_| /_/   \_\
-                       
+     ____  ____   _         _    _   _ ____    _  _____ ____  ____  
+    / ___||  _ \ / \       / \  | \ | |  _ \  | |/ /_ _|  _ \/ ___| 
+    \___ \| |_) / _ \     / _ \ |  \| | | | | | ' / | || | | \___ \ 
+     ___) |  __/ ___ \   / ___ \| |\  | |_| | | . \ | || |_| |___) |
+    |____/|_| /_/   \_\ /_/   \_\_| \_|____/  |_|\_\___|____/|____/ 
+                                                                    
    -->
 
+
+  <div id="activities-spa-and-kids">
+
+      
+
+    <div class="container-fluid has-breakpoint">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="grey-hr">
+          <div class="space50"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="margin-less-image-fake">
+            <div class="manic-image-container" id="activities-spa-and-kids-image-01">
+              <img src="images/activities/activities_spa_and_kids_01.jpg">
+            </div>
+          </div>
+
+          <div id="activities-spa-and-kids-text-01">
+            <div class="activities-spa-and-kids-text-01-container">
+              <h3>Spa in Montigo</h3>
+              <hr class="short-hr">
+              <h4>Rejuvenate your mind, body and soul</h4>
+              <p>Recharge and be holistically revived with MONTIGO Spa’s traditionally proven healing techniques. Here, nature restores your body’s balance with centuries old treatments, accentuated by the ambient infusion of soothing fragrances and light. Be pampered by a range of indulgences, ranging from exfoliating facials to invigorating soaks and scrubs. </p>
+              <p>The Montigo Spa offers experiences for all who seek respite from the urban hustle and bustle. There are massages for kids, couples, and even complete sensorial journeys like Montigo Sensory Magic for groups of up to six. Rest (and restfulness) assured, you will return for more.</p>
+
+              <a href="#" class="circle-arrow-link first-link">Download our brochure<span class="fa fa-angle-right"></span></a>
+              <a href="#" class="circle-arrow-link">Email info@montigoresorts.com<span class="fa fa-angle-right"></span></a>
+
+
+            </div>
+          </div>
+          
+
+        </div>
+        <div class="col-md-6">
+
+          <div class="margin-less-image-fake">
+            <div class="manic-image-container" id="activities-spa-and-kids-image-01">
+              <img src="images/activities/activities_spa_and_kids_02.jpg">
+            </div>
+          </div>
+
+          <div id="activities-spa-and-kids-text-02">
+            <div class="activities-spa-and-kids-text-02-container">
+              <h3><span id="new-activities-tilo-icon"></span>Olo kids club!</h3>
+              <hr class="short-hr">
+              <h4>A great place to have fun</h4>
+              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium. Nulla facilisi  libero vestibulum sem, vitae elementum. </p>
+              <p>Duis tincidunt, felis et luctus placerat, ipsum libero vestibulum sem, vitae elementum wisi ipsutm a metus. Nulla a enim sed dui hendrerit lobortis. Donec lacinia vulputate magna. Vivamus susctipit lectus at quam. In lectus est, viverra a, ultricies ut. Duis tincidunt, felis et luctus placerat, ipsum libero vestibulum sem, vitae elementum wisi ipsutm a metus. Nulla a enim sed dui hendrerit lobortis.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="grey-hr">
+        </div>
+      </div>
+    </div>
+
+
+
+  </div> <!-- activities-spa-and-kids -->
+
+
+  <!-- 
   <div id="activities-parallax-02" class="parallax-section" data-image="images/activities/activities_parallax_02.jpg">
     <div class="image-container">
     </div>
@@ -364,15 +448,6 @@
 
               <div id="activities-parallax-02-text">
 
-                <!-- 
-                <h3>The Spa</h3>
-                <hr class="short-hr">
-                <h4>Rejuvenate your mind, body and soul </h4>
-                <p>Recharge and be holistically revived with The Spa’s traditionally proven healing techniques. Here, nature restores your body’s balance with centuries old treatments, accentuated by the ambient infusion of soothing fragrances and light. Be pampered by a range of indulgences, ranging from exfoliating facials to invigorating soaks and scrubs. </p>
-                <p>The Spa offers experiences for all who seek respite from the urban hustle and bustle. There are massages for kids, couples, and even complete sensorial journeys like Montigo Sensory Magic for groups of up to six. Rest (and restfulness) assured, you will return for more.</p>
-                <a href="#" class="circle-arrow-link">More Information<span class="fa fa-angle-right"></span></a>
-                -->
-
                 <h3>MONTIGO Spa</h3>
                 <hr class="short-hr">
                 <h4>REJUVENATE YOUR MIND, BODY &amp; SOUL</h4>
@@ -380,13 +455,6 @@
                 <p>Recharge and be holistically revived with MONTIGO Spa’s traditionally proven healing techniques. Here, nature restores your body’s balance with centuries old treatments, accentuated by the ambient infusion of soothing fragrances and light. Be pampered by a range of indulgences, ranging from exfoliating facials to invigorating soaks and scrubs. </p>
                 <p>The Montigo Spa offers experiences for all who seek respite from the urban hustle and bustle. There are massages for kids, couples, and even complete sensorial journeys like Montigo Sensory Magic for groups of up to six. Rest (and restfulness) assured, you will return for more.</p>
                 <p>Download our brochure for all treatments or <br>info@montigoresorts.com for rates and schedules.</p>
-                <!-- <a href="#" class="small-circle-arrow-link">Download our brochure for all treatments or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-angle-right"></span></a> -->
-
-
-
-
-
-
                 
               </div>
 
@@ -396,16 +464,7 @@
 
       </div>
     </div>
-  </div> <!-- #activities-parallax-02 -->
-
-  <!-- 
-     _  _____ ____  ____  
-    | |/ /_ _|  _ \/ ___| 
-    | ' / | || | | \___ \ 
-    | . \ | || |_| |___) |
-    |_|\_\___|____/|____/ 
-                          
-   -->
+  </div>
 
   <div id="activities-kids">
     <div class="container-fluid has-breakpoint">
@@ -430,20 +489,13 @@
             <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium. Nulla facilisi. Duis tincidunt, felis et luctus placerat, ipsum libero vestibulum sem, vitae elementum wisi ipsutm a metus. Nulla a enim sed dui hendrerit lobortis. Donec lacinia vulputate magna. Vivamus susctipit lectus at quam. In lectus est, viverra a, ultricies ut.</p>
           </div>
 
-          <!--
-          <div class="margin-less-image">
-            <div class="manic-image-container" id="activities-kids-image-02">
-              <img src="images/activities/kid_activities_02.jpg">
-            </div>
-          </div>
-          -->
-
-
         </div>
       </div>
       
     </div>
-  </div> <!-- #activities-kids -->
+  </div>
+
+  -->
 
   <!-- 
       ___ _____ _   _ _____ ____  ____  
@@ -463,36 +515,47 @@
 
         <div class="row">
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="activities-others-item">
               <div class="item-icon">
-                <div class="item-icon-icon other_activities_icon_01"></div>
+                <div class="item-icon-icon activities_icon_01_chef"></div>
               </div>
               <h4>Chef Experience</h4>
               <hr class="short-hr">
-              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque enim.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="activities-others-item">
               <div class="item-icon">
-                <div class="item-icon-icon other_activities_icon_02"></div>
+                <div class="item-icon-icon activities_icon_02_paintball"></div>
               </div>
-              <h4>Herbal Compress</h4>
+              <h4>Paintball</h4>
               <hr class="short-hr">
-              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque enim.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="activities-others-item">
               <div class="item-icon">
-                <div class="item-icon-icon other_activities_icon_03"></div>
+                <div class="item-icon-icon activities_icon_03_herbal_compress"></div>
               </div>
-              <h4>Batik Painting</h4>
+              <h4>Herbal compress</h4>
               <hr class="short-hr">
-              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque enim.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="activities-others-item">
+              <div class="item-icon">
+                <div class="item-icon-icon activities_icon_04_karaoke"></div>
+              </div>
+              <h4>Karaoke</h4>
+              <hr class="short-hr">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
             </div>
           </div>
 
@@ -500,36 +563,47 @@
 
         <div class="row">
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="activities-others-item">
               <div class="item-icon">
-                <div class="item-icon-icon other_activities_icon_04"></div>
+                <div class="item-icon-icon activities_icon_05_batik_painting"></div>
               </div>
-              <h4>Paintball</h4>
+              <h4>Batik painting</h4>
               <hr class="short-hr">
-              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque enim.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="activities-others-item">
               <div class="item-icon">
-                <div class="item-icon-icon other_activities_icon_05"></div>
+                <div class="item-icon-icon activities_icon_06_dining"></div>
               </div>
-              <h4>Karaoke</h4>
+              <h4>Private dining</h4>
               <hr class="short-hr">
-              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque enim.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="activities-others-item">
               <div class="item-icon">
-                <div class="item-icon-icon other_activities_icon_06"></div>
+                <div class="item-icon-icon activities_icon_07_treasure_hunt"></div>
               </div>
-              <h4>Kinema Tour</h4>
+              <h4>Tilo treasure hunt</h4>
               <hr class="short-hr">
-              <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque enim.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="activities-others-item">
+              <div class="item-icon">
+                <div class="item-icon-icon activities_icon_08_spa"></div>
+              </div>
+              <h4>Spa</h4>
+              <hr class="short-hr">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis neque aliquet, aliquet nisi sit amet, iaculis.</p>
             </div>
           </div>
 

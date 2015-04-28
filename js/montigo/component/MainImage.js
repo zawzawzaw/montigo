@@ -165,7 +165,13 @@ montigo.component.MainImage.prototype.create_activities_scene = function(control
             .addTo(controller_param);
 };
 
-montigo.component.MainImage.prototype.public_method_03 = function() {};
+/**
+ * create_activities_scene description
+ * @param  {ScrollMagic.Controller} controller_param
+ */
+montigo.component.MainImage.prototype.create_rooms_scene = function(controller_param) {
+
+};
 montigo.component.MainImage.prototype.public_method_04 = function() {};
 montigo.component.MainImage.prototype.public_method_05 = function() {};
 montigo.component.MainImage.prototype.public_method_06 = function() {};

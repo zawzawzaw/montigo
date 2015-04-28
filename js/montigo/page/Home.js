@@ -234,7 +234,7 @@ montigo.page.Home.prototype.public_method_02 = function() {};
 montigo.page.Home.prototype.public_method_03 = function() {};
 montigo.page.Home.prototype.public_method_04 = function() {};
 montigo.page.Home.prototype.public_method_05 = function() {};
-montigo.page.Home.prototype.public_method_06 = function() {};
+
 
 //    _______     _______ _   _ _____ ____
 //   | ____\ \   / / ____| \ | |_   _/ ___|

@@ -49,8 +49,7 @@ manic.ui.PanelContainer.DEFAULT = {
   'initial_index': 0,
   'panel_selector': '.panel',
   'container_selector': '.panel-container-container',
-  'duration': 0.8,
-  'ease': Sine.easeInOut
+  'duration': 0.8
 };
 
 /**
@@ -127,7 +126,7 @@ manic.ui.PanelContainer.prototype.update_position = function() {
   TweenLite.killTweensOf(this.container);
   TweenLite.to(this.container, this.options['duration'], {
     left: (-1 * this.index * this.element_width),
-    ease: this.options['ease']
+    ease: Sine.easeInOut
   });
 };
 
