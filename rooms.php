@@ -11,7 +11,7 @@
                                        
    -->
 
-  <div id="rooms-slider" class="main-slider" data-image="images/main_slider/rooms_main_slider_01_square.jpg">
+  <div id="rooms-slider" class="main-slider" data-image="images/main_slider/rooms_main_slider_01_square_v2.jpg">
     <div class="text-container" id="specific-copy-03">
       <div class="one-long-text">
         <div class="text">
@@ -247,7 +247,7 @@
               <li>Complimentary wireless Internet connection</li>
               <li>LCD TV with DVD player &amp; satellite reception</li>
               <li>IDD Telephone</li>
-              <li>Wii console <span>(available in Hilltop, Seafront and Spa villas only)</span></li>
+              <li>Wii console <span>(Available in Hilltop, Seafront and Spa villas only)</span></li>
             </ul>
           </div>
 
@@ -298,6 +298,8 @@
 
               <div id="rooms-residences-text">
 
+                <div class="bg-white-gradient"></div>
+
                 <ul class="circle-button-container">
                   <li class="fa fa-circle"></li>
                   <li class="fa fa-circle"></li>
@@ -313,7 +315,7 @@ multiple plunge pools and cabanas.</p>
                 <p>Each area is separate enough to offer privacy, yet interlinked to provide an inviting warmth and the utmost comfort. With unobstructed views of the magnificent South China Sea from every room, this idyllic and relaxing retreat will lure you into the rhythm of island life and the sound of the waves.</p>
 
                 <div class="space10"></div>
-                <a href="#" class="cta-button">get in touch with montigo <span class="fa fa-chevron-circle-right"></span></a>
+                <a href="#" class="cta-button">get in touch with montigo<span class="fa fa-chevron-circle-right"></span></a>
 
               </div> <!-- #rooms-residences-text -->
               

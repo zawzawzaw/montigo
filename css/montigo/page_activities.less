@@ -13,12 +13,21 @@
   text-align: center;
   color: @white;
 
+  h3, .foot-icon, h4, hr.short-hr, p{
+    position: relative;
+  }
+
+  .bg-black-gradient{
+    .opacity(0.7);
+  }
+
   h3{
     font-size: 94px;
-    line-height: 94px;
-    letter-spacing: 0.05em;
-    margin-bottom: 13px;
-    .rotation(-15deg);
+    //line-height: 94px;
+    line-height: 76px;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+    //.rotation(-15deg);
   }
 
   .foot-icon{
@@ -87,14 +96,12 @@
 
 
 #activities-favorites-section{
+  background: #f9f9f9;
+  margin-bottom: 50px;
 
   #activities-favorites-title{
-    //padding-top: 121px;
-    //padding-bottom: 82px;
-
-    // suyeon
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 65px;
+    padding-bottom: 46px;
 
     text-align: center;
 
@@ -107,21 +114,19 @@
       // suyeon
       font-size: 60px;
       line-height: 60px;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.03em;
     }
     hr.short-hr{
       background: @light-blue;
       .opacity(0.2);
+      margin-top: 17px;
       margin-bottom: 28px;
     }
     h4{
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 20px;
+      line-height: 20px;
       letter-spacing: 0.1em;
-      //margin-bottom: 21px;
-
-      // suyeon
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
     p{
       //max-width: 600px;
@@ -132,8 +137,13 @@
       // suyeon
       font-size: 15px;
       line-height: 22px;
-      max-width: 50%;
+      max-width: 40%;
     }
+
+    .cta-button{
+      padding-top: 27px;
+    }
+
   } // #activities-favorites-title
 
   #activities-favorite-item-container{
@@ -142,7 +152,8 @@
 
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 101px;
+    //padding-bottom: 101px;
+    padding-bottom: 69px;
   }
 
   .activities-favorite-item{
@@ -197,227 +208,42 @@
 //   |____/|_____/_/   \_\
 //                        
 
+
+
 #activities-sea-image-01{
   width: 100%;
-  height: 570px;
+  height: 490px;
 }
-#activities-sea-image-02{
-  width: 100%;
-  //height: 520px;
-  height: 290px;
-}
-#activities-sea-image-03{
-  width: 100%;
-  height: 230px;
-}
-#activities-sea-image-04{
-  width: 100%;
-  //height: 520px;
-  height: 290px;
-}
-
 
 
 
 #activities-sea-section{
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
 
-  #activities-sea-row-01{
-    padding-bottom: 50px;
-  }
-
-  #activities-sea-text-01{
-    text-align: center;
-    //padding: 0 40px;
-    //padding-top: 61px;
-    height: 570px;
-
-
-    padding: 0 30px;
-    display: table;
-
-    .activities-sea-text-01-container{
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    h6{
-      .brandon-bold;
-      font-size: 11px;
-      line-height: 17px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-
-    }
-    hr.short-hr{
-      background: @light-blue;
-      .opacity(0.2);
-
-      margin-bottom: 30px;
-    }
-    h3{
-      //font-size: 55px;
-      //line-height: 61px;
-      .rotation(-14deg);
-      color: @light-blue;
-      letter-spacing: 0.01em;
-
-      //padding-top: 2px;
-      margin-top: -2px;
-      //padding-bottom: 13px;
-
-      // suyeon
-      font-size: 60px;
-      line-height: 60px;
-      padding-bottom: 10px;
-
-    }
-    h4{
-      //font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.1em;
-
-      margin-top: -5px;
-      //margin-bottom: 11px;
-
-      // suyeon
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-    p{
-      .brandon-light;
-      //font-size: 14px;
-      //line-height: 17px;
-      letter-spacing: -0.01em;
-
-      //margin-bottom: 17px;
-
-      // suyeon
-      font-size: 15px;
-      line-height: 22px;
-      margin-bottom: 15px;
-
-      &:last-child{
-        margin-bottom: 0px;
-      }
-    }
-
-  }
-  #activities-sea-text-02{
-    height: 290px;
-    //padding: 0 14px;
-    //padding-top: 36px;
-
-    // suyeon
-    //padding: 30px 25px;
-    //padding: 0 30px;
-    padding: 0 15px;          // cause there is already a col-md padding
-    display: table;
-
-    .activities-sea-text-02-container{
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    h4{
-      //font-size: 14px;
-      //line-height: 20px;
-      letter-spacing: 0.1em;
-
-      // suyeon
-      font-size: 13px;
-      line-height: 18px;
-
-    }
-    hr.short-hr{
-      background: @light-blue;
-      .opacity(0.2);
-
-      //margin: 25px 0;
-      
-      // suyeon
-      margin: 12px 0;
-    }
-    ul{
-      font-size: 0;
-      margin-bottom: 22px;
-
-      li{
-        .display-inline-block;
-        width: 50%;
-
-        .brandon-light;
-        //font-size: 14px;
-        //line-height: 20px;
-        letter-spacing: 0em;
-
-        // suyeon
-        font-size: 15px;
-        line-height: 22px;
-        //margin-bottom: 15px;
-      }
-    }
-
-  }
+#activities-sea-text-panel-container{
 
 }
 
-//     ____  ___  _     _____   ____   _    ____      _    _     _        _    __  __   ___  _ 
-//    / ___|/ _ \| |   |  ___| |  _ \ / \  |  _ \    / \  | |   | |      / \   \ \/ /  / _ \/ |
-//   | |  _| | | | |   | |_    | |_) / _ \ | |_) |  / _ \ | |   | |     / _ \   \  /  | | | | |
-//   | |_| | |_| | |___|  _|   |  __/ ___ \|  _ <  / ___ \| |___| |___ / ___ \  /  \  | |_| | |
-//    \____|\___/|_____|_|     |_| /_/   \_\_| \_\/_/   \_\_____|_____/_/   \_\/_/\_\  \___/|_|
-//                                                                                             
 
-#activities-parallax-01{
-  .text{
-    //vertical-align: bottom !important;
-  }
 
-  #activities-parallax-01-text{
-    color: @white;
-    padding-bottom: 66px;
 
-    h3{
-      font-size: 70px;
-      line-height: 70px;
-      letter-spacing: 0.03em;
-      margin: 0 -20px;
 
-      .alpha-in-top; // js animation
-    }
-    hr.short-hr{
-      background: @white;
-      margin-top: 15px;
-      margin-bottom: 24px;
+//    _____ _____ ____  ____      _    
+//   |_   _| ____|  _ \|  _ \    / \   
+//     | | |  _| | |_) | |_) |  / _ \  
+//     | | | |___|  _ <|  _ <  / ___ \ 
+//     |_| |_____|_| \_\_| \_\/_/   \_\
+//                                     
 
-      .alpha-in-top;
-    }
-    h4{
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.1em;
-      margin-bottom: 11px;
-
-      .alpha-in-top;
-    }
-    p{
-      .brandon-light;
-      font-size: 14px;
-      line-height: 17px;
-      letter-spacing: 0.0em;
-
-      max-width: 470px;
-      margin: 0 auto;
-      margin-bottom: 17px;
-
-      .alpha-in-top;
-
-    }
-  }
+#activities-terrestrial-image-01{
+  width: 100%;
+  height: 490px;
 }
 
-
+#activities-terrestrial-section{
+  margin-bottom: 50px;
+}
 
 //    _____ ___ _____ _   _ _____ ____ ____  
 //   |  ___|_ _|_   _| \ | | ____/ ___/ ___| 
@@ -426,469 +252,112 @@
 //   |_|   |___| |_| |_| \_|_____|____/____/ 
 //                                           
 
+
 #activities-fitness-image-01{
   width: 100%;
-  //height: 570px;
-  height: 360px;
+  height: 490px;
+}
 
-  margin-bottom: 30px;
-}
-#activities-fitness-image-02{
-  width: 100%;
-  height: 240px;
-}
-#activities-fitness-image-03{
-  width: 100%;
-  //height: 520px;
-  height: 280px;
+#activities-fitness-section{
+  margin-bottom: 50px;
 }
 
 
-#activities-fitness{
-  
-  padding-top: 50px;
-  padding-bottom: 50px;
 
 
-  #activities-fitness-text-01{
-    text-align: center;
-    //padding: 0 40px;
-    //padding: 0 35px;
-    //padding-top: 54px;
-    //height: 570px;
-    //height: 1090px;
-    height: 670px;
-
-    //padding: 0 15px;
-    padding: 0 50px;
-    //padding: 0 110px;
-    display: table;
-
-    .activities-fitness-text-01-container{
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    h6{
-      .brandon-bold;
-      font-size: 11px;
-      line-height: 17px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    hr.short-hr{
-      background: @light-blue;
-      .opacity(0.2);
-
-      margin-bottom: 30px;
-    }
-    h3{
-      font-size: 55px;
-      line-height: 61px;
-      .rotation(-14deg);
-      color: @light-blue;
-      letter-spacing: 0.01em;
-
-      //padding-top: 2px;
-      margin-top: -2px;
-      padding-bottom: 13px;
-    }
-    h4{
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.1em;
-
-      margin-top: -5px;
-      margin-bottom: 12px;
-    }
-    p{
-      .brandon-light;
-      font-size: 14px;
-      line-height: 17px;
-      letter-spacing: -0.01em;
-
-      //max-width: 500px;
-      //margin: 0 auto;
-      margin-bottom: 17px;
-
-      // suyeon
-      font-size: 15px;
-      line-height: 22px;
-      letter-spacing: 0;
 
 
-    }
-  } // #activities-fitness-text-01
-
-  #activities-fitness-text-02{
-    height: 280px;
-    //padding: 0 24px;
-    //padding-top: 35px;
-
-    //padding: 30px 25px;
-
-    //padding: 0 30px;
-    padding: 0 15px;
-    display: table;
-
-    .activities-fitness-text-02-container{
-      display: table-cell;
-      vertical-align: middle;
-    }
 
 
-    h4{
-      //font-size: 14px;
-      //line-height: 20px;
-      letter-spacing: 0.1em;
-
-      // suyeon
-      font-size: 13px;
-      line-height: 18px;
-    }
-    hr.short-hr{
-      background: @light-blue;
-      .opacity(0.2);
-
-      //margin: 25px 0;
-
-      // suyeon
-      margin: 12px 0;
-    }
-    ul{
-      font-size: 0;
-      margin-bottom: 42px;
-
-      li{
-        .display-inline-block;
-        width: 50%;
-
-        .brandon-light;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0em;
-
-        // suyeon
-        font-size: 15px;
-        line-height: 22px;
-      }
-    }
-  } // #activities-fitness-text-02
-
-} // #activities-fitness
 
 
-//    ____  ____   _      ____   _    ____      _    _     _        _    __  __   ___ ____  
-//   / ___||  _ \ / \    |  _ \ / \  |  _ \    / \  | |   | |      / \   \ \/ /  / _ \___ \ 
-//   \___ \| |_) / _ \   | |_) / _ \ | |_) |  / _ \ | |   | |     / _ \   \  /  | | | |__) |
-//    ___) |  __/ ___ \  |  __/ ___ \|  _ <  / ___ \| |___| |___ / ___ \  /  \  | |_| / __/ 
-//   |____/|_| /_/   \_\ |_| /_/   \_\_| \_\/_/   \_\_____|_____/_/   \_\/_/\_\  \___/_____|
-//                                                                                          
 
-#activities-parallax-02{
-  #activities-parallax-02-text{
+//    _  _____ ____  ____    ____   _    ____      _    _     _        _    __  __
+//   | |/ /_ _|  _ \/ ___|  |  _ \ / \  |  _ \    / \  | |   | |      / \   \ \/ /
+//   | ' / | || | | \___ \  | |_) / _ \ | |_) |  / _ \ | |   | |     / _ \   \  / 
+//   | . \ | || |_| |___) | |  __/ ___ \|  _ <  / ___ \| |___| |___ / ___ \  /  \ 
+//   |_|\_\___|____/|____/  |_| /_/   \_\_| \_\/_/   \_\_____|_____/_/   \_\/_/\_\
+//                                                                                
+
+#activities-parallax-01{
+  .text{
+    //vertical-align: bottom !important;
+  }
+
+  #activities-parallax-01-text{
     color: @white;
-    padding-bottom: 66px;
+    //padding-bottom: 66px;
+
+    .activities-white-tiggo-icon, h3, hr.short-hr, h4, p, .cta-button{
+      position: relative;
+    }
+
+    .bg-black-gradient{
+      //.opacity(0.4);
+      .opacity(0.6);
+    }
+
+    .activities-white-tiggo-icon{
+      .temp_white_tillo;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
 
     h3{
-      font-size: 70px;
-      line-height: 70px;
-      letter-spacing: -0.05em;
+      font-size: 60px;
+      line-height: 60px;
+      letter-spacing: 0.03em;
+      letter-spacing: -0.02em;
+      margin: 0 -20px;
 
-      .alpha-in-top;                // animation
+      //.alpha-in-top; // js animation
     }
     hr.short-hr{
       background: @white;
-      margin-top: 15px;
-      margin-bottom: 20px;
+      margin-top: 14px;
+      margin-bottom: 14px;
 
-      .alpha-in-top;
+      //.alpha-in-top;
     }
     h4{
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.1em;
-      margin-bottom: 17px;
+      margin-bottom: 9px;
 
-      .alpha-in-top;
+      //.alpha-in-top;
     }
     p{
       .brandon-light;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 15px;
+      line-height: 22px;
       letter-spacing: 0.0em;
 
-      max-width: 320px;
+      max-width: 390px;
       margin: 0 auto;
       margin-bottom: 17px;
 
-      .alpha-in-top;
+      //.alpha-in-top;
+
     }
 
-    .small-circle-arrow-link{
-      padding-top: 3px;
+    .cta-button{
+      padding-top: 16px;
+      
       color: @white;
-      .fa{
-        color: @dark-brown;
-        background: @white;
-      }
-    }
-
-    .circle-arrow-link{
-      padding-top: 3px;
-      color: @white;
-
-      .alpha-in-top;
-      .transition-in(0.2s);
 
       &:hover{
         color: @white;
       }
-
       .fa{
-        color: @dark-brown;
-        background: @white;
+        color: @white;
       }
     }
 
-  }
-}
 
-
-//    _  _____ ____  ____  
-//   | |/ /_ _|  _ \/ ___| 
-//   | ' / | || | | \___ \ 
-//   | . \ | || |_| |___) |
-//   |_|\_\___|____/|____/ 
-//                         
-
-#activities-kids-image-01{
-  width: 100%;
-  height: 710px;
-}
-#activities-kids-image-02{
-  width: 100%;
-  height: 210px;
-}
-
-#activities-kids{
-  //padding-top: 100px;
-  padding-top: 50px;
-
-  #activities-kids-text{
-    
-
-    #activities-tilo-icon{
-      .activities_kids_tilo_icon;
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-
-
-    text-align: center;
-    padding: 0 40px;
-    padding-top: 74px;
-    height: 500px;
-
-    hr.short-hr{
-      background: @light-blue;
-      .opacity(0.2);
-
-      margin-top: 14px;
-      margin-bottom: 30px;
-    }
-    h3{
-      font-size: 55px;
-      line-height: 61px;
-      color: @light-blue;
-      //letter-spacing: -0.01em;
-      letter-spacing: 0.0em;
-
-      //padding-top: 2px;
-      margin: 0 -40px;
-      margin-top: -2px;
-    }
-    h4{
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.1em;
-
-      margin-top: -5px;
-      margin-bottom: 12px;
-    }
-    p{
-      .brandon-light;
-      font-size: 14px;
-      line-height: 17px;
-      letter-spacing: -0.01em;
-
-      margin-bottom: 17px;
-    }
 
   }
 }
-
-//    ____  ____   _         _    _   _ ____    _  _____ ____  ____  
-//   / ___||  _ \ / \       / \  | \ | |  _ \  | |/ /_ _|  _ \/ ___| 
-//   \___ \| |_) / _ \     / _ \ |  \| | | | | | ' / | || | | \___ \ 
-//    ___) |  __/ ___ \   / ___ \| |\  | |_| | | . \ | || |_| |___) |
-//   |____/|_| /_/   \_\ /_/   \_\_| \_|____/  |_|\_\___|____/|____/ 
-//                                                                   
-
-
-#activities-spa-and-kids-image-01{
-  width: 100%;
-  height: 300px;
-}
-#activities-spa-and-kids-image-02{
-  width: 100%;
-  height: 300px;
-}
-
-#new-activities-tilo-icon{
-  .activities_kids_and_spa_tillo_icon;
-  .display-inline-block();
-
-  margin-right: 23px;
-  position: relative;
-  top: -8px;
-}
-
-
-
-#activities-spa-and-kids{
-
-
-  hr.grey-hr{
-    border: none;
-    border-bottom: 1px solid @dark-brown-10;
-  }
-}
-
-
-#activities-spa-and-kids-text-01{
-
-  height: 470px;
-  //display: table;
-
-  text-align: center;
-  padding: 0 50px;
-
-  position: relative;
-
-  &:after{
-    content: "";
-    display: block;
-    position: absolute;
-    //top: 37px;
-    top: 29px;
-    bottom: 21px;
-    right: -15px;
-
-    border-right: 1px solid @dark-brown-10;
-  }
-
-  .activities-spa-and-kids-text-01-container{
-    //display: table-cell;
-    //vertical-align: middle;
-    padding-top: 60px;
-  }
-  h3{
-    font-size: 55px;
-    line-height: 50px;
-    color: @light-blue;
-
-    letter-spacing: -0.05em;
-  }
-  hr.short-hr{
-    background: @light-blue;
-    .opacity(0.2);
-
-    margin-top: 13px;
-    margin-bottom: 19px;
-  }
-  h4{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-
-    margin-bottom: 9px;
-  }
-  p{
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 0;
-
-    margin-bottom: 22px;
-
-
-
-  }
-
-  .circle-arrow-link{
-    text-transform: none;
-    letter-spacing: 0em;
-
-    font-size: 13px;
-  }
-  .first-link{
-    margin-top: 29px;
-    margin-bottom: 11px;
-  }
-
-}
-
-
-
-#activities-spa-and-kids-text-02{
-
-  height: 470px;
-  //display: table;
-
-  text-align: center;
-  padding: 0 50px;
-
-
-
-  .activities-spa-and-kids-text-02-container{
-    //display: table-cell;
-    //vertical-align: middle;
-    padding-top: 60px;
-  }
-  h3{
-    font-size: 55px;
-    line-height: 50px;
-    color: @light-blue;
-
-    letter-spacing: -0.03em;
-  }
-  hr.short-hr{
-    background: @light-blue;
-    .opacity(0.2);
-
-    margin-top: 13px;
-    margin-bottom: 19px;
-  }
-  h4{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-
-    margin-bottom: 9px;
-  }
-  p{
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 0;
-
-    margin-bottom: 22px;
-
-
-
-  }
-
-}
-
 
 
 //     ___ _____ _   _ _____ ____  ____  
@@ -898,21 +367,30 @@
 //    \___/ |_| |_| |_|_____|_| \_\____/ 
 //                                       
 
+#activities-other-cta-button-container{
+  width: 100%;
+  text-align: center;
+}
+#activities-other-cta-button{
+  text-align: center;
+}
+
 #activities-others{
   .activities-other-title{
-    padding-top: 86px;
-    padding-top: 43px;
-    //padding-bottom: 58px;
-
+    padding-top: 90px;
+    
     // suyeon
-    padding-bottom: 60px;
     text-align: center;
 
+    padding-bottom: 55px;
+
     h3{
-      font-size: 54px;
-      line-height: 54px;
+      //font-size: 54px;
+      //line-height: 54px;
+      font-size: 60px;
+      line-height: 60px;
       color: @light-blue;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.04em;
     }
   } // .activities-other-title
 
@@ -933,7 +411,7 @@
         //height: 80px;
         height: 110px;
 
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
 
         .item-icon-icon{
           display: table-cell;
@@ -941,12 +419,6 @@
         }
       }
 
-      /*
-      h4{
-        font-size: 14px;
-        line-height: 20px;
-      }
-      */
       hr.short-hr{
         background: @light-blue;
         .opacity(0.2);
@@ -955,17 +427,7 @@
         margin-bottom: 16px;
 
       }
-      /*
-      p{
-        .brandon-light;
-        font-size: 14px;
-        line-height: 17px;
-        letter-spacing: 0em;
-
-        padding: 0 30px;
-      }
-      */
-
+      
 
       h4{
         //font-size: 14px;

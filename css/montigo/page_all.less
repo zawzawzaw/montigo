@@ -80,6 +80,85 @@
 } // .parallax-section
 
 
+
+
+
+
+.parallax-section-text{
+  text-align: center;
+
+  h3, hr.short-hr, h4, p, .cta-button{
+    position: relative;
+  }
+
+  h3{
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    color: @light-blue;
+
+    margin: 0 -20px;
+  }
+  hr.short-hr{
+    margin-top: 14px;
+    margin-bottom: 14px;
+
+    background: @light-blue;
+    .opacity(0.2);
+  }
+  h4{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 9px;
+  }
+  p{
+    .brandon-light;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.0em;
+
+    max-width: 390px;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+  .cta-button{
+    padding-top: 16px;
+  }
+
+
+
+  &.white-version{
+    color: @white;
+
+    h3{
+      color: @white;
+    }
+
+    hr.short-hr{
+      background: @white;
+      .opacity(1);
+    }
+
+    .cta-button{ 
+      color: @white;
+
+      &:hover{
+        color: @white;
+      }
+      .fa{
+        color: @white;
+      }
+    } // cta-button
+
+  } // white-version
+
+} // parallax-section-text
+
+
+
+
+
 //    __  __    _    ___ _   _   ____  _     ___ ____  _____ ____  
 //   |  \/  |  / \  |_ _| \ | | / ___|| |   |_ _|  _ \| ____|  _ \ 
 //   | |\/| | / _ \  | ||  \| | \___ \| |    | || | | |  _| | |_) |
@@ -104,4 +183,140 @@
     height: @main-slider-height;
     z-index: 100;
   }
+}
+
+
+
+
+.bg-black-gradient{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -501px;
+  margin-top: -415px;
+  .bg_main_image_black_gradient;
+  //.opacity(0.9);
+  //.opacity(1);
+}
+
+.bg-white-gradient{
+  .parallax_image_white_gradient;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -501px;
+  margin-top: -415px;
+}
+
+
+
+
+
+
+
+
+
+
+//       _    ____ _____ _____     _____ _____ ___ _____ ____  
+//      / \  / ___|_   _|_ _\ \   / /_ _|_   _|_ _| ____/ ___| 
+//     / _ \| |     | |  | | \ \ / / | |  | |  | ||  _| \___ \ 
+//    / ___ \ |___  | |  | |  \ V /  | |  | |  | || |___ ___) |
+//   /_/   \_\____| |_| |___|  \_/  |___| |_| |___|_____|____/ 
+//                                                             
+
+
+.description-list-panel-container{
+  height: 490px;
+
+  .description-panel{
+
+    text-align: center;
+
+    padding-top: 49px;
+
+
+    h3{
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      color: @light-blue;
+    }
+    h4{
+      letter-spacing: 0.1em;
+      font-size: 20px;
+      line-height: 29px;
+
+      margin-bottom: 16px;
+    }
+    hr.short-hr{
+      background: @light-blue;
+      .opacity(0.2);
+
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 17px;
+    }
+    p{
+      .brandon-light;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: -0.01em;
+
+      max-width: 450px;
+      margin: 0 auto;
+      margin-bottom: 22px;
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
+
+  }
+  .list-panel{
+
+    padding: 0 94px;
+    padding-top: 104px;
+
+    .cta-back-button{
+      position: absolute;
+      top: 46px;
+      right: 50px;
+      
+    }
+
+    h4{
+      letter-spacing: 0.1em;
+      font-size: 20px;
+      line-height: 29px;
+    }
+    hr.short-hr{
+      background: @light-blue;
+      .opacity(0.2);
+      margin: 0;
+      margin-top: 11px;
+      margin-bottom: 14px;
+    }
+    ul{
+      font-size: 0;
+      margin-bottom: 32px;
+
+      li{
+        .display-inline-block;
+        width: 50%;
+
+        .brandon-light;
+        //font-size: 14px;
+        //line-height: 20px;
+        letter-spacing: 0em;
+
+        // suyeon
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 8px;
+      }
+    }
+
+
+  }
+
 }

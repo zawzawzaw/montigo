@@ -56,10 +56,14 @@ Jairus List
 
 
 
+9. the footer might not be as the psd is?
+
+
 
 http://greensock.com/multipletextshadows ? 
 
 
+(you might want to do this in a seperate html (aka, not the one you are working on) )
 THINGS I WANT TO EXPLORE:
 
 1. parallax multi-layer image
@@ -68,6 +72,25 @@ THINGS I WANT TO EXPLORE:
 2. multi-layer fade in
    (fade in foreground elements, before the bg elements)
    ex. bowl in restaurant images would fade in first before the back
+
+3. If it would be possible to handwrite the titles
+   'Dining at Montigo' to animate like a pen writing the text
+
+4. image animate in
+   - as you scroll all the images animate in, so we can explore options on how this happens
+   1. like sword art online, intro.
+     the image comes from  the white bg (image slides in like it is reverse imbosed from the page)
+
+5. intro animation for home images
+   - it zooms in to the image (multiple layer image)
+     layers would scale proportionally into the image
+
+
+
+
+6. dining.php
+   - private dining image (add flickering light looping svg)
+     - create 3 variations
 
 
 
@@ -95,14 +118,6 @@ Rooms Psd
 
 
 
-AUTO PILOT:
-
-just css
-create images from psd (again T_____T)
-copy panel-container css from sga
-
-
-
 
 
 
@@ -116,3 +131,27 @@ sga?
 
 3. possible fix for people section dying 
  - slow down creation of html ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+april 29,
+ - need to re-export parallax images
+   - has a gradient taining the main image...
+
+ 
+
+ use '.parallax-section-text' on rooms.php & activities.php
