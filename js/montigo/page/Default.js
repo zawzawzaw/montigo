@@ -39,6 +39,9 @@ montigo.page.Default = function(options) {
 
   this.preloader_element = $('#page-preloader');
 
+
+  this.has_main_image_pin = false;
+
   
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
@@ -232,7 +235,13 @@ montigo.page.Default.prototype.on_scrolldown_button_click = function(event) {
 
   var header_height = 60;
   var target_y = $('#below-page-fold').offset().top - header_height;
+
+  if (this.has_main_image_pin == true){
+    target_y += 300;
+  }
+
   var target_duration = target_y / 500;
+
 
   console.log('target_y: ' + target_y);
   TweenMax.to($(window), target_duration, {scrollTo:{y:target_y,autoKill: true}, ease:Quad.easeInOut});

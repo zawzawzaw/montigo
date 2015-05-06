@@ -121,7 +121,7 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
     $('#home-restaurant-text-01 .text hr'),
     $('#home-restaurant-text-01 .text h4'),
     $('#home-restaurant-text-01 .text p'),
-    $('#home-restaurant-text-01 .text .arrow-link')
+    $('#home-restaurant-text-01 .text .cta-button')
   ]);
 
   var home_restaurant_text_01 = new ScrollMagic.Scene({triggerElement: "#home-restaurant-text-01", duration: 300, offset: -150})
@@ -135,7 +135,7 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
     $('#home-restaurant-text-02 .text hr'),
     $('#home-restaurant-text-02 .text h4'),
     $('#home-restaurant-text-02 .text p'),
-    $('#home-restaurant-text-02 .text .arrow-link')
+    $('#home-restaurant-text-02 .text .cta-button')
   ]);
 
   var home_restaurant_text_02 = new ScrollMagic.Scene({triggerElement: "#home-restaurant-text-02", duration: 300, offset: -150})

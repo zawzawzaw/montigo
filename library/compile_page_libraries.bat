@@ -3,6 +3,7 @@ java -jar "compiler.jar" ^
   --js=gsap\TimelineMax.min.js ^
   --js=gsap\easing\EasePack.min.js ^
   --js=gsap\plugins\ScrollToPlugin.min.js ^
+  --js=_js\glDatePicker.min.js ^
   --js=scrollmagic\iscroll-probe.js ^
   --js=scrollmagic\ScrollMagic.min.js ^
   --js=scrollmagic\plugins\animation.gsap.min.js ^

@@ -3,6 +3,9 @@ goog.provide('montigo.component.MainImage');
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
+goog.require('manic.ui.ImageContainer');
+goog.require('manic.ui.TextContainer');
+
 goog.require('montigo.component.ScrollMagicUtil');
 
 
@@ -31,7 +34,11 @@ montigo.component.MainImage = function(options, element) {
   this.image_container = new manic.ui.ImageContainer({
     'vertical_align': 'center',
     'image_src': this.initial_image_src
-  }, this.element);
+  }, this.element.find('.main-slider-image-container'));
+
+  this.text_container = new manic.ui.TextContainer({
+    'vertical_align': 'center'
+  }, this.element.find('.main-slider-text-container'));
 
   /**
    * @type {TimelineMax}
@@ -45,6 +52,7 @@ montigo.component.MainImage = function(options, element) {
 
   this.window = $(window);
   this.window.resize(this.on_window_resize.bind(this));
+  this.on_window_resize(null);
 
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
@@ -117,6 +125,21 @@ montigo.component.MainImage.prototype.sample_method_calls = function() {
 
 
 /**
+ * create_pin_scene description
+ * @param  {ScrollMagic.Controller} controller_param
+ */
+montigo.component.MainImage.prototype.create_pin_scene = function(controller_param) {
+
+  var trigger_element_str = "#" + this.element.attr('id');
+
+  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 300})
+            //.addIndicators({name: "Main Image Pin"}) // add indicators (requires plugin)
+            .triggerHook(0)
+            .setPin(trigger_element_str)
+            .addTo(controller_param);
+};
+
+/**
  * create_scene description
  * @param  {ScrollMagic.Controller} controller_param
  */
@@ -166,13 +189,65 @@ montigo.component.MainImage.prototype.create_activities_scene = function(control
 };
 
 /**
- * create_activities_scene description
+ * create_rooms_scene description
  * @param  {ScrollMagic.Controller} controller_param
  */
 montigo.component.MainImage.prototype.create_rooms_scene = function(controller_param) {
-
+  this.black_gradient
 };
-montigo.component.MainImage.prototype.public_method_04 = function() {};
+
+
+/**
+ * create_activities_scene description
+ * @param  {ScrollMagic.Controller} controller_param
+ */
+montigo.component.MainImage.prototype.create_dining_scene = function(controller_param) {
+  this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements([
+    this.element.find('.text h3'),
+    this.element.find('.text hr'),
+    this.element.find('.text h4'),
+    this.element.find('.text p')
+  ]);
+
+
+  //this.text_animation.add(TweenMax.to(this.element.find('.bg-black-rect'), 1, {opacity:0}), 0.2 );
+  this.text_animation.add(TweenMax.to(this.element.find('.bg-black-gradient'), 1, {opacity:0}), 0.3 );
+
+  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 350})
+            //.addIndicators({name: "Main Image"}) // add indicators (requires plugin)
+            .triggerHook(0)
+            .offset(20)
+            .setTween(this.text_animation)
+            .addTo(controller_param);
+};
+
+/**
+ * create_activities_scene description
+ * @param  {ScrollMagic.Controller} controller_param
+ */
+montigo.component.MainImage.prototype.create_spa_scene = function(controller_param) {
+  this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements([
+    this.element.find('.text h3'),
+    this.element.find('.text hr'),
+    this.element.find('.text h4'),
+    this.element.find('.text p.p1'),
+    this.element.find('.text p.p2'),
+    this.element.find('.text .cta-button')
+  ]);
+
+
+  //this.text_animation.add(TweenMax.to(this.element.find('.bg-black-rect'), 1, {opacity:0}), 0.2 );
+  this.text_animation.add(TweenMax.to(this.element.find('.bg-black-gradient'), 1, {opacity:0}), 0.3 );
+
+  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 350})
+            //.addIndicators({name: "Main Image"}) // add indicators (requires plugin)
+            .triggerHook(0)
+            .offset(20)
+            .setTween(this.text_animation)
+            .addTo(controller_param);
+};
+
+
 montigo.component.MainImage.prototype.public_method_05 = function() {};
 montigo.component.MainImage.prototype.public_method_06 = function() {};
 
@@ -189,10 +264,16 @@ montigo.component.MainImage.prototype.public_method_06 = function() {};
  * @param  {object} event
  */
 montigo.component.MainImage.prototype.on_window_resize = function(event) {
+  /*
   var window_height = this.window.height();
   console.log('text container')
   console.log(this.element.find('.text-container'));
   this.element.find('.text-container').height(window_height);
+  */
+  var window_height = this.window.height();
+    
+  this.element.height(window_height);
+
 };
 
 /**

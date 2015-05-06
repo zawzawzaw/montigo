@@ -50,6 +50,10 @@ montigo.page.Rooms = function(options, element) {
 
   
 
+  this.menu.add_black_gradient();
+
+  
+
   this.create_scrollmagic();
   this.create_main_image();
   this.create_panel_containers();
@@ -116,6 +120,8 @@ montigo.page.Rooms.prototype.create_scrollmagic = function() {
 montigo.page.Rooms.prototype.create_main_image = function() {
   this.main_image = new montigo.component.MainImage({
   },$('#rooms-slider'));
+
+
 
   this.main_image.create_rooms_scene(this.controller);
 };

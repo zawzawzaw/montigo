@@ -5,6 +5,8 @@
 //   |____/|_____|___|____/|_____|_| \_\
 //               
 
+
+/*
 #dining-slider{
 
   margin-bottom: 50px;
@@ -12,13 +14,18 @@
 
 #dining-slider-text{
   text-align: center;
-  color: @dark-brown;
+  //color: @dark-brown;
+  color: @white;
 
   position: relative;
 
   
-  h3, h4, hr.short-hr, p{
+  h3, h4, hr.short-hr, p, .cta-button{
     position: relative;
+  }
+
+  .bg-black-gradient{
+    .opacity(0.4);
   }
 
   .slider-white-circle{
@@ -32,9 +39,14 @@
   }
 
   h3{
-    font-size: 94px;
-    line-height: 98px;
-    color: @light-blue;
+    //font-size: 94px;
+    //line-height: 98px;
+
+    font-size: 80px;
+    line-height: 88px;
+
+    //color: @light-blue;
+    color: @white;
     letter-spacing: -0.05em;
 
     margin-bottom: 13px;
@@ -49,11 +61,13 @@
     margin-bottom: 7px;
   }
   hr.short-hr{
-    background: @light-blue;
+    background: @white;
+
+    //background: @light-blue;
     //margin-top: 12px;
     margin-top: 0px;
     margin-bottom: 21px;
-    .opacity(0.2);
+    //.opacity(0.2);
   }
 
   p{
@@ -71,10 +85,11 @@
 // temporary
 #dining-slider{
   .text{
-    margin-top: 10%;
+    //margin-top: 10%;
+    margin-top: 14%;
   }
 }
-
+*/
 
 
 //     ____ ___  __  __ __  __  ___  _   _ 
@@ -188,6 +203,7 @@
 
 
   margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #dining-tadds-image-02{
@@ -201,17 +217,21 @@
 
 #dining-tadds-section{
   margin-bottom: 50px;
+  padding-top: 50px;
 }
 
 #dining-tadds-text-01{
   height: 470px;   
   margin-bottom: 30px;
-
+  margin-bottom: 50px;
 } // #dining-tadds-text-01
 
 #dining-tadds-text-02{
   height: 290px;
-}
+
+  padding-top: 46px;
+  padding-left: 27px;
+} // #dining-tadds-text-02
 
 //    ____   _    _   _ _____  _    ___ 
 //   |  _ \ / \  | \ | |_   _|/ \  |_ _|
@@ -233,9 +253,16 @@
 #dining-pantai-text-01{
   height: 550px;
   margin-bottom: 30px;
+
+  h3{
+    padding-bottom: 2px;
+  }
 }
 #dining-pantai-text-02{
-  height: 180px;
+  height: 150px;
+  .dining-list{
+    margin-top: -3px;
+  }
 }
 
 
@@ -252,6 +279,7 @@
   height: 550px;
 
   margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 #dining-tiigo-image-02{
   width: 100%;
@@ -270,13 +298,26 @@
 #dining-tiigo-text-01{
   height: 550px;
   margin-bottom: 30px;
+  margin-bottom: 50px;
+
+  h3{
+    padding-bottom: 18px;
+  }
+  h4{
+    padding-top: 2px;
+  }
 
   p{
     width: 360px;
   }
 }
-#dining-tiigo-text-01{
+
+#dining-tiigo-text-02{
   height: 250px;
+
+  .dining-list{
+    margin-top: -3px;
+  }
 }
 
 //    ____  ____  _____     ___  _____ _____   ____ ___ _   _ ___ _   _  ____ 
@@ -291,9 +332,29 @@
 }
 
 #dining-private-dining-text{
+
+  width: 340px;
+
   .bg-black-gradient{
     .opacity(0.7);
+  }
 
+  h3{
+    letter-spacing: -0.03em;
+    margin-bottom: -9px;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 28px;
+
+    padding-top: 5px;
+    margin-bottom: 6px;
+  }
+  p{
+    max-width: 340px;
+  }
+  .cta-button{
+    padding-top: 5px;
   }
 }
 
@@ -314,9 +375,21 @@
   text-align: center;
   color: @dark-brown;
   position: relative;
-
+  
   h3{
+    letter-spacing: -0.07em;
     margin: 0 -40px;
+    margin-bottom: -1px;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 28px;
+
+    padding-top: 5px;
+    margin-bottom: 7px;
+  }
+  .cta-button{
+    padding-top: 6px;
   }
 
   .bg-white-gradient{

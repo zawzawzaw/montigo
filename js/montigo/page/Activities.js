@@ -58,6 +58,10 @@ montigo.page.Activities = function(options, element) {
   this.fitness_panel_container = null;
 
 
+
+  this.menu.add_black_gradient();
+
+
   this.create_scrollmagic();
   this.create_main_image();
   this.create_panel_containers();

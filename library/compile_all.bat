@@ -1,0 +1,7 @@
+call compile_page_libraries.bat
+call compile_page_home.bat
+call compile_page_activities.bat
+call compile_page_dining.bat
+call compile_page_events.bat
+call compile_page_rooms.bat
+call compile_page_spa.bat

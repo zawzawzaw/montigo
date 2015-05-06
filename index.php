@@ -2,22 +2,26 @@
 
 <div id="main-page-content">
 
-  <div id="home-slider" data-image="images/home_slider/home_slider_image_01.jpg">
-    <div class="text-container" id="specific-image-01">
-      <div class="one-long-text">
-        <div class="text">
+  <div id="home-slider" class="main-slider" data-image="images/main_slider/home_main_slider_image_01_trees.jpg">
+
+    <div class="main-slider-image-container">
+      <img src="">
+    </div>
+
+    <div class="main-slider-text-container">
+      <div class="text-container" data-width="1464" data-height="813">
+        <div class="text white-version" data-x="732" data-y="256">
+
           <h3>Tropical Getway</h3>
           <h4>For generations to come</h4>
           <hr class="short-hr">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-        </div>
 
+        </div>
       </div>
     </div>
     
-    <img>
-    
-  </div>
+  </div> <!-- main-slider -->
 
   <div id="home-featured-section">
     <div class="container-fluid has-breakpoint">
@@ -37,7 +41,7 @@
               <div class="promotion-text">
                 <h4>Spring Into 2015!</h4>
                 <p>We're kick starting 2015 with an amazing offer, just for you. Visit us from now until end March and not only you get 25% off the Best Available Rate but we'll give you an extra S$50 to spend on your meals or at the spa. Go ahead, have your cake and eat it too.</p>
-                <a href="#" class="arrow-link">View promotion</a>
+                <a href="#" class="cta-button">View promotion<span class="fa fa-chevron-circle-right"></span></a>
               </div>
             </div> <!-- home-promotions -->
 
@@ -48,7 +52,7 @@
                     <h6>tiigo’s night</h6>
                     <h4>Double Deal All Night Long</h4>
                     <p>This offer is available from 6 Jan 2015 through 28 Feb 2015. Wind down with one-for-one selected wines and beers at Tiigo Bar on Level 24 while enjoying panoramic views of the city.</p>
-                    <a href="#" class="arrow-link">View Offer Details</a>
+                    <a href="#" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -56,7 +60,7 @@
                     <h6>tiigo’s night</h6>
                     <h4>Double Deal All Night Long</h4>
                     <p>This offer is available from 6 Jan 2015 through 28 Feb 2015. Wind down with one-for-one selected wines and beers at Tiigo Bar on Level 24 while enjoying panoramic views of the city.</p>
-                    <a href="#" class="arrow-link">View Offer Details</a>
+                    <a href="#" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
               </div>
@@ -110,7 +114,7 @@
                 </div>
                 <div class="treasure-hunt-text">
                   <p>We're kick starting 2015 with an amazing treasure hunt! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
-                  <a href="#" class="arrow-link">Know more</a>
+                  <a href="#" class="cta-button">Know more<span class="fa fa-chevron-circle-right"></span></a>
                 </div>
               </div> <!-- home-tilo-treasure-hunt -->
             </div>
@@ -123,30 +127,29 @@
   </div>
 
 
-  <div id="home-parallax-01" class="home-parallax" data-image="images/home/home_parallax_image_01.jpg">
-    <div class="image-container">
+  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01.jpg">
+
+    <div class="parallax-section-image-container">
+      <img src="">
     </div>
 
-    <div class="text-container">
-      <div class="text">
-        <div class="container-fluid has-breakpoint">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="space10"></div>
-            </div>
-            <div class="col-md-5">
-              <div class="home-page-parallax-text-temp">
-                <h3>Seafront Perfection</h3>
-                <hr class="short-hr"></hr>
-                <h4>Welcome Home</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                <a href="#" class="arrow-link">Our villas</a>
-              </div>
-            </div>
-          </div>
+
+    <div class="parallax-section-text-container">
+      <div class="text-container" data-width="1276" data-height="896">
+        <div id="home-seafront-text" class="parallax-section-text text" data-x="1048" data-y="363">
+
+          <div class="bg-white-gradient"></div>
+          <h3>Seafront Perfection</h3>
+          <hr class="short-hr">
+          <h4>Welcome Home</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+          <a href="#" class="cta-button">Our villas<span class="fa fa-chevron-circle-right"></span></a>
+
         </div>
       </div>
     </div>
+
+
     
   </div>
 
@@ -166,14 +169,13 @@
               <h3>Asian flavours</h3>
               <hr class="short-hr"></hr>
               <h4>All Things Bright And Delicious</h4>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.</p> -->
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident.</p>
-              <a href="" class="arrow-link">Our Restaurants</a>
+              <a href="" class="cta-button">Our Restaurants<span class="fa fa-chevron-circle-right"></span></a>
             </div>
           </div>
         </div>
@@ -186,27 +188,24 @@
               <h3>Specials!</h3>
               <hr class="short-hr"></hr>
               <h4>Seasonal Delights</h4>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.</p> -->
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident.</p>
-              <a href="" class="arrow-link">Our promotions</a>
+              <a href="" class="cta-button">Our promotions<span class="fa fa-chevron-circle-right"></span></a>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="home-restaurant-image manic-image-container"  id="home-restaurant-image-02">
             <img src="images/home/home_restaurant_image_02.jpg">
-            <!-- <div class="image-container" style="background-image: url('images/home/home_restaurant_image_02.jpg');"></div> -->
           </div>
         </div>
         <div class="col-md-3">
           <div class="home-restaurant-image manic-image-container"  id="home-restaurant-image-03">
             <img src="images/home/home_restaurant_image_03.jpg">
-            <!-- <div class="image-container" style="background-image: url('images/home/home_restaurant_image_03.jpg');"></div> -->
           </div>
         </div>
       </div>
@@ -215,37 +214,28 @@
   </div>
 
 
-  <div id="home-parallax-02" class="home-parallax" data-image="images/home/home_parallax_image_02.jpg">
-    <div class="image-container">
-      <!-- 
-      <div class="image">
-        <img src="images/home/home_parallax_image_02.jpg">
-      </div>
-      -->
+  <div id="home-parallax-02" class="parallax-section" data-image="images/home/home_parallax_image_02.jpg">
+    
+    <div class="parallax-section-image-container">
+      <img src="">
     </div>
 
-    <div class="text-container">
-      <div class="text">
-        <div class="container-fluid has-breakpoint">
-          <div class="row">
-            
-            <div class="col-md-7">
-              <div class="space10"></div>
-            </div>
-            
-            <div class="col-md-5">
-              <div class="home-page-parallax-text-temp">
-                <h3>Inspired Events</h3>
-                <hr class="short-hr"></hr>
-                <h4>Extraordinary Special Occasions</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                <a href="#" class="arrow-link">Weddings &amp; events</a>
-              </div>
-            </div>
-          </div>
+    <div class="parallax-section-text-container">
+      <div class="text-container" data-width="1276" data-height="896">
+        <div id="home-events-text" class="parallax-section-text text" data-x="1048" data-y="320">
+
+          <div class="bg-white-gradient"></div>
+          <h3>Inspired Events</h3>
+          <hr class="short-hr">
+          <h4>Extraordinary Special Occasions</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+          <a href="#" class="cta-button">Weddings &amp; events<span class="fa fa-chevron-circle-right"></span></a>
+
         </div>
       </div>
     </div>
+
+
     
   </div>
 
@@ -254,11 +244,6 @@
 
     
     <div class="image-container" style="background-image: url('images/home/home_map_bg.jpg');">
-      <!--
-      <div class="image">
-        <img src="images/home/home_map_bg.jpg">
-      </div>
-      -->
     </div>
 
     <div class="overlay-container">
@@ -283,7 +268,7 @@
               <h3>Go out and see the world</h3>
               <h4>Discover New Experiences</h4>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem.</p>
-              <a href="#" class="arrow-link">Activities</a>
+              <a href="#" class="cta-button">Activities<span class="fa fa-chevron-circle-right"></span></a>
             </div>
             
           </div>
@@ -331,7 +316,7 @@
     $.manic_preloader({
       asset_array: [
         "images/home_slider/home_slider_image_01.jpg",
-        "images/home/home_parallax_image_01.jpg",
+        "images/parallax/rooms_residences_parallax_balcony_01.jpg",
         "images/home/home_parallax_image_02.jpg",
         "images/home/home_promotion_image_01.jpg",
         "images/home/instagram/home_instagram_01.jpg",
@@ -348,7 +333,8 @@
         "images/home/instagram/home_instagram_12.jpg",
         "images/home/home_restaurant_image_01.jpg",
         "images/home/home_restaurant_image_02.jpg",
-        "images/home/home_restaurant_image_03.jpg"
+        "images/home/home_restaurant_image_03.jpg",
+        "images/home/home_map_bg.jpg"
       ],
       desktop_js_array: [
         <?php if(DEBUG): ?>
@@ -356,6 +342,7 @@
           "library/gsap/TimelineMax.min.js",
           "library/gsap/easing/EasePack.min.js",
           "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
           "library/scrollmagic/ScrollMagic.min.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",

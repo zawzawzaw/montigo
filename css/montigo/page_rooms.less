@@ -1,3 +1,5 @@
+/*
+
 //    ____  _     ___ ____  _____ ____  
 //   / ___|| |   |_ _|  _ \| ____|  _ \ 
 //   \___ \| |    | || | | |  _| | |_) |
@@ -21,8 +23,12 @@
   }
 
   h3{
-    font-size: 94px;
-    line-height: 89px;
+    //font-size: 94px;
+    //line-height: 89px;
+
+    font-size: 80px;
+    line-height: 88px;
+
     letter-spacing: -0.01em;
     margin-bottom: 38px;
   }
@@ -72,6 +78,8 @@
   }
 }
 
+*/
+
 //    __  __    _    ____  ____  
 //   |  \/  |  / \  |  _ \/ ___| 
 //   | |\/| | / _ \ | |_) \___ \ 
@@ -80,6 +88,8 @@
 //                               
 
 #rooms-map-section{
+
+  margin-top: 50px;
 
   height: 850px;
   position: relative;
@@ -108,9 +118,9 @@
     width: 380px;
     height: 280px;
 
-    margin-left: -140px;
+    margin-left: -190px;
 
-    padding-top: 64px;
+    padding-top: 44px;
 
 
 
@@ -147,10 +157,14 @@
 //                                          
 
 
+
+
+
 #rooms-villas-section{
 
   #room-villas-image-panel-container{
     height: 520px;
+    margin-bottom: 60px;
 
     .manic-image-container{
       width: 100%;
@@ -159,15 +173,19 @@
     
   }
 
-  #room-villas-button-container{
-    margin-bottom: 20px;
-  }
+
+
+  
 
 
 
   #room-villas-sidebar{
+    height: 520px;
+    margin-bottom: 60px;
+
     text-align: center;
     padding-top: 50px;
+    position: relative;
 
 
     h3{
@@ -181,10 +199,19 @@
       margin-top: 10px;
       margin-bottom: 16px;
     }
+
+
+    #room-villas-button-container{
+      position: absolute;
+      width: 100%;
+      bottom: 22px;
+      left: 0;
+    }
   }
 
   #room-villas-text-panel-container{
-    height: 280px;
+    height: 300px;
+    //height: 280px;
     position: relative;
 
     .panel{
@@ -410,6 +437,36 @@
 }
 
 #rooms-residences-text{
+  width: 340px;
+
+  .circle-button-container, h4, h3, hr.short-hr, h4, p, .cta-button{
+    position: relative;
+  }
+
+  .circle-button-container{
+    margin-bottom: 28px;
+  }
+
+  h3{
+    
+    letter-spacing: -0.05em;
+    margin: 0 -30px;
+
+  }
+  hr.short-hr{
+    margin-top: 27px;
+    margin-bottom: 20px;
+  }
+
+
+  p{
+    max-width: 340px;
+  }
+
+}
+
+/*
+#rooms-residences-text{
   text-align: center;
   color: @dark-brown;
   position: relative;
@@ -466,3 +523,5 @@
   }
 
 } // #rooms-residences-text
+
+*/

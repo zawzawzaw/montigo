@@ -70,32 +70,146 @@ define('DEBUG', true);
       <div id="below-page-fold"></div>
     </div>
 
-    <header id="main-page-header">
 
-      <div class="blue-bg"></div>
+    <header id="main-page-header-mobile" class="visible-xs-block visible-sm-block">
+    </header>
+    
+
+    <header id="main-page-header" class="visible-md-block visible-lg-block">
+
+      <div class="gradient-container"></div>
       <div class="white-bg"></div>
 
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <a href="#" id="header-logo">Montigo Resorts</a>
+            <a href="index.php" id="header-logo">Montigo Resorts</a>
           </div>
-          <div class="col-md-8">
-            <nav id="header-navigation">
-              <ul>
+          <div class="col-md-9">
 
-                <li><a href="#">About Montigo</a></li>
-                <li><a href="#">Offers &amp; Packages</a></li>
-                <li><a href="#">Villas</a></li>
-                <li><a href="#">Dining</a></li>
-                <li><a href="#">Spa</a></li>
-                <li><a href="#">Activities</a></li>
-                <li><a href="#">Meetings &amp; Events</a></li>
-                <li><a href="#">Contact</a></li>
-                
-              </ul>
-            </nav>
+            <div id="menu-panel-container">
+              <div id="menu-navigation-panel" class="menu-panel">
+                <div class="menu-panel-content">
+
+                  <nav id="header-navigation">
+                    <ul>
+                      <li><a href="#">About Montigo</a></li>
+                      <li><a href="#">Offers &amp; Packages</a></li>
+                      <li><a href="villas.php">Villas</a></li>
+                      <li><a href="dining.php">Dining</a></li>
+                      <li><a href="spa.php">Spa</a></li>
+                      <li><a href="activities.php">Activities</a></li>
+                      <li><a href="events.php">Meetings &amp; Events</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
+              </div> <!-- #navigation-panel -->
+              <div id="menu-booking-panel" class="menu-panel">
+                <div class="menu-panel-content">
+                  
+                  <form id="menu-booking-form" name="menu-booking-form" action="https://www.phgsecure.com/IBE/bookingRedirect.ashx" method="post">
+
+                    <input type="hidden" name="propertyCode" value="SINMR" />
+
+                    <input type="hidden" name="numberOfAdults" id="numberOfAdults" value="1" />
+                    <input type="hidden" name="numberOfChildren" id="numberOfChildren" value="0" />
+
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="space10"></div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="menu-booking-form-item calendar-version">
+                          <label>Arrival</label>
+                          <div class="fa fa-calendar-o"></div>
+                          <input class="text-input" type="text" id="arrivalDate" name="arrivalDate" value="">
+
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="menu-booking-form-item calendar-version">
+                          <label>Departure</label>
+                          <div class="fa fa-calendar-o"></div>
+                          <input class="text-input" type="text" id="departureDate" name="departureDate" value="">
+                        </div>
+                      </div>
+                      <div class="col-md-1">
+                        <div class="menu-booking-form-item single-digit-version">
+                          <label>Nights</label>
+
+                          <div class="select-input">
+                            <div class="fa fa-play"></div>
+                            <select id="nights" name="nights">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                            </select>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-md-1">
+                        <div class="menu-booking-form-item single-digit-version">
+                          <label>villas</label>
+
+                          <div class="select-input">
+                            <div class="fa fa-play"></div>
+                            <select id="rooms" name="rooms">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                            </select>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="menu-booking-form-item code-version">
+                          <label>code</label>
+
+                          <div class="select-input">
+                            <div class="fa fa-play"></div>
+                            <select id="codeType" name="codeType">
+                              <option value="0">Code Type</option>
+                              <option value="Promo">Promo</option>
+                              <option value="Corporate">Corporate</option>
+                              <option value="Group">Group</option>
+                              <option value="iataNumber">IATA</option>
+                            </select>
+                          </div>
+
+                          <input class="text-input" type="text" id="code" name="code" value="">
+                        </div>
+                      </div>
+
+
+                      
+
+                    </div>
+                  </form>
+
+                </div>
+              </div> <!-- #menu-booking-panel -->
+            </div> <!-- menu-panel-container -->
+
+            <div id="header-book-now">
+              <div id="header-book-now-btn">
+                <span class="bg"></span>
+                <span class="copy">BOOK NOW</span>
+              </div>
+            </div>
+
           </div>
+
+          <!-- 
           <div class="col-md-1">
             <div id="header-book-now">
               <a href="#" id="header-book-now-btn">
@@ -104,6 +218,12 @@ define('DEBUG', true);
               </a>
             </div>
           </div>
+          -->
+
         </div>
       </div>
+
+
+      
+
     </header>

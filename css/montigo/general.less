@@ -8,8 +8,14 @@
 
 ////@light-blue: #9acaff;         // previous color ^_^
 //@light-blue: #1595d3;
-@light-blue: #22aae8;
+@light-blue: #22aae8;                                                       // if you change this, do change the 'percent' alpha of the others
+@light-blue-05: #f4fbfe;
 @light-blue-20: #d3eefa;
+@light-blue-40: #a7ddf6;
+@light-blue-50: #90d4f3;
+
+
+
 
 @dark-brown-10: #edecec;
 
@@ -103,4 +109,124 @@ hr.short-hr{
   max-width: 1280px;
 }
 
+
+//    _____  _    ____  _     _____ 
+//   |_   _|/ \  | __ )| |   | ____|
+//     | | / _ \ |  _ \| |   |  _|  
+//     | |/ ___ \| |_) | |___| |___ 
+//     |_/_/   \_\____/|_____|_____|
+//                                  
+
+.montigo-blue-table{
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  background: @light-blue-05;
+  margin-bottom: 0px;
+  
+  thead{
+    background: @light-blue-50;
+    th{
+      .brandon-black;
+      font-size: 11px;
+      line-height: 14px;
+      text-transform: uppercase;
+      color: @white;
+      text-align: center;
+      letter-spacing: 0.1em;
+      
+
+
+      height: 50px;
+      vertical-align: middle !important;
+      border-bottom: none !important;
+
+
+      border-right: 1px solid #87bfd9;
+
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+  tbody{
+    
+    .brandon-light;
+    letter-spacing: 0.05em;
+
+    tr.top-space{
+      .transition-none();
+      td{
+        height: 13px;
+      }
+      &:hover{
+        background: none;
+      }
+    }
+    tr.bottom-space{
+      .transition-none();
+      td{
+        height: 17px;
+      }
+      &:hover{
+        background: none;
+      }
+    }
+
+    tr{
+      .transition-in(0.2s);
+      &:hover{
+        //color: @light-blue;
+        
+        td{
+          border-right: 1px solid transparent;
+
+          &:last-child{
+            border-right: none;
+          }
+        }
+
+        //border: 1px solid #dce0e3;
+        //background: @white;
+        //
+        
+
+        //color: @white;
+        background: @light-blue-20;
+      }
+    }
+
+    /*
+    &:before{
+      content: "";
+      display: block;
+      height: 13px;
+    }
+    &:after{
+      content: "";
+      display: block;
+      height: 17px;
+    }
+    */
+
+    td{
+      height: 45px;
+      vertical-align: middle !important;
+      border-top: none !important;
+
+      border-right: 1px solid #dce0e3;
+
+      .transition-in(0.2s);
+
+      &:last-child{
+        border-right: none;
+        //border-right: 1px solid transparent;
+      }
+    }
+
+  }
+    
+}
 

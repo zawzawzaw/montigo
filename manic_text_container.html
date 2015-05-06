@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
+  <head>
+    <title>Montigo Resorts</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui"/>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="icon" href="favicon.png">
+
+    <!-- social -->
+    <meta content="Montigo Resorts" property="og:title"/>
+    <meta content="SHARE_IMAGE_OF_THE_PAGE" property="og:image"/>
+    <meta content="NAME_OF_THE_SITE" property="og:site_name"/>
+    <meta content="URL_OF_THE_PAGE" property="og:url"/>
+    <meta content="DESCRIPTION_OF_THE_PAGE" property="og:description"/>
+
+    <!-- FONT -->
+    <!-- 
+    <script src="//use.typekit.net/avg1jpg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    -->
+
+    <link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="library/jquery/jquery-1.9.1.min.js"></script>
+    <script src="library/_js/mobile-detect.min.js"></script>
+    <script src="library/_js/montigo_modernizr_custom.js"></script>
+    <script src="js/all.js"></script>
+
+    <!-- if debug ?? -->
+    <script src="library/closure-library/closure/goog/base.js"></script>
+    <script src="js/goog-custom-dependencies.js"></script>
+
+
+    <style type="text/css">
+
+      #manic-image-container{
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #manic-text-container{
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #manic-text-container .text{
+
+        
+
+      }
+    </style>
+
+  </head>
+
+  <body class="page-home">
+
+    <div id="manic-image-container">
+      <img src="images/parallax/dining_parallax_private_dining_beach.jpg">
+    </div>
+    
+    <div id="manic-text-container">
+
+      <div class="text-container" data-width="1276" data-height="807">
+        <div id="dining-private-dining-text" class="parallax-section-text white-version text" data-x="1009" data-y="261">
+          <div class="bg-black-gradient"></div>
+          <h3>Private Dining</h3>
+          <hr class="short-hr">
+          <h4>Unique dining experiences</h4>
+          <p>Every scenic stretch at our resort is a potential dining venue – for couples, families or even larger groups. Share your dream theme with us. We’ll pull out all the stops to replicate that signature cuisine and attentive service you’d expect at one of our restaurants.</p>
+          <a href="#" class="cta-button">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+
+    
+    <!-- 
+           _   ___     ___    ____   ____ ____  ___ ____ _____ 
+          | | / \ \   / / \  / ___| / ___|  _ \|_ _|  _ \_   _|
+       _  | |/ _ \ \ / / _ \ \___ \| |   | |_) || || |_) || |  
+      | |_| / ___ \ V / ___ \ ___) | |___|  _ < | ||  __/ | |  
+       \___/_/   \_\_/_/   \_\____/ \____|_| \_\___|_|    |_|  
+                                                               
+     -->
+
+    <script type="text/javascript" src="library/_js/preloadjs-0.4.0.min.js"></script>
+
+    <script type="text/javascript" src="library/gsap/TweenMax.min.js"></script>
+    <script type="text/javascript" src="library/gsap/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="library/gsap/easing/EasePack.min.js"></script>
+    <script type="text/javascript" src="library/gsap/plugins/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="library/scrollmagic/iscroll-probe.js"></script>
+    <script type="text/javascript" src="library/scrollmagic/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="library/scrollmagic/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="library/scrollmagic/plugins/debug.addIndicators.min.js"></script>
+
+    <script type="text/javascript">
+      goog.require('manic.ui.ImageContainer');
+      goog.require('manic.ui.TextContainer');
+      
+    </script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        
+        var text_container = new manic.ui.TextContainer({
+          //scale_mode: 'stretch',
+          //scale_mode: 'best_fit',
+          //horizontal_align: 'center',
+          //vertical_align: 'center'
+        },$('#manic-text-container'));
+
+        var image_container = new manic.ui.ImageContainer({
+          //scale_mode: 'stretch',
+          //scale_mode: 'best_fit',
+          //horizontal_align: 'center',
+          //vertical_align: 'center'
+        },$('#manic-image-container'));
+
+      });
+    </script>
+
+
+    
+  </body>
+</html>
+
+

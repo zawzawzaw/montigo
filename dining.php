@@ -2,38 +2,32 @@
 
 <div id="main-page-content">
 
-  <!-- 
-     ____  _     ___ ____  _____ ____  
-    / ___|| |   |_ _|  _ \| ____|  _ \ 
-    \___ \| |    | || | | |  _| | |_) |
-     ___) | |___ | || |_| | |___|  _ < 
-    |____/|_____|___|____/|_____|_| \_\
-                                       
-   -->
 
-  <div id="dining-slider" class="main-slider" data-image="images/main_slider/dining_main_slider_01_pillars.jpg">
-    <div class="text-container">
-      <div class="one-long-text">
-        <div class="text">
+  <div id="dining-slider" class="main-slider" data-image="images/main_slider/dining_main_slider_02_tiigo.jpg">
 
-          <div id="dining-slider-text">
-            <div class="slider-white-circle"></div>
-            <h3>Dining at<br>Montigo</h3>
-            <hr class="short-hr">
-            <h4>Montigo Resorts, Nongsa</h4>
-            <p>In pellentesque neque ut nisi rhoncus, eu imperdiet lacus sagittis. Vivamus consequat tortor a quam aliquam, sit amet varius nisl varius. Aliquam sed augue id dolor congue tincidunt. Aliquam ut libero sit amet augue gravida consectetur. Class aptent taciti sociosqu.</p>
-          </div> <!-- #rooms-slider-text -->
+    <div class="main-slider-image-container">
+      <img src="">
+    </div>
+
+    <!-- <div class="bg-black-rect"></div> -->
+
+    <div class="main-slider-text-container">
+      <div class="text-container" data-width="1280" data-height="830">
+        <div id="dining-slider-text" class="text white-version" data-x="640" data-y="415">
+
+          <div class="bg-black-gradient"></div>
+          <h3>Dining at<br>Montigo</h3>
+          <h4>Montigo Resorts, Nongsa</h4>
+          <hr class="short-hr">
+          <p>In pellentesque neque ut nisi rhoncus, eu imperdiet lacus sagittis. Vivamus consequat tortor a quam aliquam, sit amet varius nisl varius. Aliquam sed augue id dolor congue tincidunt. Aliquam ut libero sit amet augue gravida consectetur. Class aptent taciti sociosqu.</p>
 
         </div>
       </div>
-      
     </div>
+    
+  </div> <!-- main-slider -->
 
-    <!-- the image -->
-    <img>
-  </div> <!-- #dining-slider -->
-
-
+  
   <!-- 
      _____  _    ____  ____  ____  
     |_   _|/ \  |  _ \|  _ \/ ___| 
@@ -55,9 +49,10 @@
               <h3>Tadd’s</h3>
               <hr class="short-hr">
               <h4>All day dining</h4>
-              <p>Time and tide pause for all who feast at TADD’s. It’s the sweet spot for all day seafront dining, surrounded by tranquil greenery. Besides à la carte local, Asian and Western comfort cuisine, TADD’s offers a delicious twist on traditional favourites. And there’s even a gourmet counter for takeaway fare. Chef’s recommendations include garden fresh Gado Gado, fluffy Tahu Telor Goring, exotic Rujak Duck Prosciutto, and slow baked Montigo Ayam Panggang Berempah.</p>
-              <p>Whether you’re feeling peckish or up for something more sumptuous, TADD’s has the flavours you’re looking to savour.</p>
-              <a href="#" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+              <p>Tadd’s serves à la carte local, Asian and Western comfort cuisine in a relaxed semi al-fresco poolside setting, all day long.</p>
+              <p>Sumptuous daily breakfasts include international and local favorites, along with exotic tropical fruit, piping hot dim sum, and freshly baked breads and pastries. TADD’s also offers a delicious twist on traditional favourites, with a gourmet counter for takeaway fare. Chef’s recommendations include Gado Gado, club sandwiches and coconut Crème Brûlée.</p>
+              <p>Parents love dropping into Tadd’s for a laid back drink or cup of coffee, while their little ones enjoy themselves in the pool or at the neighbouring Olo Kids Club.</p>
+              <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Tadd%27s" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
             </div>
           </div> <!-- dining-tadds-text-01 -->
 
@@ -161,10 +156,12 @@
               <h3>Pantai</h3>
               <hr class="short-hr">
               <h4>Sensational seafood</h4>
+
+
               <p>Pantai, meaning ‘beach’ in Bahasa, offers an extensive menu featuring fresh, locally-sourced produce and ingredients.</p>
               <p>Drawing from the vibrant flavours of Indonesian fare and the diversity of Singaporean specialties, the Pantai palette is distinctly Indo-Chinese. Feast the senses on dishes such as crisp Deep Fried Prawns with Golden Pumpkin, hearty Wok Fried Beef ‘Mongolian Style’, and piquant Braised Homemade Tofu with Shitake Mushrooms and Seafood. Or why not indulge in the fresh catches of the day, prepared just the way you want it – be it steamed ‘nyonya style’ or deep fried with sweet and sour sauce.</p>
-              <p>Tucked away from the activities of the main lobby, the intimate kelong-style restaurant sits amongst natural beauty, a light breeze and the soft sway of trees. Diners will find the Pantai dining experience one of charm and delight.</p>
-              <a href="#" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+              <p>Tucked away from the main lobby, the intimate kelong-style restaurant sits amongst natural beauty, a light breeze and the soft sway of trees. Diners will find the Pantai dining experience one of charm and delight.</p>
+              <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Pantai" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
             </div>
           </div>
 
@@ -249,14 +246,15 @@
         <div class="col-md-4">
 
           <div id="dining-tiigo-text-01" class="dining-description">
-            <div id="dining-description-container">
+            <div class="dining-description-container">
               <h3>Tiigo</h3>
               <hr class="short-hr">
               <h4>Meals, martinis &amp; music</h4>
-              <p>It’s not just the waves you’ll hear swishing and splashing about at TIIGO – the definitive poolside hangout, where you can unwind with over fifty quirky cocktails and a distinguished list of signature spirits for company.</p>
-              <p>TIIGO’s cool across every detail, from the comfortably shaded indoor lounge to the cabana beds and sand park. There’s a weekend BBQ, with accompanying hits like crisp Tacos de Pescado, rich Tiigo Rib Eye, zesty Rendang Padang Quesadillas and spicy Pepper Lamb Sliders.</p>
-              <p>If all that isn’t enough to get you dizzy, wait till our DJ spins his weekend magic.</p>
-              <a href="#" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+
+              <p>It’s not just the waves you’ll hear swishing and splashing about at TIIGO – the chilled out beach club that’s cool across every detail. Unwind in the comfortably shaded indoor lounge, sand park or on the cabana beds, as you choose from over fifty quirky cocktails and signature spirits on offer.</p>
+              <p>Weekends see our DJ pumping the party up a notch, when TIIGO is transformed into a sandy dance floor with BBQ. Don’t miss the ever popular Tacos de Pescado, Tiigo Rib Eye, Rendang Padang Quesadillas and Pepper Lamb Sliders.</p>
+
+              <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Tiigo" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
             </div>
           </div> <!-- dining-tiigo-text-01 -->
 
@@ -323,36 +321,24 @@
   <div id="dining-private-dining-section" class="parallax-section" data-image="images/parallax/dining_parallax_private_dining_beach.jpg">
     
 
-    <div class="image-container"></div>
+    <div class="parallax-section-image-container">
+      <img src="">
+    </div>
 
-    <div class="text-container">
-      <div class="text">
+    <div class="parallax-section-text-container">
+      <div class="text-container" data-width="1276" data-height="807">
+        <div id="dining-private-dining-text" class="parallax-section-text white-version text" data-x="1009" data-y="261">
 
-        <div class="container-fluid has-breakpoint">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="space10"></div>
-            </div>
-            <div class="col-md-4">
+          <div class="bg-black-gradient"></div>
+          <h3>Private Dining</h3>
+          <hr class="short-hr">
+          <h4>Unique dining experiences</h4>
+          <p>The resort’s scenic stretches offer many private dining possibilities – for couples, families or even larger groups. An intimate anniversary meal for two, candle lit on the Montigo jetty or The Spa Beach? A birthday party at a private sand-park, complete with cushions, camp fire and BBQ? Whatever your occasion, we’ll help you make it even more special with a venue to match.</p>
+          <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Private%20Dining" class="cta-button">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
 
-              <div id="dining-private-dining-text" class="parallax-section-text white-version">
-
-                <div class="bg-black-gradient"></div>
-
-                <h3>Private Dining</h3>
-                <hr class="short-hr">
-                <h4>Unique dining experiences</h4>
-                <p>Every scenic stretch at our resort is a potential dining venue – for couples, families or even larger groups. Share your dream theme with us. We’ll pull out all the stops to replicate that signature cuisine and attentive service you’d expect at one of our restaurants.</p>
-                <a href="#" class="cta-button">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
-
-              </div> <!-- #rooms-residences-text -->
-              
-            </div>
-          </div>
         </div>
-
       </div>
-    </div> <!-- text-container -->
+    </div>
 
 
   </div> <!-- #dining-private-dining-section -->
@@ -371,38 +357,27 @@
   <div id="dining-invilla-dining-section" class="parallax-section" data-image="images/parallax/dining_parallax_invilla_dining_table.jpg">
     
 
-    <div class="image-container"></div>
+    <div class="parallax-section-image-container">
+      <img src="">
+    </div>
 
-    <div class="text-container">
-      <div class="text">
 
-        <div class="container-fluid has-breakpoint">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="space10"></div>
-            </div>
-            <div class="col-md-4">
+    <div class="parallax-section-text-container">
+      <div class="text-container" data-width="1276" data-height="806">
+        <div id="dining-invilla-dining-text" class="parallax-section-text text" data-x="1009" data-y="261">
 
-              <div id="dining-invilla-dining-text" class="parallax-section-text">
+          <div class="bg-white-gradient"></div>
 
-                <div class="bg-white-gradient"></div>
+          <h3>In-Villa Dining</h3>
+          <hr class="short-hr">
+          <h4>So private, so convenient</h4>
+          <p>What’s a private pool and rooftop without a dining experience that amply complements them? At Montigo Resorts, Nongsa, you can enjoy private poolside lunches, dinners under the stars or appetizing accompaniments to go with your favourite TV show – at whatever hour it’s playing – without stepping out of your villa.</p>
+          <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20In-Villa%20Dining" class="cta-button">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
 
-                <h3>In-Villa Dining</h3>
-                <hr class="short-hr">
-                <h4>So private, so convenient</h4>
-                <p>At Montigo Resorts, Nongsa, 24-hour room service can be a bit of an understatement. That’s because, with their spacious interiors, amenities and private pools, our villas are so much more than just… rooms. Is it any wonder that many guests prefer to dine in? So private.  So convenient.</p>
-                <a href="#" class="cta-button">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
-
-              </div> <!-- #rooms-residences-text -->
-              
-            </div>
-          </div>
         </div>
-
       </div>
-    </div> <!-- text-container -->
-
-
+    </div>
+    
   </div> <!-- #dining-invilla-dining-section -->
 
 
@@ -438,6 +413,15 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider/dining_main_slider_02_tiigo.jpg",
+        "images/parallax/dining_parallax_private_dining_beach.jpg",
+        "images/parallax/dining_parallax_invilla_dining_table.jpg",
+        "images/dining/dining_tadds_image_01.jpg",
+        "images/dining/dining_tadds_image_02.jpg",
+        "images/dining/dining_tadds_image_03.jpg",
+        "images/dining/dining_pantai_image_01.jpg",
+        "images/dining/dining_tiigo_image_01.jpg",
+        "images/dining/dining_tiigo_image_02.jpg"
       ],
       desktop_js_array: [
         <?php if(DEBUG): ?>
@@ -445,6 +429,7 @@
           "library/gsap/TimelineMax.min.js",
           "library/gsap/easing/EasePack.min.js",
           "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
           "library/scrollmagic/ScrollMagic.min.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",

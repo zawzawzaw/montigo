@@ -42,12 +42,16 @@ montigo.page.Dining = function(options, element) {
    */
   this.parallax_02 = null;
 
+  this.menu.add_black_gradient();
+
 
   this.create_scrollmagic();
   this.create_main_image();
   //this.create_panel_containers();
   this.create_parallax();
 
+
+  //this.has_main_image_pin = true;
 
 
   this.window = $(window);
@@ -112,7 +116,10 @@ montigo.page.Dining.prototype.create_main_image = function() {
   this.main_image = new montigo.component.MainImage({
   },$('#dining-slider'));
 
-  //this.main_image.create_activities_scene(this.controller);
+  this.main_image.create_dining_scene(this.controller);
+
+
+  //this.main_image.create_pin_scene(this.controller);
 };
 montigo.page.Dining.prototype.create_parallax = function() {
 
@@ -123,15 +130,12 @@ montigo.page.Dining.prototype.create_parallax = function() {
   //this.parallax_01.create_text_scene_2(this.controller);
   this.parallax_01.create_parallax_scene(this.controller2);
   
-
-
   
   this.parallax_02 = new montigo.component.ParallaxImage({
   },$('#dining-invilla-dining-section'));
 
   //this.parallax_02.create_text_scene_2(this.controller);          // temporarily taken out :D
   this.parallax_02.create_parallax_scene(this.controller2);
-  
 
 };
 

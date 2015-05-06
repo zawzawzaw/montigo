@@ -2,42 +2,30 @@
 
 <div id="main-page-content">
 
-  <!-- 
-     ____  _     ___ ____  _____ ____  
-    / ___|| |   |_ _|  _ \| ____|  _ \ 
-    \___ \| |    | || | | |  _| | |_) |
-     ___) | |___ | || |_| | |___|  _ < 
-    |____/|_____|___|____/|_____|_| \_\
-                                       
-   -->
-
-
   <div id="activities-slider" class="main-slider" data-image="images/main_slider/activities_main_slider_02_river.jpg">
-    <div class="text-container" id="specific-copy-03">
-      <div class="one-long-text">
-        <div class="text">
 
-          <div id="activities-slider-text">
-            <div class="bg-black-gradient"></div>
-            <h3>New <br>Adventures!</h3>
-            <div class="foot-icon"></div>
-            <h4>There’s never a dull moment <br>at Montigo Resorts, Nongsa.</h4>
-            <hr class="short-hr">
-            <p>That’s because our team’s been handpicked to include spirited pros who love nothing more than perfecting the perfect family getaway. Activities include a leisurely sunset cruise, exhilarating aquatic adventures, exciting terrestrial explorations, sporty challenges, innovative fitness workouts, and even a treasure trove of surprises for youngsters.</p>
-            <p>Joy, ahoy!</p>
-          </div>
+    <div class="main-slider-image-container">
+      <img src="">
+    </div>
 
+    <div class="main-slider-text-container">
+      <div class="text-container" data-width="1276" data-height="826">
+        <div class="text white-version" data-x="638" data-y="413">
 
+          <div class="bg-black-gradient"></div>
+          <h3>New <br>Adventures!</h3>
+          <div class="foot-icon"></div>
+          <h4>There’s never a dull moment <br>at Montigo Resorts, Nongsa.</h4>
+          <hr class="short-hr">
+          <p>The team at Montigo Resorts, Nongsa, has been handpicked to include spirited pros who delight in perfecting your family getaway. Activities include a leisurely sunset cruise, exhilarating aquatic adventures, exciting land explorations, sporting challenges, innovative fitness workouts, and even a treasure trove of surprises for youngsters.</p>
 
         </div>
       </div>
-      
     </div>
+    
+  </div> <!-- main-slider -->
 
-    <!-- the image -->
-    <img>
-  </div> <!-- #activities-slider -->
-
+  
   <!-- 
      _____ ___     _____  ____  ___ _____ _____ ____  
     |  ___/ \ \   / / _ \|  _ \|_ _|_   _| ____/ ___| 
@@ -54,7 +42,7 @@
       <hr class="short-hr">
       <h4>Venture out into the sun</h4>
       <p>Cras dictum. Maecenas ut turpis. In vitae erat ac orci dignissim eleifend. Nunc quis justo. Sed vel ipsum in purus tincidunt pharetra. Sed pulvinar, felis id consectetuer malesuada, enim nisl mattis elit, a facilisis tortor nibh quis leo. Sed augue lacus, pretium vitae, molestie eget, rhoncus quis, elit. Donec in augue. Fusce orci wisi, ornare id, mollis vel, lacinia vel, massa. </p>
-      <a href="#" class="cta-button">After booking your stay at Montigo Resorts, Nongsa, <br>contact us to book your activities! <span class="fa fa-chevron-circle-right"></span></a>
+      <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Activities" class="cta-button">After booking your stay at Montigo Resorts, Nongsa, <br>contact us to book your activities!<span class="fa fa-chevron-circle-right"></span></a>
     </div>
 
     <div id="activities-favorite-item-container">
@@ -67,7 +55,7 @@
               
               <h4>Jungle trekking</h4>
               <hr class="short-hr">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum sed pharetra.</p>
+              <p>Depart at 9:00AM by hotel car to Nongsa Forest. Trek uphill for a mid-morning refreshment, then across the primary forest to spot wildlife and plants indigenous to the region.</p>
             </div>
           </div>
 
@@ -78,7 +66,7 @@
               
               <h4>Mangrove Tour</h4>
               <hr class="short-hr">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum sed pharetra.</p>
+              <p>Cruise along the mangroves and wetlands as thousands upon thousands of incandescent reies light up the night skies. A guide will be on hand to point out those not-to-be-missed magic moments.</p>
             </div>
           </div>
 
@@ -89,7 +77,7 @@
               
               <h4>batam tour</h4>
               <hr class="short-hr">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum sed pharetra.</p>
+              <p>Departing from Montigo Resorts, take a stroll through Batam’s landmark dragon fruit farm followed by a drive through the iconic Barelang Bridge to the Thoa Pek Kong Temple.</p>
             </div>
           </div>
 
@@ -100,7 +88,7 @@
               
               <h4>Kampong Bike Tour</h4>
               <hr class="short-hr">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum sed pharetra.</p>
+              <p>Together with a Montigo guide, cycle from the Resort to Nongsa’s nearby Pantai Village to explore a tranditional Indonesian ‘kampong’ village. Catch a glimpse of daily life in a local Malay tribe in Batam.</p>
             </div>
           </div>
 
@@ -111,7 +99,7 @@
               
               <h4>Vintage car tour</h4>
               <hr class="short-hr">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum sed pharetra.</p>
+              <p>Take a romantic ride around Nongsa’s Heritage Village in Montigo’s vintage Volkswagen. Just let us know where you’d like to go, or let our experienced guide drive you to the best of Nongsa. Remember to bring the sunnies and head scarf!</p>
             </div>
           </div>
 
@@ -122,7 +110,7 @@
               
               <h4>Beach bike tour</h4>
               <hr class="short-hr">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum sed pharetra.</p>
+              <p>Coast along the beach with our guide and explore some of the local sites. While you’re there, why not stop for a fresh young coconut while you soak up the sun.</p>
             </div>
           </div>
 
@@ -163,10 +151,12 @@
                 <h3>Aquatic Adventure</h3>
                 <hr class="short-hr">
                 <h4>Sea Activities &amp; Water Sports</h4>
-                <p>What’s an internationally acclaimed seaside resort without some truly world class aquatic adventure? You could opt for some of our more laid back excursions, like the mangrove tour, firefly sighting and fishing trip. Or turbo charge your adrenaline with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving.</p>
-                <p>Certified instructors are at hand, should you need them. And the equipment’s comparable with what you can expect to find in other leading resorts of the world. So come on in, the water’s fine!</p>
+
+
+                <p>What’s an internationally acclaimed seaside resort without some amazing aquatic adventure? Opt for some of our more laid back excursions, like the mangrove tour, firefly sighting and fishing trip. Or  gear up for some action with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving.</p>
+                <p>Certified instructors are at hand, should you need them. Come on in, the water’s calling…</p>
                 <div class="space10"></div>
-                <a href="#" id="activities-sea-text-button-01" class="cta-button">see more sea activities<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sea%20Activities" id="activities-sea-text-button-01" class="cta-button">see more sea activities<span class="fa fa-chevron-circle-right"></span></a>
 
               </div>
               <div class="panel panel-02 list-panel">
@@ -187,7 +177,7 @@
                   <li>Jet ski</li>  
                 </ul>
 
-                <a href="#" class="cta-small-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
 
               </div>
             </div>
@@ -218,10 +208,13 @@
               <div class="panel panel-01 description-panel">
                 <h3>Terrestrial Explorations</h3>
                 <hr class="short-hr">
-                <h4>Worlds class courses.<br>the perfect setting for a win</h4>
-                <p>There’s water. And then, there’s terrestrial action that’s oceans apart. For those among us who love the thrill of a trail, we offer miles of smiles – with the Nongsa beach bike tour, kampong bike tour, Batam tour and vintage car tour. Fancy yourselves playing Tarzan and Jane? Swing over, we’ve even got a jungle trek!</p>
+
+
+                <h4>Sun, fun and games</h4>
+
+                <p>At Montigo Resorts, Nongsa, we also offer thrilling action on land – like the Nongsa beach bike tour, kampong bike tour and Batam tour. Fancy a local market visit? Sign up for our vintage car tour!</p>
                 <div class="space10"></div>
-                <a href="#" id="activities-terrestrial-text-button-01" class="cta-button">see more terrestrial activities<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Terrestrial%20Activities" id="activities-terrestrial-text-button-01" class="cta-button">see more terrestrial activities<span class="fa fa-chevron-circle-right"></span></a>
 
               </div>
               <div class="panel panel-02 list-panel">
@@ -243,7 +236,7 @@
                   <li>Exercitation</li>
                 </ul>
 
-                <a href="#" class="cta-small-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
 
               </div>
             </div>
@@ -280,7 +273,7 @@
 
           <div class="margin-less-image">
             <div id="activities-fitness-image-01" class="manic-image-container">
-              <img src="images/activities/sea_activities_01.jpg">
+              <img src="images/activities/fitness_activities_01.jpg">
             </div>
           </div>
 
@@ -292,11 +285,14 @@
               <div class="panel panel-01 description-panel">
                 <h3>Sports &amp; Fitness</h3>
                 <hr class="short-hr">
-                <h4>World class courses</h4>
-                <p>As a much cherished guest at Montigo Resorts, Nongsa, there’s no end to the pampering. If all our aquatic and terrestrial action leaves you yearning for that little extra to pack in your getaway, you’re sure to find it among our sporting and fitness activities.</p>
-                <p>You can never get enough of a good thing, especially where yoga’s concerned, and our certified instructors will have you twisting to a routine that will benefit you, for years to come. Hold that breath – we even offer the services of an in-house Ayurvedic doctor.</p>
+                <h4>All the facilities you need</h4>
+
+                <p>If you’re looking to pack even more into your getaway, explore our sporting and fitness activities. Tee off at one of the 18-hole golf courses in the vicinity. Batam’s perennial blue skies and sprawling greens offer the perfect setting for a birdie.</p>
+                <p>Missing a ripple on those biceps? Or looking to shed an inch around the middle? Offering an uninterrupted view of the Nongsa waters, our spacious gym houses some of the latest exercise machines for fitness enthusiasts.</p>
+                <p>You can never get enough of a good thing, especially where yoga’s concerned, and our certified instructors will have you twisting to a routine that will keep you fit, for years to come. Hold that breath – we even offer the services of an in-house Ayurvedic doctor.</p>
+
                 <div class="space10"></div>
-                <a href="#" id="activities-fitness-text-button-01" class="cta-button">see more sports &amp; fitness<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sport%20%26%20Fitness%20Activities" id="activities-fitness-text-button-01" class="cta-button">see more sports &amp; fitness<span class="fa fa-chevron-circle-right"></span></a>
 
               </div>
               <div class="panel panel-02 list-panel">
@@ -313,7 +309,7 @@
                   <li>Sand soccer</li>
                 </ul>
 
-                <a href="#" class="cta-small-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
 
               </div>
             </div>
@@ -328,38 +324,38 @@
 
 
   <div id="activities-parallax-01" class="parallax-section" data-image="images/parallax/activities_parallax_03_kids.jpg">
-    <div class="image-container">
+    <div class="parallax-section-image-container">
+      <img src="">
     </div>
-    <div class="text-container">
-      <div class="text">
 
-        <div class="container-fluid has-breakpoint">
-          <div class="row">
-            <div class="col-md-5">
-              <div id="activities-parallax-01-text">
-                <div class="bg-black-gradient"></div>
-                <div class="activities-white-tiggo-icon"></div>                
-                <h3>Olo kids club!</h3>
-                <hr class="short-hr">
-                <h4>A great place to have fun</h4>
-                <p>Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium. Nulla facilisi  libero vestibulum sem, vitae elementum. </p>
-                <p>Duis tincidunt, felis et luctus placerat, ipsum libero vestibulum sem, vitae elementum wisi ipsutm a metus. Nulla a enim sed dui hendrerit lobortis. Donec lacinia vulputate magna. Vivamus susctipit lectus at quam.</p>
-                <a href="" class="cta-button">get in touch with montigo <span class="fa fa-chevron-circle-right"></span></a>
-              </div>
-            </div>
-          </div>
+    <div class="parallax-section-text-container">
+      <div class="text-container" data-width="1276" data-height="726">
+        <div id="activities-parallax-01-text" class="parallax-section-text white-version text" data-x="280" data-y="387">
+
+          <div class="bg-black-gradient"></div>
+
+          <div class="activities-white-tiggo-icon"></div>                
+          <h3>Olo kids club!</h3>
+          <hr class="short-hr">
+          <h4>A great place to have fun</h4>
+          <p>Montigo Resorts, Nongsa, offers a sporting, artistic and educational mix of thrills for kids and teens.</p>
+          <p>The Olo Kids Club is championed by none other than Tilo, our resort’s lovable chick – and very chic – prince mascot. Tilo is always game to make new friends, so do ensure your little ones have enough time with him! For older kids and teens, there’s swimming, beach volleyball, tennis, arts & craft, and cookie baking. We also have a playground, and a playroom with PS3, X Box, Wii, foosball and mini billiards.</p>
+          <p>Parents can entrust our qualified mentors with their children’s care, setting themselves free to discover even more of Montigo Resorts, Nongsa.</p>
+
+          <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Olo%20Kids%20Club" class="cta-button">get in touch with montigo <span class="fa fa-chevron-circle-right"></span></a>
+
         </div>
-
       </div>
     </div>
+
   </div> <!-- #activities-parallax-01 -->
 
   
 
   <!-- 
       ___ _____ _   _ _____ ____  ____  
-     / _ \_   _| | | | ____|  _ \/ ___| 
-    | | | || | | |_| |  _| | |_) \___ \ 
+     / _ \_   _| | | | ____|  _ \/ ___|
+    | | | || | | |_| |  _| | |_) \___ \
     | |_| || | |  _  | |___|  _ < ___) |
      \___/ |_| |_| |_|_____|_| \_\____/ 
                                         
@@ -475,7 +471,7 @@
           <div class="col-md-6">
             <div class="space20"></div>
             <div id="activities-other-cta-button-container">
-              <a href="#" id="activities-other-cta-button" class="cta-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+              <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Activities" id="activities-other-cta-button" class="cta-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
             </div>
             <div class="space70"></div>
           </div>
@@ -518,9 +514,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
-        "images/activities_slider/activities_slider_image_01.jpg",
-        "images/activities/activities_parallax_01.jpg",
-        "images/activities/activities_parallax_02.jpg",
+        "images/main_slider/activities_main_slider_02_river.jpg",
+        "images/parallax/activities_parallax_03_kids.jpg",
         "images/activities/favorites_01.jpg",
         "images/activities/favorites_02.jpg",
         "images/activities/favorites_03.jpg",
@@ -528,14 +523,17 @@
         "images/activities/favorites_05.jpg",
         "images/activities/favorites_06.jpg",
         "images/activities/sea_activities_01.jpg",
-        "images/activities/sea_activities_02.jpg",
-        "images/activities/sea_activities_03.jpg",
-        "images/activities/sea_activities_04.jpg",
+        "images/activities/terrestrial_activities_01.jpg",
         "images/activities/fitness_activities_01.jpg",
-        "images/activities/fitness_activities_02.jpg",
-        "images/activities/fitness_activities_03.jpg",
-        "images/activities/kid_activities_01.jpg",
-        "images/activities/kid_activities_02.jpg"
+
+        "images/icons/activities_icon_01_chef.png",
+        "images/icons/activities_icon_02_paintball.png",
+        "images/icons/activities_icon_03_herbal_compress.png",
+        "images/icons/activities_icon_04_karaoke.png",
+        "images/icons/activities_icon_05_batik_painting.png",
+        "images/icons/activities_icon_06_dining.png",
+        "images/icons/activities_icon_07_treasure_hunt.png",
+        "images/icons/activities_icon_08_spa.png"
       ],
       desktop_js_array: [
         <?php if(DEBUG): ?>
@@ -543,6 +541,7 @@
           "library/gsap/TimelineMax.min.js",
           "library/gsap/easing/EasePack.min.js",
           "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
           "library/scrollmagic/ScrollMagic.min.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
@@ -566,5 +565,4 @@
   });
 </script>
 
-
-<?php include('footer.php'); ?>  
+<?php include('footer.php'); ?>

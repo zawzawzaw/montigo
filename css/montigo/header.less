@@ -1,5 +1,6 @@
 @desktop-header-height: 62px;
 
+@book-now-width: 128px;
 
 
 #main-page-header{
@@ -19,6 +20,7 @@
   height: @desktop-header-height;
   z-index: 9999;
 
+  /*
   .blue-bg{
     position: absolute;
     top: 0;
@@ -31,6 +33,12 @@
 
     .transition-in();
     .opacity(1);
+  }
+  */
+ 
+  .gradient-container{
+    .opacity(1);
+    .transition-in();
   }
 
   .white-bg{
@@ -63,10 +71,18 @@
   }
 
 
+  //    _   _    ___     _____ ____    _  _____ ___ ___  _   _ 
+  //   | \ | |  / \ \   / /_ _/ ___|  / \|_   _|_ _/ _ \| \ | |
+  //   |  \| | / _ \ \ / / | | |  _  / _ \ | |  | | | | |  \| |
+  //   | |\  |/ ___ \ V /  | | |_| |/ ___ \| |  | | |_| | |\  |
+  //   |_| \_/_/   \_\_/  |___\____/_/   \_\_| |___\___/|_| \_|
+  //                                                           
+
 
   #header-navigation{
     margin-top: 10px;
-    margin-right: -16px;
+    //margin-right: 22px;     // already provided for by the menu-panel-container
+    //margin-right: -16px;
     text-align: right;
 
     > ul{
@@ -99,23 +115,90 @@
     }
   } // #header-navigation
 
-  #header-book-now{
-    width: 100%;
-    
+
+
+
+  //    __  __ _____ _   _ _   _   ____   _    _   _ _____ _        ____ ___  _   _ _____  _    ___ _   _ _____ ____  
+  //   |  \/  | ____| \ | | | | | |  _ \ / \  | \ | | ____| |      / ___/ _ \| \ | |_   _|/ \  |_ _| \ | | ____|  _ \ 
+  //   | |\/| |  _| |  \| | | | | | |_) / _ \ |  \| |  _| | |     | |  | | | |  \| | | | / _ \  | ||  \| |  _| | |_) |
+  //   | |  | | |___| |\  | |_| | |  __/ ___ \| |\  | |___| |___  | |__| |_| | |\  | | |/ ___ \ | || |\  | |___|  _ < 
+  //   |_|  |_|_____|_| \_|\___/  |_| /_/   \_\_| \_|_____|_____|  \____\___/|_| \_| |_/_/   \_\___|_| \_|_____|_| \_\
+  //                                                                                                                  
+
+  
+
+  #menu-panel-container{
+    position: absolute;
+    width: auto;
     height: @desktop-header-height;
-    position: relative;
+    top: 0;
+    left: 0;
+    right: unit( (@book-now-width + 22), px);
+
+    .menu-panel{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .menu-panel-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+
+    #menu-navigation-panel{
+      top: 0px;
+    }
+    #menu-booking-panel{
+      top: -62px;
+    }
+
+  }
+
+
+
+
+
+
+
+
+  //    ____   ___   ___  _  __  _   _  _____        __
+  //   | __ ) / _ \ / _ \| |/ / | \ | |/ _ \ \      / /
+  //   |  _ \| | | | | | | ' /  |  \| | | | \ \ /\ / / 
+  //   | |_) | |_| | |_| | . \  | |\  | |_| |\ V  V /  
+  //   |____/ \___/ \___/|_|\_\ |_| \_|\___/  \_/\_/   
+  //                                                   
+
+
+  #header-book-now{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    //position: relative;
+    //width: 100%;
+    width: @book-now-width;
+    height: @desktop-header-height;
 
     
 
     #header-book-now-btn{
       display: block;
-      width: 100%;
-      min-width: 105px;
+      width: @book-now-width;
 
       height: @desktop-header-height;
       position: absolute;
-      right: -15px;
+      //right: -15px;
       top: 0;
+      left: 0;
 
       .brandon-bold;
       font-size: 12px;
@@ -126,6 +209,9 @@
       letter-spacing: 0.12em;
 
       padding-top: 10px;
+
+      cursor: pointer;
+      .transition-in();
 
       .copy{
         position: relative;
@@ -194,6 +280,11 @@
 
   .box-shadow (0, 0, 9px, #ebebeb);
 
+
+  .gradient-container{
+    .opacity(0);
+  }
+
   .blue-bg{
     .opacity(0);
   }
@@ -244,6 +335,305 @@
 }
 
 
+//    ____   ___   ___  _  _____ _   _  ____  __     _______ ____  ____ ___ ___  _   _ 
+//   | __ ) / _ \ / _ \| |/ /_ _| \ | |/ ___| \ \   / / ____|  _ \/ ___|_ _/ _ \| \ | |
+//   |  _ \| | | | | | | ' / | ||  \| | |  _   \ \ / /|  _| | |_) \___ \| | | | |  \| |
+//   | |_) | |_| | |_| | . \ | || |\  | |_| |   \ V / | |___|  _ < ___) | | |_| | |\  |
+//   |____/ \___/ \___/|_|\_\___|_| \_|\____|    \_/  |_____|_| \_\____/___\___/|_| \_|
+//                                                                                     
+
+
+#main-page-header.booking-version{
+  #header-book-now{
+    #header-book-now-btn{
+
+      .bg{
+        background: @white !important;
+        .opacity(1);
+        
+      }
+      .copy{
+        color: @light-blue !important;
+        padding-top: 2px;
+
+        &:after{
+          .opacity(0);
+        }
+
+      }
+
+    }
+  }
+
+
+  &.white-version{
+
+    #header-book-now{
+      #header-book-now-btn{
+
+        .bg{
+          background: @light-blue !important;
+          .opacity(1);
+        }
+        .copy{
+          color: @white !important;
+          padding-top: 2px;
+
+          &:after{
+            .opacity(0);
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+}
+
+//    ____   ___   ___  _  _____ _   _  ____ 
+//   | __ ) / _ \ / _ \| |/ /_ _| \ | |/ ___|
+//   |  _ \| | | | | | | ' / | ||  \| | |  _ 
+//   | |_) | |_| | |_| | . \ | || |\  | |_| |
+//   |____/ \___/ \___/|_|\_\___|_| \_|\____|
+//                                           
+
+.menu-booking-form-item{
+  padding-top: 8px;
+  position: relative;
+
+  label{
+    .brandon-bold;
+    font-size: 11px;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: @white;
+
+    display: block;
+
+    &.single-digit-version{
+      text-align: center;
+    }
+  }
+
+  .text-input{
+    .brandon-medium;
+    font-size: 10px;
+    line-height: 20px;
+    text-transform: uppercase;
+    //letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
+    color: @white;
+
+    width: 100%;
+    height: 20px;
+
+    display: block;
+    outline: none;
+    border: none;
+    border: 1px solid @white;
+    padding: 0 8px;
+    padding-top: 1px;
+    background: transparent;
+
+    &.single-digit-version{
+      
+    }
+  }
+
+  .select-input{
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+
+    display: block;
+    outline: none;
+    border: none;
+    border: 1px solid @white;
+    background: transparent;
+
+    .fa{
+      font-size: 6px;
+      color: @white;
+
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      .rotation(90deg);
+    }
+
+    select{
+      .brandon-medium;
+      font-size: 10px;
+      line-height: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: @white;
+
+      width: 120%;
+
+      display: block;
+      border: none;
+      outline: none;
+      outline: 0px;
+      background: transparent;
+      padding-left: 3px;
+      
+      option{
+        //.brandon-bold;
+        //letter-spacing: 0.1em;
+        border: none;
+        outline: none;
+        outline: 0px;
+        color: @light-blue;
+        background: white;
+      }
+
+      
+    }
+  }
+
+
+  &.calendar-version{
+
+    .fa{
+      display: block;
+      position: absolute;
+      top: 35px;
+      right: 6px;
+
+      font-size: 8px;
+      color: @white;
+    }
+    //fa-calendar-o
+  }
+
+
+  &.single-digit-version{
+    label{
+      text-align: center;
+    }
+    .text-input{
+      width: 30px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .select-input{
+      width: 30px;
+      margin: 0 auto;
+      
+      select{
+        width: 50px;
+      }
+    }
+  }
+
+  &.code-version{
+    font-size: 0;
+
+    .select-input{
+      .display-inline-block;
+      width: 50%;
+    }
+    .text-input{
+      .display-inline-block;
+      width: 50%;
+      margin-left: -1px;
+    }
+  }
+
+
+
+
+} // .menu-booking-form-item
+
+
+
+//    ____   ___   ___  _  _____ _   _  ____  __        ___   _ ___ _____ _____  __     _______ ____  ____ ___ ___  _   _ 
+//   | __ ) / _ \ / _ \| |/ /_ _| \ | |/ ___| \ \      / / | | |_ _|_   _| ____| \ \   / / ____|  _ \/ ___|_ _/ _ \| \ | |
+//   |  _ \| | | | | | | ' / | ||  \| | |  _   \ \ /\ / /| |_| || |  | | |  _|    \ \ / /|  _| | |_) \___ \| | | | |  \| |
+//   | |_) | |_| | |_| | . \ | || |\  | |_| |   \ V  V / |  _  || |  | | | |___    \ V / | |___|  _ < ___) | | |_| | |\  |
+//   |____/ \___/ \___/|_|\_\___|_| \_|\____|    \_/\_/  |_| |_|___| |_| |_____|    \_/  |_____|_| \_\____/___\___/|_| \_|
+//                                                                                                                        
+
+#main-page-header.white-version{
+  .menu-booking-form-item{
+    
+    label{
+      color: @dark-brown;
+    }
+
+    .text-input{
+      color: @dark-brown;
+      border: 1px solid @dark-brown;
+    }
+
+    .select-input{
+      border: 1px solid @dark-brown;
+      
+      .fa{
+        color: @dark-brown;
+      }
+
+      select{
+        color: @dark-brown;
+        option{
+          color: @white;
+          background: @dark-brown;
+        }
+      }
+    }
+
+
+    &.calendar-version{
+      .fa{
+        color: @dark-brown;
+      }
+    }
+
+
+    &.single-digit-version{
+      label{
+        text-align: center;
+      }
+      .text-input{
+        width: 30px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .select-input{
+        width: 30px;
+        margin: 0 auto;
+        
+        select{
+          width: 50px;
+        }
+      }
+    }
+
+    &.code-version{
+      font-size: 0;
+
+      .select-input{
+        .display-inline-block;
+        width: 50%;
+      }
+      .text-input{
+        .display-inline-block;
+        width: 50%;
+        margin-left: -1px;
+      }
+    }
+
+  } // .menu-booking-form-item
+}
+
+
+
+
 //    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
 //   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
 //   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
@@ -256,7 +646,7 @@
 
   #main-page-header{
     #header-navigation{
-      margin-right: 5px;
+      //margin-right: 5px;
 
       > ul > li{
         margin-right: 10px;
@@ -279,7 +669,7 @@
 
   #main-page-header{
     #header-navigation{
-      margin-right: 5px;
+      //margin-right: 5px;
 
       > ul > li{
         margin-right: 8px;
@@ -303,7 +693,7 @@
 
   #main-page-header{
     #header-navigation{
-      margin-right: 18px;
+      //margin-right: 18px;
 
       > ul > li{
         margin-right: 6px;

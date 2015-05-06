@@ -5,6 +5,9 @@ goog.provide('montigo.component.ParallaxImage');
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
+goog.require('manic.ui.TextContainer');
+goog.require('manic.ui.ImageContainer');
+
 goog.require('montigo.component.ScrollMagicUtil');
 
 /**
@@ -21,8 +24,21 @@ montigo.component.ParallaxImage = function(options, element) {
   this.element = element;
 
 
-  this.image_container = this.element.find('.image-container');
-  this.text_container = this.element.find('.text-container');
+  /**
+   * @type {manic.ui.TextContainer}
+   */
+  this.manic_text_container = null;
+
+  /**
+   * @type {manic.ui.ImageContainer}
+   */
+  this.manic_image_container = null;
+  
+
+
+
+  //this.image_container = this.element.find('.image-container');
+  //this.text_container = this.element.find('.text-container');
 
   /**
    * @type {ScrollMagic.Scene}
@@ -42,11 +58,26 @@ montigo.component.ParallaxImage = function(options, element) {
   // set image bg
   this.initial_image_src = this.element.attr('data-image');
 
+
+  /*
   this.image_container.css({
     "background-image": "url(" + this.initial_image_src + ")"
   });
-  console.log(this.element)
-  console.log('this.initial_image_src' + this.initial_image_src);
+  */
+
+  //console.log(this.element)
+  //console.log('this.initial_image_src' + this.initial_image_src);
+
+
+
+
+  this.manic_text_container = new manic.ui.TextContainer({
+    'max_x': (1280 - 60)
+  },this.element.find('.parallax-section-text-container'));
+
+  this.manic_image_container = new manic.ui.ImageContainer({
+    'image_src': this.initial_image_src
+  },this.element.find('.parallax-section-image-container'));
 
   
 
@@ -139,11 +170,11 @@ montigo.component.ParallaxImage.prototype.create_text_scene = function(controlle
   var trigger_element_str = "#" + this.element.attr('id');
   
   this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_in_top_animation_for_elements([
-    this.element.find('.text h3'),
-    this.element.find('.text hr'),
-    this.element.find('.text h4'),
-    this.element.find('.text p'),
-    this.element.find('.text .arrow-link')
+    this.element.find('h3'),
+    this.element.find('hr'),
+    this.element.find('h4'),
+    this.element.find('p'),
+    this.element.find('.cta-button')
   ]);
 
   this.text_scene = new ScrollMagic.Scene({triggerElement: trigger_element_str, duration: 300})  // previous duration 300
@@ -192,7 +223,7 @@ montigo.component.ParallaxImage.prototype.create_text_scene_2 = function(control
  */
 montigo.component.ParallaxImage.prototype.create_parallax_scene = function(controller_param) {
   var trigger_element_str = "#" + this.element.attr('id');
-
+  /*
   // initial value
   TweenMax.to(this.image_container, 0, {top: -300});
 
@@ -200,6 +231,18 @@ montigo.component.ParallaxImage.prototype.create_parallax_scene = function(contr
     //.addIndicators({name: "parallax scene"}) // add indicators (requires plugin)
     .setTween(TweenMax.to(this.image_container, 1, {top: 300, ease: Linear.easeNone}))
     .addTo(controller_param);
+  */
+
+
+  // initial value
+  TweenMax.to(this.manic_image_container.element, 0, {top: -300});
+
+  this.parallax_scene = new ScrollMagic.Scene({triggerElement: trigger_element_str, duration: "100%"})
+    //.addIndicators({name: "parallax scene"}) // add indicators (requires plugin)
+    .setTween(TweenMax.to(this.manic_image_container.element, 1, {top: 300, ease: Linear.easeNone}))
+    .addTo(controller_param);
+
+  
 };
 montigo.component.ParallaxImage.prototype.public_method_02 = function() {};
 montigo.component.ParallaxImage.prototype.public_method_03 = function() {};
@@ -223,7 +266,7 @@ montigo.component.ParallaxImage.prototype.on_window_resize = function(event) {
   var window_height = this.window.height();
   this.element.height(window_height)
 
-  this.text_container.height(window_height);
+  //this.text_container.height(window_height);
 };
 
 /**
