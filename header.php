@@ -110,6 +110,8 @@ define('DEBUG', true);
                 <div class="menu-panel-content">
                   
                   <form id="menu-booking-form" name="menu-booking-form" action="https://www.phgsecure.com/IBE/bookingRedirect.ashx" method="post">
+                    <!-- note that the booking in not done by post, but by javascript window.location.href with GET variables as per the example of the previous version -->
+                    <!-- this is to format the dates -->
 
                     <input type="hidden" name="propertyCode" value="SINMR" />
 
