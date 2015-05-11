@@ -24,10 +24,7 @@ montigo.page.Dining = function(options, element) {
    * @type {ScrollMagic.Controller}
    */
   this.controller2 = null;    // for parallax effects
-  /**
-   * @type {ScrollMagic.Controller}
-   */
-  this.controller3 = null;    // for parallax effects
+  
 
   /**
    * @type {montigo.component.MainImage}
@@ -42,7 +39,7 @@ montigo.page.Dining = function(options, element) {
    */
   this.parallax_02 = null;
 
-  this.menu.add_black_gradient();
+  //this.menu.add_black_gradient();
 
 
   this.create_scrollmagic();
@@ -109,7 +106,6 @@ montigo.page.Dining.EVENT_02 = '';
 montigo.page.Dining.prototype.create_scrollmagic = function() {
 
   this.controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-  this.controller3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
 
 };
 montigo.page.Dining.prototype.create_main_image = function() {

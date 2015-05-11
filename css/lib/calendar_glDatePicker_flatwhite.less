@@ -1,19 +1,24 @@
 
 
 .gldp-menu-booking-calendar {
-	position: absolute;
-	position: fixed;
+	//position: absolute;
+	//position: fixed;
 	//font-family: 'helvetica';
 	//width: 144px !important;
 	//
 	.brandon-bold;
 	letter-spacing: 0.05em;
-	top: 50px !important;
+	//top: 50px !important;
+	
+	/*
 	padding-top: 8px;
 	padding-bottom: 9px;
 	padding-left: 2px;
 	padding-right: 2px;
+	*/
 
+
+	/*
 	&:before{
 		content: "";
 		display: block;
@@ -24,6 +29,7 @@
 		height: 100%;
 		background: @white;
 	}
+	*/
 
 }
 
@@ -44,25 +50,33 @@
 	text-align: center;
 	cursor: pointer;
 	//color: #222;
-	color: @light-blue-40;
-	background: #ffffff;
+	//color: @light-blue-40;
+	//background: #ffffff;
+	
+	color: #979291;
+
 }
 
 /* Cell border */
 .gldp-menu-booking-calendar .border {
+	border: none;
+	/*
 	border-style: solid;
 	border-width: 0;
 	border-color: #fff;
+	*/
 }
 
 /* Month/Year text and select */
 .gldp-menu-booking-calendar .monyear,
 .gldp-menu-booking-calendar .monyear select {
 	//font-size: 16px !important;
+	
+	.brandon-bold;
 	color: @light-blue;
 	font-size: 10px !important;
 	text-transform: uppercase;
-	margin-bottom: -1px;
+	margin-bottom: 1px;
 	//font-weight: bold;
 	//background: #eee;
 }
@@ -99,9 +113,13 @@
 	cursor: wait !important;
 	background: #eee;
 	*/
-	color: @light-blue;
+
+	//color: @light-blue;
+	
+	.brandon-bold;
+	color: #625b59;
 	font-size: 10px;
-	margin-bottom: 1px;
+	margin-bottom: 2px;
 }
 
 /* Weekdays */
@@ -110,22 +128,25 @@
 .gldp-menu-booking-calendar .wed,
 .gldp-menu-booking-calendar .thu,
 .gldp-menu-booking-calendar .fri {
-	line-height: 19px !important;
-	height: 19px !important;
+	line-height: 19.5px !important;
+	height: 19.5px !important;
+	//margin-bottom: 1px;
 }
 
 /* Weekend days */
 .gldp-menu-booking-calendar .sat,
 .gldp-menu-booking-calendar .sun {
-	line-height: 19px !important;
-	height: 19px !important;
+	line-height: 19.5px !important;
+	height: 19.5px !important;
+	//margin-bottom: 1px;
 }
 
 /* Selectable days that are outside of current month being shown */
 .gldp-menu-booking-calendar .outday {
 	//color: #aaa !important;
 	//color: @light-blue-20 !important;
-	color: @light-blue-05 !important;
+	//color: @light-blue-05 !important;
+	visibility: hidden;
 }
 
 /* Hover */
@@ -141,10 +162,14 @@
 
 /* Non-Selectable days */
 .gldp-menu-booking-calendar .noday {
-	color: #bbb;
-	font-weight: normal;
+	//color: #bbb;
+	//font-weight: normal;
 	cursor: wait !important;
-	background: #ddd;
+	//background: #ddd;
+		
+	.opacity(0.1);
+
+
 }
 
 /* Currently selected day */
@@ -164,16 +189,18 @@
 	&:before{
   	position: absolute;
   	z-index: -1;
-  	top: -1px;
-  	left: -1px;
+  	//top: -1px;
+  	//left: -1px;
+  	top: -2px;
+  	left: 0px;
 
   	content: "";
   	display: block;
-  	background: #edecec;
+  	background: #514947;
   	width: 20px;
   	height: 20px;
   	.round(20px);
-
+  	.opacity(0.2);
   }  
 
 }
@@ -197,3 +224,9 @@
 	border-color: #444;
 	background: #666;
 }
+
+
+
+
+
+

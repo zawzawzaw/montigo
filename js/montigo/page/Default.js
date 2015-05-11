@@ -6,9 +6,10 @@ goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
 goog.require('manic.page.Page');
-
 goog.require('manic.ui.ImageContainer');
+
 goog.require('montigo.component.Menu');
+goog.require('montigo.component.MainImage');
 
 /**
  * The Default Page constructor
@@ -26,21 +27,36 @@ montigo.page.Default = function(options) {
   this.controller = null;
 
   /**
+   * @type {ScrollMagic.Controller}
+   */
+  this.controller2 = null;    // for parallax effects
+
+  /**
+   * @type {montigo.component.MainImage}
+   */
+  this.main_image = null;
+
+  /**
    * @type {montigo.component.Menu}
    */
   this.menu = null;
-
-  this.scrolldown_button = null;
 
   /**
    * @type {Array.<manic.ui.ImageContainer>}
    */
   this.manic_image_array = [];
 
+  /**
+   * @type {jQuery}
+   */
+  this.scrolldown_button = null;
+
+  /**
+   * @type {jQuery}
+   */
   this.preloader_element = $('#page-preloader');
 
 
-  this.has_main_image_pin = false;
 
   
   //    ___ _   _ ___ _____
@@ -53,15 +69,22 @@ montigo.page.Default = function(options) {
 
   this.check_query_variables();
 
-
   this.check_svg_smil();
   this.create_manic_image_container();
-  this.create_controller();     // needed by menu
+  this.create_controller();                       // needed by menu
+
   this.create_menu();
+  this.create_main_image();
   this.create_scrolldown_button();
 
 
-  this.hide_preloader();                      // js and images are already loaded on instanciation...
+  this.hide_preloader();                          // js and images are already loaded on instanciation...
+
+
+  this.window = $(window);
+  this.window.resize(this.on_window_resize.bind(this));
+  this.on_window_resize(null);
+
 
 
   console.log('init');
@@ -103,7 +126,6 @@ montigo.page.Default.EVENT_02 = '';
 //   |  __/|  _ < | |  \ V / ___ \| | | |___
 //   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 
-
 montigo.page.Default.prototype.check_query_variables = function(){
   var breakpoint = this.getQueryVariable('breakpoint');
 
@@ -132,6 +154,9 @@ montigo.page.Default.prototype.check_svg_smil = function() {
 
 montigo.page.Default.prototype.create_controller = function() {
   this.controller = new ScrollMagic.Controller();
+
+  this.controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
 };
 montigo.page.Default.prototype.create_menu = function() {
   this.menu = new montigo.component.Menu({
@@ -139,6 +164,14 @@ montigo.page.Default.prototype.create_menu = function() {
 
 
   this.menu.create_scene(this.controller);
+};
+
+montigo.page.Default.prototype.create_main_image = function(){
+  this.main_image = new montigo.component.MainImage({
+  },$('.main-slider'));
+
+  this.main_image.create_scene(this.controller);
+  
 };
 
 montigo.page.Default.prototype.create_scrolldown_button = function(){
@@ -190,10 +223,18 @@ montigo.page.Default.prototype.sample_method_calls = function() {
 montigo.page.Default.prototype.hide_preloader = function() {
   this.preloader_element.addClass('preload-complete');
   $('body').addClass('preload-complete');
+  $('body').addClass('preload-complete-2');
   TweenMax.to(this.preloader_element, 0.2, {autoAlpha:0, delay: 2, onComplete: this.on_hide_preloader_complete, onCompleteScope: this});
+
+  TweenMax.delayedCall(10, this.on_hide_preloader_complete_02, [], this);
+  //TweenMax.to(this.preloader_element, 0.2, {autoAlpha:0, delay: 2, onComplete: this.on_hide_preloader_complete, onCompleteScope: this});
 };
 montigo.page.Default.prototype.on_hide_preloader_complete = function() {
   $('body').removeClass('preload-complete');
+};
+
+montigo.page.Default.prototype.on_hide_preloader_complete_02 = function(){
+  $('body').removeClass('preload-complete-2');
 };
 
 
@@ -236,10 +277,6 @@ montigo.page.Default.prototype.on_scrolldown_button_click = function(event) {
   var header_height = 60;
   var target_y = $('#below-page-fold').offset().top - header_height;
 
-  if (this.has_main_image_pin == true){
-    target_y += 300;
-  }
-
   var target_duration = target_y / 500;
 
 
@@ -268,6 +305,16 @@ montigo.page.Default.prototype.on_event_handler_03 = function(event) {
 montigo.page.Default.prototype.on_event_handler_04 = function(event) {
 };
 
+
+
+/**
+ * event handler
+ * @param  {object} event
+ */
+montigo.page.Default.prototype.on_window_resize = function(event) {
+  this.controller.update();
+  this.controller2.update();
+};
 
 
 

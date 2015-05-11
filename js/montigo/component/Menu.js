@@ -28,30 +28,39 @@ montigo.component.Menu = function(options, element) {
   this.booking_form = this.element.find('#menu-booking-form');
   this.booking_form.submit(this.on_form_submit.bind(this));
 
-  this.booking_panel = this.element.find('#menu-booking-panel');
-  this.navigation_panel = this.element.find('#menu-navigation-panel');
+  this.booking_form_container = this.element.find('#menu-booking-form-container');
+  this.calendar_container = this.element.find('#menu-booking-form-calendar-container');
   
 
-  //this.element.find('#menubookingarrival').glDatePicker({
-  //this.element.find('#arrival').glDatePicker({
+  this.booking_form_submit_button = this.element.find('#menu-booking-form-submit-button');
+  this.booking_form_cancel_button = this.element.find('#menu-booking-form-cancel-button');
+  
+  this.booking_form_submit_button.click(this.on_booking_form_submit_button_click.bind(this));
+  this.booking_form_cancel_button.click(this.on_booking_form_cancel_button_click.bind(this));
+
+  
   this.element.find('#arrivalDate').glDatePicker({
     'cssName':'menu-booking-calendar',
     'zIndex': 10000,
     'dowNames': [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
     'prevArrow': '<span class="fa fa-chevron-left"></span>',
-    'nextArrow': '<span class="fa fa-chevron-right"></span>'
+    'nextArrow': '<span class="fa fa-chevron-right"></span>',
+    'selectableDateRange': [ {'from': new Date(), 'to': new Date(1e15) } ],
+    'onShow': this.on_calendar_show.bind(this),
+    'onHide': this.on_calendar_hide.bind(this)
   });
 
-  //this.element.find('#menubookingdeparture').glDatePicker({
-  //this.element.find('#departure').glDatePicker({
+  
   this.element.find('#departureDate').glDatePicker({
     'cssName':'menu-booking-calendar',
     'zIndex': 10000,
     'dowNames': [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
     'prevArrow': '<span class="fa fa-chevron-left"></span>',
-    'nextArrow': '<span class="fa fa-chevron-right"></span>'
+    'nextArrow': '<span class="fa fa-chevron-right"></span>',
+    'selectableDateRange': [ {'from': new Date(), 'to': new Date(1e15) } ],
+    'onShow': this.on_calendar_show.bind(this),
+    'onHide': this.on_calendar_hide.bind(this)
   });
-
 
 
   /**
@@ -167,37 +176,65 @@ montigo.component.Menu.prototype.add_black_gradient = function() {
 
 
 
-montigo.component.Menu.prototype.show_booking_panel = function() {
+montigo.component.Menu.prototype.show_booking_form = function() {
 
   if(this.state != montigo.component.Menu.BOOKING_STATE){
     this.state = montigo.component.Menu.BOOKING_STATE;
 
     this.element.addClass('booking-version');
 
-    this.book_now_button_copy.html("find a villa");
-
-    TweenMax.to(this.navigation_panel, 0.5, {top: -1 * this.header_height, ease: Sine.easeInOut});
-    TweenMax.to(this.booking_panel, 0.5, {top: 0, ease: Sine.easeInOut, delay: 0.5});
+    this.booking_form_container.show(0);
 
   }
 
   //menu-navigation-panel
 };
-montigo.component.Menu.prototype.show_navigation_panel = function() {
+
+
+montigo.component.Menu.prototype.hide_booking_form = function() {
   if(this.state != montigo.component.Menu.NAVIGATION_STATE){
     this.state = montigo.component.Menu.NAVIGATION_STATE;
 
     this.element.removeClass('booking-version');
 
-    this.book_now_button_copy.html("book now");
+    this.booking_form_container.hide(0);
+    this.calendar_container.hide(0);
 
-    TweenMax.to(this.booking_panel, 0.5, {top: -1 * this.header_height, ease: Sine.easeInOut});
-    TweenMax.to(this.navigation_panel, 0.5, {top: 0, ease: Sine.easeInOut, delay: 0.5});          // has delay
   }
 };
+
+
 montigo.component.Menu.prototype.public_method_05 = function() {};
 montigo.component.Menu.prototype.public_method_06 = function() {};
 
+
+
+//    __  __  ___  _   _ ____  _____   _______     _______ _   _ _____ ____  
+//   |  \/  |/ _ \| | | / ___|| ____| | ____\ \   / / ____| \ | |_   _/ ___| 
+//   | |\/| | | | | | | \___ \|  _|   |  _|  \ \ / /|  _| |  \| | | | \___ \ 
+//   | |  | | |_| | |_| |___) | |___  | |___  \ V / | |___| |\  | | |  ___) |
+//   |_|  |_|\___/ \___/|____/|_____| |_____|  \_/  |_____|_| \_| |_| |____/ 
+//                                                                           
+
+
+/**
+ * mouse event handler
+ * @param  {object} event
+ */
+montigo.component.Menu.prototype.on_booking_form_submit_button_click = function(event) {
+  event['preventDefault']();
+  this.booking_form.submit();
+};
+
+/**
+ * mouse event handler
+ * @param  {object} event
+ */
+montigo.component.Menu.prototype.on_booking_form_cancel_button_click = function(event) {
+  event['preventDefault']();
+  this.hide_booking_form();
+  
+};
 
 //    _______     _______ _   _ _____ ____
 //   | ____\ \   / / ____| \ | |_   _/ ___|
@@ -213,11 +250,10 @@ montigo.component.Menu.prototype.public_method_06 = function() {};
 montigo.component.Menu.prototype.on_book_now_button_click = function(event) {
 
   if (this.state == montigo.component.Menu.NAVIGATION_STATE) {
-    this.show_booking_panel();
+    this.show_booking_form();
   } else {
-    //this.show_navigation_panel();
-    
-    this.booking_form.submit();
+    //this.hide_booking_form();
+    //this.booking_form.submit();
   }
 
 };
@@ -294,11 +330,27 @@ montigo.component.Menu.prototype.on_form_submit = function(event) {
 };
 
 /**
- * event handler
- * @param  {object} event
+ * on_calendar_show
+ * @param  {object} calendar
  */
-montigo.component.Menu.prototype.on_event_handler_03 = function(event) {
+montigo.component.Menu.prototype.on_calendar_show = function(calendar) {
+
+  this.calendar_container.show(0);
+  calendar['show']();
 };
+
+/**
+ * on_calendar_hide
+ * @param  {object} calendar
+ */
+montigo.component.Menu.prototype.on_calendar_hide = function(calendar) {
+
+  this.calendar_container.hide(0);
+  calendar['hide']();
+};
+
+
+
 
 /**
  * event handler

@@ -59,7 +59,7 @@ montigo.page.Activities = function(options, element) {
 
 
 
-  this.menu.add_black_gradient();
+  //this.menu.add_black_gradient();
 
 
   this.create_scrollmagic();

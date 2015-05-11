@@ -2,20 +2,18 @@
 
 <div id="main-page-content">
 
-  <div id="home-slider" class="main-slider" data-image="images/main_slider/home_main_slider_image_01_trees.jpg">
+  <div id="home-slider" class="main-slider" data-image="images/main_slider/may6_home_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
     </div>
 
     <div class="main-slider-text-container">
-      <div class="text-container" data-width="1464" data-height="813">
-        <div class="text white-version" data-x="732" data-y="256">
+      <div class="text-container" data-width="1408" data-height="830">
+        <div class="text" data-x="704" data-y="210">
 
-          <h3>Tropical Getway</h3>
-          <h4>For generations to come</h4>
-          <hr class="short-hr">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          <h3>For Generations to Come</h3>
+          <p>Barely 30 minutes away from Singapore, our sprawling resort’s architectural expanse of white is breathtaking against the deep blue Nongsa waters. The accommodation’s spacious, and the surrounding landscape offers enough activity to thrill all generations.</p>
 
         </div>
       </div>
@@ -31,16 +29,16 @@
           <div id="home-featured-content">
             <div id="home-promotions">
               <div class="promotion-title">
-                <h3>Specials!</h3>
+                <h3>Specials</h3>
                 <h4>An Early Bird Summer Getaway</h4>
                 <hr>
               </div>
               <div class="promotion-image manic-image-container">
-                <img src="images/home/home_promotion_image_01.jpg">
+                <img src="images/home/home_promotion_image_02.jpg">
               </div>
               <div class="promotion-text">
-                <h4>Spring Into 2015!</h4>
-                <p>We're kick starting 2015 with an amazing offer, just for you. Visit us from now until end March and not only you get 25% off the Best Available Rate but we'll give you an extra S$50 to spend on your meals or at the spa. Go ahead, have your cake and eat it too.</p>
+                <h4>advanced purchase offer</h4>
+                <p>Book in advance and take advantage of reduced advance purchase rates. Book 14 days ahead or more for a 15% discount off our best available rate, or 30 days ahead or more for a 20% discount.</p>
                 <a href="#" class="cta-button">View promotion<span class="fa fa-chevron-circle-right"></span></a>
               </div>
             </div> <!-- home-promotions -->
@@ -49,17 +47,17 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="home-offer-item home-offer-item-01">
-                    <h6>tiigo’s night</h6>
-                    <h4>Double Deal All Night Long</h4>
-                    <p>This offer is available from 6 Jan 2015 through 28 Feb 2015. Wind down with one-for-one selected wines and beers at Tiigo Bar on Level 24 while enjoying panoramic views of the city.</p>
+                    <h6>Fun for four</h6>
+                    <h4>Your perfect holiday</h4>
+                    <p>Whether you’re traveling as a family of four or checking in with your best friends, we’ve got something for you. So pack your bags, book your spa session, and get ready for some quality time with your favourite loved ones.</p>
                     <a href="#" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="home-offer-item home-offer-item-02">
-                    <h6>tiigo’s night</h6>
-                    <h4>Double Deal All Night Long</h4>
-                    <p>This offer is available from 6 Jan 2015 through 28 Feb 2015. Wind down with one-for-one selected wines and beers at Tiigo Bar on Level 24 while enjoying panoramic views of the city.</p>
+                    <h6>Spa Getaway</h6>
+                    <h4>The ultimate spa day</h4>
+                    <p>Want to get away but need to be home on time? Montigo resorts is the perfect short escape from the city, replete with a relaxing massage, a rejuvenating body scrub or facial and a delicious lunch. Perfect!</p>
                     <a href="#" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
@@ -79,27 +77,22 @@
                 <p>Tag your instagram images and stand a chance to win exclusive prizes!</p>
               </div>
               <div class="image-container">
-                <img src="images/home/instagram/home_instagram_01.jpg">
-                <img src="images/home/instagram/home_instagram_02.jpg">
-                <img src="images/home/instagram/home_instagram_03.jpg">
-                <img src="images/home/instagram/home_instagram_04.jpg">
-                <img src="images/home/instagram/home_instagram_05.jpg">
-                <img src="images/home/instagram/home_instagram_06.jpg">
-                <img src="images/home/instagram/home_instagram_07.jpg">
-                <img src="images/home/instagram/home_instagram_08.jpg">
-                <img src="images/home/instagram/home_instagram_09.jpg">
-                <!-- 
-                <img src="images/home/instagram/home_instagram_10.jpg">
-                <img src="images/home/instagram/home_instagram_11.jpg">
-                <img src="images/home/instagram/home_instagram_12.jpg">
-                 -->
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/00.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/01.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/02.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/03.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/04.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/05.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/06.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/07.jpg"></a>
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/08.jpg"></a>
               </div>
 
               <div class="instagram-social">
                 <h3><span>follow us</span></h3>
-                <a href="" class="fa fa-facebook"></a>
-                <a href="" class="fa fa-twitter"></a>
-                <a href="" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/MontigoResortNongsa" target="_blank" class="fa fa-facebook"></a>
+                <!-- <a href="" class="fa fa-twitter"></a> -->
+                <a href="https://instagram.com/montigoresortsnongsa/" target="_blank" class="fa fa-instagram"></a>
               </div>
 
             </div> <!-- home-instagram -->
@@ -107,14 +100,14 @@
             <div class="home-tilo-treasure-hunt-container">
               <div id="home-tilo-treasure-hunt">
                 <div class="treasure-hunt-title">
-                  <h4>tilo New <br>treasure hunt!</h4>
+                  <h4>Tilo <br>Treasure Hunt</h4>
                   <div id="home-tilo-icon">
                     <img class="home-tilo-icon-svg svg-graphic" src="images/icons/tilo_icon.svg" data-fallback="images/icons/tilo_icon.png">
                   </div>
                 </div>
                 <div class="treasure-hunt-text">
-                  <p>We're kick starting 2015 with an amazing treasure hunt! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
-                  <a href="#" class="cta-button">Know more<span class="fa fa-chevron-circle-right"></span></a>
+                  <p>Tilo’s left clues across the resort for you to find. Embark on an exciting hunt to discover what surprises he has tucked away for you.</p>
+                  <a href="activities.php" class="cta-button">Find out more<span class="fa fa-chevron-circle-right"></span></a>
                 </div>
               </div> <!-- home-tilo-treasure-hunt -->
             </div>
@@ -127,7 +120,7 @@
   </div>
 
 
-  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01.jpg">
+  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01b.jpg">
 
     <div class="parallax-section-image-container">
       <img src="">
@@ -138,12 +131,11 @@
       <div class="text-container" data-width="1276" data-height="896">
         <div id="home-seafront-text" class="parallax-section-text text" data-x="1048" data-y="363">
 
-          <div class="bg-white-gradient"></div>
           <h3>Seafront Perfection</h3>
           <hr class="short-hr">
-          <h4>Welcome Home</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-          <a href="#" class="cta-button">Our villas<span class="fa fa-chevron-circle-right"></span></a>
+          <h4>Welcome home</h4>
+          <p>Each villa and residence offers an uninterrupted view of the sea. And if that isn’t enough water, each villa also features a sea facing private infinity plunge pool. Dive in!</p>
+          <a href="accommodation.php" class="cta-button">Accommodation<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -160,52 +152,45 @@
         <div class="col-md-6">
           <div class="home-restaurant-image manic-image-container" id="home-restaurant-image-01">
             <img src="images/home/home_restaurant_image_01.jpg">
-            <!-- <div class="image-container" style="background-image: url('images/home/home_restaurant_image_01.jpg');"></div> -->
           </div>
         </div>
         <div class="col-md-6">
-          <div class="home-restaurant-text" id="home-restaurant-text-01">
-            <div class="text">
+
+          <div id="home-restaurant-text-01" class="montigo-image-description">
+            <div class="montigo-image-description-container">
               <h3>Asian flavours</h3>
-              <hr class="short-hr"></hr>
-              <h4>All Things Bright And Delicious</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident.</p>
-              <a href="" class="cta-button">Our Restaurants<span class="fa fa-chevron-circle-right"></span></a>
+              <hr class="short-hr">
+              <h4>all things bring and delicious</h4>
+              <p>Inspired by the diversity of local flavours, our team of experienced chefs conjure up amply satisfying food for thought. The selection of dining venues delight with their distinctiveness, across locations, menus and themes. From hearty daily breakfasts to sizzling weekend BBQs, there’s never a dull moment – or palate – at our resort.</p>
+              <a href="dining.php" class="cta-button">Our Restaurants<span class="fa fa-chevron-circle-right"></span></a>
             </div>
-          </div>
+          </div> <!-- .montigo-image-description -->
+          
         </div>
       </div>
       <div class="spacing"></div>
       <div class="row">
         <div class="col-md-6">
-          <div class="home-restaurant-text" id="home-restaurant-text-02">
-            <div class="text">
-              <h3>Specials!</h3>
-              <hr class="short-hr"></hr>
-              <h4>Seasonal Delights</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident.</p>
-              <a href="" class="cta-button">Our promotions<span class="fa fa-chevron-circle-right"></span></a>
+
+          <div id="" class="montigo-image-description">
+            <div class="montigo-image-description-container">
+              <h3>Montigo Spa</h3>
+              <hr class="short-hr">
+              <h4>Rest and restfulness assured</h4>
+              <p>Recharge and be holistically revived at the Montigo Spa. Restore your body’s balance with centuries old therapies, accentuated by the ambient infusion of soothing fragrances and light. Be pampered by a range of indulgences, ranging from traditional facials to invigorating soaks and scrubs. The Montigo Spa has something for all who seek respite from the urban hustle and bustle.</p>
+              <a href="spa.php" class="cta-button">Montigo Spa<span class="fa fa-chevron-circle-right"></span></a>
             </div>
-          </div>
+          </div> <!-- .montigo-image-description -->
+
         </div>
         <div class="col-md-3">
           <div class="home-restaurant-image manic-image-container"  id="home-restaurant-image-02">
-            <img src="images/home/home_restaurant_image_02.jpg">
+            <img src="images/home/home_spa_image_01.jpg">
           </div>
         </div>
         <div class="col-md-3">
           <div class="home-restaurant-image manic-image-container"  id="home-restaurant-image-03">
-            <img src="images/home/home_restaurant_image_03.jpg">
+            <img src="images/home/home_spa_image_02.jpg">
           </div>
         </div>
       </div>
@@ -228,8 +213,8 @@
           <h3>Inspired Events</h3>
           <hr class="short-hr">
           <h4>Extraordinary Special Occasions</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-          <a href="#" class="cta-button">Weddings &amp; events<span class="fa fa-chevron-circle-right"></span></a>
+          <p>Entrust us with your event – be it a wedding, birthday, corporate meet or Team Building. We’ll take care of all the details, to ensure it’s one you will long cherish.</p>
+          <a href="events.php" class="cta-button">Meetings &amp; events<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -239,51 +224,69 @@
     
   </div>
 
-
-  <div id="home-map">
-
-    
-    <div class="image-container" style="background-image: url('images/home/home_map_bg.jpg');">
+  <div id="home-activities-section">
+    <div id="home-activities-title">
+      <h3>New Experiences</h3>
     </div>
 
-    <div class="overlay-container">
-
-      <div class="overlay-image">
-        <img src="images/home/home_map_overlay.svg" data-fallback="images/home/home_map_overlay.png" class="svg-graphic">
-      </div>
-      <div class="overlay-item" id="overlay-item-01">
-        <h6>Sunday Market</h6>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra.</p>
-      </div>
-      <!-- dunno what to put here -->
-    </div>
-
-    <div class="text-container">
-
+    <div id="home-activities-item-container">
       <div class="container-fluid has-breakpoint">
         <div class="row">
-          <div class="col-md-12">
 
-            <div class="text-container-container">
-              <h3>Go out and see the world</h3>
-              <h4>Discover New Experiences</h4>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem.</p>
-              <a href="#" class="cta-button">Activities<span class="fa fa-chevron-circle-right"></span></a>
+          <div class="col-md-3">
+            <div class="home-activities-item">
+              <div class="item-icon">
+                <div class="item-icon-icon home_activities_icon_01_aquatic"></div>
+              </div>
+              <h4>Aquatic ADVENTURES</h4>
+              <hr class="short-hr">
+              <p>Gear up for some wake boarding, water skiing or knee boarding. For a more laid back excursions, try our mangrove tour, firefly sighting or fishing trip. Come on in, the water’s calling…</p>
             </div>
-            
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-1">
-            <div class="space10"></div>
+
+          <div class="col-md-3">
+            <div class="home-activities-item">
+              <div class="item-icon">
+                <div class="item-icon-icon home_activities_icon_02_terra"></div>
+              </div>
+              <h4>Outdoor Activities</h4>
+              <hr class="short-hr">
+              <p>At Montigo Resorts, Nongsa, we also offer thrilling action on land – like the Nongsa beach bike tour, kampong bike tour and Batam tour. Fancy a market visit? Sign up for our vintage car tour!</p>
+            </div>
           </div>
-          <div class="col-md-4">
+
+          <div class="col-md-3">
+            <div class="home-activities-item">
+              <div class="item-icon">
+                <div class="item-icon-icon home_activities_icon_03_sport"></div>
+              </div>
+              <h4>sport &amp; fitness</h4>
+              <hr class="short-hr">
+              <p>Tee off at one of the local 18-hole golf courses. Batam’s perennial blue skies offer the perfect setting for a birdie. Looking to shed an inch around the middle, Our spacious gym houses some of the latest exercise machines for fitness enthusiasts.</p>
+            </div>
           </div>
+
+          <div class="col-md-3">
+            <div class="home-activities-item">
+              <div class="item-icon">
+                <div class="item-icon-icon home_activities_icon_04_olu"></div>
+              </div>
+              <h4>Olo kids club</h4>
+              <hr class="short-hr">
+              <p>The Olo Kids Club is championed by none other than Tilo, our resort’s lovable chick – and very chic – prince mascot. Tilo is always game to make new friends, so do ensure your little ones have enough time with him!</p>
+            </div>
+          </div>
+          
         </div>
       </div>
+    </div> <!-- home-activities-item-container -->
 
+    <div id="home-activities-cta-button-container">
+      <a href="activities.php" class="cta-button">find out more on montigo activities<span class="fa fa-chevron-circle-right"></span></a>
     </div>
-  </div> <!-- home-map -->
+
+  </div>
+
 
 </div> <!-- main-page-content -->
 
@@ -315,26 +318,22 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
-        "images/home_slider/home_slider_image_01.jpg",
-        "images/parallax/rooms_residences_parallax_balcony_01.jpg",
+        "images/main_slider/may6_home_main_slider.jpg",
+        "images/parallax/rooms_residences_parallax_balcony_01b.jpg",
         "images/home/home_parallax_image_02.jpg",
         "images/home/home_promotion_image_01.jpg",
-        "images/home/instagram/home_instagram_01.jpg",
-        "images/home/instagram/home_instagram_02.jpg",
-        "images/home/instagram/home_instagram_03.jpg",
-        "images/home/instagram/home_instagram_04.jpg",
-        "images/home/instagram/home_instagram_05.jpg",
-        "images/home/instagram/home_instagram_06.jpg",
-        "images/home/instagram/home_instagram_07.jpg",
-        "images/home/instagram/home_instagram_08.jpg",
-        "images/home/instagram/home_instagram_09.jpg",
-        "images/home/instagram/home_instagram_10.jpg",
-        "images/home/instagram/home_instagram_11.jpg",
-        "images/home/instagram/home_instagram_12.jpg",
+        "images/home/instagram/00.jpg",
+        "images/home/instagram/01.jpg",
+        "images/home/instagram/02.jpg",
+        "images/home/instagram/03.jpg",
+        "images/home/instagram/04.jpg",
+        "images/home/instagram/05.jpg",
+        "images/home/instagram/06.jpg",
+        "images/home/instagram/07.jpg",
+        "images/home/instagram/08.jpg",
         "images/home/home_restaurant_image_01.jpg",
-        "images/home/home_restaurant_image_02.jpg",
-        "images/home/home_restaurant_image_03.jpg",
-        "images/home/home_map_bg.jpg"
+        "images/home/home_spa_image_01.jpg",
+        "images/home/home_spa_image_02.jpg"
       ],
       desktop_js_array: [
         <?php if(DEBUG): ?>

@@ -1,0 +1,221 @@
+//     ___  _____ _____ _____ ____  ____  
+//    / _ \|  ___|  ___| ____|  _ \/ ___| 
+//   | | | | |_  | |_  |  _| | |_) \___ \ 
+//   | |_| |  _| |  _| | |___|  _ < ___) |
+//    \___/|_|   |_|   |_____|_| \_\____/ 
+//                                        
+
+#offer-slider{
+  margin-bottom: 70px;
+}
+
+
+
+
+//     ___  _____ _____ _____ ____    _     ___ ____ _____ 
+//    / _ \|  ___|  ___| ____|  _ \  | |   |_ _/ ___|_   _|
+//   | | | | |_  | |_  |  _| | |_) | | |    | |\___ \ | |  
+//   | |_| |  _| |  _| | |___|  _ <  | |___ | | ___) || |  
+//    \___/|_|   |_|   |_____|_| \_\ |_____|___|____/ |_|  
+//                                                         
+
+#offer-list-item-container{
+
+}
+
+
+
+.offer-list-item{
+  margin-bottom: 50px;
+
+  .offer-list-item-image{
+    width: 100%;
+    height: 490px;
+
+    
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+  }
+
+
+} // .offer-list-item
+
+
+.offer-list-panel-container{
+  height: 490px;
+
+
+
+  
+
+  .description-panel{
+    display: table;
+    text-align: center;
+
+    //padding-top: 49px;
+    //
+    .description-panel-text-container{
+      display: table-cell;
+      vertical-align: middle;
+
+      padding: 0 15%;
+    }
+
+    h3{
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      color: @light-blue;
+    }
+    h4{
+      letter-spacing: 0.1em;
+      font-size: 20px;
+      line-height: 29px;
+
+      margin-bottom: 16px;
+    }
+    hr.short-hr{
+      background: @light-blue;
+      .opacity(0.2);
+
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 17px;
+    }
+    p{
+      .brandon-light;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: -0.01em;
+
+      max-width: 450px;
+      margin: 0 auto;
+      margin-bottom: 22px;  
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
+
+    p.offer-disclaimer{
+      color: @dark-grey
+    }
+
+
+
+    .cta-button{
+      display: block;
+      padding-top: 11px;
+      margin-bottom: 19px;
+    }
+
+
+  } // .description-panel
+
+
+  .list-panel{
+
+    display: table;
+
+    .list-panel-text-container{
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 53px;
+
+      .list-panel-text-list{
+        margin-bottom: 36px;
+
+        &:last-child{
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .cta-back-button{
+      position: absolute;
+      top: 7px;
+      //top: 46px;
+      right: 50px;
+    }
+
+    h4{
+      letter-spacing: 0.1em;
+      font-size: 20px;
+      line-height: 29px;
+    }
+    hr.short-hr{
+      background: @light-blue;
+      .opacity(0.2);
+      margin: 0;
+      margin-top: 11px;
+      margin-bottom: 14px;
+    }
+    ul{
+      font-size: 0;
+      margin-bottom: 8px;
+      //margin-bottom: 32px;
+
+      li{
+        display: block;
+        position: relative;
+        
+        .brandon-light;
+        letter-spacing: 0em;
+
+        font-size: 15px;
+        line-height: 22px;
+        //margin-bottom: 8px;
+
+        padding-left: 10px;
+
+        margin-right: -100px;
+
+
+        &:before{
+          .fa;
+          font-size: 4px;
+          line-height: 10px;
+          height: 10px;
+          width: 10px;
+          text-align: center;
+          content: "\f111";
+          letter-spacing: 0px;
+
+          position: absolute;
+          top: 7px;
+          left: -3px;
+
+        }
+      }
+    }
+
+    p{
+      .brandon-light;
+      letter-spacing: 0em;
+
+      font-size: 15px;
+      line-height: 22px;
+
+      margin-bottom: 8px;
+
+      //margin-bottom: 21px;
+    }
+
+    .cta-small-v2-button{
+      display: block;
+      //padding-top: 21px;
+      padding-top: 13px;
+    }
+    .cta-button{
+      display: block;
+      padding-top: 13px;
+    }
+
+
+  }
+
+
+} // .offer-list-panel-container

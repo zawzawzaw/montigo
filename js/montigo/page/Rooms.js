@@ -6,7 +6,12 @@ goog.require('goog.events.EventTarget');
 goog.require('montigo.component.MainImage');
 goog.require('montigo.component.ParallaxImage');
 
+
+goog.require('montigo.component.AccomodationsMap');
+
 goog.require('manic.ui.PanelContainer');
+
+
 
 goog.require('montigo.page.Default');
 
@@ -48,9 +53,15 @@ montigo.page.Rooms = function(options, element) {
    */
   this.villa_text_panel_container = null;
 
+
+  /**
+   * @type {montigo.component.AccomodationsMap}
+   */
+  this.map = null;
+
   
 
-  this.menu.add_black_gradient();
+  //this.menu.add_black_gradient();
 
   
 
@@ -58,6 +69,7 @@ montigo.page.Rooms = function(options, element) {
   this.create_main_image();
   this.create_panel_containers();
   this.create_parallax();
+  this.create_map();
 
   this.window = $(window);
   this.window.resize(this.on_window_resize.bind(this));
@@ -150,7 +162,14 @@ montigo.page.Rooms.prototype.create_panel_containers = function() {
   $('#rooms-villas-section .prev-panel-button').click(this.on_rooms_villa_prev_click.bind(this));
 
 };
-montigo.page.Rooms.prototype.private_method_05 = function() {};
+montigo.page.Rooms.prototype.create_map = function() {
+  this.map = new montigo.component.AccomodationsMap({
+  }, $('#rooms-map-interactive'));
+
+  this.map.create_map_scene(this.controller);
+
+  
+};
 montigo.page.Rooms.prototype.private_method_06 = function() {};
 
 

@@ -81,3 +81,11 @@ ScrollMagic.Scene.prototype.addTo = function(controller_param){};
  */
 ScrollMagic.Scene.prototype.addIndicators = function(object_param){};
 
+
+/**
+ * on description
+ * @param  {string} str_param
+ * @param  {function} function_param
+ */
+ScrollMagic.Scene.prototype.on = function(str_param, function_param){};
+

@@ -6,8 +6,6 @@ goog.require('goog.events.EventTarget');
 goog.require('montigo.component.MainImage');
 goog.require('montigo.component.ParallaxImage');
 
-goog.require('manic.ui.PanelContainer');
-
 goog.require('montigo.page.Default');
 
 /**
@@ -34,7 +32,7 @@ montigo.page.Spa = function(options, element) {
    */
   this.main_image = null;
   
-  this.menu.add_black_gradient();
+  //this.menu.add_black_gradient();
 
   
   this.create_scrollmagic();

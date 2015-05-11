@@ -67,10 +67,12 @@ manic.ui.ImageContainer = function(options, element) {
 
   this.image_element.css({
     'display': 'block',
-    'position': 'absolute',
-    'top': '0px',
-    'left': '0px'
+    //'position': 'absolute',
+    //'top': '0px',
+    //'left': '0px'
   })
+
+  TweenMax.to(this.image_element, 0, {'z': 0.1});
 
   this.window = $(window);
   this.window_width = 0;
@@ -285,10 +287,18 @@ manic.ui.ImageContainer.prototype.use_scale_mode_show_all = function() {
       target_y = this.container_height - target_height;
     }
 
+    target_x = Math.round(target_x);
+    target_y = Math.round(target_y);
+    target_width = Math.round(target_width);
+    target_height = Math.round(target_height);
+
+
+    TweenMax.to(this.image_element, 0, {'x': target_x, 'y': target_y});
+
     // update css of image
     this.image_element.css({
-      'top': target_y + 'px',
-      'left': target_x + 'px',
+      //'top': target_y + 'px',
+      //'left': target_x + 'px',
       'width': target_width + 'px',
       'height': target_height + 'px'
     });
@@ -331,10 +341,17 @@ manic.ui.ImageContainer.prototype.use_scale_mode_best_fit = function() {
       target_y = this.container_height - target_height;
     }
 
+    target_x = Math.round(target_x);
+    target_y = Math.round(target_y);
+    target_width = Math.round(target_width);
+    target_height = Math.round(target_height);
+
+    TweenMax.to(this.image_element, 0, {'x': target_x, 'y': target_y});
+
     // update css of image
     this.image_element.css({
-      'top': target_y + 'px',
-      'left': target_x + 'px',
+      //'top': target_y + 'px',
+      //'left': target_x + 'px',
       'width': target_width + 'px',
       'height': target_height + 'px'
     });

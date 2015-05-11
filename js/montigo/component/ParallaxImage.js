@@ -81,6 +81,8 @@ montigo.component.ParallaxImage = function(options, element) {
 
   
 
+  TweenMax.to(this.manic_image_container.element, 0, {'z': 0.1});
+
   this.window = $(window);
   this.window.resize(this.on_window_resize.bind(this));
   this.on_window_resize(null);
@@ -201,10 +203,13 @@ montigo.component.ParallaxImage.prototype.create_text_scene_2 = function(control
   for (var i = 0, l = arr.length; i < l; i++) {
     animation_elements[animation_elements.length] = $(arr[i]);
   }
+
+  /*
   var arr2 = this.element.find('.text .circle-arrow-link');
   if(arr2.length != 0){
     animation_elements[animation_elements.length] = arr2;
   }
+  */
 
   
   
@@ -235,11 +240,13 @@ montigo.component.ParallaxImage.prototype.create_parallax_scene = function(contr
 
 
   // initial value
-  TweenMax.to(this.manic_image_container.element, 0, {top: -300});
+  //TweenMax.to(this.manic_image_container.element, 0, {top: -300});
+  TweenMax.to(this.manic_image_container.element, 0, {'y': -300});
 
   this.parallax_scene = new ScrollMagic.Scene({triggerElement: trigger_element_str, duration: "100%"})
     //.addIndicators({name: "parallax scene"}) // add indicators (requires plugin)
-    .setTween(TweenMax.to(this.manic_image_container.element, 1, {top: 300, ease: Linear.easeNone}))
+    //.setTween(TweenMax.to(this.manic_image_container.element, 1, {top: 300, ease: Linear.easeNone}))
+    .setTween(TweenMax.to(this.manic_image_container.element, 1, {'y': 300, ease: Linear.easeNone}))
     .addTo(controller_param);
 
   

@@ -8,6 +8,8 @@ goog.require('montigo.component.ParallaxImage');
 
 goog.require('manic.ui.PanelContainer');
 
+goog.require('montigo.component.EventBookingForm');
+
 goog.require('montigo.page.Default');
 
 /**
@@ -33,13 +35,21 @@ montigo.page.Events = function(options, element) {
    * @type {montigo.component.MainImage}
    */
   this.main_image = null;
+
+
+  /**
+   * @type {montigo.component.EventBookingForm}
+   */
+  this.booking_form = null;
   
-  this.menu.add_black_gradient();
+  //this.menu.add_black_gradient();
 
   
   this.create_scrollmagic();
   this.create_main_image();
   this.create_parallax();
+  this.create_event_booking_form();
+  this.create_event_booking_buttons();
  
 
   this.has_main_image_pin = true;
@@ -120,7 +130,36 @@ montigo.page.Events.prototype.create_parallax = function() {
   this.parallax_01.create_parallax_scene(this.controller2);
 
 };
-montigo.page.Events.prototype.private_method_06 = function() {};
+
+
+montigo.page.Events.prototype.create_event_booking_form = function() {
+  this.booking_form = new montigo.component.EventBookingForm({}, $('#events-booking-form-container'));
+
+};
+montigo.page.Events.prototype.create_event_booking_buttons = function() {
+  var arr = $('.event-booking-cta-button');
+
+  /**
+   * @type {jQuery}
+   */
+  var item = null;
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+    item = $(arr[i]);
+    item.click(this.on_event_booking_button_click.bind(this));
+  }
+
+
+
+  var arr = $('.floor-plan-cta-button');
+  for (var i = 0, l = arr.length; i < l; i++) {
+    item = $(arr[i]);
+    item.click(this.on_floor_plan_button_click.bind(this));
+  }  
+
+  
+  
+};
 
 
 //    ____  _   _ ____  _     ___ ____
@@ -165,6 +204,41 @@ montigo.page.Events.prototype.on_event_handler_03 = function(event) {
  * @param  {object} event
  */
 montigo.page.Events.prototype.on_event_handler_04 = function(event) {
+};
+
+
+
+//    __  __  ___  _   _ ____  _____   _______     _______ _   _ _____ ____  
+//   |  \/  |/ _ \| | | / ___|| ____| | ____\ \   / / ____| \ | |_   _/ ___| 
+//   | |\/| | | | | | | \___ \|  _|   |  _|  \ \ / /|  _| |  \| | | | \___ \ 
+//   | |  | | |_| | |_| |___) | |___  | |___  \ V / | |___| |\  | | |  ___) |
+//   |_|  |_|\___/ \___/|____/|_____| |_____|  \_/  |_____|_| \_| |_| |____/ 
+//                                                                           
+
+
+/**
+ * event handler
+ * @param  {object} event
+ */
+montigo.page.Events.prototype.on_event_booking_button_click = function(event){
+  event['preventDefault']();
+  
+  this.booking_form.show();
+
+};
+
+/**
+ * event handler
+ * @param  {object} event
+ */
+montigo.page.Events.prototype.on_floor_plan_button_click = function(event){
+  event['preventDefault']();
+  
+  var target_y = $('#events-space-section').position()['top'] - 62;
+
+  TweenMax.to($('body'), 1.5, {scrollTo:{y:target_y}, ease: Sine.easeInOut});
+  
+
 };
 
 

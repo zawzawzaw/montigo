@@ -244,6 +244,8 @@ manic.ui.TextContainer.prototype.update_layout = function() {
     target_text_x = target_text_x > relative_max_x ? relative_max_x : target_text_x;
   }
 
+  target_text_x = Math.round(target_text_x);
+  target_text_y = Math.round(target_text_y);
   
 
   this.text_element_element.css({
@@ -313,6 +315,11 @@ manic.ui.TextContainer.prototype.use_scale_mode_show_all = function() {
     this.image_scale_x = target_width / this.original_image_width;
     this.image_scale_y = target_height / this.original_image_height;
 
+
+    target_x = Math.round(target_x);
+    target_y = Math.round(target_y);
+
+
     // update css of image
     this.text_element.css({
       'top': target_y + 'px',
@@ -361,6 +368,9 @@ manic.ui.TextContainer.prototype.use_scale_mode_best_fit = function() {
 
     this.image_scale_x = target_width / this.original_image_width;
     this.image_scale_y = target_height / this.original_image_height;
+
+    target_x = Math.round(target_x);
+    target_y = Math.round(target_y);
 
     // update css of image
     this.text_element.css({

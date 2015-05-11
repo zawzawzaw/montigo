@@ -5,10 +5,9 @@ goog.require('goog.events.EventTarget');
 
 goog.require('manic.ui.ImageContainer');
 
-goog.require('montigo.component.MainImage');
-goog.require('montigo.component.ParallaxImage');
 goog.require('montigo.component.InstagramSidebar');
 goog.require('montigo.component.ScrollMagicUtil');
+goog.require('montigo.component.ParallaxImage');
 
 goog.require('montigo.page.Default');
 
@@ -22,20 +21,6 @@ montigo.page.Home = function(options, element) {
   montigo.page.Default.call(this, options);
   this.options = $.extend(this.options, montigo.page.Home.DEFAULT, options);
 
-  // additional controllers
-  /**
-   * @type {ScrollMagic.Controller}
-   */
-  this.controller2 = null;    // for parallax effects
-  /**
-   * @type {ScrollMagic.Controller}
-   */
-  this.controller3 = null;    // for parallax effects
-
-  /**
-   * @type {montigo.component.MainImage}
-   */
-  this.main_image = null;
   /**
    * @type {montigo.component.ParallaxImage}
    */
@@ -44,6 +29,7 @@ montigo.page.Home = function(options, element) {
    * @type {montigo.component.ParallaxImage}
    */
   this.parallax_02 = null;
+
   /**
    * @type {montigo.component.InstagramSidebar}
    */
@@ -59,16 +45,8 @@ montigo.page.Home = function(options, element) {
   console.log('init');
 
   this.create_scrollmagic();
-  this.create_main_image();
   this.create_parallax();
   this.create_instagram_sidebar();
-
-  
-
-  this.window = $(window);
-  this.window.resize(this.on_window_resize.bind(this));
-  this.on_window_resize(null);
-
 };
 goog.inherits(montigo.page.Home, montigo.page.Default);
 
@@ -110,11 +88,7 @@ montigo.page.Home.EVENT_02 = '';
 
 montigo.page.Home.prototype.create_scrollmagic = function() {
   
-  this.controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-  this.controller3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "100%"}});
-
-  
-
+  /*
   // RESTAURANT TEXT
   var home_restaurant_text_animation_01 = montigo.component.ScrollMagicUtil.get_alpha_in_animation_for_elements([
     $('#home-restaurant-text-01 .text h3'),
@@ -144,6 +118,8 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
             .setTween(home_restaurant_text_animation_02)
             .addTo(this.controller);
 
+  */
+
 
 
   // RESTAURANT IMAGE
@@ -167,14 +143,6 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
             .setTween(home_restaurant_image_animation_02)
             .addTo(this.controller);
 
-  TweenMax.to("#home-map .image-container", 0, {top: -150});
-
-  var home_image_map = new ScrollMagic.Scene({triggerElement: "#home-map", duration: "100%"})
-          .triggerHook(0)
-          .setTween("#home-map .image-container", 1, {top: 0, ease: Linear.easeNone})
-          ////.addIndicators('7 (duration 100%)')
-          .addTo(this.controller3);
-
 }; // end create_scrollmagic
 
 
@@ -186,15 +154,6 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
 //   |  _  | |_| | |  | | |___   ___) | |___ | || |_| | |___|  _ < 
 //   |_| |_|\___/|_|  |_|_____| |____/|_____|___|____/|_____|_| \_\
 //                                                                 
-
-
-montigo.page.Home.prototype.create_main_image = function(){
-  this.main_image = new montigo.component.MainImage({
-  },$('#home-slider'));
-
-  this.main_image.create_scene(this.controller);
-  
-};
 
 montigo.page.Home.prototype.create_parallax = function() {
   this.parallax_01 = new montigo.component.ParallaxImage({
@@ -217,6 +176,7 @@ montigo.page.Home.prototype.create_instagram_sidebar = function() {
 
   this.instagram_sidebar.create_scene(this.controller);
 };
+
 montigo.page.Home.prototype.private_method_05 = function() {};
 montigo.page.Home.prototype.private_method_06 = function() {};
 
@@ -227,8 +187,6 @@ montigo.page.Home.prototype.private_method_06 = function() {};
 //   |  __/| |_| | |_) | |___ | | |___
 //   |_|    \___/|____/|_____|___\____|
 //
-
-
 
 montigo.page.Home.prototype.public_method_02 = function() {};
 montigo.page.Home.prototype.public_method_03 = function() {};
@@ -242,25 +200,6 @@ montigo.page.Home.prototype.public_method_05 = function() {};
 //   | |___  \ V / | |___| |\  | | |  ___) |
 //   |_____|  \_/  |_____|_| \_| |_| |____/
 //
-
-/**
- * event handler
- * @param  {object} event
- */
-montigo.page.Home.prototype.on_window_resize = function(event) {
-  var window_width = this.window.width();
-  var window_height = this.window.height();
-
-  this.controller.update();
-  this.controller2.update();
-  this.controller3.update();
-
-  $("#home-map").height(window_height); // also needs to have the height of the browser window 
-
-};
-
-
-
 
 /**
  * event handler

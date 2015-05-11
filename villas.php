@@ -2,21 +2,25 @@
 
 <div id="main-page-content">
 
-  <div id="rooms-slider" class="main-slider" data-image="images/main_slider/rooms_main_slider_01_square_v2.jpg">
+  <div id="rooms-slider" class="main-slider" data-image="images/main_slider/may6_villas_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
     </div>
 
     <div class="main-slider-text-container">
-      <div class="text-container" data-width="1408" data-height="829">
-        <div class="text white-version" data-x="704" data-y="414">
+      <div class="text-container" data-width="1408" data-height="830">
+        <div class="text white-version" data-x="704" data-y="256">
 
+          <!-- 
           <div class="bg-black-gradient"></div>
           <h3>Accommodating<br>Generations</h3>
           <h4>Montigo Resorts, Nongsa</h4>
           <hr class="short-hr">
           <p>Across generations, a blissful getaway awaits at Montigo Resorts, Nongsa, barely 30 minutes away from Singapore. Our scenic landscapes ensconce spacious villas (each with a swimming pool) and contemporary residences to delight every patron – from lively tots to their doting grandparents, and couples in search of some precious seclusion to groups of close friends.</p>
+          -->
+          <h3>Accommodating Generations</h3>
+          <p>Conceived from our fond desire for all generations to share a blissful getaway, the resort is 30 minutes away from Singapore. Our architectural landscapes and modern amenities ensconces a mix of spacious villas and contemporary residences to delight every patron.</p>
 
         </div>
       </div>
@@ -43,7 +47,7 @@
     <div id="rooms-map-text">
       <h3>Our Villas</h3>
       <hr class="short-hr">
-      <h4>lorem ipsum dolor <br>sit amet elit</h4>
+      <h4>Come stay with us</h4>
     </div>
     
   </div>
@@ -178,12 +182,25 @@
     <div class="container-fluid has-breakpoint">
       <div class="row">
         <div class="col-md-4">
+
+          <div id="rooms-amenities-header-text" class="montigo-image-description">
+            <div class="montigo-image-description-container">
+              <h3>Just for You</h3>
+              <hr class="short-hr">
+              <h4>Villa Amenities</h4>
+              <p>At Montigo Resorts, Nongsa, each villa offers a wide selection of amenities that amply complement their rich diversity of location and views. And with such attention to detail, you’re unlikely to miss a smile.</p>
+            </div>
+          </div> <!-- .montigo-image-description -->
+
+          <!-- 
           <div id="rooms-amenities-header-text">
             <h3>Just for You</h3>
             <hr class="short-hr">
             <h4>Villa Amenities</h4>
             <p>At Montigo Resorts, Nongsa, each villa offers a wide selection of amenities that amply complement their rich diversity of location and views. And with such attention to detail, you’re unlikely to miss a smile.</p>
           </div>
+          -->
+
         </div>
         <div class="col-md-8">
           <div id="rooms-amenities-header-image" class="manic-image-container">
@@ -225,8 +242,6 @@
               <li>Superior bath amenities including plush terry bathrobes and towels</li>
               <li>Spacious wardrobes</li>
               <li>Al fresco dining terrace</li>
-              <li>Infinity pool</li>
-              <li>Powder Room with shower</li>
               
             </ul>
 
@@ -238,6 +253,8 @@
 
           <div id="rooms-amenities-text-02">
             <ul>
+              <li>Infinity pool</li>
+              <li>Powder Room with shower</li>
               <li>Kitchenette &amp; Mini-Bar</li>
               <li>Coffee and Tea making facilities</li>
               <li>Safe-deposit box</li>
@@ -247,10 +264,6 @@
               <li>IDD Telephone</li>
               <li>Wii console <span>(Available in Hilltop, Seafront and Spa villas only)</span></li>
             </ul>
-          </div>
-
-          <div id="rooms-amenities-image-03" class="manic-image-container">
-            <img src="images/rooms/rooms_amenities_image_03.jpg">
           </div>
 
         </div>
@@ -344,14 +357,17 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
-        "images/main_slider/rooms_main_slider_01_square_v2.jpg",
+        "images/main_slider/may6_villas_main_slider.jpg",
         "images/parallax/rooms_residences_parallax_balcony_01.jpg",
         "images/rooms/_temp_map.png",
         "images/rooms/rooms_villas_image_01.jpg",
+        "images/rooms/rooms_villas_image_01.jpg",
+        "images/rooms/rooms_villas_image_01.jpg",
+        "images/rooms/rooms_villas_image_01.jpg",
+        "images/rooms/rooms_villas_image_01.jpg",
         "images/rooms/rooms_amenities_header_image_01.jpg",
         "images/rooms/rooms_amenities_image_01.jpg",
-        "images/rooms/rooms_amenities_image_02.jpg",
-        "images/rooms/rooms_amenities_image_03.jpg"
+        "images/rooms/rooms_amenities_image_02.jpg"
       ],
       desktop_js_array: [
         <?php if(DEBUG): ?>

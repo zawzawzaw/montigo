@@ -32,12 +32,12 @@ montigo.component.MainImage = function(options, element) {
    * @type {manic.ui.ImageContainer}
    */
   this.image_container = new manic.ui.ImageContainer({
-    'vertical_align': 'center',
+    'vertical_align': 'top',
     'image_src': this.initial_image_src
   }, this.element.find('.main-slider-image-container'));
 
   this.text_container = new manic.ui.TextContainer({
-    'vertical_align': 'center'
+    'vertical_align': 'top'
   }, this.element.find('.main-slider-text-container'));
 
   /**
@@ -160,92 +160,6 @@ montigo.component.MainImage.prototype.create_scene = function(controller_param) 
           
 };
 
-/**
- * create_activities_scene description
- * @param  {ScrollMagic.Controller} controller_param
- */
-montigo.component.MainImage.prototype.create_activities_scene = function(controller_param) {
-
-  var animation_elements = [
-    this.element.find('.text h3'),
-    this.element.find('.text .foot-icon'),
-    this.element.find('.text h4'),
-    this.element.find('.text hr')
-  ];
-
-  var arr = this.element.find('.text p');
-  for (var i = 0, l = arr.length; i < l; i++) {
-    animation_elements[animation_elements.length] = $(arr[i]);
-  }
-
-  this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements(animation_elements);
-
-  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 400})
-            //.addIndicators({name: "Main Image"}) // add indicators (requires plugin)
-            .triggerHook(0)
-            .offset(20)
-            .setTween(this.text_animation)
-            .addTo(controller_param);
-};
-
-/**
- * create_rooms_scene description
- * @param  {ScrollMagic.Controller} controller_param
- */
-montigo.component.MainImage.prototype.create_rooms_scene = function(controller_param) {
-  this.black_gradient
-};
-
-
-/**
- * create_activities_scene description
- * @param  {ScrollMagic.Controller} controller_param
- */
-montigo.component.MainImage.prototype.create_dining_scene = function(controller_param) {
-  this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements([
-    this.element.find('.text h3'),
-    this.element.find('.text hr'),
-    this.element.find('.text h4'),
-    this.element.find('.text p')
-  ]);
-
-
-  //this.text_animation.add(TweenMax.to(this.element.find('.bg-black-rect'), 1, {opacity:0}), 0.2 );
-  this.text_animation.add(TweenMax.to(this.element.find('.bg-black-gradient'), 1, {opacity:0}), 0.3 );
-
-  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 350})
-            //.addIndicators({name: "Main Image"}) // add indicators (requires plugin)
-            .triggerHook(0)
-            .offset(20)
-            .setTween(this.text_animation)
-            .addTo(controller_param);
-};
-
-/**
- * create_activities_scene description
- * @param  {ScrollMagic.Controller} controller_param
- */
-montigo.component.MainImage.prototype.create_spa_scene = function(controller_param) {
-  this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements([
-    this.element.find('.text h3'),
-    this.element.find('.text hr'),
-    this.element.find('.text h4'),
-    this.element.find('.text p.p1'),
-    this.element.find('.text p.p2'),
-    this.element.find('.text .cta-button')
-  ]);
-
-
-  //this.text_animation.add(TweenMax.to(this.element.find('.bg-black-rect'), 1, {opacity:0}), 0.2 );
-  this.text_animation.add(TweenMax.to(this.element.find('.bg-black-gradient'), 1, {opacity:0}), 0.3 );
-
-  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 350})
-            //.addIndicators({name: "Main Image"}) // add indicators (requires plugin)
-            .triggerHook(0)
-            .offset(20)
-            .setTween(this.text_animation)
-            .addTo(controller_param);
-};
 
 
 montigo.component.MainImage.prototype.public_method_05 = function() {};

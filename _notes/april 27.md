@@ -1,9 +1,45 @@
+NIK
+ 1. SGA FEATURED IMAGES HAS 404 ERROR (something like that)
+
+
+//SUYEON NEW BANNER IMAGE
+//1. ImageContainer
+//   vertical align top
+//   (crop from below the image)    --- all images have drop shadow
+
+   parallax image to top (don't move the image :D) - maybe
+
+//2. text will stay at a consitent position (per pixel ) from the top
+//3. yatch picture will change the 
+
+//1. HOME PAGE ACTIVITIES SECTION
+
+//2. VILLAS PAGE AMENETIES SECTION
+//3. josh email, dining page hours (see psd)
+
+//   and for the feature dishes now is 15 px size.. hahahah
+
+
+
+
+
+//YILING BOOKING ENGINE TODO LIST:
+//1. add dropshadow
+//   - same as home sidebar
+//2. add ( DD/MM/YYYY ) placeholder text
+//3. code the non-tranparent 'white-version' for the booking engine
+
+
+
+
 things to do: (there's alot, here's some of the)
 
 //remove black thing from main_slider
 //remove pinning
+//booking engine
 
-booking engine
+ 
+
 
 
 // put events booking form on hold 
@@ -15,23 +51,17 @@ booking engine
 2. tweak footer to be centered
 
 
-
-
-
-
-
-
 MAJOR MISSING FEATURES:
  
 
 // !! HOTEL BOOKING FUNCTIONALITY !!
+// - cannot book from previous dates
+// - add 'unable to choose past dates' feature
+//   (copy from reignwood)
 
- - cannot book from previous dates
 
+//////  1. home page, map interactivity.           -- not used anymore
 
-
-
-  1. home page, map interactivity.
   2. rooms page, map interactivity.
 
  //2. book now, calendar dropdown
@@ -45,7 +75,11 @@ MAJOR MISSING FEATURES:
 
 Optional Code Cleaning:
  //1. parallax & main image across pages.
- //2. change rooms to villas
+ 
+
+ 2. change montigo.page.Room to montigo.page.Villas   (and other things related to this)
+ 3. move form stuff away from menu, to a seperate component 'MenuForm'
+
 
 Optional Animation
  1. parallax scene for activities, dining & rooms page
@@ -55,9 +89,9 @@ Optional Animation
 
 
 
-fix gradient css opacity of each item (main slider)
-fix letter spacing css of each h3 (main slider)
-add the foot icon back (activities) ? or ask if it can be permanently removed.
+//fix gradient css opacity of each item (main slider) - no need anymore.
+//fix letter spacing css of each h3 (main slider) - no need anymore, this was changed.
+//add the foot icon back (activities) ? or ask if it can be permanently removed. - not needed anymore.
 
 
 
@@ -65,16 +99,18 @@ add the foot icon back (activities) ? or ask if it can be permanently removed.
 
 
 
-plunk in form
- - should have reignwood js, not allow previous dates
+//plunk in form
+ //- should have reignwood js, not allow previous dates
 
 
 
 
 
-Bugs/ Flaws
- 1. text container, margin from top is too small on some aspect ratios.
-    (repositioning logic doesn't function the way you wanted it to)
+//Bugs/ Flaws
+ //1. text container, margin from top is too small on some aspect ratios.
+    //(repositioning logic doesn't function the way you wanted it to)
+
+    - actually it does
 
 
 
@@ -88,7 +124,8 @@ Ernica List
 
 //2. change all arrow buttons to circle arrow buttons
 
-3. make map interactive?  // don't do yet. might be removed...
+//3. make map interactive?  // don't do yet. might be removed...
+// - not needed anymore, this was removed.
 
 Home Psd
 
@@ -103,7 +140,8 @@ Home Psd
 
   
    - or just go full 3D ^___^
-     (or just plot each point out in raphaeljs)
+     (or just plot each point out in raphaeljs) - whew, good thing i didn't do this yet ^__^
+
 
 
 
