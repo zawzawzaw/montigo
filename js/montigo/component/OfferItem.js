@@ -1,5 +1,7 @@
 goog.provide('montigo.component.OfferItem');
 
+goog.require('manic.ui.PanelContainer');
+
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 

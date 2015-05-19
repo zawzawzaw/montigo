@@ -26,7 +26,7 @@ define('DEBUG', true);
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="images/icons/montigo-favicon.png">
 
     <!-- social -->
     <meta content="Montigo Resorts" property="og:title"/>
@@ -71,6 +71,7 @@ define('DEBUG', true);
     </div>
 
     <div id="page-wrapper">
+      
 
       <header id="main-page-header-mobile" class="visible-xs-block visible-sm-block">
       </header>
@@ -92,7 +93,7 @@ define('DEBUG', true);
                 <nav id="header-navigation">
                   <ul>
                     <li><a href="#">About Montigo</a></li>
-                    <li><a href="#">Offers &amp; Packages</a></li>
+                    <li><a href="offers.php">Offers &amp; Packages</a></li>
                     <li><a href="accommodation.php">Accommodation</a></li>
                     <li><a href="dining.php">Dining</a></li>
                     <li><a href="spa.php">Spa</a></li>
@@ -151,6 +152,21 @@ define('DEBUG', true);
 
                           <div class="menu-booking-form-item single-line-version">
                             <label>Nights</label>
+
+                            <div class="manic-dropdown montigo-version">
+                              <span>1</span>
+                              <input type="hidden" id="nights" name="nights" value="1">
+                              <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                              </ul>
+                            </div>
+
+                            <!-- 
                             <div class="select-input">
                               <div class="fa fa-play"></div>
                               <select id="nights" name="nights">
@@ -162,6 +178,7 @@ define('DEBUG', true);
                                 <option>6</option>
                               </select>
                             </div>
+                             -->
                           </div>
 
                         </div>
@@ -169,6 +186,21 @@ define('DEBUG', true);
                           
                           <div class="menu-booking-form-item single-line-version">
                             <label>villas</label>
+
+                            <div class="manic-dropdown montigo-version">
+                              <span>1</span>
+                              <input type="hidden" id="rooms" name="rooms" value="1">
+                              <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                              </ul>
+                            </div>
+
+                            <!-- 
                             <div class="select-input">
                               <div class="fa fa-play"></div>
                               <select id="rooms" name="rooms">
@@ -180,6 +212,8 @@ define('DEBUG', true);
                                 <option>6</option>
                               </select>
                             </div>
+                             -->
+
                           </div>
 
                         </div>
@@ -188,6 +222,19 @@ define('DEBUG', true);
                         <div class="col-md-6">
 
                           <div class="menu-booking-form-item">
+
+
+                            <div class="manic-dropdown montigo-version">
+                              <span>Code Type</span>
+                              <input type="hidden" id="codeType" name="codeType" value="0">
+                              <ul>
+                                <li data-value="Promo">Promo</li>
+                                <li data-value="Corporate">Corporate</li>
+                                <li data-value="Group">Group</li>
+                                <li data-value="iataNumber">IATA</li>
+                              </ul>
+                            </div>
+                            <!-- 
                             <div class="select-input">
                               <div class="fa fa-play"></div>
                               <select id="codeType" name="codeType">
@@ -198,6 +245,7 @@ define('DEBUG', true);
                                 <option value="iataNumber">IATA</option>
                               </select>
                             </div>
+                             -->
                           </div>
 
                         </div>

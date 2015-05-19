@@ -22,5 +22,6 @@ subprocess.Popen([
   '--root_with_prefix=../js/manic/video ../../../../js/manic/video/',
   '--root_with_prefix=../js/montigo/page ../../../../js/montigo/page/',
   '--root_with_prefix=../js/montigo/component ../../../../js/montigo/component/',
+  '--root_with_prefix=../js/montigo/content ../../../../js/montigo/content/',
   '--output_file=../js/goog-custom-dependencies.js'
   ], shell=True);

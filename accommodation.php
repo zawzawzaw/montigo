@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="rooms-slider" class="main-slider" data-image="images/main_slider/may6_villas_main_slider.jpg">
+  <div id="rooms-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_villas_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -10,7 +10,7 @@
 
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div class="text white-version" data-x="704" data-y="256">
+        <div class="text white-version" data-x="704" data-y="232">
 
           <h3>Accommodating Generations</h3>
           <p>A blissful getaway awaits at Montigo Resorts, Nongsa, barely 30 minutes away from Singapore. Scenic landscapes ensconce spacious villas and contemporary residences to delight every patron – from lively tots to their doting grandparents, and couples in search of some precious seclusion to groups of close friends.</p>
@@ -23,27 +23,32 @@
 
   <!-- 
      __  __    _    ____  ____  
-    |  \/  |  / \  |  _ \/ ___| 
-    | |\/| | / _ \ | |_) \___ \ 
+    |  \/  |  / \  |  _ \/ ___|
+    | |\/| | / _ \ | |_) \___ \
     | |  | |/ ___ \|  __/ ___) |
-    |_|  |_/_/   \_\_|   |____/ 
-                                
+    |_|  |_/_/   \_\_|   |____/
+
    -->
 
-  <div id="rooms-map-section">
+
+  <div class="space50"></div>
+  <div id="rooms-map-scroll-target" class="scroll-target" data-value="map"></div>
+  
+    <div id="rooms-map-section">
 
 
-    <div id="rooms-map-interactive">
-      <!-- <img src="images/rooms/_temp_map.png"> -->
+      <div id="rooms-map-interactive">
+        <!-- <img src="images/rooms/_temp_map.png"> -->
+        
+      </div>
+
+      <div id="rooms-map-text">
+        <h3>Our Villas</h3>
+        <hr class="short-hr">
+        <h4>Come stay with us</h4>
+      </div>
     </div>
-
-    <div id="rooms-map-text">
-      <h3>Our Villas</h3>
-      <hr class="short-hr">
-      <h4>Come stay with us</h4>
-    </div>
-    
-  </div>
+  
 
   <!-- 
     __     _____ _     _        _    ____  
@@ -54,6 +59,7 @@
                                            
    -->
 
+  <div class="scroll-target" data-value="villas"></div>
   <div id="rooms-villas-section">
 
 
@@ -61,40 +67,45 @@
       <div class="row">
         <div class="col-md-8">
 
-          <div id="room-villas-image-panel-container" class="panel-container">
-            <div class="panel-container-container">
-              <div class="panel">
-                <div class="manic-image-container">
-                  <img src="images/rooms/rooms_villa_01.jpg">
+          <div class="no-right-margin">
+            <div id="room-villas-image-panel-container" class="panel-container">
+              <div class="panel-container-container">
+                <div class="panel">
+                  <div class="manic-image-container">
+                    <img src="images/rooms/rooms_villa_01.jpg">
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="manic-image-container">
+                    <img src="images/rooms/rooms_villa_02.jpg">
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="manic-image-container">
+                    <img src="images/rooms/rooms_villa_03.jpg">
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="manic-image-container">
+                    <img src="images/rooms/rooms_villa_04.jpg">
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="manic-image-container">
+                    <img src="images/rooms/rooms_villa_05.jpg">
+                  </div>
                 </div>
               </div>
-              <div class="panel">
-                <div class="manic-image-container">
-                  <img src="images/rooms/rooms_villa_02.jpg">
-                </div>
-              </div>
-              <div class="panel">
-                <div class="manic-image-container">
-                  <img src="images/rooms/rooms_villa_03.jpg">
-                </div>
-              </div>
-              <div class="panel">
-                <div class="manic-image-container">
-                  <img src="images/rooms/rooms_villa_04.jpg">
-                </div>
-              </div>
-              <div class="panel">
-                <div class="manic-image-container">
-                  <img src="images/rooms/rooms_villa_05.jpg">
-                </div>
-              </div>
-            </div>
-          </div> <!-- room-villas-image-panel-container -->
+            </div> <!-- room-villas-image-panel-container -->
+          </div>
+
 
           
 
         </div>
         <div class="col-md-4">
+
+
 
           <div id="room-villas-sidebar">
 
@@ -161,6 +172,7 @@
                                                           
    -->
 
+  <div class="scroll-target" data-value="amenities"></div>
   <div id="rooms-amenities-header-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
@@ -186,9 +198,13 @@
 
         </div>
         <div class="col-md-8">
-          <div id="rooms-amenities-header-image" class="manic-image-container">
-            <img src="images/rooms/rooms_amenities_header_image_01.jpg">
+
+          <div class="no-left-margin">
+            <div id="rooms-amenities-header-image" class="manic-image-container fadein-right">
+              <img src="images/rooms/rooms_amenities_header_image_01.jpg">
+            </div>
           </div>
+
         </div>
       </div> <!-- row -->
     </div> <!-- container-fluid -->
@@ -201,12 +217,14 @@
       <div class="row">
         <div class="col-md-4">
 
-          <div id="rooms-amenities-image-01" class="manic-image-container">
-            <img src="images/rooms/rooms_amenities_image_01.jpg">
-          </div>
+          <div class="no-right-margin">
+            <div id="rooms-amenities-image-01" class="manic-image-container fadein-left">
+              <img src="images/rooms/rooms_amenities_image_01.jpg">
+            </div>
 
-          <div id="rooms-amenities-image-02" class="manic-image-container">
-            <img src="images/rooms/rooms_amenities_image_02.jpg">
+            <div id="rooms-amenities-image-02" class="manic-image-container fadein-left">
+              <img src="images/rooms/rooms_amenities_image_02.jpg">
+            </div>
           </div>
 
         </div>
@@ -228,7 +246,7 @@
               
             </ul>
 
-            <a href="#" class="cta-button">see our commonly asked questions<span class="fa fa-chevron-circle-right"></span></a>
+            <a href="faq.php" class="cta-button">see our commonly asked questions<span class="fa fa-chevron-circle-right"></span></a>
           </div>
 
         </div>
@@ -264,8 +282,8 @@
     |_| \_\_____|____/___|____/|_____|_| \_|\____|_____|____/ 
                                                               
    -->
-
-  <div id="rooms-residences-section" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01b.jpg">
+  <div class="scroll-target" data-value="residences"></div>
+  <div id="rooms-residences-section" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01c.jpg">
 
     <ul class="data-container">
       <li>images/asdf/asdf.jpg</li>
@@ -280,28 +298,16 @@
     </div>
 
     <div class="parallax-section-text-container">
-      <div class="text-container" data-width="1276" data-height="896">
-        <div id="rooms-residences-text" class="parallax-section-text text" data-x="1048" data-y="363">
+      <div class="text-container" data-width="1877" data-height="1147">
+        <div id="rooms-residences-text" class="parallax-section-text text" data-x="1462" data-y="416">
 
-          <!-- <div class="bg-white-gradient"></div> -->
+          <h3 class="fadein-top">The Residences</h3>
+          <hr class="short-hr fadein-top">
+          <h4 class="fadein-top">Exclusive and exquisite</h4>
 
-          <!--
-          <ul class="circle-button-container">
-            <li class="fa fa-circle"></li>
-            <li class="fa fa-circle"></li>
-            <li class="fa fa-circle"></li>
-            <li class="fa fa-circle"></li>
-            <li class="fa fa-circle"></li>
-          </ul>
-          -->
-
-          <h3>The Residences</h3>
-          <hr class="short-hr">
-          <h4>Exclusive and exquisite</h4>
-
-          <p>Exclusive and exquisite, the Montigo Residences are ideal destinations for your next holiday. Each well-appointed residence a unique configuration, it features three modern en-suite bedrooms, along with a living and dining room, kitchen, powder room, and an expansive terrace with multiple plunge pools and cabanas.</p>
-          <p>Each area is separate enough to offer privacy, yet interlinked to provide an inviting warmth and the utmost comfort. With unobstructed views of the magnificent South China Sea from every room, this idyllic and relaxing retreat will lure you into the rhythm of island life and the sound of the waves.</p>
-          <a href="#" class="cta-button">get in touch with montigo<span class="fa fa-chevron-circle-right"></span></a>
+          <p class="fadein-top">Exclusive and exquisite, the Montigo Residences are ideal destinations for your next holiday. Each well-appointed residence a unique configuration, it features three modern en-suite bedrooms, along with a living and dining room, kitchen, powder room, and an expansive terrace with multiple plunge pools and cabanas.</p>
+          <p class="fadein-top">Each area is separate enough to offer privacy, yet interlinked to provide an inviting warmth and the utmost comfort. With unobstructed views of the magnificent South China Sea from every room, this idyllic and relaxing retreat will lure you into the rhythm of island life and the sound of the waves.</p>
+          <a href="#" class="cta-button fadein-top">get in touch with montigo<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -347,7 +353,7 @@
       asset_array: [
         "json/accomodation_map.json",
         "images/main_slider/may6_villas_main_slider.jpg",
-        "images/parallax/rooms_residences_parallax_balcony_01b.jpg",
+        "images/parallax/rooms_residences_parallax_balcony_01c.jpg",
         "images/rooms/_temp_map.png",
         "images/rooms/rooms_villas_image_01.jpg",
         "images/rooms/rooms_villas_image_01.jpg",

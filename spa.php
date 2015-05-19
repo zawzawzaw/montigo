@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="spa-slider" class="main-slider" data-image="images/main_slider/may6_spa_main_slider.jpg">
+  <div id="spa-slider" class="main-slider no-scale-version" data-image="images/main_slider/may15_spa_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -10,7 +10,7 @@
 
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div class="text" data-x="704" data-y="245">
+        <div class="text" data-x="704" data-y="230">
 
           <h3>Montigo Spa</h3>
           <p>The Montigo Spa has something for all who seek respite from urban life. Restore your body’s balance with centuries old therapies, accentuated by the ambient infusion of soothing fragrances and light. Recharge and be holistically revived at the Montigo Spa.</p>
@@ -39,8 +39,8 @@
       <div class="row">
         <div class="col-md-6">
 
-          <div class="margin-less-image">
-            <div id="spa-experience-image-01" class="manic-image-container">
+          <div class="no-right-margin">
+            <div id="spa-experience-image-01" class="manic-image-container fadein-left">
               <img src="images/spa/spa_experience_image_01.jpg">
             </div>
           </div>
@@ -48,6 +48,7 @@
         </div>
         <div class="col-md-6">
 
+          
           <div id="spa-experience-text-01" class="montigo-image-description">
             <div class="montigo-image-description-container">
               <h3>The Facilities</h3>
@@ -78,12 +79,12 @@
               <a href="" class="cta-button">Please get in touch for rates &amp; schedules<span class="fa fa-chevron-circle-right"></span></a>
             </div>
           </div> <!-- spa-experience-text-02 -->
-
+          
         </div>
         <div class="col-md-6">
 
-          <div class="margin-less-image">
-            <div id="spa-experience-image-02" class="manic-image-container">
+          <div class="no-left-margin">
+            <div id="spa-experience-image-02" class="manic-image-container fadein-right">
               <img src="images/spa/spa_experience_image_02.jpg">
             </div>
           </div>
@@ -104,16 +105,16 @@
    -->
 
 
-  <div id="spa-signiture-section">
-    <div id="spa-signiture-title">
+  <div id="spa-signiture-section" class="icon-set-section">
+    <div class="icon-set-title">
       <h3>Signature Treatments</h3>
     </div>
-    <div id="spa-signiture-item-container">
+    <div class="icon-set-item-container">
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_01_herbal_compress_massage"></div>
               </div>
@@ -124,7 +125,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_02_traditional_facial"></div>
               </div>
@@ -135,7 +136,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_03_foot_reflexology"></div>
               </div>
@@ -146,7 +147,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_04_island_spice_blend"></div>
               </div>
@@ -160,7 +161,7 @@
         <div class="row">
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_05_firming_wrap"></div>
               </div>
@@ -171,7 +172,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_06_javanese_lulur"></div>
               </div>
@@ -182,7 +183,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_07_ginger_bath"></div>
               </div>
@@ -193,7 +194,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="spa-signiture-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon spa_icon_08_couple_spa_experience"></div>
               </div>
@@ -205,14 +206,14 @@
 
         </div>
       </div>
-    </div> <!-- #spa-signiture-item-container -->
+    </div> <!-- .icon-set-item-container -->
 
 
-    <div id="spa-signiture-cta-button-container">
+    <div class="icon-set-cta-button-container">
       <a href="pdf/MontigoSpa_Brochure(Phase2)_Online_FA.pdf" class="cta-button">See our full list of treatments here<span class="fa fa-chevron-circle-right"></span></a>
     </div>
 
-  </div> <!-- #spa-signiture-section -->
+  </div> <!-- .icon-set-section -->
 
 
 </div> <!-- main-page-content -->
@@ -234,7 +235,7 @@
 
 <?php if(DEBUG): ?>
   <script type="text/javascript">
-    goog.require('montigo.page.Spa');
+    goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -245,7 +246,7 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
-        "images/main_slider/may6_spa_main_slider.jpg",
+        "images/main_slider/may15_spa_main_slider.jpg",
         "images/spa/spa_experience_image_01.jpg",
         "images/spa/spa_experience_image_02.jpg",
         "images/icons/spa_icon_01_herbal_compress_massage.png",
@@ -270,13 +271,13 @@
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-spa.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       mobile_js_array: [
       ],
       on_desktop_complete: function(){
-        page = new montigo.page.Spa();
+        page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
         console.log('no mobile code yet');

@@ -146,6 +146,15 @@ manic.ui.ImageContainer.BEST_FIT = 'best_fit';
  * @const
  * @type {string}
  */
+manic.ui.ImageContainer.BEST_FIT_NO_SCALE_DOWN = 'best_fit_no_scale_down';
+
+
+
+/**
+ * ImageContainer Constant
+ * @const
+ * @type {string}
+ */
 manic.ui.ImageContainer.SHOW_ALL = 'show_all';
 
 /**
@@ -234,6 +243,8 @@ manic.ui.ImageContainer.prototype.update_layout = function() {
     this.use_scale_mode_show_all();
   } else if(this.scale_mode == manic.ui.ImageContainer.BEST_FIT) {
     this.use_scale_mode_best_fit();
+  } else if(this.scale_mode == manic.ui.ImageContainer.BEST_FIT_NO_SCALE_DOWN){
+    this.use_scale_mode_best_fit_no_scale_down();
   }
 
 
@@ -358,7 +369,65 @@ manic.ui.ImageContainer.prototype.use_scale_mode_best_fit = function() {
 
   } // end if aspect ratio
 };
-manic.ui.ImageContainer.prototype.private_method_05 = function() {};
+manic.ui.ImageContainer.prototype.use_scale_mode_best_fit_no_scale_down = function() {
+
+  var target_width = 0;
+  var target_height = 0;
+  var target_x = 0;
+  var target_y = 0;
+
+  if (this.image_aspect_ratio != -1) {
+
+    // set target width and height
+    if (this.container_aspect_ratio > this.image_aspect_ratio) {
+      target_width = this.container_width
+      target_height = target_width / this.image_aspect_ratio;
+    } else {
+      target_height = this.container_height
+      target_width = target_height * this.image_aspect_ratio;
+    }
+
+    // this is the no scale down code
+    target_width = target_width <= this.original_image_width ? this.original_image_width : target_width;
+    target_height =  target_height <= this.original_image_height ? this.original_image_height : target_height;
+    
+
+    // set target x
+    if (this.horizontal_align == manic.ui.ImageContainer.LEFT) {
+      target_x = 0;
+    } else if (this.horizontal_align == manic.ui.ImageContainer.CENTER) {
+      target_x = (this.container_width - target_width) / 2;
+    } else if (this.horizontal_align == manic.ui.ImageContainer.RIGHT) {
+      target_x = this.container_width - target_width;
+    }
+
+    // set target y
+    if(this.vertical_align == manic.ui.ImageContainer.TOP){
+      target_y = 0;
+    } else if(this.vertical_align == manic.ui.ImageContainer.CENTER){
+      target_y = (this.container_height - target_height) / 2;
+    } else if(this.vertical_align == manic.ui.ImageContainer.BOTTOM){
+      target_y = this.container_height - target_height;
+    }
+
+    target_x = Math.round(target_x);
+    target_y = Math.round(target_y);
+    target_width = Math.round(target_width);
+    target_height = Math.round(target_height);
+
+    TweenMax.to(this.image_element, 0, {'x': target_x, 'y': target_y});
+
+    // update css of image
+    this.image_element.css({
+      //'top': target_y + 'px',
+      //'left': target_x + 'px',
+      'width': target_width + 'px',
+      'height': target_height + 'px'
+    });
+
+  } // end if aspect ratio
+
+};
 manic.ui.ImageContainer.prototype.private_method_06 = function() {};
 
 

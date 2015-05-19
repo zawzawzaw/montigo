@@ -198,3 +198,51 @@
   }
 
 }
+
+
+
+.back-to-top-button{
+  background: @light-blue;
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+  //.transition-in(0.4s);
+  .transition-in-single(background, 0.4s);
+
+  text-align: center;
+
+  position: relative;
+
+  &:hover{
+    background: @dark-brown; 
+  }
+
+  .fa{
+    color: @white;
+
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 40px;
+    font-size: 12px;
+  }
+
+  p{
+    .brandon-black;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: @white;
+
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    width: 40px;
+  }
+
+
+
+
+}

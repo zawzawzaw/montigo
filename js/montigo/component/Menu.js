@@ -3,6 +3,8 @@ goog.provide('montigo.component.Menu');
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
+goog.require('manic.ui.DropDown');
+
 /**
  * The Menu constructor
  * @param {object} options The object extendable like jquery plugins
@@ -38,20 +40,23 @@ montigo.component.Menu = function(options, element) {
   this.booking_form_submit_button.click(this.on_booking_form_submit_button_click.bind(this));
   this.booking_form_cancel_button.click(this.on_booking_form_cancel_button_click.bind(this));
 
+
+  // create dropdowns
   
-  this.element.find('#arrivalDate').glDatePicker({
-    'cssName':'menu-booking-calendar',
-    'zIndex': 10000,
-    'dowNames': [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
-    'prevArrow': '<span class="fa fa-chevron-left"></span>',
-    'nextArrow': '<span class="fa fa-chevron-right"></span>',
-    'selectableDateRange': [ {'from': new Date(), 'to': new Date(1e15) } ],
-    'onShow': this.on_calendar_show.bind(this),
-    'onHide': this.on_calendar_hide.bind(this)
-  });
+  var arr = this.element.find('.manic-dropdown');
+  var item = null;
+  var dropdown = null;
+
+  for (var i = 0, l = arr.length ; i < l; i++) {
+    item = $(arr[i]);
+    dropdown = new manic.ui.DropDown({},item);
+  }
 
   
-  this.element.find('#departureDate').glDatePicker({
+
+
+  // create date picker
+  this.arrival_datepicker = this.element.find('#arrivalDate').glDatePicker({
     'cssName':'menu-booking-calendar',
     'zIndex': 10000,
     'dowNames': [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
@@ -59,8 +64,26 @@ montigo.component.Menu = function(options, element) {
     'nextArrow': '<span class="fa fa-chevron-right"></span>',
     'selectableDateRange': [ {'from': new Date(), 'to': new Date(1e15) } ],
     'onShow': this.on_calendar_show.bind(this),
-    'onHide': this.on_calendar_hide.bind(this)
-  });
+    'onHide': this.on_calendar_hide.bind(this),
+    'onClick': this.on_arrival_select.bind(this)
+  }).glDatePicker(true);
+
+  
+
+  this.departure_datepicker = this.element.find('#departureDate').glDatePicker({                                                  // do the same to select handler at the bottom
+    'cssName':'menu-booking-calendar',
+    'zIndex': 10000,
+    'dowNames': [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
+    'prevArrow': '<span class="fa fa-chevron-left"></span>',
+    'nextArrow': '<span class="fa fa-chevron-right"></span>',
+    'selectableDateRange': [ {'from': new Date(), 'to': new Date(1e15) } ],
+    'onShow': this.on_calendar_show.bind(this),
+    'onHide': this.on_calendar_hide.bind(this),
+    'onClick': this.on_departure_select.bind(this)
+  }).glDatePicker(true);
+
+  //console.log('this.departure_datepicker');
+  //console.log(this.departure_datepicker);
 
 
   /**
@@ -168,11 +191,13 @@ montigo.component.Menu.prototype.create_scene = function(controller_param) {
     .addTo(controller_param);
 };
 
+
+/*
 montigo.component.Menu.prototype.add_black_gradient = function() {
   var black_gradient = $('<div class="black-menu-gradient"></div>');
   this.gradient_container.append(black_gradient);
-
 };
+*/
 
 
 
@@ -348,6 +373,53 @@ montigo.component.Menu.prototype.on_calendar_hide = function(calendar) {
   this.calendar_container.hide(0);
   calendar['hide']();
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * on_arrival_select
+ * @param  {jquery} el   The input element the date picker is bound to
+ * @param  {jquery} cell The cell on the calendar that triggered this event
+ * @param  {Date} date The date associated with the cell
+ * @param  {Date} data Special data associated with the cell (if available, otherwise, null)
+ */
+montigo.component.Menu.prototype.on_arrival_select = function(el, cell, date, data) {
+  console.log(date);
+
+  el.val(date.toLocaleDateString()); // needed by the component
+
+  this.departure_datepicker['options']['selectableDateRange'] = [ {'from': date, 'to': new Date(1e15) } ]
+  this.departure_datepicker['render']();
+
+  this.element.find('#departureDate').val('');
+};
+
+
+/**
+ * on_arrival_select
+ * @param  {jquery} el   The input element the date picker is bound to
+ * @param  {jquery} cell The cell on the calendar that triggered this event
+ * @param  {Date} date The date associated with the cell
+ * @param  {Date} data Special data associated with the cell (if available, otherwise, null)
+ */
+montigo.component.Menu.prototype.on_departure_select = function(el, cell, date, data) {
+  console.log(date);
+  el.val(date.toLocaleDateString());
+};
+
+
 
 
 

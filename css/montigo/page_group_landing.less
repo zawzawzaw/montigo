@@ -1,0 +1,132 @@
+.page-group-landing{
+  overflow: hidden;
+
+  #main-page-header{
+    display: none !important;
+  }
+
+  .down-scroll-arrow{
+    display: none !important;
+  }
+}
+
+
+#group-landing-slider{
+
+}
+
+#group-landing-slider-text{
+  width: 800px;
+
+  .montigo-landing-logo{
+    .logo_montigo_landing_brown;
+
+    margin: 0 auto;
+    margin-bottom: 102px;
+
+    position: relative;
+    left: -20px;
+  }
+
+  .group-landing-item-container{
+    width: 800px;
+
+
+    .group-landing-item{
+
+      .display-inline-block;
+
+      margin-right: 78px;
+
+      &:last-child{
+        margin-right: 0px;
+      }
+
+    }
+  }
+
+}
+
+.main-slider .text{
+
+  .group-landing-item{
+    text-align: center;
+    width: 310px;
+    height: 190px;
+
+    position: relative;
+    padding-top: 47px;
+
+    color: @dark-brown;
+
+
+    &:before{
+      content: "";
+      display: block;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: @white;
+      .opacity(0.5);
+    }
+
+    h4{
+      .brandon-bold;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.1em;
+
+      position: relative;
+      margin-bottom: 4px;
+    }
+    p{
+      .brandon-regular;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: 0em;
+
+      position: relative;
+    }
+    .button-container{
+      display: block;
+      padding-top: 42px;
+
+      position: relative;
+
+      .cta-button{
+
+        color: @dark-brown;
+
+        .display-inline-block();
+
+        .transition-in(0.4s);
+
+        .fa{
+          .transition-in(0.4s);
+          color: @dark-brown;
+        }
+
+        &:hover{
+          .opacity(1);
+          color: @light-blue;
+
+          .fa{
+            color: @light-blue;
+          }
+          //color: @dark-brown;
+        }
+
+        margin-right: 23px;
+
+        &:last-child{
+          margin-right: 0px;
+        }
+      }
+    }
+
+  } // .group-landing-item{
+
+} // .main-slider .text

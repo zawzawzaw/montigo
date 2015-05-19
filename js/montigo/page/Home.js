@@ -121,13 +121,12 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
   */
 
 
-
+  /*
   // RESTAURANT IMAGE
   var home_restaurant_image_animation_01 = new TimelineMax();
   home_restaurant_image_animation_01.add(TweenMax.to($('#home-restaurant-image-01'), 1, {opacity:1, left:0, ease:Back.easeOut}), 0);
 
   var home_restaurant_image_01 = new ScrollMagic.Scene({triggerElement: "#home-restaurant-text-01", duration: 300})
-            ////.addIndicators({name: "restaurant 03"}) // add indicators (requires plugin)
             .triggerHook(0.8)
             .setTween(home_restaurant_image_animation_01)
             .addTo(this.controller);
@@ -138,10 +137,11 @@ montigo.page.Home.prototype.create_scrollmagic = function() {
   home_restaurant_image_animation_02.add(TweenMax.to($('#home-restaurant-image-02'), 1, {opacity:1, left:0, ease:Back.easeOut}), 0.3);
 
   var home_restaurant_image_02 = new ScrollMagic.Scene({triggerElement: "#home-restaurant-text-02", duration: 300})
-            //.addIndicators({name: "restaurant 03"}) // add indicators (requires plugin)
             .triggerHook(0.8)
             .setTween(home_restaurant_image_animation_02)
             .addTo(this.controller);
+
+  */
 
 }; // end create_scrollmagic
 

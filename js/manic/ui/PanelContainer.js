@@ -37,6 +37,8 @@ manic.ui.PanelContainer = function(options, element) {
   this.update_layout();
   this.goto_index(this.options['initial_index']);
 
+  $(window).resize(this.on_window_resize.bind(this))
+
   //console.log('init');
 };
 goog.inherits(manic.ui.PanelContainer, goog.events.EventTarget);
@@ -241,3 +243,12 @@ manic.ui.PanelContainer.prototype.create_panels_from_array_with_inner = function
   this.goto_index_force(0);
 };
 
+
+
+/**
+ * on_window_resize description
+ * @param  {object} event
+ */
+manic.ui.PanelContainer.prototype.on_window_resize = function(event){
+  this.update_layout();
+}

@@ -5,7 +5,6 @@ goog.require('goog.events.EventTarget');
 
 goog.require('montigo.component.MainImage');
 goog.require('montigo.component.OfferItem');
-goog.require('manic.ui.PanelContainer');
 
 goog.require('montigo.page.Default');
 
@@ -20,28 +19,11 @@ montigo.page.Offers = function(options, element) {
   this.options = $.extend(this.options, montigo.page.Offers.DEFAULT, options);
 
   /**
-   * @type {ScrollMagic.Controller}
-   */
-  this.controller2 = null;    // for parallax effects
-
-  /**
-   * @type {montigo.component.MainImage}
-   */
-  this.main_image = null;
-
-  /**
    * @type {Array<montigo.component.OfferItem>}
    */
   this.offer_item_array = [];
   
-  this.create_scrollmagic();
-  this.create_main_image();
   this.create_offer_items();
-
-  
-  this.window = $(window);
-  this.window.resize(this.on_window_resize.bind(this));
-  this.on_window_resize(null);
 
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
@@ -68,20 +50,6 @@ montigo.page.Offers.DEFAULT = {
   'option_02': ''
 };
 
-/**
- * Offers Page Event Constant
- * @const
- * @type {string}
- */
-montigo.page.Offers.EVENT_01 = '';
-
-/**
- * Offers Page Event Constant
- * @const
- * @type {string}
- */
-montigo.page.Offers.EVENT_02 = '';
-
 
 //    ____  ____  _____     ___  _____ _____
 //   |  _ \|  _ \|_ _\ \   / / \|_   _| ____|
@@ -91,19 +59,8 @@ montigo.page.Offers.EVENT_02 = '';
 //
 
 
-montigo.page.Offers.prototype.create_scrollmagic = function() {
 
-  this.controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
-};
-montigo.page.Offers.prototype.create_main_image = function() {
-
-  this.main_image = new montigo.component.MainImage({
-  },$('#offer-slider'));
-  
-  //this.main_image.create_spa_scene(this.controller);
-  //this.main_image.create_pin_scene(this.controller);
-};
 
 montigo.page.Offers.prototype.create_offer_items = function() {
   var arr = $('.offer-list-item');
@@ -143,10 +100,6 @@ montigo.page.Offers.prototype.private_method_06 = function() {};
 
 montigo.page.Offers.prototype.public_method_01 = function() {};
 montigo.page.Offers.prototype.public_method_02 = function() {};
-montigo.page.Offers.prototype.public_method_03 = function() {};
-montigo.page.Offers.prototype.public_method_04 = function() {};
-montigo.page.Offers.prototype.public_method_05 = function() {};
-montigo.page.Offers.prototype.public_method_06 = function() {};
 
 
 //    _______     _______ _   _ _____ ____
@@ -156,12 +109,6 @@ montigo.page.Offers.prototype.public_method_06 = function() {};
 //   |_____|  \_/  |_____|_| \_| |_| |____/
 //
 
-/**
- * event handler
- * @param  {object} event
- */
-montigo.page.Offers.prototype.on_window_resize = function(event) {
-};
 
 /**
  * event handler
@@ -169,14 +116,6 @@ montigo.page.Offers.prototype.on_window_resize = function(event) {
  */
 montigo.page.Offers.prototype.on_event_handler_03 = function(event) {
 };
-
-/**
- * event handler
- * @param  {object} event
- */
-montigo.page.Offers.prototype.on_event_handler_04 = function(event) {
-};
-
 
 
 

@@ -56,3 +56,21 @@ montigo.component.ScrollMagicUtil.get_alpha_in_top_animation_for_elements = func
   return return_timeline_max;
 
 };
+
+
+/**
+ * get_alpha_in_top_v2_animation_for_elements description
+ * @param  {Array.<jQuery>} array_param array of jquery elements
+ * @return {TimelineMax} animation for elements
+ */
+montigo.component.ScrollMagicUtil.get_alpha_in_top_v2_animation_for_elements = function(array_param) {
+  var return_timeline_max = new TimelineMax();
+
+  for (var i = 0, l = array_param.length; i < l; i++) {
+    return_timeline_max.add(TweenMax.to(array_param[i], 0.7, {opacity:1}), (0.15 * i) + 0.2 );
+    return_timeline_max.add(TweenMax.to(array_param[i], 0.9, {top:0, ease: Sine.easeIn}), 0.15 * i );
+  }
+
+  return return_timeline_max;
+
+};

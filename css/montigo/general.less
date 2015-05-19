@@ -63,14 +63,23 @@ h4{
 
 
 
-.alpha-in-top{
+.fadein-top{
   position: relative;
   top: 25px;
   .opacity(0);
 
-  cursor: pointer;
+  //cursor: pointer;
 }
 
+.fadein-left{
+  left: 20px;
+  .opacity(0);
+}
+
+.fadein-right{
+  left: -20px;
+  .opacity(0);
+}
 
 
 
@@ -96,6 +105,15 @@ body, html{
   margin: 0 -15px;
 }
 
+.no-right-margin{
+  margin-right: -15px;
+  margin-left: 15px;
+}
+.no-left-margin{
+  margin-left: -15px;
+  margin-right: 15px;
+}
+
 
 hr.short-hr{
   border: none;
@@ -108,6 +126,130 @@ hr.short-hr{
 
 .container-fluid.has-breakpoint{
   max-width: 1280px;
+}
+
+
+
+
+//    ____  ____   ___  ____  ____   _____        ___   _ 
+//   |  _ \|  _ \ / _ \|  _ \|  _ \ / _ \ \      / / \ | |
+//   | | | | |_) | | | | |_) | | | | | | \ \ /\ / /|  \| |
+//   | |_| |  _ <| |_| |  __/| |_| | |_| |\ V  V / | |\  |
+//   |____/|_| \_\\___/|_|   |____/ \___/  \_/\_/  |_| \_|
+//                                                        
+
+.manic-dropdown.montigo-version{
+
+  width: 100%;
+  height: 23px;
+  border: 1px solid @dark-grey;
+  background: transparent;
+
+  &:after{
+    content: "\f04b";
+    display: block;
+    position: absolute;
+
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 6px;
+    color: @dark-grey;
+
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    .rotation(90deg);
+
+  }
+
+  cursor: default;
+
+  span{
+    position: absolute;
+    width: 100%;
+    height: 23px;
+    line-height: 21px;
+
+    overflow: hidden;
+
+    .brandon-medium;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: @dark-grey;
+
+    padding-left: 7px;
+    padding-right: 16px;
+  }
+
+  input{
+    display: none;
+  }
+  ul{
+    display: none;
+    position: absolute;
+    width: 100%;
+    //height: 23px;
+    top: 23px;
+    left: 0px;
+
+    z-index: 20;
+
+    padding: 4px 0;
+
+
+    &:before{
+      content: "";
+      display: block;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: @white;
+      //  .opacity(0.9);  // they wanted it to be opace
+
+      .transition-in();
+
+      //border: 1px solid #ebebeb;
+      border: 1px solid transparent;
+      //.box-shadow (0, 0, 9px, #ebebeb);
+      .box-shadow (0, 0, 9px, #cccccc);
+    }
+
+
+    .brandon-medium;
+    font-size: 10px;
+    color: @white;
+    //background: @dark-grey;
+    background: transparent;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    li{
+      position: relative;
+
+      width: 100%;
+      height: 23px;
+      line-height: 21px;
+      background: transparent;
+      //background: #ffffff;
+      //color: #000000;
+      background: transparent;
+      color: @dark-grey;
+
+      padding-left: 7px;
+      padding-right: 16px;
+
+      &:hover{
+        color: @light-blue;
+
+        //color: #ffffff;
+        //background: #000000;
+      }
+    }
+  }
 }
 
 

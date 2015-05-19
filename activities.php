@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="activities-slider" class="main-slider" data-image="images/main_slider/may6_activities_main_slider.jpg">
+  <div id="activities-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_activities_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -10,7 +10,7 @@
 
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div class="text" data-x="704" data-y="246">
+        <div class="text" data-x="704" data-y="232">
 
           <h3>New Adventures!</h3>
           <p>The team at Montigo Resorts, Nongsa includes spirited pros who delight in perfecting your getaway in every way. Activities include a leisurely sunset cruise, exhilarating aquatic adventures, exciting land explorations, a host of sporting challenges, and even a treasure trove of surprises for youngsters.</p>
@@ -33,6 +33,7 @@
                                                       
    -->
 
+   <div class="scroll-target" data-value="favorites"></div>
   <div id="activities-favorites-section">
 
     <div id="activities-favorites-title">
@@ -131,13 +132,15 @@
                                       
    -->
 
+  <div class="scroll-target" data-value="outdoor"></div>
+
   <div id="activities-terrestrial-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
 
         <div class="col-md-6">
 
-          <div class="margin-less-image">
+          <div class="no-right-margin">
             <div id="activities-terrestrial-image-01" class="manic-image-container">
               <img src="images/activities/terrestrial_activities_01.jpg">
             </div>
@@ -199,6 +202,8 @@
                          
    -->
 
+  <div class="scroll-target" data-value="aquatic"></div>
+
   <div id="activities-sea-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
@@ -246,7 +251,7 @@
         </div>
         <div class="col-md-6">
 
-          <div class="margin-less-image">
+          <div class="no-left-margin">
             <div id="activities-sea-image-01" class="manic-image-container">
               <!-- <img src="images/activities/sea_activities_01.jpg"> -->
               <img src="images/activities/sea_activities_01b_yatch.jpg">
@@ -270,12 +275,14 @@
                                             
    -->
 
+  <div class="scroll-target" data-value="fitness"></div>
+
   <div id="activities-fitness-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
         <div class="col-md-6">
 
-          <div class="margin-less-image">
+          <div class="no-right-margin">
             <div id="activities-fitness-image-01" class="manic-image-container">
               <img src="images/activities/fitness_activities_01b.jpg">
             </div>
@@ -326,8 +333,9 @@
 
 
 
+  <div class="scroll-target" data-value="olu"></div>
 
-  <div id="activities-parallax-01" class="parallax-section" data-image="images/parallax/activities_parallax_03_kids.jpg">
+  <div id="activities-parallax-01" class="parallax-section" data-image="images/parallax/may18_activities_parallax_olu.jpg">
     <div class="parallax-section-image-container">
       <img src="">
     </div>
@@ -336,18 +344,18 @@
       <div class="text-container" data-width="1276" data-height="726">
         <div id="activities-parallax-01-text" class="parallax-section-text white-version text" data-x="280" data-y="387">
 
+          <!-- 
           <div class="bg-black-gradient"></div>
+           -->
+          
+          <div class="activities-white-tiggo-icon fadein-top"></div>                
+          <h3 class="fadein-top">Olo kids club!</h3>
+          <hr class="short-hr fadein-top">
+          <h4 class="fadein-top">Where kids rule</h4>
 
-          <div class="activities-white-tiggo-icon"></div>                
-          <h3>Olo kids club!</h3>
-          <hr class="short-hr">
-          <h4>Where kids rule</h4>
-
-          <p>OLO Kids Club is championed by none other than Tilo, our resort’s lovable chick – and very chic – prince mascot. Tilo is always game to make new friends, so do ensure your little ones have enough time with him! For older kids, there’re swimming, beach volleyball, tennis, arts &amp; craft, and cookie baking. We also have a playground and multiple playrooms for some quiet reading or a game on the PS3, X-Box or Wii.</p>
-          <p>Parents can entrust our qualified mentors with their children’s care, setting themselves free to explore Montigo Resorts, Nongsa.</p>
-
-
-          <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Olo%20Kids%20Club" class="cta-button">get in touch with montigo <span class="fa fa-chevron-circle-right"></span></a>
+          <p class="fadein-top">OLO Kids Club is championed by none other than Tilo, our resort’s lovable chick – and very chic – prince mascot. Tilo is always game to make new friends, so do ensure your little ones have enough time with him! For older kids, there’re swimming, beach volleyball, tennis, arts &amp; craft, and cookie baking. We also have a playground and multiple playrooms for some quiet reading or a game on the PS3, X-Box or Wii.</p>
+          <p class="fadein-top">Parents can entrust our qualified mentors with their children’s care, setting themselves free to explore Montigo Resorts, Nongsa.</p>
+          <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Olo%20Kids%20Club" class="cta-button fadein-top">get in touch with montigo <span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -357,26 +365,17 @@
 
   
 
-  <!-- 
-      ___ _____ _   _ _____ ____  ____  
-     / _ \_   _| | | | ____|  _ \/ ___|
-    | | | || | | |_| |  _| | |_) \___ \
-    | |_| || | |  _  | |___|  _ < ___) |
-     \___/ |_| |_| |_|_____|_| \_\____/ 
-                                        
-   -->
 
-  <div id="activities-others">
-    <div class="activities-other-title">
+  <div id="activities-others" class="icon-set-section">
+    <div class="icon-set-title">
       <h3>And if that wasn’t enough...</h3>
     </div>
-    <div id="activities-others-item-container">
+    <div class="icon-set-item-container">
       <div class="container-fluid has-breakpoint">
-
         <div class="row">
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_01_chef"></div>
               </div>
@@ -387,7 +386,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_02_paintball"></div>
               </div>
@@ -398,7 +397,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_03_herbal_compress"></div>
               </div>
@@ -409,7 +408,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_04_karaoke"></div>
               </div>
@@ -420,11 +419,10 @@
           </div>
 
         </div>
-
         <div class="row">
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_05_batik_painting"></div>
               </div>
@@ -435,7 +433,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_06_dining"></div>
               </div>
@@ -446,7 +444,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_07_treasure_hunt"></div>
               </div>
@@ -457,7 +455,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="activities-others-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_08_spa"></div>
               </div>
@@ -468,25 +466,17 @@
           </div>
 
         </div>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="space10"></div>
-          </div>
-          <div class="col-md-6">
-            <div class="space20"></div>
-            <div id="activities-other-cta-button-container">
-              <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Activities" id="activities-other-cta-button" class="cta-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-            <div class="space70"></div>
-          </div>
-
-        </div>
-
       </div>
-    </div> <!-- #activities-others-item-container -->
+    </div> <!-- .icon-set-item-container -->
 
-  </div> <!-- #activities-others -->
+
+    <div class="icon-set-cta-button-container">
+      <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Activities" id="activities-other-cta-button" class="cta-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+    </div>
+
+  </div> <!-- .icon-set-section -->
+
+
 
 
 </div> <!-- main-page-content -->
@@ -520,7 +510,7 @@
     $.manic_preloader({
       asset_array: [
         "images/main_slider/may6_activities_main_slider.jpg",
-        "images/parallax/activities_parallax_03_kids.jpg",
+        "images/parallax/may18_activities_parallax_olu.jpg",
         "images/activities/favorites_01.jpg",
         "images/activities/favorites_02.jpg",
         "images/activities/favorites_03.jpg",

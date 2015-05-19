@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="home-slider" class="main-slider" data-image="images/main_slider/may6_home_main_slider.jpg">
+  <div id="home-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_home_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -10,7 +10,8 @@
 
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div class="text" data-x="704" data-y="210">
+        <!-- <div class="text" data-x="704" data-y="224"> -->
+        <div class="text" data-x="704" data-y="204">
 
           <h3>For Generations to Come</h3>
           <p>Barely 30 minutes away from Singapore, our sprawling resort’s architectural expanse of white is breathtaking against the deep blue Nongsa waters. The accommodation’s spacious, and the surrounding landscape offers enough activity to thrill all generations.</p>
@@ -39,7 +40,7 @@
               <div class="promotion-text">
                 <h4>advanced purchase offer</h4>
                 <p>Book in advance and take advantage of reduced advance purchase rates. Book 14 days ahead or more for a 15% discount off our best available rate, or 30 days ahead or more for a 20% discount.</p>
-                <a href="#" class="cta-button">View promotion<span class="fa fa-chevron-circle-right"></span></a>
+                <a href="offers.php#advance-purchase" class="cta-button">View promotion<span class="fa fa-chevron-circle-right"></span></a>
               </div>
             </div> <!-- home-promotions -->
 
@@ -50,7 +51,7 @@
                     <h6>Fun for four</h6>
                     <h4>Your perfect holiday</h4>
                     <p>Whether you’re traveling as a family of four or checking in with your best friends, we’ve got something for you. So pack your bags, book your spa session, and get ready for some quality time with your favourite loved ones.</p>
-                    <a href="#" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
+                    <a href="offers.php#fun-for-four" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -58,7 +59,7 @@
                     <h6>Spa Getaway</h6>
                     <h4>The ultimate spa day</h4>
                     <p>Want to get away but need to be home on time? Montigo resorts is the perfect short escape from the city, replete with a relaxing massage, a rejuvenating body scrub or facial and a delicious lunch. Perfect!</p>
-                    <a href="#" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
+                    <a href="offers.php#spa-getaway" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
               </div>
@@ -107,7 +108,7 @@
                 </div>
                 <div class="treasure-hunt-text">
                   <p>Tilo’s left clues across the resort for you to find. Embark on an exciting hunt to discover what surprises he has tucked away for you.</p>
-                  <a href="activities.php" class="cta-button">Find out more<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="activities.php#olu" class="cta-button">Find out more<span class="fa fa-chevron-circle-right"></span></a>
                 </div>
               </div> <!-- home-tilo-treasure-hunt -->
             </div>
@@ -120,7 +121,7 @@
   </div>
 
 
-  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01b.jpg">
+  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/may13_home_parallax_spa.jpg">
 
     <div class="parallax-section-image-container">
       <img src="">
@@ -128,14 +129,14 @@
 
 
     <div class="parallax-section-text-container">
-      <div class="text-container" data-width="1276" data-height="896">
-        <div id="home-seafront-text" class="parallax-section-text text" data-x="1048" data-y="363">
+      <div class="text-container" data-width="1408" data-height="830">
+        <div id="home-seafront-text" class="parallax-section-text text" data-x="966" data-y="286">
 
-          <h3>Seafront Perfection</h3>
-          <hr class="short-hr">
-          <h4>Welcome home</h4>
-          <p>Each villa and residence offers an uninterrupted view of the sea. And if that isn’t enough water, each villa also features a sea facing private infinity plunge pool. Dive in!</p>
-          <a href="accommodation.php" class="cta-button">Accommodation<span class="fa fa-chevron-circle-right"></span></a>
+          <h3 class="fadein-top">Seafront Perfection</h3>
+          <hr class="short-hr fadein-top">
+          <h4 class="fadein-top">Welcome home</h4>
+          <p class="fadein-top">Each villa and residence offers an uninterrupted view of the sea. And if that isn’t enough water, each villa also features a sea facing private infinity plunge pool. Dive in!</p>
+          <a href="accommodation.php#residences" class="cta-button fadein-top">Accommodation<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -150,9 +151,13 @@
 
       <div class="row">
         <div class="col-md-6">
-          <div class="home-restaurant-image manic-image-container" id="home-restaurant-image-01">
-            <img src="images/home/home_restaurant_image_01.jpg">
+
+          <div class="no-right-margin">
+            <div class="home-restaurant-image manic-image-container fadein-left" id="home-restaurant-image-01">
+              <img src="images/home/home_restaurant_image_01.jpg">
+            </div>
           </div>
+
         </div>
         <div class="col-md-6">
 
@@ -172,7 +177,7 @@
       <div class="row">
         <div class="col-md-6">
 
-          <div id="" class="montigo-image-description">
+          <div id="home-restaurant-text-02" class="montigo-image-description">
             <div class="montigo-image-description-container">
               <h3>Montigo Spa</h3>
               <hr class="short-hr">
@@ -184,14 +189,22 @@
 
         </div>
         <div class="col-md-3">
-          <div class="home-restaurant-image manic-image-container"  id="home-restaurant-image-02">
-            <img src="images/home/home_spa_image_01.jpg">
+
+          <div class="no-left-margin">
+            <div class="home-restaurant-image manic-image-container fadein-right"  id="home-restaurant-image-02" data-delay="0.3">
+              <img src="images/home/home_spa_image_01.jpg">
+            </div>
           </div>
+
         </div>
         <div class="col-md-3">
-          <div class="home-restaurant-image manic-image-container"  id="home-restaurant-image-03">
-            <img src="images/home/home_spa_image_02.jpg">
+
+          <div class="no-left-margin">
+            <div class="home-restaurant-image manic-image-container fadein-right"  id="home-restaurant-image-03">
+              <img src="images/home/home_spa_image_02.jpg">
+            </div>
           </div>
+          
         </div>
       </div>
 
@@ -199,22 +212,22 @@
   </div>
 
 
-  <div id="home-parallax-02" class="parallax-section" data-image="images/home/home_parallax_image_02.jpg">
+  <div id="home-parallax-02" class="parallax-section" data-image="images/parallax/may18_home_parallax_events.jpg">
     
     <div class="parallax-section-image-container">
       <img src="">
     </div>
 
     <div class="parallax-section-text-container">
-      <div class="text-container" data-width="1276" data-height="896">
-        <div id="home-events-text" class="parallax-section-text text" data-x="1048" data-y="320">
+      <div class="text-container" data-width="1280" data-height="739">
+        <div id="home-events-text" class="parallax-section-text text" data-x="1018" data-y="251">
 
-          <div class="bg-white-gradient"></div>
-          <h3>Inspired Events</h3>
-          <hr class="short-hr">
-          <h4>Extraordinary Special Occasions</h4>
-          <p>Entrust us with your event – be it a wedding, birthday, corporate meet or Team Building. We’ll take care of all the details, to ensure it’s one you will long cherish.</p>
-          <a href="events.php" class="cta-button">Meetings &amp; events<span class="fa fa-chevron-circle-right"></span></a>
+          <!-- <div class="bg-white-gradient"></div> -->
+          <h3 class="fadein-top">Inspired Events</h3>
+          <hr class="short-hr fadein-top">
+          <h4 class="fadein-top">Extraordinary Special Occasions</h4>
+          <p class="fadein-top">Entrust us with your event – be it a wedding, birthday, corporate meet or Team Building. We’ll take care of all the details, to ensure it’s one you will long cherish.</p>
+          <a href="events.php" class="cta-button fadein-top">Meetings &amp; events<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -224,17 +237,25 @@
     
   </div>
 
-  <div id="home-activities-section">
-    <div id="home-activities-title">
+
+
+
+
+
+
+
+
+
+  <div id="home-activities-section" class="icon-set-section">
+    <div class="icon-set-title">
       <h3>New Experiences</h3>
     </div>
-
-    <div id="home-activities-item-container">
+    <div class="icon-set-item-container">
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
           <div class="col-md-3">
-            <div class="home-activities-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_01_aquatic"></div>
               </div>
@@ -245,7 +266,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="home-activities-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_02_terra"></div>
               </div>
@@ -256,7 +277,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="home-activities-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_03_sport"></div>
               </div>
@@ -267,7 +288,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="home-activities-item">
+            <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_04_olu"></div>
               </div>
@@ -276,16 +297,25 @@
               <p>The Olo Kids Club is championed by none other than Tilo, our resort’s lovable chick – and very chic – prince mascot. Tilo is always game to make new friends, so do ensure your little ones have enough time with him!</p>
             </div>
           </div>
-          
-        </div>
-      </div>
-    </div> <!-- home-activities-item-container -->
 
-    <div id="home-activities-cta-button-container">
+        </div>
+
+
+
+        
+      </div>
+    </div> <!-- .icon-set-item-container -->
+
+
+    <div class="icon-set-cta-button-container">
       <a href="activities.php" class="cta-button">find out more on montigo activities<span class="fa fa-chevron-circle-right"></span></a>
     </div>
 
-  </div>
+  </div> <!-- .icon-set-section -->
+
+
+
+  
 
 
 </div> <!-- main-page-content -->
@@ -319,8 +349,8 @@
     $.manic_preloader({
       asset_array: [
         "images/main_slider/may6_home_main_slider.jpg",
-        "images/parallax/rooms_residences_parallax_balcony_01b.jpg",
-        "images/home/home_parallax_image_02.jpg",
+        "images/parallax/may13_home_parallax_spa.jpg",
+        "images/parallax/may18_home_parallax_events.jpg",
         "images/home/home_promotion_image_01.jpg",
         "images/home/instagram/00.jpg",
         "images/home/instagram/01.jpg",

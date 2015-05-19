@@ -23,6 +23,9 @@ montigo.component.AccomodationsMap = function(options, element) {
   this.element = element;
 
 
+  /**
+   * @type {manic.util.JsonParser}
+   */
   this.json_parser = new manic.util.JsonParser({'json': 'json/accomodation_map.json'});
   goog.events.listen(this.json_parser,manic.util.JsonParser.ON_COMPLETE, this.on_json_parser_complete.bind(this));
 
@@ -32,10 +35,22 @@ montigo.component.AccomodationsMap = function(options, element) {
    */
   this.room_scene = null;
 
+  /**
+   * @type {ScrollMagic.Scene}
+   */
+  this.pin_scene = null;
+
   this.has_started = false;
   this.has_created = false;
 
   this.stage = null;
+
+  /*
+  this.frame_tween = null;
+  this.frame_obj = {
+    'f': 2
+  };
+  */
 
 
 
@@ -121,19 +136,48 @@ montigo.component.AccomodationsMap.prototype.sample_method_calls = function() {
  */
 montigo.component.AccomodationsMap.prototype.create_map_scene = function(controller_param) {
 
-  var trigger_element_str = "#" + this.element.attr('id');
-  
-  this.room_scene = new ScrollMagic.Scene({offset: -162, triggerElement: trigger_element_str, duration: 300})   
-    .triggerHook(0.0)
-    //.setTween(this.text_animation)
-    .addTo(controller_param);
+  //this.frame_tween = TweenMax.to(this.frame_obj, 10, {'f':240, onUpdate: this.on_frame_tween_update, onUpdateScope: this});
 
-    //scene.on("change update progress start end enter leave", callback);
+
+  //var window_height = $(window).height();
+  //var tween_duration = window_height * 0.8;
+
+
+  var trigger_str = '#rooms-map-section-container';
+  var element_str = "#" + this.element.attr('id');
   
+  
+  
+  //this.room_scene = new ScrollMagic.Scene({offset: 350, triggerElement: '#rooms-map-scroll-target', duration: (850 - 350 + 100) })   
+  this.room_scene = new ScrollMagic.Scene({offset: 250, triggerElement: '#rooms-map-scroll-target', duration: 300 })   
+    .triggerHook(1.0)
+    //.setTween(this.frame_tween)
+    .addTo(controller_param);
+    
+  
+    //scene.on("change update progress start end enter leave", callback);
+  /*
+  this.pin_scene = new ScrollMagic.Scene({offset: -62, triggerElement: '#rooms-map-scroll-target', duration: (500) })   
+    //.setPin('#rooms-map-section-container')
+    //.setPin('#rooms-map-section')
+    .setPin('#rooms-map-interactive')
+    .triggerHook(0)
+    .addTo(controller_param);
+    */
+
+  /*
+  this.pin_scene2 = new ScrollMagic.Scene({offset: -62, triggerElement: '#rooms-map-scroll-target', duration: (500) })   
+    .setPin('#rooms-map-section-container')
+    //.setPin('#rooms-map-interactive')
+    .triggerHook(0)
+    .addTo(controller_param);
+  */
+ 
 
   this.room_scene.on("start", this.on_room_scene_start.bind(this));
 
 };
+
 
 
 montigo.component.AccomodationsMap.prototype.start_animation = function() {
@@ -142,17 +186,26 @@ montigo.component.AccomodationsMap.prototype.start_animation = function() {
     this.json_parser.has_loaded == true && 
     this.has_created == false) {
 
-
     this.has_created = true;  // do this once only
-
-    this.stage = new swiffy.Stage( this.element[0], this.json_parser.data_array, {});
     this.stage['start']();
-  }
-  
-  
 
+  }
 };
-montigo.component.AccomodationsMap.prototype.public_method_03 = function() {};
+
+
+/*
+montigo.component.AccomodationsMap.prototype.on_frame_tween_update = function() {
+
+  if (this.has_created == true) {
+    console.log(this.frame_obj['f']);
+
+    var str = 'customf=' + this.frame_obj['f'];
+    this.stage['setFlashVars'](str);
+  }
+};
+*/
+
+
 montigo.component.AccomodationsMap.prototype.public_method_04 = function() {};
 montigo.component.AccomodationsMap.prototype.public_method_05 = function() {};
 montigo.component.AccomodationsMap.prototype.public_method_06 = function() {};
@@ -173,25 +226,31 @@ montigo.component.AccomodationsMap.prototype.on_json_parser_complete = function(
   console.log('on_json_parser_complete');
   console.log(this.json_parser.data_array);
 
+  
+  //this.has_created = true;  // do this once only
+  this.stage = new swiffy.Stage( this.element[0], this.json_parser.data_array, {});
+
+
+  //this.stage['start']();
+  
+
 
   this.start_animation();
+
+
+  //var str = 'customf=' + 140;
+  //this.stage['setFlashVars'](str);
 };
 
-/**
- * event handler
- * @param  {object} event
- */
+
 montigo.component.AccomodationsMap.prototype.on_room_scene_start = function(event) {
   //console.log('on_room_scene_start');
   
   this.has_started = true;
 
-
   this.start_animation();
-
-  
-
 };
+
 
 /**
  * event handler

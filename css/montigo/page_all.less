@@ -172,28 +172,62 @@
 
   h3, hr.short-hr, h4, p, .cta-button{
     position: relative;
+
+    //.alpha-in-top;
   }
 
   h3{
-    font-size: 60px;
-    line-height: 60px;
+    //font-size: 60px;
+    //line-height: 60px;
+
+
     letter-spacing: -0.02em;
     color: @light-blue;
 
     margin: 0 -20px;
+
+
+    // suyeon edit may 18
+    font-size: 42px;
+    line-height: 42px;
+
   }
   hr.short-hr{
     margin-top: 14px;
     margin-bottom: 14px;
 
-    background: @light-blue;
-    .opacity(0.2);
+    //background: @light-blue;
+    //.opacity(0.2);
+    background: transparent;
+
+
+
+
+
+    &:after{
+      content: "";
+      display: block;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 19px;
+      height: 3px;
+      background: @light-blue;
+      .opacity(0.2);
+    }
+
   }
   h4{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
+    //font-size: 14px;
+    //line-height: 20px;
+    //letter-spacing: 0.1em;
     margin-bottom: 9px;
+
+    // suyeon edits
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .12em;
   }
   p{
     .brandon-light;
@@ -210,6 +244,12 @@
     padding-top: 16px;
     .transition-none();
   }
+
+  .cta-button + .cta-button{
+    padding-top: 9px;
+  }
+
+
   
   &.white-version{
     color: @white;
@@ -219,8 +259,12 @@
     }
 
     hr.short-hr{
-      background: @white;
-      .opacity(1);
+
+      &:after{
+        background: @white;
+        .opacity(1);
+        
+      }
     }
 
     .cta-button{ 
@@ -250,6 +294,17 @@
 //                                                                 
 
 
+.has-main-slider-short-version{
+  #page-fold{
+    height: 500px;
+    #below-page-fold{
+    }
+  }
+  .main-slider{
+    height: 500px !important;
+  }
+}
+
 @main-slider-height: 834px;
 
 .main-slider{
@@ -273,6 +328,11 @@
     position: absolute !important;
     top: 0;
     left: 0;
+
+    img{
+      position: relative;
+      top: 0;
+    }
   }
 
 
@@ -339,15 +399,26 @@
       margin: 0 -50px;
       margin-bottom: 23px;
 
+      &:last-child{
+        margin-bottom: 0;
+      }
+
     }
     p{
       //.brandon-regular;
-      .brandon-light;
-      font-size: 17px;
+      //.brandon-light;
+      
+      //font-size: 17px;
       line-height: 20px;
       //letter-spacing: 0em;
       //letter-spacing: 0.05em;
       letter-spacing: 0em;
+
+      // suyeon edits (may 18)
+      .brandon-regular;
+      font-size: 16px
+
+
     }
 
 
@@ -542,8 +613,12 @@
     background: @light-blue;
     .opacity(0.1);
 
-    margin-top: 18px;
-    margin-bottom: 19px;
+    //margin-top: 18px;
+    //margin-bottom: 19px;                // need to check
+
+    // suyeon edit may 18
+    margin-top: 10px;
+    margin-bottom: 17px;
   }
   h4{
     font-size: 20px;
@@ -568,3 +643,443 @@
     padding-top: 9px;
   }
 }
+
+
+//    ____  ____  _____    _    ____   ____ ____  _   _ __  __ ____  
+//   | __ )|  _ \| ____|  / \  |  _ \ / ___|  _ \| | | |  \/  | __ ) 
+//   |  _ \| |_) |  _|   / _ \ | | | | |   | |_) | | | | |\/| |  _ \ 
+//   | |_) |  _ <| |___ / ___ \| |_| | |___|  _ <| |_| | |  | | |_) |
+//   |____/|_| \_\_____/_/   \_\____/ \____|_| \_\\___/|_|  |_|____/ 
+//                                                                   
+
+/*
+.text-bold{
+  .brandon-bold;
+  font-size: 11px;
+  line-height: 20px;
+  height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+*/
+
+.breadcrumb-header-container{
+  z-index: 2000;
+}
+.breadcrumb-header{
+  width: 100%;
+  height: 50px;
+  //max-height: 50px;
+  //.transition-in(0.4s);
+  .transition-in-single(max-height, 0.4s);
+
+  background: @light-grey;
+  //overflow: hidden;
+  
+  &.closed-version{
+    //max-height: 0px;
+    //-webkit-transition-delay: 0.8s;
+    //transition-delay: 0.8s;
+  }
+  
+
+  .breadcrumb-container{
+    ul{
+      li{
+        .display-inline-block;
+
+        .brandon-bold;
+        font-size: 11px;
+        line-height: 20px;
+        height: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        padding-top: 15px;
+
+        cursor: default;
+
+        &:first-child{
+          cursor: pointer;
+        }
+
+        &:after{
+          .fa;
+          //content: "\f054";  // fa-chevron-right
+          //content: "\f061";     // fa-arrow-right
+          content: "\f105"; // fa-angle-right
+
+          display: inline;
+          font-size: 12px;
+          line-height: 20px;
+
+          margin-right: 8px;
+          margin-left: 12px;
+          //cursor: default;
+        }
+
+        &:last-child{
+          &:after{
+            display: none;
+          }
+        }
+      }
+
+
+    }
+  }
+
+
+}
+
+
+//    _____ _______  _______    ____ ___  _   _ _____ _____ _   _ _____ 
+//   |_   _| ____\ \/ /_   _|  / ___/ _ \| \ | |_   _| ____| \ | |_   _|
+//     | | |  _|  \  /  | |   | |  | | | |  \| | | | |  _| |  \| | | |  
+//     | | | |___ /  \  | |   | |__| |_| | |\  | | | | |___| |\  | | |  
+//     |_| |_____/_/\_\ |_|    \____\___/|_| \_| |_| |_____|_| \_| |_|  
+//                                                                      
+
+.generic-text-section{
+
+  .generic-text-sidebar{
+    padding-top: 44px;
+
+    h3{
+      font-size: 15px;
+      line-height: 25px;
+      color: @light-blue;
+      letter-spacing: -0.03em;
+
+      margin-bottom: 7px;
+    }
+    ul{
+      li{
+        .brandon-bold;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        color: @dark-brown;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        &:last-child{
+          margin-bottom: 0px;
+        }
+
+        a{
+          .brandon-bold;
+          font-size: 12px;
+          line-height: 20px;
+          color: @dark-brown;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+
+          &:hover{
+            .opacity(1);
+            color: @light-blue;
+          }
+        }
+      }
+    }
+  } // generic-text-sidebar
+
+  .generic-text-content{
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 40px;
+      left: -79px;
+      //bottom: 83px;
+      bottom: 60px;
+      border-right: 1px solid #edecec;
+    }
+
+    
+
+    .generic-text-content-title{
+      padding-top: 59px;
+      margin-bottom: 12px + 22px;
+
+      &.second-title-version{
+        margin-top: -22px;
+      }
+
+      h3{
+        font-size: 30px;
+        line-height: 30px;
+        color: @light-blue;
+        letter-spacing: -0.04em;
+      }
+      hr.short-hr{
+        background: @light-blue;
+        .opacity(0.2);
+        margin: 0;
+        //margin-top: 18px;
+        margin-top: 20px;
+        margin-bottom: 21px;
+      }
+
+      p{
+        .brandon-light;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0em;
+
+        margin-bottom: 22px;
+        &:last-child{
+          margin-bottom: 0px;
+        }
+      }
+
+    } // .generic-text-content-title
+
+    .generic-text-item{
+      padding-left: 35px;
+      margin-bottom: 60px;
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
+
+      h4{
+        position: relative;
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+
+        span{
+          position: absolute;
+          left: -33px;
+        }
+      }
+      p{
+        .brandon-light;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0em;
+
+        margin-bottom: 22px;
+      }
+
+      p + ol{
+        margin-top: -22px;
+      }
+
+      ol{
+        
+
+        li{
+          .brandon-light;
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 0em;
+
+          position: relative;
+          margin-bottom: 22px;
+
+          //list-style-type: lower-alpha;
+
+          &:last-child{
+            margin-bottom: 0px;
+          }
+        }
+
+
+        li:before{
+          content: "";
+          display: block;
+          position: absolute;
+          left: -33px;
+        }
+
+        li:nth-child(1):before{  content: "a." }
+        li:nth-child(2):before{  content: "b." }
+        li:nth-child(3):before{  content: "c." }
+        li:nth-child(4):before{  content: "d." }
+        li:nth-child(5):before{  content: "e." }
+        li:nth-child(6):before{  content: "f." }
+        li:nth-child(7):before{  content: "g." }
+        li:nth-child(8):before{  content: "h." }
+        li:nth-child(9):before{  content: "i." }
+        li:nth-child(10):before{  content: "j." }
+        li:nth-child(11):before{  content: "k." }
+        li:nth-child(12):before{  content: "l." }
+        li:nth-child(13):before{  content: "m." }
+        li:nth-child(14):before{  content: "n." }
+        li:nth-child(15):before{  content: "o." }
+        li:nth-child(16):before{  content: "p." }
+        li:nth-child(17):before{  content: "q." }
+        li:nth-child(18):before{  content: "r." }
+        li:nth-child(19):before{  content: "s." }
+        li:nth-child(20):before{  content: "t." }
+        li:nth-child(21):before{  content: "u." }
+        li:nth-child(22):before{  content: "v." }
+        li:nth-child(23):before{  content: "w." }
+        li:nth-child(24):before{  content: "x." }
+        li:nth-child(25):before{  content: "y." }
+        li:nth-child(26):before{  content: "z." }
+
+
+      }
+    } // generic-text-item
+
+    .generic-text-cta-container{
+      padding-top: 21px;
+      padding-left: 35px;
+      padding-bottom: 67px;
+
+      .cta-button{
+
+      }
+    }
+
+  }
+
+} // .generic-text-section
+
+
+
+//    ____    _    ____ _  __  _____ ___    _____ ___  ____  
+//   | __ )  / \  / ___| |/ / |_   _/ _ \  |_   _/ _ \|  _ \ 
+//   |  _ \ / _ \| |   | ' /    | || | | |   | || | | | |_) |
+//   | |_) / ___ \ |___| . \    | || |_| |   | || |_| |  __/ 
+//   |____/_/   \_\____|_|\_\   |_| \___/    |_| \___/|_|    
+//                                                           
+
+
+#back-to-top-button-container-container{
+  position: relative;
+}
+#back-to-top-button-container{
+  position: relative;
+
+  .back-to-top-button{
+    margin: 0 !important;
+  }
+}
+
+
+.generic-text-back-to-top-container{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+
+  z-index: 200;
+
+  .back-to-top-button{
+    position: absolute;
+    bottom: 88px;
+  }
+}
+
+
+
+
+
+
+
+
+
+//    ___ ____ ___  _   _      ____  _____ _____ 
+//   |_ _/ ___/ _ \| \ | |    / ___|| ____|_   _|
+//    | | |  | | | |  \| |____\___ \|  _|   | |  
+//    | | |__| |_| | |\  |_____|__) | |___  | |  
+//   |___\____\___/|_| \_|    |____/|_____| |_|  
+//                                               
+
+
+.icon-set-section{
+  .icon-set-title{
+    padding-top: 90px;  
+
+    text-align: center;
+    padding-bottom: 55px;
+
+    h3{
+      //font-size: 60px;
+      //line-height: 60px;
+      color: @light-blue;
+      letter-spacing: -0.04em;
+
+      // suyeon edit may 18
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  .icon-set-item-container{
+    .icon-set-item{
+      text-align: center;
+      padding: 0 30px;
+      //margin-bottom: 70px;
+      margin-bottom: 50px;
+
+
+      .item-icon{
+        display: table;
+
+        width: 100%;
+        height: 110px;
+
+        .item-icon-icon{
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+
+      hr.short-hr{
+        background: @light-blue;
+        .opacity(0.2);
+
+        //margin-top: 16px;
+        //margin-bottom: 16px;
+
+        // suyeon edit may 18
+        margin-top: 12px;
+        margin-bottom: 12px;
+
+      }
+      
+
+      h4{
+        line-height: 18px;
+        letter-spacing: 0.1em;
+
+        margin-top: -5px;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+      p{
+        .brandon-light;
+        
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.01em;
+
+        margin-bottom: 15px;
+      }
+
+    } // .icon-set-item
+
+  } // .icon-set-item-container
+
+
+  .icon-set-cta-button-container{
+    .cta-button{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        //padding-bottom: 48px;
+        //
+        padding-top: 15px;
+        padding-bottom: 40px;
+    }
+  } // .icon-set-cta-button-container
+
+} // .icon-set-section

@@ -1,5 +1,9 @@
 #main-page-footer{
 
+  .container-fluid.has-breakpoint{
+    max-width: 1424px;
+  }
+
   // suyeon
   background: #f9f9f9;
   margin-top: 80px;
@@ -13,11 +17,17 @@
     padding-top: 35px;
     //min-height: 323px;
     //min-height: 219px;
-    min-height: 206px;
-    
+    //min-height: 206px;
+    //min-height: 227px;
+    min-height: 223px;
+
+    //.add-clearfix();
 
     .footer-item-container{
-      max-width: 300px;
+      //max-width: 300px;
+      //max-width: 268px;
+      max-width: 314px;
+
       margin: 0 auto;
     }
 
@@ -29,7 +39,7 @@
         position: absolute;
         //top: 37px;
         top: 29px;
-        bottom: 21px;
+        bottom: 17px;
         right: -15px;
 
         border-right: 1px solid @dark-brown-10;
@@ -45,7 +55,8 @@
       font-size: 30px;
       line-height: 40px;
       color: @light-blue;
-      letter-spacing: -0.02em;
+      //letter-spacing: -0.02em;
+      letter-spacing: -0.07em;
 
       margin-bottom: 9px;
     }
@@ -69,9 +80,13 @@
   #footer-montigo-logo{
     color: transparent;
     //.logo_montigo_footer_grey;
-    .logo_montigo_header_color;
+    //.logo_montigo_header_color;
+
+    .logo_montigo_footer_color;
     display: block;
     margin: 0 auto;
+
+    
 
     //position: relative;
     //left: -7px;
@@ -99,26 +114,31 @@
     padding-top: 41px;
 
     .footer-item-container{
-      margin: 0;
+      //margin: 0;
+      //float: right;
+      padding-left: 102px;
+      padding-top: 4px;
     }
 
     #footer-montigo-logo{
       margin: 0;
       //margin-bottom: 16px;
-      margin-bottom: 28px;
+      //padding-top: 4px;
+      margin-top: -4px;
+      margin-bottom: 22px;
     }
 
     .footer-location{
       display: block;
-      margin-bottom: 13px;
+      margin-bottom: 17px;
       text-align: center;
       width: 203px;
-
+      margin-left: 8px;
 
       h6{
         .brandon-bold;
         font-size: 13px;
-        line-height: 15px;
+        line-height: 16px;
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
@@ -135,16 +155,22 @@
 
 
   #footer-links{
+
+    h3{
+      margin-left: -3px;
+    }
     
     nav{
       padding-top: 3px;
       position: relative;
-      padding-left: 10px;
+      //padding-left: 10px;
+      padding-left: 6px;
 
       ul{
         font-size: 0;
-        margin-right: -46px;
         //margin-right: -100px;
+        //margin-right: -46px;
+        margin-right: -54px;
 
         li{
           //display: block;
@@ -152,7 +178,7 @@
           .display-inline-block;
 
           line-height: 18px;
-          margin-bottom: 6px;
+          margin-bottom: 7px;
 
           a{
             //.brandon-medium;
@@ -160,11 +186,12 @@
             //line-height: 17px;
             .brandon-black;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-
+            //letter-spacing: 0.1em;
+            
             font-size: 11px;
             line-height: 18px;
-            letter-spacing: 0.15em;
+            //letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
 
             display: block;
 
@@ -181,25 +208,26 @@
     h3{
       padding-top: 4px;
       padding-bottom: 4px;
-      letter-spacing: -.03em;
+      //letter-spacing: -.03em;
     }
     h4{
-      margin-bottom: -2px;
+      margin-bottom: -3px;
     }
 
     p{
       .brandon-light;
       font-size: 14px;
-      line-height: 16px;
+      line-height: 18px;
       letter-spacing: -0.03em;
       
       padding-top: 6px;
       //margin-bottom: 24px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
 
     #footer-mailing-form{
+      //margin-right: -100px;     // causing horizontal scrollbar.
 
       input[type=text]{
         .brandon-regular-italic;
@@ -400,34 +428,31 @@
     background: #514947;
     text-align: center;
 
-    //padding-top: 5px;
-    //padding-bottom: 3px;
-
-    // suyeon
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 11px;
 
     ul{
       display: block;
       
       //margin-bottom: -4px;
-      margin-bottom: 2px;
+      //margin-bottom: 2px;
+      margin-bottom: -1px;
 
       li{
         .display-inline-block;
-        margin-right: 26px;
+        margin-right: 22px;
         position: relative;
 
         &:after{
           content: "";
           display: block;
           position: absolute;
-          top: 3px;
-          right: -15px;
+          top: 4px;
+          right: -14px;
           width: 0px;
           height: 12px;
-          border-right: 1px solid @white;
-          .opacity(0.4);
+          border-right: 2px solid @white;
+          .opacity(0.2);
         }
 
         &:last-child{
@@ -442,11 +467,12 @@
           display: block;
 
           .brandon-regular;
-          font-size: 10px;
+          font-size: 11px;
           line-height: 20px;
           color: @white;
           text-transform: uppercase;
-          letter-spacing: 0.1em;
+          //letter-spacing: 0.1em;
+          letter-spacing: 0.09em;
 
 
           .opacity(0.4);
@@ -460,11 +486,12 @@
     }
     p{
       .brandon-regular;
-      font-size: 10px;
+      font-size: 11px;
       line-height: 20px;
       color: @white;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      //letter-spacing: 0.12em;
+      letter-spacing: 0.09em;
 
       .opacity(0.4);
 

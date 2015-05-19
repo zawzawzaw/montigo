@@ -1,0 +1,35 @@
+.animationDelay (@delay) { 
+	-webkit-animation-delay: @delay;  
+	-moz-animation-delay:    @delay;
+	-ms-animation-delay:     @delay; 
+	-o-animation-delay:      @delay;  
+    animation-delay:      @delay; 
+}
+
+@interval: .08s; /* Stagger interval */
+
+.d0{ .animationDelay(0); }
+.d1{ .animationDelay(1 * @interval); }
+.d2{ .animationDelay(2 * @interval); }
+.d3{ .animationDelay(3 * @interval); }
+.d4{ .animationDelay(4 * @interval); }
+.d5{ .animationDelay(5 * @interval); }
+.d6{ .animationDelay(6 * @interval); }
+.d7{ .animationDelay(7 * @interval); }
+.d8{ .animationDelay(8 * @interval); }
+.d9{ .animationDelay(9 * @interval); }
+.d10{ .animationDelay(10 * @interval); }
+
+.dd0{ .animationDelay(0.5 + 0); }
+.dd1{ .animationDelay(0.5 + 1 * @interval); }
+.dd2{ .animationDelay(0.5 + 2 * @interval); }
+.dd3{ .animationDelay(0.5 + 3 * @interval); }
+.dd4{ .animationDelay(0.5 + 4 * @interval); }
+.dd5{ .animationDelay(0.5 + 5 * @interval); }
+.dd6{ .animationDelay(0.5 + 6 * @interval); }
+.dd7{ .animationDelay(0.5 + 7 * @interval); }
+.dd8{ .animationDelay(0.5 + 8 * @interval); }
+.dd9{ .animationDelay(0.5 + 9 * @interval); }
+.dd10{ .animationDelay(0.5 + 10 * @interval); }
+
+/* You can also add more classes if you need more than 10 */

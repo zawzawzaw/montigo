@@ -3,14 +3,14 @@
 <div id="main-page-content">
 
 
-  <div id="offer-slider" class="main-slider" data-image="images/main_slider/may6_offers_main_slider.jpg">
+  <div id="offer-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_offers_main_slider.jpg">
     <div class="main-slider-image-container">
       <img src="">
     </div>
 
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div class="text" data-x="710" data-y="221">
+        <div class="text" data-x="710" data-y="213">
 
           <h3>Montigo Offers</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum amet, consectetur adipisicing elit.</p>
@@ -32,6 +32,9 @@
       |_|
          
      -->
+
+
+    <div class="scroll-target" data-value="advance-purchase"></div>
 
     <div class="offer-list-item">
       <div class="container-fluid has-breakpoint">
@@ -96,11 +99,13 @@
           </div>
 
           <div class="col-md-6">
-            <div class="margin-less-image">
-              <div class="offer-list-item-image manic-image-container">
+
+            <div class="no-left-margin">
+              <div id="offer-list-item-image-01" class="offer-list-item-image manic-image-container fadein-right">
                 <img src="images/offers/offer_list_item_image_01.jpg">
               </div>
             </div>
+
           </div>
 
         </div>
@@ -116,13 +121,15 @@
              
      -->
 
+    <div class="scroll-target" data-value="fun-for-four"></div>
+
     <div class="offer-list-item">
       <div class="container-fluid has-breakpoint">
         <div class="row">
           <div class="col-md-6">
 
-            <div class="margin-less-image">
-              <div class="offer-list-item-image manic-image-container">
+            <div class="no-right-margin">
+              <div id="offer-list-item-image-02" class="offer-list-item-image manic-image-container fadein-left">
                 <img src="images/offers/offer_list_item_image_02.jpg">
               </div>
             </div>
@@ -226,6 +233,7 @@
              
      -->
 
+    <div class="scroll-target" data-value="spa-getaway"></div>
 
     <div class="offer-list-item">
       <div class="container-fluid has-breakpoint">
@@ -335,8 +343,8 @@
           </div>
           <div class="col-md-6">
 
-            <div class="margin-less-image">
-              <div class="offer-list-item-image manic-image-container">
+            <div class="no-left-margin">
+              <div id="offer-list-item-image-03" class="offer-list-item-image manic-image-container fadein-right">
                 <img src="images/offers/offer_list_item_image_03.jpg">
               </div>
             </div>
@@ -355,14 +363,15 @@
          |_|  
               
      -->
+    <div class="scroll-target" data-value="family-times"></div>
 
     <div class="offer-list-item">
       <div class="container-fluid has-breakpoint">
         <div class="row">
           <div class="col-md-6">
 
-            <div class="margin-less-image">
-              <div class="offer-list-item-image manic-image-container">
+            <div class="no-right-margin">
+              <div id="offer-list-item-image-04" class="offer-list-item-image manic-image-container fadein-left">
                 <img src="images/offers/offer_list_item_image_04.jpg">
               </div>
             </div>
@@ -466,6 +475,8 @@
              
      -->
 
+    <div class="scroll-target" data-value="montigo-dining"></div>
+
     <div class="offer-list-item">
       <div class="container-fluid has-breakpoint">
         <div class="row">
@@ -525,8 +536,8 @@
           </div>
 
           <div class="col-md-6">
-            <div class="margin-less-image">
-              <div class="offer-list-item-image manic-image-container">
+            <div class="no-left-margin">
+              <div id="offer-list-item-image-05" class="offer-list-item-image manic-image-container fadein-right">
                 <img src="images/offers/offer_list_item_image_05.jpg">
               </div>
             </div>
@@ -545,13 +556,15 @@
              
      -->
 
+    <div class="scroll-target" data-value="high-tea"></div>
+
     <div class="offer-list-item">
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
           <div class="col-md-6">
-            <div class="margin-less-image">
-              <div class="offer-list-item-image manic-image-container">
+            <div class="no-right-margin">
+              <div id="offer-list-item-image-06" class="offer-list-item-image manic-image-container fadein-left">
                 <img src="images/offers/offer_list_item_image_06.jpg">
               </div>
             </div>

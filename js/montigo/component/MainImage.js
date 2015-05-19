@@ -17,11 +17,6 @@ goog.require('montigo.component.ScrollMagicUtil');
  * @extends {goog.events.EventTarget}
  */
 montigo.component.MainImage = function(options, element) {
-  // if has parent
-  //goog.events.EventTarget.call(this, options, element);
-  //this.options = $.extend(this.options, montigo.component.MainImage.DEFAULT, options);
-
-  // else
   goog.events.EventTarget.call(this);
   this.options = $.extend({}, montigo.component.MainImage.DEFAULT, options);
   this.element = element;
@@ -31,14 +26,9 @@ montigo.component.MainImage = function(options, element) {
   /**
    * @type {manic.ui.ImageContainer}
    */
-  this.image_container = new manic.ui.ImageContainer({
-    'vertical_align': 'top',
-    'image_src': this.initial_image_src
-  }, this.element.find('.main-slider-image-container'));
+  this.image_container = null;
 
-  this.text_container = new manic.ui.TextContainer({
-    'vertical_align': 'top'
-  }, this.element.find('.main-slider-text-container'));
+  this.text_container = null;
 
   /**
    * @type {TimelineMax}
@@ -49,6 +39,67 @@ montigo.component.MainImage = function(options, element) {
    * @type {ScrollMagic.Scene}
    */
   this.scene = null;
+
+
+  /**
+   * @type {String}
+   */
+  this.category = montigo.component.MainImage.DEFAULT_VERSION;
+
+
+  if (this.element.hasClass(montigo.component.MainImage.SHORT_VERSION)) {
+    this.category = montigo.component.MainImage.SHORT_VERSION;
+  } else if (this.element.hasClass(montigo.component.MainImage.NO_SCALE_VERSION)) {
+    this.category = montigo.component.MainImage.NO_SCALE_VERSION;
+  }
+
+  // create containers
+
+  if (this.category == montigo.component.MainImage.DEFAULT_VERSION) {
+    this.image_container = new manic.ui.ImageContainer({
+      'vertical_align': 'top',
+      'image_src': this.initial_image_src
+    }, this.element.find('.main-slider-image-container'));
+
+    this.text_container = new manic.ui.TextContainer({
+      'vertical_align': 'top'
+    }, this.element.find('.main-slider-text-container'));
+
+  } else if (this.category == montigo.component.MainImage.SHORT_VERSION) {
+
+    $('body').addClass('has-main-slider-short-version');
+
+    this.image_container = new manic.ui.ImageContainer({
+      'vertical_align': 'top',
+      'has_window_height': false,
+      'fixed_height': 500,
+      'image_src': this.initial_image_src,
+      'scale_mode': 'best_fit_no_scale_down'
+    }, this.element.find('.main-slider-image-container'));
+
+    this.text_container = new manic.ui.TextContainer({
+      'vertical_align': 'top',
+      'has_window_height': false,
+      'fixed_height': 500,
+      'scale_mode': 'best_fit_no_scale_down'
+    }, this.element.find('.main-slider-text-container'));
+
+  } else if (this.category == montigo.component.MainImage.NO_SCALE_VERSION) {
+
+    this.image_container = new manic.ui.ImageContainer({
+      'vertical_align': 'top',
+      'image_src': this.initial_image_src,
+      'scale_mode': 'best_fit_no_scale_down',
+    }, this.element.find('.main-slider-image-container'));
+
+    this.text_container = new manic.ui.TextContainer({
+      'vertical_align': 'top',
+      'scale_mode': 'best_fit_no_scale_down'
+    }, this.element.find('.main-slider-text-container'));
+
+  }
+
+
 
   this.window = $(window);
   this.window.resize(this.on_window_resize.bind(this));
@@ -68,29 +119,36 @@ goog.inherits(montigo.component.MainImage, goog.events.EventTarget);
 
 
 
-// i have to remove this eventually, it's better to have class STATIC variables,  this.var with STATIC defaults...
+/**
+ * CLASSNAME Event Constant
+ * @const
+ * @type {string}
+ */
+montigo.component.MainImage.DEFAULT_VERSION = 'default-version';
+
+/**
+ * CLASSNAME Event Constant
+ * @const
+ * @type {string}
+ */
+montigo.component.MainImage.SHORT_VERSION = 'short-version';
+
+/**
+ * CLASSNAME Event Constant
+ * @const
+ * @type {string}
+ */
+montigo.component.MainImage.NO_SCALE_VERSION = 'no-scale-version';
+
+
 
 /**
  * default options for MainImage
  * @const {object}
  */
 montigo.component.MainImage.DEFAULT = {
+  //'type': 'default'
 };
-
-/**
- * MainImage Event Constant
- * @const
- * @type {string}
- */
-montigo.component.MainImage.EVENT_01 = '';
-
-/**
- * MainImage Event Constant
- * @const
- * @type {string}
- */
-montigo.component.MainImage.EVENT_02 = '';
-
 
 //    ____  ____  _____     ___  _____ _____
 //   |  _ \|  _ \|_ _\ \   / / \|_   _| ____|
@@ -98,23 +156,6 @@ montigo.component.MainImage.EVENT_02 = '';
 //   |  __/|  _ < | |  \ V / ___ \| | | |___
 //   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 //
-
-
-montigo.component.MainImage.prototype.private_method_01 = function() {};
-montigo.component.MainImage.prototype.private_method_02 = function() {};
-montigo.component.MainImage.prototype.private_method_03 = function() {};
-montigo.component.MainImage.prototype.private_method_04 = function() {};
-montigo.component.MainImage.prototype.private_method_05 = function() {};
-montigo.component.MainImage.prototype.private_method_06 = function() {};
-
-
-/**
- * sample_method_calls
- */
-montigo.component.MainImage.prototype.sample_method_calls = function() {
-  montigo.component.MainImage.superClass_.method_02.call(this);                                    // call is important
-  this.dispatchEvent(new goog.events.Event(montigo.component.MainImage.EVENT_01));
-};
 
 //    ____  _   _ ____  _     ___ ____
 //   |  _ \| | | | __ )| |   |_ _/ ___|
@@ -132,7 +173,7 @@ montigo.component.MainImage.prototype.create_pin_scene = function(controller_par
 
   var trigger_element_str = "#" + this.element.attr('id');
 
-  this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 300})
+  this.scene = new ScrollMagic.Scene({offset: 10, triggerElement: "#page-fold", duration: 300})
             //.addIndicators({name: "Main Image Pin"}) // add indicators (requires plugin)
             .triggerHook(0)
             .setPin(trigger_element_str)
@@ -156,14 +197,27 @@ montigo.component.MainImage.prototype.create_scene = function(controller_param) 
             .triggerHook(0)
             .offset(20)
             .setTween(this.text_animation)
-            .addTo(controller_param);
-          
+            .addTo(controller_param);          
 };
 
 
+/**
+ * create_parallax_scene
+ * @param  {ScrollMagic.Controller} controller_param
+ */
+montigo.component.MainImage.prototype.create_parallax_scene = function(controller_param) {
+  
+  var trigger_element_str = "#" + this.element.attr('id');
+  
+  //TweenMax.to(this.image_container.image_element, 0, {'top': -300});
 
-montigo.component.MainImage.prototype.public_method_05 = function() {};
-montigo.component.MainImage.prototype.public_method_06 = function() {};
+  this.parallax_scene = new ScrollMagic.Scene({triggerElement: trigger_element_str, duration: "100%"})
+    //.addIndicators({name: "main parallax"}) // add indicators (requires plugin)
+    .setTween(TweenMax.to(this.image_container.image_element, 1, {'top': 300, ease: Linear.easeNone}))
+    .addTo(controller_param);
+
+};
+
 
 
 //    _______     _______ _   _ _____ ____
@@ -178,36 +232,8 @@ montigo.component.MainImage.prototype.public_method_06 = function() {};
  * @param  {object} event
  */
 montigo.component.MainImage.prototype.on_window_resize = function(event) {
-  /*
-  var window_height = this.window.height();
-  console.log('text container')
-  console.log(this.element.find('.text-container'));
-  this.element.find('.text-container').height(window_height);
-  */
   var window_height = this.window.height();
     
   this.element.height(window_height);
 
 };
-
-/**
- * event handler
- * @param  {object} event
- */
-montigo.component.MainImage.prototype.on_event_handler_02 = function(event) {
-};
-
-/**
- * event handler
- * @param  {object} event
- */
-montigo.component.MainImage.prototype.on_event_handler_03 = function(event) {
-};
-
-/**
- * event handler
- * @param  {object} event
- */
-montigo.component.MainImage.prototype.on_event_handler_04 = function(event) {
-};
-

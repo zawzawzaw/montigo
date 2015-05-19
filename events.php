@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="events-slider" class="main-slider" data-image="images/main_slider/may6_events_main_slider.jpg">
+  <div id="events-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_events_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -10,7 +10,7 @@
 
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div id="events-slider-text" class="text white-version" data-x="704" data-y="250">
+        <div id="events-slider-text" class="text white-version" data-x="704" data-y="231">
 
           <h3>Meetings &amp; Events</h3>
           <p>Offering customised themes for groups as large as 250, our spacious ballroom comfortably accommodates guests for larger occasions such as dreamy weddings, fun corporate getaways and other special events. The sea views complement our cuisine and service, leaving hosts delighted, and guests thrilled to be invited.</p>
@@ -25,8 +25,8 @@
     <div class="container-fluid has-breakpoint">
       <div class="row">
         <div class="col-md-7">
-          <div class="margin-less-image">
-            <div id="events-corporate-meetings-image-01" class="manic-image-container">
+          <div class="no-right-margin">
+            <div id="events-corporate-meetings-image-01" class="manic-image-container fadein-left">
               <img src="images/events/events_corporate_meetings_image_01.jpg">
             </div>
           </div>
@@ -69,8 +69,8 @@
 
         </div>
         <div class="col-md-8">
-          <div class="margin-less-image">
-            <div id="events-team-building-image-01" class="manic-image-container">
+          <div class="no-left-margin">
+            <div id="events-team-building-image-01" class="manic-image-container fadein-right">
               <img src="images/events/events_team_building_image_01.jpg">
             </div>
           </div>
@@ -84,11 +84,13 @@
     <div class="container-fluid has-breakpoint">
       <div class="row">
         <div class="col-md-8">
-          <div class="margin-less-image">
-            <div id="events-special-events-image-01" class="manic-image-container">
+
+          <div class="no-right-margin">
+            <div id="events-special-events-image-01" class="manic-image-container fadein-left">
               <img src="images/events/events_special_events_image_01.jpg">
             </div>
           </div>
+
         </div>
         <div class="col-md-4">
 
@@ -111,7 +113,7 @@
   </div> <!-- #events-special-events-section -->
 
 
-  <div id="events-wedding-section" class="parallax-section" data-image="images/parallax/events_parallax_01_wedding.jpg">
+  <div id="events-wedding-section" class="parallax-section" data-image="images/parallax/may18_events_parallax_wedding.jpg">
     <div class="parallax-section-image-container">
       <img src="">
     </div>
@@ -119,17 +121,13 @@
     <div class="parallax-section-text-container">
       <div class="text-container" data-width="1276" data-height="726">
         <div id="events-wedding-section-text" class="parallax-section-text text" data-x="1048" data-y="325">
-
-          <div class="bg-white-gradient"></div>
-
-          <h3>Weddings</h3>
-          <hr class="short-hr">
-          <h4>the most important <br>day of your life</h4>
-          <p>When you and your beloved pledge nuptial vows with an everlasting, “I Do”, we promise you a thoughtfully planned all-in-one package. Romantic elegance is assured across your culinary, floral, ambient and photographic needs. Our dedicated wedding planners will always be on hand to ensure your big day is themed to enchant like no other – be it aboard a yacht, set in a picturesque garden or perfectly timed for that sunset-of-a-lifetime among swaying palms on the beach.</p>
-
-
-          <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
-          <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form<span class="fa fa-chevron-circle-right"></span></a>
+          <!-- <div class="bg-white-gradient"></div> -->
+          <h3 class="fadein-top">Weddings</h3>
+          <hr class="short-hr fadein-top">
+          <h4 class="fadein-top">the most important <br>day of your life</h4>
+          <p class="fadein-top">When you and your beloved pledge nuptial vows with an everlasting, “I Do”, we promise you a thoughtfully planned all-in-one package. Romantic elegance is assured across your culinary, floral, ambient and photographic needs. Our dedicated wedding planners will always be on hand to ensure your big day is themed to enchant like no other – be it aboard a yacht, set in a picturesque garden or perfectly timed for that sunset-of-a-lifetime among swaying palms on the beach.</p>
+          <a href="#" class="cta-button floor-plan-cta-button fadein-top">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
+          <a href="#" class="cta-button event-booking-cta-button fadein-top">For more information, please <br>complete our event enquiry form<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -921,7 +919,7 @@
     $.manic_preloader({
       asset_array: [
         "images/main_slider/may6_events_main_slider.jpg",
-        "images/parallax/events_parallax_01_wedding.jpg",
+        "images/parallax/may18_events_parallax_wedding.jpg",
         "images/events/events_corporate_meetings_image_01.jpg",
         "images/events/events_team_building_image_01.jpg",
         "images/events/events_special_events_image_01.jpg",
