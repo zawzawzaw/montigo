@@ -27,7 +27,8 @@ goog.addDependency('../../../../js/montigo/component/FaqDetailView.js', ['montig
 goog.addDependency('../../../../js/montigo/component/FaqListView.js', ['montigo.component.FaqListView', 'montigo.component.FaqListView.Item'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/montigo/component/InstagramSidebar.js', ['montigo.component.InstagramSidebar'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/montigo/component/MainImage.js', ['montigo.component.MainImage'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.ui.ImageContainer', 'manic.ui.TextContainer', 'montigo.component.ScrollMagicUtil']);
-goog.addDependency('../../../../js/montigo/component/Menu.js', ['montigo.component.Menu'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.ui.DropDown']);
+goog.addDependency('../../../../js/montigo/component/Menu.js', ['montigo.component.Menu'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.ui.DropDown', 'montigo.component.MenuBookingForm']);
+goog.addDependency('../../../../js/montigo/component/MenuBookingForm.js', ['montigo.component.MenuBookingForm'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/montigo/component/OfferItem.js', ['montigo.component.OfferItem'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.ui.PanelContainer']);
 goog.addDependency('../../../../js/montigo/component/ParallaxImage.js', ['montigo.component.ParallaxImage'], ['goog.events.Event', 'goog.events.EventTarget', 'manic.ui.ImageContainer', 'manic.ui.TextContainer', 'montigo.component.ScrollMagicUtil']);
 goog.addDependency('../../../../js/montigo/component/ScrollMagicUtil.js', ['montigo.component.ScrollMagicUtil'], []);

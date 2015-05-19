@@ -44,21 +44,25 @@
       <div class="row">
         <div class="col-md-6">
 
+          <!-- <div class="no-right-margin"> -->
+            <div id="dining-tadds-text-01" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Tadd’s</h3>
+                <hr class="short-hr">
+                <h4>All day dining</h4>
 
-          <div id="dining-tadds-text-01" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Tadd’s</h3>
-              <hr class="short-hr">
-              <h4>All day dining</h4>
 
+                <p>A casual lunch, a relaxing dinner, a snack while the kids play at neighbouring OLO Kids’ Club, or a fresh coconut between laps in the main pool, TADD’S is the perfect spot for a delicious repose. Serving local, Asian and Western comfort cuisine in a relaxed semi al-fresco poolside setting, the all-day dinning café’s contemporary takes on traditional favourites, including the Gado Gado Salad, the Montigo Club Sandwich and the Coconut Crème Brûlée, are sure to please.</p>
+                <p>Sumptuous daily breakfasts include international and local favorites, exotic tropical fruit and piping hot dim sum. Aside, a gourmet counter offers freshly baked breads and pastries for takeaway fare.</p>
+                <div class="cta-button-container">
+                  <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Tadd%27s" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+                  <a target="_blank" href="pdf/Foods_030315_no pics.pdf" class="cta-button">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
+                  <a target="_blank" href="pdf/Beverages_160415_no pics.pdf" class="cta-button">See our full drink menu<span class="fa fa-chevron-circle-right"></span></a>
+                </div>
+              </div>
+            </div> <!-- .montigo-image-description -->
+          <!-- </div> -->
 
-              <p>A casual lunch, a relaxing dinner, a snack while the kids play at neighbouring OLO Kids’ Club, or a fresh coconut between laps in the main pool, TADD’S is the perfect spot for a delicious repose. Serving local, Asian and Western comfort cuisine in a relaxed semi al-fresco poolside setting, the all-day dinning café’s contemporary takes on traditional favourites, including the Gado Gado Salad, the Montigo Club Sandwich and the Coconut Crème Brûlée, are sure to please.</p>
-              <p>Sumptuous daily breakfasts include international and local favorites, exotic tropical fruit and piping hot dim sum. Aside, a gourmet counter offers freshly baked breads and pastries for takeaway fare.</p>
-              <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Tadd%27s" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
-              <a target="_blank" href="pdf/Foods_030315_no pics.pdf" class="cta-button">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
-              <a target="_blank" href="pdf/Beverages_160415_no pics.pdf" class="cta-button">See our full drink menu<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-          </div> <!-- .montigo-image-description -->
 
         </div>
         <div class="col-md-6">
@@ -160,22 +164,26 @@
       <div class="row">
         <div class="col-md-5">
 
-          <div id="dining-pantai-text-01" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Pantai</h3>
-              <hr class="short-hr">
-              <h4>Sensational seafood</h4>
+          <!-- <div class="no-right-margin"> -->
+            <div id="dining-pantai-text-01" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Pantai</h3>
+                <hr class="short-hr">
+                <h4>Sensational seafood</h4>
 
 
-              <p>Adjacent to the main lobby, the intimate kelong-style restaurant is tucked away in a cocoon of natural beauty, a gentle breeze and the soft sway of trees. Pantai, meaning ‘beach’ in Bahasa, offers an extensive menu featuring fresh, locally-sourced produce and ingredients, rendering the Pantai experience both charming and delightful.</p>
-              <p>Drawing from the vibrant flavours of Indonesian fare and the diversity of Singaporean specialties, the Pantai palette is distinctly Indo-Chinese. Feast the senses on dishes such as crisp Deep Fried Prawns with Golden Pumpkin, hearty Wok-Fried Beef ‘Mongolian Style’, and piquant Braised Homemade Tofu with Shitake Mushrooms and Seafood. Or why not indulge in the fresh catches of the day, prepared just the way you want it – be it steamed ‘nyonya-style’ or deep-fried with sweet and sour sauce.</p>
-              
-              <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Pantai" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+                <p>Adjacent to the main lobby, the intimate kelong-style restaurant is tucked away in a cocoon of natural beauty, a gentle breeze and the soft sway of trees. Pantai, meaning ‘beach’ in Bahasa, offers an extensive menu featuring fresh, locally-sourced produce and ingredients, rendering the Pantai experience both charming and delightful.</p>
+                <p>Drawing from the vibrant flavours of Indonesian fare and the diversity of Singaporean specialties, the Pantai palette is distinctly Indo-Chinese. Feast the senses on dishes such as crisp Deep Fried Prawns with Golden Pumpkin, hearty Wok-Fried Beef ‘Mongolian Style’, and piquant Braised Homemade Tofu with Shitake Mushrooms and Seafood. Or why not indulge in the fresh catches of the day, prepared just the way you want it – be it steamed ‘nyonya-style’ or deep-fried with sweet and sour sauce.</p>
+                
+                <div class="cta-button-container">
+                  <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Pantai" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+                  <a target="_blank" href="pdf/PANTAI_bilingual_menu_100115_WEB_eng.pdf" class="cta-button">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
+                </div>
 
-              <a target="_blank" href="pdf/PANTAI_bilingual_menu_100115_WEB_eng.pdf" class="cta-button">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
+              </div>
+            </div> <!-- .montigo-image-description -->
+          <!-- </div> -->
 
-            </div>
-          </div> <!-- .montigo-image-description -->
 
 
 
@@ -188,13 +196,6 @@
               <img src="images/dining/dining_pantai_image_01.jpg">
             </div>
           </div>
-
-        </div>
-      </div> <!-- row -->
-      <div class="row">
-        <div class="col-md-5">
-        </div>
-        <div class="col-md-7">
 
           <div id="dining-pantai-text-02">
 
@@ -228,15 +229,13 @@
 
               </div>
             </div>
-
-                
-
-                
-
           </div> <!-- dining-pantai-text-02 -->
+
 
         </div>
       </div> <!-- row -->
+      
+      
     </div> <!-- container-fluid -->
   </div> <!-- #dining-pantai-section -->
 
@@ -269,19 +268,23 @@
         </div>
         <div class="col-md-4">
 
-          <div id="dining-tiigo-text-01" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Tiigo</h3>
-              <hr class="short-hr">
-              <h4>Meals, martinis &amp; music</h4>
+          <!-- <div class="no-left-margin"> -->
+            <div id="dining-tiigo-text-01" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Tiigo</h3>
+                <hr class="short-hr">
+                <h4>Meals, martinis &amp; music</h4>
 
-              <p>TIIGO beach club is cool across every detail. Unwind in the comfort of shaded indoor loungers, at the sand park or on the cabana beds, as you lazily gaze out at the magical Montigo sunset. To indulge the tastebuds, an extensive drinks menu featuring over 50 tempting cocktails and signature spirits is served alongside a selection of delectable bar bites. At nightfall, the resident DJ takes to the decks, transforming the space into an electric, groovy dance floor.</p>
+                <p>TIIGO beach club is cool across every detail. Unwind in the comfort of shaded indoor loungers, at the sand park or on the cabana beds, as you lazily gaze out at the magical Montigo sunset. To indulge the tastebuds, an extensive drinks menu featuring over 50 tempting cocktails and signature spirits is served alongside a selection of delectable bar bites. At nightfall, the resident DJ takes to the decks, transforming the space into an electric, groovy dance floor.</p>
 
-              <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Tiigo" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+                <div class="cta-button-container">
+                  <a href="mailto:info@montigoresorts.com?subject=Reservation%20-%20Tiigo" class="cta-button">To make a reservation, please email<span class="fa fa-chevron-circle-right"></span></a>
+                  <a target="_blank" href="pdf/TIIGO_menu_100115_WEB.PDF" class="cta-button">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
+                </div>
+              </div>
+            </div> <!-- .montigo-image-description -->
+          <!-- </div> -->
 
-              <a target="_blank" href="pdf/TIIGO_menu_100115_WEB.PDF" class="cta-button">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-          </div> <!-- .montigo-image-description -->
 
 
         </div>
@@ -420,8 +423,11 @@
           <hr class="short-hr fadein-top">
           <h4 class="fadein-top">So private, so convenient</h4>
           <p class="fadein-top">What’s a private pool or a rooftop terrace without a dining experience that amply complements it? At Montigo Resorts, Nongsa, you can enjoy private poolside lunches, dinners under the stars, or appetizing accompaniments to your favourite TV show – at whatever hour it’s playing – without stepping out of your villa.</p>
-          <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20In-Villa%20Dining" class="cta-button fadein-top">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
-          <a target="_blank" href="pdf/IVD MENU 020315.pdf" class="cta-button fadein-top">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
+
+          <div class="cta-button-container">
+            <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20In-Villa%20Dining" class="cta-button fadein-top">To find out more, please email<span class="fa fa-chevron-circle-right"></span></a>
+            <a target="_blank" href="pdf/IVD MENU 020315.pdf" class="cta-button fadein-top">See our full menu<span class="fa fa-chevron-circle-right"></span></a>
+          </div>
 
         </div>
       </div>

@@ -25,6 +25,15 @@ montigo.page.Offers = function(options, element) {
   
   this.create_offer_items();
 
+
+  this.advance_purchase_button = $('#advance-purchase-book-button');
+  this.family_button = $('#family-times-book-button');
+
+
+
+  this.advance_purchase_button.click(this.on_advance_purchase_button_click.bind(this));
+  this.family_button.click(this.on_family_button_click.bind(this));
+
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
   //    | ||  \| || |  | |
@@ -98,7 +107,45 @@ montigo.page.Offers.prototype.private_method_06 = function() {};
 //
 
 
-montigo.page.Offers.prototype.public_method_01 = function() {};
+/**
+ * book_promo_code description
+ * @param  {string} str_param
+ */
+montigo.page.Offers.prototype.book_promo_code = function(str_param) {
+
+
+  var today = new Date();
+
+  var arrival_date = today.toLocaleDateString();
+  var departure_date = today.toLocaleDateString();
+
+  //console.log(arrival_date)
+
+  var arrival = arrival_date.split('/');
+  arrival = arrival[1]+'/'+arrival[0]+'/'+arrival[2];
+
+  var departure = departure_date.split('/');
+  departure = departure[1]+'/'+departure[0]+'/'+departure[2];
+
+  var nights = 0;
+  var rooms = 1;
+  var codeType = 'rateCode';      // see menu booking form js
+  var code = '' + str_param;
+
+  var params = '';
+      params+= '&arrivalDate='+arrival;
+      params+= '&departureDate='+departure;
+      params+= '&numberOfNights='+nights;
+      params+= '&rooms='+rooms;
+      //params+= '&numberOfAdults='+adults;
+      //params+= (child != 0) ? '&numberOfChildren='+child : '';
+      params+= (codeType != 0 && code != '') ? '&'+codeType+'='+code : '';
+      //params+= '&start=availresults';
+
+
+  console.log('https://www.phgsecure.com/IBE/bookingRedirect.ashx?propertyCode=SINMR' + params);
+  window.location.href = 'https://www.phgsecure.com/IBE/bookingRedirect.ashx?propertyCode=SINMR' + params;
+};
 montigo.page.Offers.prototype.public_method_02 = function() {};
 
 
@@ -114,7 +161,19 @@ montigo.page.Offers.prototype.public_method_02 = function() {};
  * event handler
  * @param  {object} event
  */
-montigo.page.Offers.prototype.on_event_handler_03 = function(event) {
+montigo.page.Offers.prototype.on_advance_purchase_button_click = function(event) {
+  event['preventDefault']();
+  this.book_promo_code('AdvancePurchase');
+  
+
+};
+/**
+ * event handler
+ * @param  {object} event
+ */
+montigo.page.Offers.prototype.on_family_button_click = function(event) {
+  event['preventDefault']();
+  this.book_promo_code('FAMRETREAT');
 };
 
 

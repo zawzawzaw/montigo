@@ -1,30 +1,26 @@
-booking form functionality
- - night is not a drop down (it is a simple text field)
- - when both arrival date and departure date are completed, it will be auto filled with how many nights
+//booking form functionality
+ //- night is not a drop down (it is a simple text field)
+ //- when both arrival date and departure date are completed, it will be auto filled with how many nights
 
+//menu-booking-form-calendar-container 
+ // - must be inside the booking container... naaah
 
- 
 
 
 //CAREERS PAGE
 // - Json parser html
 
 
-TERMS & PRIVACY PAGES:
+//TERMS & PRIVACY PAGES:
   //1. on user press on sidebar link, it would scroll to section
-
   //2. scroll to top button
-
-
   // 3. breadcrumb pinning
 
-  4. breadcrumb title changing on user scrolldown to section
-  - ???? 
-    - on press of initial [0] tag
-       - goto top position
-
-
-    - place 'scroll-target' inside 'generic-text-item'
+  //4. breadcrumb title changing on user scrolldown to section
+  //- ???? 
+    // on press of initial [0] tag
+       //- goto top position
+    //- place 'scroll-target' inside 'generic-text-item'
 
 
 FAQ PAGE
@@ -74,7 +70,7 @@ REMOVE EXTRA PLUGIN
 
 
 
-add offset data to scroll targets
+//add offset data to scroll targets
 remove all pages JS
  - 
 
@@ -95,13 +91,13 @@ TODO AFTER LUNCH:
 
 
 
-add script for scroll target 
-when window location changes hashtag, ( follow implementation of juno sga )
+//add script for scroll target 
+//when window location changes hashtag, ( follow implementation of juno sga ) // didn't do this implementation
 
 
 
-<div class="scroll-target" data-value=""></div>
- - do for all sections in all pages...
+//<div class="scroll-target" data-value=""></div>
+// - do for all sections in all pages...
 
 
 
@@ -115,7 +111,7 @@ when window location changes hashtag, ( follow implementation of juno sga )
 
 FAQ
  //- back to top button
- - on click of item, scroll to position (on detailed view)
+ //- on click of item, scroll to position (on detailed view)
    - you can only select the first 4 buttons
      doesn't matter which you click, it will be selected
 

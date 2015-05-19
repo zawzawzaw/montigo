@@ -48,37 +48,42 @@
         </div>
         <div class="col-md-6">
 
-          
-          <div id="spa-experience-text-01" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>The Facilities</h3>
-              <hr class="short-hr">
-              <h4>Rest &amp; restfulness assured</h4>
+          <!-- <div class="no-left-margin"> -->
+            <div id="spa-experience-text-01" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>The Facilities</h3>
+                <hr class="short-hr">
+                <h4>Rest &amp; restfulness assured</h4>
 
-              <p>The Montigo Spa’s timeless Sumatran huts have had their rich authenticity preserved for over a century. Acquired exclusively for the resort, this rustic cluster adjoins its own stretch of beach. There’re also a steam bath and plunge pools – the latter perfect to lounge, wade or simply cool off in. A revived body also needs some stimulation for the mind, and you’re sure to find it in the spa’s library and reading area.</p>
-              <a href="" class="cta-button">Please get in touch for rates &amp; schedules<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-          </div> <!-- spa-experience-text-01 -->
+                <p>The Montigo Spa’s timeless Sumatran huts have had their rich authenticity preserved for over a century. Acquired exclusively for the resort, this rustic cluster adjoins its own stretch of beach. There’re also a steam bath and plunge pools – the latter perfect to lounge, wade or simply cool off in. A revived body also needs some stimulation for the mind, and you’re sure to find it in the spa’s library and reading area.</p>
+                <a href="" class="cta-button">Please get in touch for rates &amp; schedules<span class="fa fa-chevron-circle-right"></span></a>
+              </div>
+            </div> <!-- spa-experience-text-01 -->
+          <!-- </div> -->
+          
 
         </div>
       </div> <!-- row -->
       <div class="row">
         <div class="col-md-6">
 
-          <div id="spa-experience-text-02" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Rituals &amp; Therapies</h3>
-              <hr class="short-hr">
-              <h4>Recharge your body</h4>
-              
+          <!-- <div class="no-right-margin"> -->
+            <div id="spa-experience-text-02" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Rituals &amp; Therapies</h3>
+                <hr class="short-hr">
+                <h4>Recharge your body</h4>
+                
 
-              <p>Most of the Montigo Spa’s restorative treatments are formulated without chemicals on premise, under the supervision of Spa Manager and herb specialist, Warsiyah. A popular massage, the Central Javanese Lulur scrub uses rice powder, milk, turmeric and ginger. To ensure the natural oils and juices retain their efficacy, ingredients are hand ground minutes before your appointment.</p>
-              <p>Offering personalised experiences, share your preferences with a spa therapist, and Warsiyah will ensure it’s a visit you’ll long cherish.</p>
+                <p>Most of the Montigo Spa’s restorative treatments are formulated without chemicals on premise, under the supervision of Spa Manager and herb specialist, Warsiyah. A popular massage, the Central Javanese Lulur scrub uses rice powder, milk, turmeric and ginger. To ensure the natural oils and juices retain their efficacy, ingredients are hand ground minutes before your appointment.</p>
+                <p>Offering personalised experiences, share your preferences with a spa therapist, and Warsiyah will ensure it’s a visit you’ll long cherish.</p>
 
 
-              <a href="" class="cta-button">Please get in touch for rates &amp; schedules<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-          </div> <!-- spa-experience-text-02 -->
+                <a href="" class="cta-button">Please get in touch for rates &amp; schedules<span class="fa fa-chevron-circle-right"></span></a>
+              </div>
+            </div> <!-- spa-experience-text-02 -->
+          <!-- </div> -->
+
           
         </div>
         <div class="col-md-6">
@@ -210,7 +215,9 @@
 
 
     <div class="icon-set-cta-button-container">
-      <a href="pdf/MontigoSpa_Brochure(Phase2)_Online_FA.pdf" class="cta-button">See our full list of treatments here<span class="fa fa-chevron-circle-right"></span></a>
+      <div class="icon-set-cta-button-container-container">
+        <a href="pdf/MontigoSpa_Brochure(Phase2)_Online_FA.pdf" class="cta-button">See our full list of treatments here<span class="fa fa-chevron-circle-right"></span></a>
+      </div>
     </div>
 
   </div> <!-- .icon-set-section -->

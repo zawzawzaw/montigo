@@ -161,15 +161,18 @@
         </div>
         <div class="col-md-6">
 
-          <div id="home-restaurant-text-01" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Asian flavours</h3>
-              <hr class="short-hr">
-              <h4>all things bring and delicious</h4>
-              <p>Inspired by the diversity of local flavours, our team of experienced chefs conjure up amply satisfying food for thought. The selection of dining venues delight with their distinctiveness, across locations, menus and themes. From hearty daily breakfasts to sizzling weekend BBQs, there’s never a dull moment – or palate – at our resort.</p>
-              <a href="dining.php" class="cta-button">Our Restaurants<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-          </div> <!-- .montigo-image-description -->
+          <div class="no-left-margin">
+            <div id="home-restaurant-text-01" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Asian flavours</h3>
+                <hr class="short-hr">
+                <h4>all things bring and delicious</h4>
+                <p>Inspired by the diversity of local flavours, our team of experienced chefs conjure up amply satisfying food for thought. The selection of dining venues delight with their distinctiveness, across locations, menus and themes. From hearty daily breakfasts to sizzling weekend BBQs, there’s never a dull moment – or palate – at our resort.</p>
+                <a href="dining.php" class="cta-button">Our Restaurants<span class="fa fa-chevron-circle-right"></span></a>
+              </div>
+            </div> <!-- .montigo-image-description -->
+          </div>
+
           
         </div>
       </div>
@@ -177,15 +180,17 @@
       <div class="row">
         <div class="col-md-6">
 
-          <div id="home-restaurant-text-02" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Montigo Spa</h3>
-              <hr class="short-hr">
-              <h4>Rest and restfulness assured</h4>
-              <p>Recharge and be holistically revived at the Montigo Spa. Restore your body’s balance with centuries old therapies, accentuated by the ambient infusion of soothing fragrances and light. Be pampered by a range of indulgences, ranging from traditional facials to invigorating soaks and scrubs. The Montigo Spa has something for all who seek respite from the urban hustle and bustle.</p>
-              <a href="spa.php" class="cta-button">Montigo Spa<span class="fa fa-chevron-circle-right"></span></a>
-            </div>
-          </div> <!-- .montigo-image-description -->
+          <div class="no-right-margin">
+            <div id="home-restaurant-text-02" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Montigo Spa</h3>
+                <hr class="short-hr">
+                <h4>Rest and restfulness assured</h4>
+                <p>Recharge and be holistically revived at the Montigo Spa. Restore your body’s balance with centuries old therapies, accentuated by the ambient infusion of soothing fragrances and light. Be pampered by a range of indulgences, ranging from traditional facials to invigorating soaks and scrubs. The Montigo Spa has something for all who seek respite from the urban hustle and bustle.</p>
+                <a href="spa.php" class="cta-button">Montigo Spa<span class="fa fa-chevron-circle-right"></span></a>
+              </div>
+            </div> <!-- .montigo-image-description -->
+          </div>
 
         </div>
         <div class="col-md-3">
@@ -308,7 +313,9 @@
 
 
     <div class="icon-set-cta-button-container">
-      <a href="activities.php" class="cta-button">find out more on montigo activities<span class="fa fa-chevron-circle-right"></span></a>
+      <div class="icon-set-cta-button-container-container">
+        <a href="activities.php" class="cta-button">find out more on montigo activities<span class="fa fa-chevron-circle-right"></span></a>
+      </div>
     </div>
 
   </div> <!-- .icon-set-section -->

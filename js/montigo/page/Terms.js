@@ -45,20 +45,15 @@ montigo.page.Terms = function(options, element) {
     .addTo(this.controller);
 
 
+  $('.breadcrumb-container .breadcrumb-01').click(this.on_breadcrumb_01_click.bind(this));
 
   this.terms_content = new montigo.content.Terms({},$('.generic-text-section'));
 
   //TweenMax.delayedCall(1, this.terms_content.create_item_scene, [this.controller], this.terms_content);
   this.terms_content.create_item_scene(this.controller);
   
-
   this.on_window_resize(null);
-
-
   
-
-  
-
 };
 goog.inherits(montigo.page.Terms, montigo.page.Default);
 
@@ -117,7 +112,10 @@ montigo.page.Terms.prototype.public_method_06 = function() {};
  * event handler
  * @param  {object} event
  */
-montigo.page.Terms.prototype.on_event_handler_03 = function(event) {
+montigo.page.Terms.prototype.on_breadcrumb_01_click = function(event) {
+  event['preventDefault']();
+
+  this.scroll_to(0);
 };
 
 /**

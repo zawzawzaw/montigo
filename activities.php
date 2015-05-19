@@ -47,70 +47,76 @@
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
-          <div class="col-md-2">
-            <div class="activities-favorite-item">
-              <img class="img-full-width" src="images/activities/favorites_01.jpg">
-              
-              <h4>Jungle trekking</h4>
-              <hr class="short-hr">
-              <p>Depart at 9:00AM by hotel car to Nongsa Forest. Trek uphill for a mid-morning refreshment, then across the primary forest to spot wildlife and plants indigenous to the region.</p>
+          <div id="activities-favorite-item-container-row-container">
+
+            <div class="col-md-2">
+              <div class="activities-favorite-item">
+                <img class="img-full-width" src="images/activities/favorites_01.jpg">
+                
+                <h4>Jungle trekking</h4>
+                <hr class="short-hr">
+                <p>Depart at 9:00AM by hotel car to Nongsa Forest. Trek uphill for a mid-morning refreshment, then across the primary forest to spot wildlife and plants indigenous to the region.</p>
+              </div>
             </div>
+
+            <div class="col-md-2">
+              <div class="activities-favorite-item">
+                
+                <img class="img-full-width" src="images/activities/favorites_02.jpg">
+                
+                <h4>Mangrove tour</h4>
+                <hr class="short-hr">
+                <p>Cruise along the mangroves as thousands upon thousands of incandescent fireflies light up the night skies. A guide will be on hand to point out those not-to-be-missed moments.</p>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="activities-favorite-item">
+                
+                <img class="img-full-width" src="images/activities/favorites_03.jpg">
+                
+                <h4>Batam tour</h4>
+                <hr class="short-hr">
+                <p>Departing from Montigo Resorts, take a stroll through Batam’s landmark dragon fruit farm followed by a drive through the iconic Barelang Bridge to the Thoa Pek Kong Temple.</p>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="activities-favorite-item">
+                
+                <img class="img-full-width" src="images/activities/favorites_04.jpg">
+                
+                <h4>Kampong bike tour</h4>
+                <hr class="short-hr">
+                <p>With a Montigo guide, cycle from to nearby Pantai Village to explore a traditional Indonesian ‘kampong’ village. Catch a glimpse of daily life in a local Malay tribe in Batam.</p>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="activities-favorite-item">
+                
+                <img class="img-full-width" src="images/activities/favorites_05.jpg">
+                
+                <h4>Vintage car tour</h4>
+                <hr class="short-hr">
+                <p>Take a romantic ride around Nongsa’s Heritage Village in Montigo’s vintage Volkswagen. Just let us know where you’d like to go, or let our experienced guide surprise you!</p>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="activities-favorite-item">
+                
+                <img class="img-full-width" src="images/activities/favorites_06.jpg">
+                
+                <h4>Beach bike tour</h4>
+                <hr class="short-hr">
+                <p>Coast along the beach with our guide and explore some of the local sites. While you’re there, why not stop for a fresh young coconut while you soak up the sun.</p>
+              </div>
+            </div>
+            
           </div>
 
-          <div class="col-md-2">
-            <div class="activities-favorite-item">
-              
-              <img class="img-full-width" src="images/activities/favorites_02.jpg">
-              
-              <h4>Mangrove tour</h4>
-              <hr class="short-hr">
-              <p>Cruise along the mangroves as thousands upon thousands of incandescent fireflies light up the night skies. A guide will be on hand to point out those not-to-be-missed moments.</p>
-            </div>
-          </div>
-
-          <div class="col-md-2">
-            <div class="activities-favorite-item">
-              
-              <img class="img-full-width" src="images/activities/favorites_03.jpg">
-              
-              <h4>Batam tour</h4>
-              <hr class="short-hr">
-              <p>Departing from Montigo Resorts, take a stroll through Batam’s landmark dragon fruit farm followed by a drive through the iconic Barelang Bridge to the Thoa Pek Kong Temple.</p>
-            </div>
-          </div>
-
-          <div class="col-md-2">
-            <div class="activities-favorite-item">
-              
-              <img class="img-full-width" src="images/activities/favorites_04.jpg">
-              
-              <h4>Kampong bike tour</h4>
-              <hr class="short-hr">
-              <p>With a Montigo guide, cycle from to nearby Pantai Village to explore a traditional Indonesian ‘kampong’ village. Catch a glimpse of daily life in a local Malay tribe in Batam.</p>
-            </div>
-          </div>
-
-          <div class="col-md-2">
-            <div class="activities-favorite-item">
-              
-              <img class="img-full-width" src="images/activities/favorites_05.jpg">
-              
-              <h4>Vintage car tour</h4>
-              <hr class="short-hr">
-              <p>Take a romantic ride around Nongsa’s Heritage Village in Montigo’s vintage Volkswagen. Just let us know where you’d like to go, or let our experienced guide surprise you!</p>
-            </div>
-          </div>
-
-          <div class="col-md-2">
-            <div class="activities-favorite-item">
-              
-              <img class="img-full-width" src="images/activities/favorites_06.jpg">
-              
-              <h4>Beach bike tour</h4>
-              <hr class="short-hr">
-              <p>Coast along the beach with our guide and explore some of the local sites. While you’re there, why not stop for a fresh young coconut while you soak up the sun.</p>
-            </div>
-          </div>
+          
 
 
         </div>
@@ -149,42 +155,45 @@
         </div>
         <div class="col-md-6">
 
-          <div id="activities-terrestrial-text-panel-container" class="panel-container description-list-panel-container">
-            <div class="panel-container-container">
-              <div class="panel panel-01 description-panel">
-                <h3>Outdoor Activities</h3>
-                <hr class="short-hr">
+          <!-- <div class="no-left-margin"> -->
+            <div id="activities-terrestrial-text-panel-container" class="panel-container description-list-panel-container">
+              <div class="panel-container-container">
+                <div class="panel panel-01 description-panel">
+                  <h3>Outdoor Activities</h3>
+                  <hr class="short-hr">
 
 
-                <h4>Sun, fun and games</h4>
+                  <h4>Sun, fun and games</h4>
 
-                <p>At Montigo Resorts, Nongsa, we also offer thrilling action on land – like the Nongsa beach bike tour, kampong bike tour and Batam tour. Fancy a local market visit? Sign up for our vintage car tour!</p>
-                <div class="space10"></div>
-                <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Terrestrial%20Activities" id="activities-terrestrial-text-button-01" class="cta-button">see more outdoor activities<span class="fa fa-chevron-circle-right"></span></a>
+                  <p>At Montigo Resorts, Nongsa, we also offer thrilling action on land – like the Nongsa beach bike tour, kampong bike tour and Batam tour. Fancy a local market visit? Sign up for our vintage car tour!</p>
+                  <div class="space10"></div>
+                  <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Terrestrial%20Activities" id="activities-terrestrial-text-button-01" class="cta-button">see more outdoor activities<span class="fa fa-chevron-circle-right"></span></a>
 
-              </div>
-              <div class="panel panel-02 list-panel">
-                
-                <a href="#" id="activities-terrestrial-text-button-02" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>
+                </div>
+                <div class="panel panel-02 list-panel">
+                  
+                  <a href="#" id="activities-terrestrial-text-button-02" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>
 
-                <h4>Outdoor Activities list</h4>
-                <hr class="short-hr">
-                <ul>
-                  <li>Kampong bike tour</li>
-                  <li>Trek</li>
-                  <li>Beach bike tour</li>
-                  <li>Batam tour</li>
-                  <li>Vintage car tour</li>
-                  <li>Paintball</li>
-                  <li>Billiards</li>
-                  <li>Foosball</li>
-                </ul>
+                  <h4>Outdoor Activities list</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Kampong bike tour</li>
+                    <li>Trek</li>
+                    <li>Beach bike tour</li>
+                    <li>Batam tour</li>
+                    <li>Vintage car tour</li>
+                    <li>Paintball</li>
+                    <li>Billiards</li>
+                    <li>Foosball</li>
+                  </ul>
 
-                <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
 
+                </div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
+
 
         </div>
         
@@ -210,43 +219,46 @@
         
         <div class="col-md-6">
 
-          <div id="activities-sea-text-panel-container" class="panel-container description-list-panel-container">
-            <div class="panel-container-container">
-              <div class="panel panel-01 description-panel">
-                <h3>Aquatic Adventure</h3>
-                <hr class="short-hr">
-                <h4>Sea Activities &amp; Water Sports</h4>
+          <!-- <div class="no-right-margin"> -->
+            <div id="activities-sea-text-panel-container" class="panel-container description-list-panel-container">
+              <div class="panel-container-container">
+                <div class="panel panel-01 description-panel">
+                  <h3>Aquatic Adventure</h3>
+                  <hr class="short-hr">
+                  <h4>Sea Activities &amp; Water Sports</h4>
 
-                <p>Amazing aquatic adventures are the hallmark of any internationally-acclaimed seaside resort, and Montigo proudly offers plenty of choices. Opt for a more laid back excursion such as the mangrove tour, firefly sighting or fishing trip. Or gear up for some action with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving.</p>
-                <p>Certified instructors are at hand, should you need them. Come on in, the water’s calling…</p>
-                
-                <div class="space10"></div>
-                <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sea%20Activities" id="activities-sea-text-button-01" class="cta-button">see more sea activities<span class="fa fa-chevron-circle-right"></span></a>
+                  <p>Amazing aquatic adventures are the hallmark of any internationally-acclaimed seaside resort, and Montigo proudly offers plenty of choices. Opt for a more laid back excursion such as the mangrove tour, firefly sighting or fishing trip. Or gear up for some action with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving.</p>
+                  <p>Certified instructors are at hand, should you need them. Come on in, the water’s calling…</p>
+                  
+                  <div class="space10"></div>
+                  <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sea%20Activities" id="activities-sea-text-button-01" class="cta-button">see more sea activities<span class="fa fa-chevron-circle-right"></span></a>
 
-              </div>
-              <div class="panel panel-02 list-panel">
-                
-                <a href="#" id="activities-sea-text-button-02" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>
+                </div>
+                <div class="panel panel-02 list-panel">
+                  
+                  <a href="#" id="activities-sea-text-button-02" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>
 
-                <h4>Sea Activities list</h4>
-                <hr class="short-hr">
-                <ul>
-                  <li>Fishing trip </li>
-                  <li>Wake boarding </li>
-                  <li>Mangrove tour </li>
-                  <li>Water skiing </li>
-                  <li>Firefly sighting </li>
-                  <li>Kayaking </li>
-                  <li>Sunset cruise </li>
-                  <li>Knee boarding</li>
-                  <li>Jet ski</li>  
-                </ul>
+                  <h4>Sea Activities list</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Fishing trip </li>
+                    <li>Wake boarding </li>
+                    <li>Mangrove tour </li>
+                    <li>Water skiing </li>
+                    <li>Firefly sighting </li>
+                    <li>Kayaking </li>
+                    <li>Sunset cruise </li>
+                    <li>Knee boarding</li>
+                    <li>Jet ski</li>  
+                  </ul>
 
-                <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
 
+                </div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
+
 
         </div>
         <div class="col-md-6">
@@ -291,40 +303,43 @@
         </div>
         <div class="col-md-6">
 
-          <div id="activities-fitness-text-panel-container" class="panel-container description-list-panel-container">
-            <div class="panel-container-container">
-              <div class="panel panel-01 description-panel">
-                <h3>Sports &amp; Fitness</h3>
-                <hr class="short-hr">
-                <h4>Facilities near &amp; far</h4>
+          <!-- <div class="no-left-margin"> -->
+            <div id="activities-fitness-text-panel-container" class="panel-container description-list-panel-container">
+              <div class="panel-container-container">
+                <div class="panel panel-01 description-panel">
+                  <h3>Sports &amp; Fitness</h3>
+                  <hr class="short-hr">
+                  <h4>Facilities near &amp; far</h4>
 
-                <p>If you’re looking to pack even more into your getaway, explore the resort’s sporting and fitness activities.Tee off at one of the 18-hole golf courses in the vicinity. Batam’s perennial blue skies and sprawling greens offer the perfect setting for a birdie.</p>
-                <p>Missing a ripple on those biceps? Offering an uninterrupted view of the Nongsa waters, the spacious gym houses some of the latest exercise machines for fitness enthusiasts and novices alike.</p>
-                <p>You can never get enough of a good thing, especially where yoga’s concerned. Certified instructors will have you twisting to a routine that will keep you fit, for years to come. Hold that breath – we even offer the services of an in-house Ayurvedic doctor.</p>
+                  <p>If you’re looking to pack even more into your getaway, explore the resort’s sporting and fitness activities.Tee off at one of the 18-hole golf courses in the vicinity. Batam’s perennial blue skies and sprawling greens offer the perfect setting for a birdie.</p>
+                  <p>Missing a ripple on those biceps? Offering an uninterrupted view of the Nongsa waters, the spacious gym houses some of the latest exercise machines for fitness enthusiasts and novices alike.</p>
+                  <p>You can never get enough of a good thing, especially where yoga’s concerned. Certified instructors will have you twisting to a routine that will keep you fit, for years to come. Hold that breath – we even offer the services of an in-house Ayurvedic doctor.</p>
 
-                <div class="space10"></div>
-                <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sport%20%26%20Fitness%20Activities" id="activities-fitness-text-button-01" class="cta-button">see more sports &amp; fitness<span class="fa fa-chevron-circle-right"></span></a>
+                  <div class="space10"></div>
+                  <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sport%20%26%20Fitness%20Activities" id="activities-fitness-text-button-01" class="cta-button">see more sports &amp; fitness<span class="fa fa-chevron-circle-right"></span></a>
 
-              </div>
-              <div class="panel panel-02 list-panel">
-                
-                <a href="#" id="activities-fitness-text-button-02" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>
+                </div>
+                <div class="panel panel-02 list-panel">
+                  
+                  <a href="#" id="activities-fitness-text-button-02" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>
 
-                <h4>sport &amp; fitness activities</h4>
-                <hr class="short-hr">
-                <ul>
-                  <li>Yoga </li>
-                  <li>Water polo </li>
-                  <li>Tennis </li>
-                  <li>Gym</li>
-                  <li>Sand soccer</li>
-                </ul>
+                  <h4>sport &amp; fitness activities</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Yoga </li>
+                    <li>Water polo </li>
+                    <li>Tennis </li>
+                    <li>Gym</li>
+                    <li>Sand soccer</li>
+                  </ul>
 
-                <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="#" class="cta-small-v2-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
 
+                </div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
+
 
         </div>
       </div>
@@ -343,10 +358,6 @@
     <div class="parallax-section-text-container">
       <div class="text-container" data-width="1276" data-height="726">
         <div id="activities-parallax-01-text" class="parallax-section-text white-version text" data-x="280" data-y="387">
-
-          <!-- 
-          <div class="bg-black-gradient"></div>
-           -->
           
           <div class="activities-white-tiggo-icon fadein-top"></div>                
           <h3 class="fadein-top">Olo kids club!</h3>
@@ -471,7 +482,10 @@
 
 
     <div class="icon-set-cta-button-container">
-      <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Activities" id="activities-other-cta-button" class="cta-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+      <div class="icon-set-cta-button-container-container">
+        <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Activities" id="activities-other-cta-button" class="cta-button">Please get in touch with the resort concierge or <br>info@montigoresorts.com for rates and schedules.<span class="fa fa-chevron-circle-right"></span></a>
+      </div> 
+
     </div>
 
   </div> <!-- .icon-set-section -->

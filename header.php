@@ -99,6 +99,7 @@ define('DEBUG', true);
                     <li><a href="spa.php">Spa</a></li>
                     <li><a href="activities.php">Activities</a></li>
                     <li><a href="events.php">Meetings &amp; Events</a></li>
+                    <li><a href="faq.php">Faq</a></li>
                     <!-- <li><a href="#">Contact</a></li> -->
                   </ul>
                 </nav>
@@ -153,6 +154,9 @@ define('DEBUG', true);
                           <div class="menu-booking-form-item single-line-version">
                             <label>Nights</label>
 
+                            <input class="text-input" type="text" id="nights" name="nights" value="1">
+
+                            <!-- 
                             <div class="manic-dropdown montigo-version">
                               <span>1</span>
                               <input type="hidden" id="nights" name="nights" value="1">
@@ -165,6 +169,7 @@ define('DEBUG', true);
                                 <li>6</li>
                               </ul>
                             </div>
+                            -->
 
                             <!-- 
                             <div class="select-input">
@@ -234,18 +239,7 @@ define('DEBUG', true);
                                 <li data-value="iataNumber">IATA</li>
                               </ul>
                             </div>
-                            <!-- 
-                            <div class="select-input">
-                              <div class="fa fa-play"></div>
-                              <select id="codeType" name="codeType">
-                                <option value="0">Code Type</option>
-                                <option value="Promo">Promo</option>
-                                <option value="Corporate">Corporate</option>
-                                <option value="Group">Group</option>
-                                <option value="iataNumber">IATA</option>
-                              </select>
-                            </div>
-                             -->
+                            
                           </div>
 
                         </div>

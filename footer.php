@@ -8,13 +8,13 @@
             <div class="col-md-4">
               <div class="footer-item has-border" id="footer-locations">
                 <div class="footer-item-container">
-                  <a href="#" id="footer-montigo-logo">Montigo Resorts</a>
+                  <a href="index.php" id="footer-montigo-logo">Montigo Resorts</a>
                   
-                  <a href="#" class="footer-location">
+                  <a href="index.php" class="footer-location">
                     <h6>Nongsa, Batam</h6>
                     <p>Indonesia</p>
                   </a>
-                  <a href="#" class="footer-location">
+                  <a href="group_landing.php" class="footer-location">
                     <h6>Seminyak, Bali</h6>
                     <p>Indonesia</p>
                   </a>

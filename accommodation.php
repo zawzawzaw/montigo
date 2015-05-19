@@ -85,11 +85,13 @@
                     <img src="images/rooms/rooms_villa_03.jpg">
                   </div>
                 </div>
+                <!-- 
                 <div class="panel">
                   <div class="manic-image-container">
                     <img src="images/rooms/rooms_villa_04.jpg">
                   </div>
                 </div>
+                 -->
                 <div class="panel">
                   <div class="manic-image-container">
                     <img src="images/rooms/rooms_villa_05.jpg">
@@ -106,52 +108,56 @@
         <div class="col-md-4">
 
 
+          <!-- <div class="no-left-margin"> -->
+            <div id="room-villas-sidebar">
 
-          <div id="room-villas-sidebar">
+              <h3>Our Villas</h3>
+              <hr class="short-hr"></hr>
 
-            <h3>Our Villas</h3>
-            <hr class="short-hr"></hr>
+              <div id="room-villas-text-panel-container" class="panel-container">
 
-            <div id="room-villas-text-panel-container" class="panel-container">
+                <div class="next-panel-button fa fa-angle-right"></div>
+                <div class="prev-panel-button fa fa-angle-left"></div>
 
-              <div class="next-panel-button fa fa-angle-right"></div>
-              <div class="prev-panel-button fa fa-angle-left"></div>
+                <div class="panel-container-container">
 
-              <div class="panel-container-container">
+                  <div class="panel">
+                    <h4>Your home away from home</h4>
+                    <p>Barely 30 minutes away from Singapore, Montigo Resorts, Nongsa boasts individual contemporary residences. An architectural expanse of white, each villa and residence offers uninterrupted views of the South China Sea. Moving around the resort is a breeze through the on-site buggy service, simply call and you will be picked up!</p>
+                  </div>
+                  <div class="panel">
+                    <h4>Restfulness assured</h4>
+                    <p>Your master bedroom complete with king-size canopy bed await. Superior bed mattresses and linen will help you unwind and get that morning sleep-in you deserve! All villas also feature a guest bedroom with two single beds plus an en-suite as standard. When you are rested and awake, why not take breakfast on your rooftop dining terrace?</p>                  
+                  </div>
+                  <div class="panel">
+                    <h4>Unwind in style</h4>
+                    <p>On top of the calming South China Sea’s blue waters and your cooling private infinity pool, each villa accommodates a large modern bathing area. The large roof skylight allows natural light to flood the room as you unwind and de-stress, ready to take on the plethora of activities Montigo has to offer.</p>
+                  </div>
+                  <!-- 
+                  <div class="panel">
+                    <h4>Everything you need</h4>
+                    <p>Complimenting your villas excellent oversized bathroom and tub, is a fine selection of Argan bath amenities. If you are looking for more restorative products, the Montigo Spa hand grind to order a variety of scrubs, rubs and oils using ingredients from the Montigo garden (without any nasty chemicals). Ask for Warsiyah, our Spa Manager and Herb Specialist.</p>
+                  </div>
+                  -->
+                  <div class="panel">
+                    <h4>Your private infinity pool</h4>
+                    <p>All Montigo villas feature a private sea facing infinity plunge pool. Morning, daytime or evening is the perfect time for a dip. The water action does not stop there though. Maybe gear up for some wake boarding, water skiing or knee boarding? For a more laid back excursions, try our mangrove tour, firefly sighting or fishing trip. Come on in, the water’s calling!</p>
+                  </div>
 
-                <div class="panel">
-                  <h4>Your home away from home</h4>
-                  <p>Barely 30 minutes away from Singapore, Montigo Resorts, Nongsa boasts individual contemporary residences. An architectural expanse of white, each villa and residence offers uninterrupted views of the South China Sea. Moving around the resort is a breeze through the on-site buggy service, simply call and you will be picked up!</p>
                 </div>
-                <div class="panel">
-                  <h4>Restfulness assured</h4>
-                  <p>Your master bedroom complete with king-size canopy bed await. Superior bed mattresses and linen will help you unwind and get that morning sleep-in you deserve! All villas also feature a guest bedroom with two single beds plus an en-suite as standard. When you are rested and awake, why not take breakfast on your rooftop dining terrace?</p>                  
-                </div>
-                <div class="panel">
-                  <h4>Unwind in style</h4>
-                  <p>On top of the calming South China Sea’s blue waters and your cooling private infinity pool, each villa accommodates a large modern bathing area. The large roof skylight allows natural light to flood the room as you unwind and de-stress, ready to take on the plethora of activities Montigo has to offer.</p>
-                </div>
-                <div class="panel">
-                  <h4>Everything you need</h4>
-                  <p>Complimenting your villas excellent oversized bathroom and tub, is a fine selection of Argan bath amenities. If you are looking for more restorative products, the Montigo Spa hand grind to order a variety of scrubs, rubs and oils using ingredients from the Montigo garden (without any nasty chemicals). Ask for Warsiyah, our Spa Manager and Herb Specialist.</p>
-                </div>
-                <div class="panel">
-                  <h4>Your private infinity pool</h4>
-                  <p>All Montigo villas feature a private sea facing infinity plunge pool. Morning, daytime or evening is the perfect time for a dip. The water action does not stop there though. Maybe gear up for some wake boarding, water skiing or knee boarding? For a more laid back excursions, try our mangrove tour, firefly sighting or fishing trip. Come on in, the water’s calling!</p>
-                </div>
+              </div> <!-- room-villas-text-panel -->
 
-              </div>
-            </div> <!-- room-villas-text-panel -->
+              <ul id="room-villas-button-container" class="circle-button-container">
+                <li class="fa fa-circle selected"></li>
+                <li class="fa fa-circle"></li>
+                <li class="fa fa-circle"></li>
+                <!-- <li class="fa fa-circle"></li> -->
+                <li class="fa fa-circle"></li>
+              </ul>
 
-            <ul id="room-villas-button-container" class="circle-button-container">
-              <li class="fa fa-circle selected"></li>
-              <li class="fa fa-circle"></li>
-              <li class="fa fa-circle"></li>
-              <li class="fa fa-circle"></li>
-              <li class="fa fa-circle"></li>
-            </ul>
+            </div> <!-- room-villas-sidebar -->
+          <!-- </div> -->
 
-          </div> <!-- room-villas-sidebar -->
 
 
         </div>
@@ -178,23 +184,17 @@
       <div class="row">
         <div class="col-md-4">
 
-          <div id="rooms-amenities-header-text" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Just for You</h3>
-              <hr class="short-hr">
-              <h4>Villa Amenities</h4>
-              <p>At Montigo Resorts, Nongsa, each villa offers a wide selection of amenities that amply complement their rich diversity of location and views. And with such attention to detail, you’re unlikely to miss a smile.</p>
-            </div>
-          </div> <!-- .montigo-image-description -->
+          <!-- <div class="no-right-margin"> -->
+            <div id="rooms-amenities-header-text" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Just for You</h3>
+                <hr class="short-hr">
+                <h4>Villa Amenities</h4>
+                <p>At Montigo Resorts, Nongsa, each villa offers a wide selection of amenities that amply complement their rich diversity of location and views. And with such attention to detail, you’re unlikely to miss a smile.</p>
+              </div>
+            </div> <!-- .montigo-image-description -->
+          <!-- </div> -->
 
-          <!-- 
-          <div id="rooms-amenities-header-text">
-            <h3>Just for You</h3>
-            <hr class="short-hr">
-            <h4>Villa Amenities</h4>
-            <p>At Montigo Resorts, Nongsa, each villa offers a wide selection of amenities that amply complement their rich diversity of location and views. And with such attention to detail, you’re unlikely to miss a smile.</p>
-          </div>
-          -->
 
         </div>
         <div class="col-md-8">
@@ -237,7 +237,7 @@
               <li>Sky terrace</li>
               <li>Master bedroom suite with king-sized canopy bed and en-suite bathroom</li>
               <li>Open-air master bathroom features oversized bathtub and separate rain shower</li>
-              <li>Argan bath amenities</li>
+              <!-- <li>Argan bath amenities</li> -->
               <li>Guest Bedroom with twin beds and en-suite bathroom</li>
               <li>Superior beds with fine linen</li>
               <li>Superior bath amenities including plush terry bathrobes and towels</li>

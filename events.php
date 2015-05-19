@@ -11,7 +11,6 @@
     <div class="main-slider-text-container">
       <div class="text-container" data-width="1408" data-height="830">
         <div id="events-slider-text" class="text white-version" data-x="704" data-y="231">
-
           <h3>Meetings &amp; Events</h3>
           <p>Offering customised themes for groups as large as 250, our spacious ballroom comfortably accommodates guests for larger occasions such as dreamy weddings, fun corporate getaways and other special events. The sea views complement our cuisine and service, leaving hosts delighted, and guests thrilled to be invited.</p>
         </div>
@@ -33,17 +32,22 @@
         </div>
         <div class="col-md-5">
 
-          <div id="events-corporate-meetings-text" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Corporate Meetings</h3>
-              <hr class="short-hr">
-              <h4>Everything you need to impress</h4>
-              <p>The expansive ballroom and two private meeting rooms at Montigo Resorts, Nongsa, are apt for conferencing needs, and feature some of the latest audio visual equipment for impactful presentations. After a successful day indoors, the resort offers many outdoor venues to facilitate team building and dining. We ensure no two experiences are alike, so guests can look forward to something different during subsequent visits.</p>
-              <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
-              <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form <span class="fa fa-chevron-circle-right"></span></a>
+          <!-- <div class="no-left-margin"> -->
+            <div id="events-corporate-meetings-text" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Corporate Meetings</h3>
+                <hr class="short-hr">
+                <h4>Everything you need to impress</h4>
+                <p>The expansive ballroom and two private meeting rooms at Montigo Resorts, Nongsa, are apt for conferencing needs, and feature some of the latest audio visual equipment for impactful presentations. After a successful day indoors, the resort offers many outdoor venues to facilitate team building and dining. We ensure no two experiences are alike, so guests can look forward to something different during subsequent visits.</p>
 
+                <div class="cta-button-container">
+                  <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form <span class="fa fa-chevron-circle-right"></span></a>
+                </div>
+
+              </div>
             </div>
-          </div>
+          <!-- </div> -->
 
         </div>
       </div>
@@ -55,17 +59,23 @@
       <div class="row">
         <div class="col-md-4">
 
-          <div id="events-team-building-text" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Team Building</h3>
-              <hr class="short-hr">
-              <h4>Hone those leadership skills</h4>
-              <p>A business' most valuable assets are its people. That’s why Team Building is so popular for impacting organizational performance. At Montigo Resorts, Nongsa, we offer programs designed to hone leadership skills, and establish collaborative environments. So your people can be better equipped to meet goals, in a truly fun filled environment.</p>
-              <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
-              <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form <span class="fa fa-chevron-circle-right"></span></a>
+          <!-- <div class="no-right-margin"> -->
+            <div id="events-team-building-text" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Team Building</h3>
+                <hr class="short-hr">
+                <h4>Hone those leadership skills</h4>
+                <p>A business' most valuable assets are its people. That’s why Team Building is so popular for impacting organizational performance. At Montigo Resorts, Nongsa, we offer programs designed to hone leadership skills, and establish collaborative environments. So your people can be better equipped to meet goals, in a truly fun filled environment.</p>
 
+                <div class="cta-button-container">
+                  <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form <span class="fa fa-chevron-circle-right"></span></a>
+                </div>
+
+              </div>
             </div>
-          </div>
+          <!-- </div> -->
+
 
         </div>
         <div class="col-md-8">
@@ -94,17 +104,23 @@
         </div>
         <div class="col-md-4">
 
-          <div id="events-special-events-text" class="montigo-image-description">
-            <div class="montigo-image-description-container">
-              <h3>Special Events</h3>
-              <hr class="short-hr">
-              <h4>For generations to come</h4>
-              <p>At Montigo Resorts, Nongsa, the landscape, views, service and cuisine come together to make for memorable events – like reunions, engagements and anniversaries.</p>
-              <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
-              <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form <span class="fa fa-chevron-circle-right"></span></a>
+          <!-- <div class="no-left-margin"> -->
+            <div id="events-special-events-text" class="montigo-image-description">
+              <div class="montigo-image-description-container">
+                <h3>Special Events</h3>
+                <hr class="short-hr">
+                <h4>For generations to come</h4>
+                <p>At Montigo Resorts, Nongsa, the landscape, views, service and cuisine come together to make for memorable events – like reunions, engagements and anniversaries.</p>
 
+                <div class="cta-button-container">
+                  <a href="#" class="cta-button floor-plan-cta-button">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
+                  <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form <span class="fa fa-chevron-circle-right"></span></a>
+                </div>
+
+              </div>
             </div>
-          </div>
+          <!-- </div> -->
+
 
 
         </div>
@@ -126,8 +142,11 @@
           <hr class="short-hr fadein-top">
           <h4 class="fadein-top">the most important <br>day of your life</h4>
           <p class="fadein-top">When you and your beloved pledge nuptial vows with an everlasting, “I Do”, we promise you a thoughtfully planned all-in-one package. Romantic elegance is assured across your culinary, floral, ambient and photographic needs. Our dedicated wedding planners will always be on hand to ensure your big day is themed to enchant like no other – be it aboard a yacht, set in a picturesque garden or perfectly timed for that sunset-of-a-lifetime among swaying palms on the beach.</p>
-          <a href="#" class="cta-button floor-plan-cta-button fadein-top">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
-          <a href="#" class="cta-button event-booking-cta-button fadein-top">For more information, please <br>complete our event enquiry form<span class="fa fa-chevron-circle-right"></span></a>
+
+          <div class="cta-button-container">
+            <a href="#" class="cta-button floor-plan-cta-button fadein-top">see floor plan &amp; event capacity<span class="fa fa-chevron-circle-right"></span></a>
+            <a href="#" class="cta-button event-booking-cta-button fadein-top">For more information, please <br>complete our event enquiry form<span class="fa fa-chevron-circle-right"></span></a>
+          </div>
 
         </div>
       </div>
@@ -317,7 +336,12 @@
           <div class="space10"></div>
         </div>
         <div class="col-md-6">
-          <a href="#" class="cta-button event-booking-cta-button">For more information, please <br>complete our event enquiry form<span class="fa fa-chevron-circle-right"></span></a>
+
+          <div class="cta-button-container-container">
+            <div class="cta-button-container">
+              <a href="#" class="cta-button">For more information, please <br>complete our event enquiry form<span class="fa fa-chevron-circle-right"></span></a>
+            </div>
+          </div>
           
         </div>
       </div>

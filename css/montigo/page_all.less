@@ -250,6 +250,14 @@
   }
 
 
+  .cta-button-container{
+    .display-inline-block;
+
+    .cta-button{
+      //text-align: left;
+    }
+  }
+
   
   &.white-version{
     color: @white;
@@ -341,6 +349,9 @@
     text-align: center;
     width: 466px;
     //width: 450px;
+    color: @dark-brown;
+
+    top: 145px !important;      // against my will, i did this....   // suyeon edit may 18
 
     h3, h4, hr.short-hr, p, .cta-button{
       position: relative;
@@ -388,7 +399,7 @@
     */
    
 
-    color: @dark-brown;
+    
 
     h3{
       font-size: 48px;
@@ -611,7 +622,7 @@
   }
   hr.short-hr{
     background: @light-blue;
-    .opacity(0.1);
+    .opacity(0.2);
 
     //margin-top: 18px;
     //margin-bottom: 19px;                // need to check
@@ -642,6 +653,15 @@
     display: block;
     padding-top: 9px;
   }
+
+  .cta-button-container{
+    .display-inline-block;
+
+    .cta-button{
+      //text-align: left;
+    }
+  }
+
 }
 
 
@@ -1071,10 +1091,21 @@
 
 
   .icon-set-cta-button-container{
+    text-align: center;
+
+    .icon-set-cta-button-container-container{
+      .display-inline-block;
+      //text-align: left;
+
+      .cta-button{
+        
+      }
+    }
+
     .cta-button{
-        text-align: center;
+        //text-align: center;
         display: block;
-        margin: 0 auto;
+        //margin: 0 auto;
         //padding-bottom: 48px;
         //
         padding-top: 15px;
