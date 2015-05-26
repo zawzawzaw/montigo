@@ -12,49 +12,42 @@
       <div class="text-container" data-width="1877" data-height="1147">
         <div id="contact-slider-text" class="text" data-x="940" data-y="295">
 
-          <h3>Contact Us</h3>
-          <p>We would love hearing from you… but please read our Frequently Asked Questions before contacting us. It's very likely that you will be able to find your answer in minutes.</p>
-          <a href="" class="cta-button">see our frequently asked question<span class="fa fa-chevron-circle-right"></span></a>
+          <h3 class="fadeout">Contact Us</h3>
+          <p class="fadeout">We would love hearing from you… but please read our Frequently Asked Questions before contacting us. It's very likely that you will be able to find your answer in minutes.</p>
+          <a href="faq.php" class="cta-button fadeout">see our frequently asked question<span class="fa fa-chevron-circle-right"></span></a>
 
           <div class="contact-slider-list-spacer"></div>
           
           <div id="contact-slider-list">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-1"><div class="space10"></div></div>
+                <!-- <div class="col-md-1"><div class="space10"></div></div> -->
 
-                <div class="col-md-2">
-                  <div class="contact-slider-item">
+                <div class="col-md-3">
+                  <div class="contact-slider-item fadeout">
                     <h4>Address</h4>
                     <p>Jl. Hang Lekir Nongsa <br>Batam, Indonesia</p>
                   </div>
                 </div>
 
-                <div class="col-md-2">
-                  <div class="contact-slider-item">
+                <div class="col-md-3">
+                  <div class="contact-slider-item fadeout">
                     <h4>Telephone number </h4>
-                    <p>+62 778 776 8888</p>
+                    <p class="number-version">+62 778 776 8888</p>
                   </div>
                 </div>
 
-                <div class="col-md-2">
-                  <div class="contact-slider-item">
+                <div class="col-md-3">
+                  <div class="contact-slider-item fadeout">
                     <h4>Reservations</h4>
-                    <p><a href="mailto:reservations@montigoresorts.com">reservations@montigoresorts.com</a></p>
+                    <p><a href="mailto:info@montigoresorts.com?subject=Montigo%20Contact%20Us%3A%20Reservation">info@montigoresorts.com</a></p>
                   </div>
                 </div>
 
-                <div class="col-md-2">
-                  <div class="contact-slider-item">
+                <div class="col-md-3">
+                  <div class="contact-slider-item fadeout">
                     <h4>singapore sales office</h4>
-                    <p>+65 6505 9381</p>
-                  </div>
-                </div>
-
-                <div class="col-md-2">
-                  <div class="contact-slider-item">
-                    <h4>email address</h4>
-                    <p><a href="mailto:info@montigoresorts.com">info@montigoresorts.com</a></p>
+                    <p  class="number-version">+65 6505 9381</p>
                   </div>
                 </div>
 

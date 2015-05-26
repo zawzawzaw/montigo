@@ -84,7 +84,7 @@ montigo.content.Careers.CAREER_TEMPLATE = [
     '<h4>{job_title}</h4>',
     '<hr class="short-hr">',
     '<ul>{description_li_array}</ul>',
-    '<a href="mailto:careers@montigoresorts.com" class="cta-small-button">Please send your CV with photo, three <br>references, salary expectation, and notice period <br>to careers@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>',
+    '<a href="mailto:info@montigoresorts.com?subject=Montigo%20Careers%3A%20Application" class="cta-small-button">Please send your CV with photo, three <br>references, salary expectation, and notice period <br>to info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>',
   '</div>'
 ].join('');
 

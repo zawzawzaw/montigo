@@ -92,7 +92,7 @@ define('DEBUG', true);
               <div id="header-navigation-container">
                 <nav id="header-navigation">
                   <ul>
-                    <li><a href="#">About Montigo</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="offers.php">Offers &amp; Packages</a></li>
                     <li><a href="accommodation.php">Accommodation</a></li>
                     <li><a href="dining.php">Dining</a></li>
@@ -100,6 +100,7 @@ define('DEBUG', true);
                     <li><a href="activities.php">Activities</a></li>
                     <li><a href="events.php">Meetings &amp; Events</a></li>
                     <li><a href="faq.php">Faq</a></li>
+                    <li><a href="http://www.montigoresortsnongsa.com/" target="_blank">Ownership</a></li>
                     <!-- <li><a href="#">Contact</a></li> -->
                   </ul>
                 </nav>

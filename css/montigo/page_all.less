@@ -170,6 +170,8 @@
   text-align: center;
   width: 390px;
 
+  //padding: 0 50px;
+
   h3, hr.short-hr, h4, p, .cta-button{
     position: relative;
 
@@ -479,8 +481,24 @@
 
 
 
+@media only screen and (max-width: 993px) {
+  .main-slider .text{
+    top: 90px!important;
+  }
+  .main-slider.short-version .text{
+    top: 50px!important;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .main-slider .text{
+    //width: 400px;
+    width: 320px;
+    //padding: 0 15px;
+  }
 
 
+  
+}
 
 
 
@@ -498,6 +516,7 @@
 
   .description-panel{
 
+    /*
     text-align: center;
 
     padding-top: 49px;
@@ -520,6 +539,7 @@
       background: @light-blue;
       .opacity(0.2);
 
+      text-align: left;
       margin: 0 auto;
       margin-top: 10px;
       margin-bottom: 17px;
@@ -538,6 +558,7 @@
         margin-bottom: 0px;
       }
     }
+    */
 
   }
   .list-panel{
@@ -560,6 +581,9 @@
     hr.short-hr{
       background: @light-blue;
       .opacity(0.2);
+
+      text-align: left;
+
       margin: 0;
       margin-top: 11px;
       margin-bottom: 14px;
@@ -614,7 +638,7 @@
     vertical-align: middle;
   }
 
-  
+    
 
   h3{
     color: @light-blue;
@@ -664,6 +688,43 @@
 
 }
 
+
+@media only screen and (max-width: 993px) {
+  .montigo-image-description{
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .montigo-image-description{
+    padding: 0 15px;
+    height: auto !important;
+
+    .montigo-image-description-container{
+      display: block;
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+
+    hr.short-hr{
+      margin-bottom: 15px;
+    }
+
+    h4{
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}
+
+/*
+@media only screen and (max-width: 890px) {
+//@media only screen and (max-width: 769px) {
+  .montigo-image-description{
+    padding: 0 5px;
+  }
+}
+*/
 
 //    ____  ____  _____    _    ____   ____ ____  _   _ __  __ ____  
 //   | __ )|  _ \| ____|  / \  |  _ \ / ___|  _ \| | | |  \/  | __ ) 
@@ -839,6 +900,8 @@
       hr.short-hr{
         background: @light-blue;
         .opacity(0.2);
+
+        text-align: left;
         margin: 0;
         //margin-top: 18px;
         margin-top: 20px;
@@ -1114,3 +1177,31 @@
   } // .icon-set-cta-button-container
 
 } // .icon-set-section
+
+
+@media only screen and (max-width: 769px) {
+  .icon-set-section{
+    .icon-set-title{
+      padding-top: 50px;
+      padding-bottom: 30px;
+
+      h3{
+        //font-size: 30px;
+        //line-height: 40px;
+        font-size: 42px;
+        line-height: 42px;     // same size as parallax titles
+        letter-spacing: -0.1em;  // to make it fit
+      }
+    }
+    .icon-set-item-container{
+      .icon-set-item{
+        padding: 0;
+
+        p{
+          padding: 0 20px;
+        }
+      }
+    }
+
+  } //.icon-set-section
+}

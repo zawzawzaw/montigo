@@ -34,6 +34,7 @@ manic.ui.TextContainer = function(options, element) {
   this.horizontal_align = this.options['horizontal_align'];
 
   this.max_x = this.options['max_x'];
+  this.min_y = this.options['min_y'];
 
   this.image_scale_x = 1;
   this.image_scale_y = 1;
@@ -76,6 +77,13 @@ manic.ui.TextContainer = function(options, element) {
   this.text_width = parseInt( '' + this.text_element_element.attr('data-width'));
   this.text_height = parseInt( '' + this.text_element_element.attr('data-height'));
 
+
+  this.target_image_x = 0;
+  this.target_image_y = 0;
+
+  this.target_image_width = 0;
+  this.target_image_height = 0;
+
   console.log('this.text_x: ' + this.text_x);
   console.log('this.text_y: ' + this.text_y);
   //console.log('this.text_x: ' + this.text_x);
@@ -110,7 +118,8 @@ manic.ui.TextContainer.DEFAULT = {
   'fixed_width': -1,                                // no checking if number or not
   'fixed_height': -1,
 
-  'max_x': 0
+  'max_x': 0,
+  'min_y': 0
   //'max_x': (1280 - 60)
 };
 
@@ -232,7 +241,7 @@ manic.ui.TextContainer.prototype.update_layout = function() {
     this.use_scale_mode_best_fit_no_scale_down();
   }
 
-
+  console.log('---');
 
 
   // update the text based on current text width and height 
@@ -241,20 +250,113 @@ manic.ui.TextContainer.prototype.update_layout = function() {
   var center_x = (this.text_x / this.original_image_width) * (this.image_scale_x * this.original_image_width);
   var center_y = (this.text_y / this.original_image_height) * (this.image_scale_y * this.original_image_height);
 
-  var target_text_x = center_x - this.text_element_element.width() / 2;
+  var text_element_element_width = this.text_element_element.width()
+  var text_element_element_width_2 = this.text_element_element.width() / 2;
+
+  var target_text_x = center_x - text_element_element_width / 2;
   var target_text_y = center_y - this.text_element_element.height() / 2;
 
 
+  console.log('target_text_x: ' + target_text_x);
+  //console.log('text_element_element_width: ' + text_element_element_width);
+  
   if(this.max_x != 0){
-    var relative_min_x = (this.container_width - this.max_x) / 2;
-    var relative_max_x = this.container_width - (this.container_width - this.max_x) / 2 - this.text_element_element.width();
+    var relative_min_x = 0;
+    var relative_max_x = 0;
+
+    var border_width = 50;
+
+    //target_image_width
+    //target_image_height
+    //
+    //console.log('this.horizontal_align: ' + this.horizontal_align)
+    
+    if (this.horizontal_align == manic.ui.TextContainer.LEFT) {             // to test...
+      //console.log('left');
+      
+      if((this.container_width - 60) >= this.max_x) {     // minor fix... 
+        relative_min_x = (this.container_width - this.max_x) / 2;
+        //relative_max_x = 100000;
+        relative_max_x = this.container_width - (this.container_width - this.max_x) / 2 - text_element_element_width;
+
+      } else {
+        relative_min_x = border_width;
+        relative_max_x = this.container_width - text_element_element_width - border_width;
+      }
+
+
+
+    } else if (this.horizontal_align == manic.ui.TextContainer.CENTER) {
+
+
+      if((this.container_width - 60) >= this.max_x) {     // minor fix... 
+        relative_min_x = (this.target_image_width - this.max_x) / 2;
+        relative_max_x = (this.target_image_width - this.max_x) / 2 + this.max_x - text_element_element_width;
+
+      } else {
+        relative_min_x = (this.target_image_width - this.container_width) / 2 + border_width;
+        relative_max_x = (this.target_image_width - this.container_width) / 2  + this.container_width - text_element_element_width - border_width;
+      }
+
+    } else if (this.horizontal_align == manic.ui.TextContainer.RIGHT) {
+
+      if((this.container_width - 60) >= this.max_x) {     // minor fix... 
+        relative_min_x = (this.target_image_width - this.container_width) + (this.container_width - this.max_x) / 2;
+        relative_max_x = (this.target_image_width - this.container_width) + this.container_width - (this.container_width - this.max_x) / 2 - text_element_element_width;
+      } else {
+        relative_min_x = (this.target_image_width - this.container_width) + border_width;
+        relative_max_x = this.target_image_width - text_element_element_width - border_width;
+      }
+
+    }
+
+    console.log('relative_max_x: ' + relative_max_x);
 
     target_text_x = target_text_x < relative_min_x ? relative_min_x : target_text_x;
     target_text_x = target_text_x > relative_max_x ? relative_max_x : target_text_x;
+
+  } // end if max_x
+
+
+  if (this.min_y != 0) {
+
+    var relative_min_y = 0;
+    //var relative_max_y = 0;
+    //this.min_y
+
+    if (this.vertical_align == manic.ui.TextContainer.TOP) {
+
+      console.log('this.vertical_align: top');
+      relative_min_y = this.min_y;
+
+    } else if (this.vertical_align == manic.ui.TextContainer.CENTER) {
+
+      console.log('this.vertical_align: center');
+      relative_min_y = (this.target_image_y * -1) + this.min_y;
+
+    } if (this.vertical_align == manic.ui.TextContainer.BOTTOM) {
+
+      console.log('this.vertical_align: bottom');
+      relative_min_y = (this.target_image_y * -1) + this.min_y;
+      
+    }
+
+
+    target_text_y = target_text_y < relative_min_y ? relative_min_y : target_text_y;      // this is where you put a floor on Y;
+
   }
+
+
+
+
+  
 
   target_text_x = Math.round(target_text_x);
   target_text_y = Math.round(target_text_y);
+
+  console.log('target_text_x: ' + target_text_x);
+
+  console.log('---');
   
 
   this.text_element_element.css({
@@ -278,9 +380,11 @@ manic.ui.TextContainer.prototype.use_scale_mode_stretch = function() {
     'height': target_height + 'px'
   });
 
-
+  this.target_image_x = 0;
+  this.target_image_y = 0;
   
-
+  this.target_image_width = target_width;
+  this.target_image_height = target_height;
 
   
 
@@ -327,6 +431,13 @@ manic.ui.TextContainer.prototype.use_scale_mode_show_all = function() {
 
     target_x = Math.round(target_x);
     target_y = Math.round(target_y);
+
+
+    this.target_image_x = target_x;
+    this.target_image_y = target_y;
+
+    this.target_image_width = target_width;
+    this.target_image_height = target_height;
 
 
     // update css of image
@@ -380,6 +491,12 @@ manic.ui.TextContainer.prototype.use_scale_mode_best_fit = function() {
 
     target_x = Math.round(target_x);
     target_y = Math.round(target_y);
+
+    this.target_image_x = target_x;
+    this.target_image_y = target_y;
+
+    this.target_image_width = target_width;
+    this.target_image_height = target_height;
 
     // update css of image
     this.text_element.css({
@@ -435,6 +552,12 @@ manic.ui.TextContainer.prototype.use_scale_mode_best_fit_no_scale_down = functio
 
     target_x = Math.round(target_x);
     target_y = Math.round(target_y);
+
+    this.target_image_x = target_x;
+    this.target_image_y = target_y;
+
+    this.target_image_width = target_width;
+    this.target_image_height = target_height;
 
     // update css of image
     this.text_element.css({

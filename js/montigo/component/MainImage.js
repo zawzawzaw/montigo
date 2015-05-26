@@ -185,12 +185,25 @@ montigo.component.MainImage.prototype.create_pin_scene = function(controller_par
  * @param  {ScrollMagic.Controller} controller_param
  */
 montigo.component.MainImage.prototype.create_scene = function(controller_param) {
+  /*
   this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements([
     this.element.find('.text h3'),
     this.element.find('.text h4'),
     this.element.find('.text hr'),
     this.element.find('.text p')
   ]);
+  */
+  var arr = this.element.find('.fadeout');
+  var item_arr = [];
+  var item = null;
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+    item = $(arr[i]);
+    item_arr[item_arr.length] = item;
+  }
+
+  this.text_animation = montigo.component.ScrollMagicUtil.get_alpha_animation_for_elements(item_arr);
+
 
   this.scene = new ScrollMagic.Scene({triggerElement: "#page-fold", duration: 200})
             //.addIndicators({name: "Main Image"}) // add indicators (requires plugin)

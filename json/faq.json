@@ -25,11 +25,11 @@
       },
       {
         "question": "There will be additional guests joining me but I have already made my booking. How do I make the changes?",
-        "answer": "<p>Remember, the maximum occupancy is 5 guests per villa. To add more guests to your booking, please send us an email to <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a>, to notify us of the changes prior to your arrival. Payment for the additional guest(s) will be reflected on your final bill upon check-out.</p><p>Additional 3rd & 4th guest: S$30++ per guest per villa per night <br>Additional 5th guest: S$100++ per villa per night</p>"
+        "answer": "<p>Remember, the maximum occupancy is 5 guests per villa. To add more guests to your booking, please send us an email to <a href='mailto:info@montigoresorts.com?subject=Montigo%20Faq%3A%20Additional%20Guest%20Booking'>info@montigoresorts.com</a>, to notify us of the changes prior to your arrival. Payment for the additional guest(s) will be reflected on your final bill upon check-out.</p><p>Additional 3rd & 4th guest: S$30++ per guest per villa per night <br>Additional 5th guest: S$100++ per villa per night</p>"
       },
       {
         "question": "I want to book for 5 people but your website only allows me to book for 4. What do I do?",
-        "answer": "<p>As we do not encourage more than 4 guests for the optimal experience, our booking system only allows for 4. If you have a 5th person <span>(adults or children over 3 years of age)</span> joining, please inform us at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> prior to your arrival. We will make the arrangements and note it on your booking. The charge for the 5th person will be reflected on your final bill upon check-out.</p>"
+        "answer": "<p>As we do not encourage more than 4 guests for the optimal experience, our booking system only allows for 4. If you have a 5th person <span>(adults or children over 3 years of age)</span> joining, please inform us at <a href='mailto:info@montigoresorts.com?subject=Montigo%20Faq%3A%20Additional%20Guest%20Booking'>info@montigoresorts.com</a> prior to your arrival. We will make the arrangements and note it on your booking. The charge for the 5th person will be reflected on your final bill upon check-out.</p>"
       },
       {
         "question": "What is the cancellation policy?",
@@ -52,7 +52,7 @@
       },
       {
         "question": "How do I make my ferry booking? ",
-        "answer": "<p>Our Reservations colleagues can assist you with your ferry booking. Simply forward your passport details, villa confirmation number and preferred departure time to <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a>. Alternatively, you can easily book your tickets online at <a href='http://batamfast.com'>Batamfast</a>.</p>"
+        "answer": "<p>Our Reservations colleagues can assist you with your ferry booking. Simply forward your passport details, villa confirmation number and preferred departure time to <a href='mailto:info@montigoresorts.com?subject=Montigo%20Faq%3A%20Ferry%20Booking'>info@montigoresorts.com</a>. Alternatively, you can easily book your tickets online at <a href='http://batamfast.com'>Batamfast</a>.</p>"
       },
       {
         "question": "What is the ferry schedule?",
@@ -68,7 +68,7 @@
       },
       {
         "question": "How do I arrange the land transfer pick up from the Nongsapura Ferry Terminal?",
-        "answer": "<p>To organise the pick-up arrangements, please write to us at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> and include your villa booking confirmation number and ferry ticket confirmation with the departure time. We can only arrange the pick-up after you have made all the bookings. </p>"
+        "answer": "<p>To organise the pick-up arrangements, please write to us at <a href='mailto:info@montigoresorts.com?subject=Montigo%20Faq%3A%20Pick%20Up%20Booking'>info@montigoresorts.com</a> and include your villa booking confirmation number and ferry ticket confirmation with the departure time. We can only arrange the pick-up after you have made all the bookings. </p>"
       },
       {
         "question": "I am taking the ferry from Harbourfront Ferry Terminal to Batam Centre Ferry Terminal. How do I get to Montigo Resorts?",
@@ -91,7 +91,7 @@
       },
       {
         "question": "I'm arriving early in the morning, can I request for an early check-in?",
-        "answer": "<p>The official check-in is at 1500hrs. If you would like to check in earlier, we are happy to make such arrangements for you, subject to the availability. In the scenario where no villa is available for early check-in, we welcome you to enjoy our facilities while waiting - pampering yourself at the <a href='spa.php'>Montigo Spa</a>, dine at our restaurants or go for a dip at the TADD’s Pool. To arrange an early check-in, please send us a request at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> prior to your arrival.</p>"
+        "answer": "<p>The official check-in is at 1500hrs. If you would like to check in earlier, we are happy to make such arrangements for you, subject to the availability. In the scenario where no villa is available for early check-in, we welcome you to enjoy our facilities while waiting - pampering yourself at the <a href='spa.php'>Montigo Spa</a>, dine at our restaurants or go for a dip at the TADD’s Pool. To arrange an early check-in, please send us a request at <a href='mailto:info@montigoresorts.com?subject=Montigo%20Faq%3A%20Early%20Checkin%20Request'>info@montigoresorts.com</a> prior to your arrival.</p>"
       },
       {
         "question": "Can we request for villas to be arranged side by side?",
@@ -130,7 +130,7 @@
       },
       {
         "question": "Does Montigo Resorts provide baby cots?",
-        "answer": "<p>We offer complimentary baby cots upon request <span>(subject to availability)</span>. Please send us a request at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> prior to your arrival should you require a cot.</p>"
+        "answer": "<p>We offer complimentary baby cots upon request <span>(subject to availability)</span>. Please send us a request at <a href='mailto:info@montigoresorts.com?subject=Montigo%20Faq%3A%20Baby%20Cot%20Request'>info@montigoresorts.com</a> prior to your arrival should you require a cot.</p>"
       },
       {
         "question": "What type of power point does Montigo Resorts use?",
@@ -212,7 +212,7 @@
       },
       {
         "question": "What activities do you have at the resort?",
-        "answer": "<p>Please refer to <a href='#'>brochure</a></p>"
+        "answer": "<p>Please refer to <a href='pdf/Montigo Activity Guide.pdf' target='_blank'>brochure</a></p>"
       }
 
     ]

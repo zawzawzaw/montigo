@@ -116,6 +116,14 @@
 }
 
 
+.filter(...){
+  -webkit-filter: @arguments;
+  -moz-filter: @arguments;
+  -o-filter: @arguments;
+  -ms-filter: @arguments;
+  filter: @arguments;
+}
+
 .add-clearfix() {
   *zoom: 1;
   &:before,
@@ -286,3 +294,4 @@
   display: block;
   .transform(translatez(0));
 }
+

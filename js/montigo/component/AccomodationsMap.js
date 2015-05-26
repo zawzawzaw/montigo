@@ -1,3 +1,11 @@
+/*
+
+unhandled errors:
+1. Uncaught ReferenceError: swiffy is not definedmontigo.component.AccomodationsMap.on_json_parser_complete @ AccomodationsMap.js:231goog.events.EventTarget.fireListeners @ eventtarget.js:284goog.events.EventTarget.dispatchEventInternal_ @ eventtarget.js:381goog.events.EventTarget.dispatchEvent @ eventtarget.js:196manic.util.JsonParser.process_json @ JsonParser.js:69manic.util.JsonParser.on_json_load_complete @ JsonParser.js:109b.Callbacks.c @ jquery-1.9.1.min.js:2b.Callbacks.p.fireWith @ jquery-1.9.1.min.js:2k @ jquery-1.9.1.min.js:4b.ajaxTransport.send.r @ jquery-1.9.1.min.js:4
+2. AccomodationsMap.js:190 Uncaught TypeError: Cannot read property 'start' of null
+
+*/
+
 goog.provide('montigo.component.AccomodationsMap');
 
 goog.require('goog.events.Event');

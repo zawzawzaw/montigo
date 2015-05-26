@@ -12,6 +12,8 @@
 
 
 
+
+
 //     ___  _____ _____ _____ ____    _     ___ ____ _____ 
 //    / _ \|  ___|  ___| ____|  _ \  | |   |_ _/ ___|_   _|
 //   | | | | |_  | |_  |  _| | |_) | | |    | |\___ \ | |  
@@ -80,7 +82,7 @@
     hr.short-hr{
       background: @light-blue;
       .opacity(0.2);
-
+      text-align: left;
       margin: 0 auto;
       margin-top: 10px;
       margin-bottom: 17px;
@@ -149,6 +151,7 @@
     hr.short-hr{
       background: @light-blue;
       .opacity(0.2);
+      text-align: left;
       margin: 0;
       margin-top: 11px;
       margin-bottom: 14px;
@@ -219,3 +222,65 @@
 
 
 } // .offer-list-panel-container
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+@media only screen and (max-width: 769px) {
+  #offer-slider{
+    margin-bottom: 0px;
+  }
+
+  #offer-list-item-container{
+    margin-bottom: -80px;
+  }
+
+  .offer-list-panel-container{
+    height: 650px;
+
+    .description-panel{
+      .description-panel-text-container{
+        padding: 0 15px;
+      }
+      hr.short-hr{
+        margin-bottom: 15px;
+      }
+
+      h4{
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+
+    .list-panel{
+      .list-panel-text-container{
+        padding: 0 15px;
+      }
+
+      .cta-back-button{
+        top: 23px;
+        right: 15px;
+      }
+      h4{
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      ul li{
+          margin-right: 0px;
+      }
+    }
+
+  }
+
+  
+  .offer-list-item{
+    margin-bottom: 0;
+  }
+
+}

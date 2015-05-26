@@ -58,6 +58,19 @@ montigo.page.Default = function(options) {
 
 
   /**
+   * @type {Array.<montigo.component.ParallaxImage>}
+   */
+  this.parallax_section_array = [];
+
+  
+
+  $('body').addClass('desktop-version');
+
+
+  
+
+
+  /**
    * @type {ScrollMagic.Scene}
    */
   this.back_to_top_button_scene = null;
@@ -135,7 +148,7 @@ montigo.page.Default = function(options) {
 
 
 
-  console.log('init');
+  //console.log('init');
 };
 goog.inherits(montigo.page.Default, manic.page.Page);
 
@@ -183,11 +196,11 @@ montigo.page.Default.prototype.check_query_variables = function(){
 };
 
 montigo.page.Default.prototype.check_svg_smil = function() {
-  console.log('check_svg_smil');
+  //console.log('check_svg_smil');
 
   if (!Modernizr.smil) {
 
-    console.log('no svg smil capabilities');
+    //console.log('no svg smil capabilities');
 
     var arr = $('.svg-graphic');
     var fallback_src = "";
@@ -285,7 +298,7 @@ montigo.page.Default.prototype.create_animation = function() {
       delay_num = parseFloat(delay_attr);
     }
 
-    console.log('delay_num:' + delay_num)
+    //console.log('delay_num:' + delay_num)
 
 
     if(item.hasClass('fadein-left')){
@@ -371,7 +384,7 @@ montigo.page.Default.prototype.create_back_to_top_scene = function(){
   this.back_to_top_button.click(this.on_back_to_top_button_click.bind(this));
 
 
-  console.log('TEST 01 ' + $('#back-to-top-button-container-container').offset().top);
+  //console.log('TEST 01 ' + $('#back-to-top-button-container-container').offset().top);
 
   this.back_to_top_button_scene = new ScrollMagic.Scene({triggerElement: '#back-to-top-button-container'})  // previous duration 300
     .triggerHook(1)
@@ -519,7 +532,7 @@ montigo.page.Default.prototype.initial_scrollto_hashtag = function() {
 
   //var initial_hash_tag = window.location.hash.substr(1);
 
-  console.log('initial this.window_hash: ' + this.window_hash);
+  //console.log('initial this.window_hash: ' + this.window_hash);
 
   this.scroll_to_target(this.window_hash);
 
@@ -547,7 +560,7 @@ montigo.page.Default.prototype.on_scrolldown_button_click = function(event) {
   var target_duration = target_y / 500;
 
 
-  console.log('target_y: ' + target_y);
+  //console.log('target_y: ' + target_y);
   TweenMax.to($(window), target_duration, {scrollTo:{y:target_y,autoKill: true}, ease:Quad.easeInOut});
 };
 
@@ -561,7 +574,7 @@ montigo.page.Default.prototype.on_window_hash_change = function(event) {
 
   this.window_hash = window.location.hash.replace('#', '');
   
-  console.log('this.window_hash: ' + this.window_hash);
+  //console.log('this.window_hash: ' + this.window_hash);
 
   if(this.window_hash != ''){
     this.scroll_to_target(this.window_hash);
@@ -607,7 +620,7 @@ montigo.page.Default.prototype.on_window_resize = function(event) {
     var document_height = $(document).height();
     $('#back-to-top-button-container-container').show();
 
-    console.log('TEST 02 ' + $('#back-to-top-button-container-container').offset().top);
+    //console.log('TEST 02 ' + $('#back-to-top-button-container-container').offset().top);
 
     var target_duration = document_height - $('#main-page-footer').height() - $('#back-to-top-button-container-container').offset().top - 80 - 100; ///(NOT SURE WHY PLUS 100)
     this.back_to_top_button_scene.duration(target_duration);

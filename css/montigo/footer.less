@@ -1,52 +1,47 @@
 #main-page-footer{
 
-  .container-fluid.has-breakpoint{
-    max-width: 1424px;
-  }
-
-  // suyeon
   background: #f9f9f9;
-  margin-top: 80px;
+  margin-top: 80px;  
 
-  // general
-  .footer-item{
-    position: relative;
-    //text-align: center;
-    //padding-top: 64px;
-    //padding-top: 26px;
-    padding-top: 35px;
-    //min-height: 323px;
-    //min-height: 219px;
-    //min-height: 206px;
-    //min-height: 227px;
-    min-height: 223px;
+} // #main-page-footer
 
-    //.add-clearfix();
 
-    .footer-item-container{
-      //max-width: 300px;
-      //max-width: 268px;
-      max-width: 314px;
+#new-footer-item-container{
+  width: 100%;
+  min-height: 240px;
 
-      margin: 0 auto;
-    }
+  font-size: 0px;
+  text-align: center;
 
+  .new-footer-item{
     
-    &.has-border{
+
+    .display-inline-block;
+    width: 100px;
+    height: 240px;
+    position: relative;
+
+    padding-top: 35px;
+    text-align: left;
+
+    &.new-footer-item-border{
+      margin-left: 55px;
+      margin-right: 55px;
+      width: 1px;
+
       &:after{
         content: "";
         display: block;
         position: absolute;
-        //top: 37px;
         top: 29px;
         bottom: 17px;
-        right: -15px;
+        left: 0;
 
         border-right: 1px solid @dark-brown-10;
       }
+
     }
 
-    
 
     h3{
       //.notera;
@@ -74,58 +69,36 @@
         color: @light-blue;
       }
     }
-  } // .footer-item
+
+  } //.new-footer-item
+
+} // #new-footer-item-container
 
 
-  #footer-montigo-logo{
-    color: transparent;
-    //.logo_montigo_footer_grey;
-    //.logo_montigo_header_color;
+//    _     ___   ____  ___  
+//   | |   / _ \ / ___|/ _ \ 
+//   | |  | | | | |  _| | | |
+//   | |__| |_| | |_| | |_| |
+//   |_____\___/ \____|\___/ 
+//                           
 
-    .logo_montigo_footer_color;
-    display: block;
-    margin: 0 auto;
-
-    
-
-    //position: relative;
-    //left: -7px;
-  }
-
-
-  /*
-  #footer-locations{
+#new-footer-item-container .new-footer-item{
+  &#footer-locations{
     padding-top: 41px;
-    p{
-      .brandon-light;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0em;
-      text-align: center;
-
-      padding-top: 6px;
-      //margin-bottom: 24px;
-      margin-top: 21px;
-      //margin-bottom: 26px;
-    }
-  }
-  */
-  #footer-locations{
-    padding-top: 41px;
-
-    .footer-item-container{
-      //margin: 0;
-      //float: right;
-      padding-left: 102px;
-      padding-top: 4px;
-    }
+    width: 200px;
+    width: 198px;
 
     #footer-montigo-logo{
-      margin: 0;
-      //margin-bottom: 16px;
-      //padding-top: 4px;
-      margin-top: -4px;
-      margin-bottom: 22px;
+      color: transparent;
+      .logo_montigo_footer_color;
+      display: block;
+
+      margin-top: -2px;
+      margin-bottom: 20px;
+
+      &:hover{
+        .opacity(0.6);
+      }
     }
 
     .footer-location{
@@ -133,7 +106,8 @@
       margin-bottom: 17px;
       text-align: center;
       width: 203px;
-      margin-left: 8px;
+
+      margin-left: -2px;
 
       h6{
         .brandon-bold;
@@ -147,68 +121,94 @@
         font-size: 10px;
         line-height: 15px;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: .1em;
+
       }
     }
 
   }
+}
 
+//    _     ___ _   _ _  ______  
+//   | |   |_ _| \ | | |/ / ___| 
+//   | |    | ||  \| | ' /\___ \ 
+//   | |___ | || |\  | . \ ___) |
+//   |_____|___|_| \_|_|\_\____/ 
+//                               
 
-  #footer-links{
+#new-footer-item-container .new-footer-item{
+  &#footer-links{
+    width: 512px;
+    margin-right: -49px;
 
     h3{
-      margin-left: -3px;
+      //margin-left: -3px;
+      margin-left: -9px;
+    }
+
+    .footer-item-container{
+      max-width: 512px;
+      left: 11px;
+    }
+
+    &:after{
+      right: 2px;
     }
     
     nav{
       padding-top: 3px;
       position: relative;
-      //padding-left: 10px;
-      padding-left: 6px;
+      //padding-left: 6px;
 
       ul{
         font-size: 0;
-        //margin-right: -100px;
-        //margin-right: -46px;
         margin-right: -54px;
 
         li{
-          //display: block;
-          width: 50%;
-          .display-inline-block;
-
+          
           line-height: 18px;
           margin-bottom: 7px;
 
           a{
-            //.brandon-medium;
-            //font-size: 10px;
-            //line-height: 17px;
-            .brandon-black;
+            
+            .brandon-bold;
             text-transform: uppercase;
-            //letter-spacing: 0.1em;
             
             font-size: 11px;
             line-height: 18px;
-            //letter-spacing: 0.15em;
             letter-spacing: 0.1em;
-
             display: block;
 
           }
         }
       }
     }
+
+
   }
+}
 
-  #footer-signup{
-    //padding-top: 26px;
+//    ____ ___ ____ _   _ _   _ ____  
+//   / ___|_ _/ ___| \ | | | | |  _ \ 
+//   \___ \| | |  _|  \| | | | | |_) |
+//    ___) | | |_| | |\  | |_| |  __/ 
+//   |____/___\____|_| \_|\___/|_|    
+//                                    
+
+#new-footer-item-container .new-footer-item{
+  &#footer-signup{
+    //width: 314px;
+    width: 290px;
     padding-top: 30px;
-
+    
     h3{
       padding-top: 4px;
       padding-bottom: 4px;
-      //letter-spacing: -.03em;
+
+      position: relative;
+      //margin-left: 40px;
+      padding-left: 40px;
+      left: -40px;
     }
     h4{
       margin-bottom: -3px;
@@ -221,28 +221,25 @@
       letter-spacing: -0.03em;
       
       padding-top: 6px;
-      //margin-bottom: 24px;
       margin-bottom: 16px;
     }
 
 
     #footer-mailing-form{
-      //margin-right: -100px;     // causing horizontal scrollbar.
 
       input[type=text]{
+
+        -webkit-appearance: none;
+        border-radius: 0;
+
         .brandon-regular-italic;
         font-size: 13px;
         line-height: 30px;
         color: #7a5946;
-        //text-align: center;
-        //text-align: left;
         padding: 0 8px;
 
         height: 30px;
-        //width: 156px;
-        //width: 47%;
         width: 255px;
-        //border: 1px solid #dbaf7d;
         border: 1px solid @light-blue;
 
         &::-webkit-input-placeholder{ color: #7a5946; .transition-in(); }
@@ -257,16 +254,9 @@
 
       } // input[type=text]
 
-      /*
-      input[type=submit]{
-        position: relative;
-      }
-      */
-     
 
       #footer-mailing-form-submit{
         color: @light-blue;
-        //font-size: 12px;
         font-size: 16px;
 
         .display-inline-block;
@@ -274,229 +264,242 @@
         background: none;
         border: none;
 
-
-        //top: 4px;
-        //top: 2px;
         top: 6px;
-        //left: 1px;
         left: 1px;
         .transition-in();
-
-
-        .fa-angle-right{
-          //font-size: 10px;
-          font-size: 12px;
-          color: @white;
-
-          display: block;
-          position: absolute;
-          top: 2px;
-          //top: 1px;
-          left: 11px;
-        }
 
         &:hover{
           color: @dark-brown;
         }
 
-      } // #footer-mailing-form-submit
-
+      } // #footer-mailing-form-submit=
 
     } // #footer-mailing-form
 
-  } // #footer-signup
-
-  #footer-instagram{
-    display: none;
-
-    .footer-instagram-title{
-      background: #f6f6f6;
-      text-align: center;
-
-      padding-top: 8px;
-      padding-bottom: 9px;
-
-      h3{
-        //.notera;
-        .dearjoe;
-        font-size: 45px;
-        line-height: 45px;
-      }
-      h4{
-        .brandon-bold;
-        font-size: 12px;
-        line-height: 18px;
-        letter-spacing: 0.1em;
-      }
-    }
-    ul{
-      width: 100%;
-      font-size: 0;
-
-      li{
-        //width: 12.5%;
-        width: 10%;
-        .display-inline-block();
-
-        a{
-          display: block;
-          width: 100%;
-          position: relative;
-          color: #ffffff;
-
-          img{
-            display: block;
-            width: 100%;
-            height: auto;
-          }
-
-          .overlay{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-
-            .opacity(0);
-            .transition-in();
-            
-            .overlay-container-2{
-              display: table;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              z-index: 10;
-            }
-
-            &:after{
-              content: "";
-              display: block;
-              background: #000000;
-              .opacity(0.5);
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              z-index: 5;
-            }
-
-            .overlay-container{
-              display: table-cell;
-              vertical-align: middle;
-
-              .fa{
-                margin-right: 9px;
-                font-size: 13px;
-                position: relative;
-                top: 1px;
-              }
-            }
-
-            .likes{
-              .brandon-regular;
-              font-size: 12px;
-              line-height: 21px;
-              letter-spacing: 0.35em;
-            }
-            .comments{
-              .brandon-regular;
-              font-size: 12px;
-              line-height: 21px;
-              letter-spacing: 0.35em;
-
-            }
-          }
-
-          &:hover{
-            .overlay{
-              .opacity(1);
-            }
-          }
-
-        } // a
-
-      }
-    }
   }
+}
 
 
-  #footer-copyright{
-    background: #514947;
-    text-align: center;
-
-    padding-top: 10px;
-    padding-bottom: 11px;
-
-    ul{
-      display: block;
-      
-      //margin-bottom: -4px;
-      //margin-bottom: 2px;
-      margin-bottom: -1px;
-
-      li{
-        .display-inline-block;
-        margin-right: 22px;
-        position: relative;
-
-        &:after{
-          content: "";
-          display: block;
-          position: absolute;
-          top: 4px;
-          right: -14px;
-          width: 0px;
-          height: 12px;
-          border-right: 2px solid @white;
-          .opacity(0.2);
-        }
-
-        &:last-child{
-          margin-right: 0;
-
-          &:after{
-            display: none;
-          }
-        }
-
-        a{
-          display: block;
-
-          .brandon-regular;
-          font-size: 11px;
-          line-height: 20px;
-          color: @white;
-          text-transform: uppercase;
-          //letter-spacing: 0.1em;
-          letter-spacing: 0.09em;
 
 
-          .opacity(0.4);
+//     ____ ___  ______   ______  ___ ____ _   _ _____ 
+//    / ___/ _ \|  _ \ \ / /  _ \|_ _/ ___| | | |_   _|
+//   | |  | | | | |_) \ V /| |_) || | |  _| |_| | | |  
+//   | |__| |_| |  __/ | | |  _ < | | |_| |  _  | | |  
+//    \____\___/|_|    |_| |_| \_\___\____|_| |_| |_|  
+//                                                     
 
-          &:hover{
-            .opacity(1);
-          }
-        }
+#footer-copyright{
+  background: #514947;
+  //text-align: center;
 
-      }
-    }
+  //padding-top: 10px;
+  //padding-bottom: 11px;
+
+  #footer-copyright-text{
+    padding-top: 15px;
+    //padding-left: 15px;
+    //padding-left: 48px;
+    
+    text-align: left;
+
+    position: relative;
+    //left: 40px;
+
     p{
-      .brandon-regular;
-      font-size: 11px;
-      line-height: 20px;
+      .brandon-bold;
+      font-size: 10px;
+      line-height: 15px;
       color: @white;
       text-transform: uppercase;
-      //letter-spacing: 0.12em;
       letter-spacing: 0.09em;
-
-      .opacity(0.4);
-
-      
+      .opacity(0.6);
     }
   }
 
-} // #main-page-footer
+  #footer-copyright-logo-container{
+    text-align: right;
+
+
+    //position: relative;
+    //left: 40px;
+
+    ul{
+      font-size: 0;
+      //padding-right: 8px;
+      //padding-right: 78px;
+
+      li{
+
+        .display-inline-block;
+        height: 60px;
+
+        .footer-logo{
+          &:hover{
+            .opacity(0.7);
+          }
+        }
+
+      }
+    }
+
+    .footer-logo-boutique{
+
+    }
+    .footer-logo-aqua-voyage{
+      margin-left: 20px;
+    }
+    .footer-logo-trip-advisor{
+      margin-left: 18px;
+      margin-right: -9px;
+    }
+
+  }
+
+  
+}
+
+
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+
+
+
+@media only screen and (max-width: 1260px) {
+  #new-footer-item-container .new-footer-item.new-footer-item-border{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  #new-footer-item-container .new-footer-item{
+    .scale(0.8);
+    margin: 0 -10px;
+  }
+  #new-footer-item-container .new-footer-item.new-footer-item-border{
+    margin-left: 5px;
+    margin-right: 5px;
+    .scale(1);
+  }
+  /*
+  #new-footer-item-container .new-footer-item.new-footer-item-border{
+    margin-left: 5px;
+    margin-right: 5px;
+    .scale(1);
+  }
+  */
+
+}
+
+
+@media only screen and (max-width: 993px) {
+  #new-footer-item-container{
+    padding-bottom: 40px;
+  }
+
+  #new-footer-item-container .new-footer-item{
+    display: block;
+    margin: 0 auto !important;
+    height: auto;
+    .scale(1);
+  }
+  #new-footer-item-container .new-footer-item.new-footer-item-border{
+    height: 0;
+    margin: 25px 0 !important;
+    width: 100%;
+    padding-top: 0;
+
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 25px;
+      right: 25px;
+      //width: 100%;
+
+      border-top: 1px solid @dark-brown-10;
+      border-right: none;
+    }
+
+  }
+
+  #new-footer-item-container .new-footer-item#footer-locations{
+    left: -15px;
+  }
+    
+  #new-footer-item-container .new-footer-item#footer-links h3{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    padding-left: 40px;
+    left: -40px;
+  }
+  #new-footer-item-container .new-footer-item#footer-links{
+    width: 100%;
+    //max-width: 300px;
+    max-width: 288px;
+
+  }
+  #new-footer-item-container .new-footer-item#footer-links nav ul{
+    margin-right: 0;
+  }
+  #new-footer-item-container .new-footer-item#footer-links nav ul li{
+    margin-bottom: 0;
+  }
+  
+
+
+  
+
+  #footer-mailing-form{
+    margin-right: -30px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 769px) {
+  #footer-copyright #footer-copyright-text{
+    //.scale(0.8);
+    //.transform-origin(0%,0%);
+    margin-right: -35px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    p{
+      //.brandon-light;
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+  #footer-copyright #footer-copyright-logo-container{
+    //padding-top: 10px;
+    padding-top: 13px;
+
+    //.scale(0.8);
+    //.transform-origin(100%,0%);
+    //margin-left: -100px;
+  }
+  #footer-copyright #footer-copyright-logo-container ul li{
+    height: auto;
+  }
+  #footer-copyright #footer-copyright-logo-container .footer-logo-aqua-voyage{
+    margin-left: 0px;
+  }
+  #footer-copyright #footer-copyright-logo-container .footer-logo-trip-advisor{
+    margin-left: 5px;
+    margin-right: -3px;
+  }
+
+}

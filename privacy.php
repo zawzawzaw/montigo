@@ -12,7 +12,7 @@
       <div class="text-container" data-width="1280" data-height="500">
         <div id="privacy-slider-text" class="text" data-x="640" data-y="169">
 
-          <h3>Privacy Policy</h3>
+          <h3 class="fadeout">Privacy Policy</h3>
 
         </div>
       </div>
@@ -147,7 +147,7 @@
             </div>
 
             <div class="generic-text-cta-container">
-              <a href="mailto:info@montigoresorts.com">If you have any other questions about the use of this web site, <br>please refer to our User Term &amp; Conditions or e-mail info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
+              <a href="mailto:info@montigoresorts.com?subject=Montigo%20Privacy%20Enquiry">If you have any other questions about the use of this web site, <br>please refer to our User Term &amp; Conditions or e-mail info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
             </div>
             
 

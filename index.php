@@ -13,8 +13,8 @@
         <!-- <div class="text" data-x="704" data-y="224"> -->
         <div class="text" data-x="704" data-y="204">
 
-          <h3>For Generations to Come</h3>
-          <p>Barely 30 minutes away from Singapore, our sprawling resort’s architectural expanse of white is breathtaking against the deep blue Nongsa waters. The accommodation’s spacious, and the surrounding landscape offers enough activity to thrill all generations.</p>
+          <h3 class="fadeout">For Generations to Come</h3>
+          <p class="fadeout">Barely 30 minutes away from Singapore, our sprawling resort’s architectural expanse of white is breathtaking against the deep blue Nongsa waters. The accommodation’s spacious, and the surrounding landscape offers enough activity to thrill all generations.</p>
 
         </div>
       </div>
@@ -35,7 +35,7 @@
                 <hr>
               </div>
               <div class="promotion-image manic-image-container">
-                <img src="images/home/home_promotion_image_02.jpg">
+                <img src="images/home/may20_home_promotion_image.jpg">
               </div>
               <div class="promotion-text">
                 <h4>advanced purchase offer</h4>
@@ -58,7 +58,7 @@
                   <div class="home-offer-item home-offer-item-02">
                     <h6>Spa Getaway</h6>
                     <h4>The ultimate spa day</h4>
-                    <p>Want to get away but need to be home on time? Montigo resorts is the perfect short escape from the city, replete with a relaxing massage, a rejuvenating body scrub or facial and a delicious lunch. Perfect!</p>
+                    <p>Want to get away but need to be home on time? Montigo Resorts is the perfect short escape from the city, replete with a relaxing massage, a rejuvenating body scrub or facial and a delicious lunch. Perfect!</p>
                     <a href="offers.php#spa-getaway" class="cta-button">View Offer Details<span class="fa fa-chevron-circle-right"></span></a>
                   </div>
                 </div>
@@ -75,7 +75,7 @@
               <div class="instagram-title">
                 <h3>Snap and tag!</h3>
                 <h4>#MONTIGORESORT</h4>
-                <p>Tag your instagram images and stand a chance to win exclusive prizes!</p>
+                <p>Follow us on Instagram and stand a chance to win exclusive prizes!</p>
               </div>
               <div class="image-container">
                 <a href="https://instagram.com/montigoresortsnongsa/" target="_blank"><img src="images/home/instagram/00.jpg"></a>
@@ -121,7 +121,7 @@
   </div>
 
 
-  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/may13_home_parallax_spa.jpg">
+  <div id="home-parallax-01" class="parallax-section" data-image="images/parallax/may13_home_parallax_spa.jpg" data-horizontal-crop="right" data-vertical-crop="center">
 
     <div class="parallax-section-image-container">
       <img src="">
@@ -130,7 +130,8 @@
 
     <div class="parallax-section-text-container">
       <div class="text-container" data-width="1408" data-height="830">
-        <div id="home-seafront-text" class="parallax-section-text text" data-x="966" data-y="286">
+        <!-- <div id="home-seafront-text" class="parallax-section-text text" data-x="1358" data-y="286"> -->
+        <div id="home-seafront-text" class="parallax-section-text text" data-x="1118" data-y="262">
 
           <h3 class="fadein-top">Seafront Perfection</h3>
           <hr class="short-hr fadein-top">
@@ -166,7 +167,7 @@
               <div class="montigo-image-description-container">
                 <h3>Asian flavours</h3>
                 <hr class="short-hr">
-                <h4>all things bring and delicious</h4>
+                <h4>all things bright and delicious</h4>
                 <p>Inspired by the diversity of local flavours, our team of experienced chefs conjure up amply satisfying food for thought. The selection of dining venues delight with their distinctiveness, across locations, menus and themes. From hearty daily breakfasts to sizzling weekend BBQs, there’s never a dull moment – or palate – at our resort.</p>
                 <a href="dining.php" class="cta-button">Our Restaurants<span class="fa fa-chevron-circle-right"></span></a>
               </div>
@@ -217,7 +218,7 @@
   </div>
 
 
-  <div id="home-parallax-02" class="parallax-section" data-image="images/parallax/may18_home_parallax_events.jpg">
+  <div id="home-parallax-02" class="parallax-section" data-image="images/parallax/may18_home_parallax_events.jpg"  data-horizontal-crop="right" data-vertical-crop="center">
     
     <div class="parallax-section-image-container">
       <img src="">
@@ -225,7 +226,7 @@
 
     <div class="parallax-section-text-container">
       <div class="text-container" data-width="1280" data-height="739">
-        <div id="home-events-text" class="parallax-section-text text" data-x="1018" data-y="251">
+        <div id="home-events-text" class="parallax-section-text text" data-x="1044" data-y="231">
 
           <!-- <div class="bg-white-gradient"></div> -->
           <h3 class="fadein-top">Inspired Events</h3>
@@ -259,7 +260,7 @@
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_01_aquatic"></div>
@@ -270,7 +271,7 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_02_terra"></div>
@@ -281,7 +282,7 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_03_sport"></div>
@@ -292,7 +293,7 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_04_olu"></div>
@@ -358,7 +359,7 @@
         "images/main_slider/may6_home_main_slider.jpg",
         "images/parallax/may13_home_parallax_spa.jpg",
         "images/parallax/may18_home_parallax_events.jpg",
-        "images/home/home_promotion_image_01.jpg",
+        "images/home/may20_home_promotion_image.jpg",
         "images/home/instagram/00.jpg",
         "images/home/instagram/01.jpg",
         "images/home/instagram/02.jpg",

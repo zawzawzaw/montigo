@@ -183,8 +183,6 @@ montigo.component.MenuBookingForm.prototype.update_night_value = function() {
   {
 
     this.nights_input_element.val(noOfNights);
-    
-    $('form#'+parentForm+' #nights').val( noOfNights );
   }
 
 };
@@ -276,13 +274,12 @@ montigo.component.MenuBookingForm.prototype.on_arrival_select = function(el, cel
   this.departure_datepicker['render']();
 
 
-
-  if (this.arrival_date.getTime() > this.departure_date.getTime()){
-    this.departure_input_element.val('');
-    this.nights_input_element.val(1);
+  if (goog.isDefAndNotNull(this.arrival_date) && goog.isDefAndNotNull(this.departure_date)) {
+    if (this.arrival_date.getTime() > this.departure_date.getTime()){
+      this.departure_input_element.val('');
+      this.nights_input_element.val(1);
+    }
   }
-
-
 
   if (this.arrival_input_element.val() != '' && this.departure_input_element.val() != '') {
     this.update_night_value();

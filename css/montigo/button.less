@@ -34,6 +34,15 @@
 }
 
 
+.is-ie{
+  .cta-button{
+    .fa{
+      top: 0;
+    }
+  }
+}
+
+
 .cta-back-button{
   .display-inline-block;
 
@@ -245,4 +254,92 @@
 
 
 
+}
+
+
+
+
+//       _    ____  ____   _____        __
+//      / \  |  _ \|  _ \ / _ \ \      / /
+//     / _ \ | |_) | |_) | | | \ \ /\ / / 
+//    / ___ \|  _ <|  _ <| |_| |\ V  V /  
+//   /_/   \_\_| \_\_| \_\\___/  \_/\_/   
+//                                        
+
+@animation_inc: 0.1;
+
+.down-scroll-arrow{
+  width: 30px;
+  height: 30px;
+  .round(100px);
+  //background: #000000;
+  //background: rgba(0, 0, 0, 0.2);
+  //
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
+
+  //background: #1595d3;
+  //background: rgba(21, 149, 211, 0.2);
+  
+
+  .transition-in();
+  .scale(1.2);
+
+  &:hover{
+    background: rgba(255, 255, 255, 0.7);
+    //background: rgba(0,0,0, 0.7);
+    //background: rgba(21, 149, 211, 0.7);
+    //background: rgba(255, 255, 255, 0.3);
+  }
+
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -30px;
+  cursor: pointer;
+
+  .arrow-01,
+  .arrow-02,
+  .arrow-03{
+    .icon_blog_scroll_down_for_more_arrow;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+
+    -webkit-animation: scroll_for_more_animation 1.4s infinite ease-in-out;
+    animation: scroll_for_more_animation 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;                  // Prevent first frame from flickering when animation starts
+    animation-fill-mode: both;
+
+  }
+
+  .arrow-01{
+    top: 7px;
+    -webkit-animation-delay: unit((-1*@animation_inc*3),s);
+    animation-delay: unit((-1*@animation_inc*2),s);
+  }
+  .arrow-02{
+    top: 13px;
+    -webkit-animation-delay: unit((-1*@animation_inc*2),s);
+    animation-delay: unit((-1*@animation_inc*2),s);
+  }
+  .arrow-03{
+    top: 19px;
+    -webkit-animation-delay: unit((-1*@animation_inc*1),s);
+    animation-delay: unit((-1*@animation_inc*1),s);
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 769px) {
+  .down-scroll-arrow{
+    display: none;
+  }
 }

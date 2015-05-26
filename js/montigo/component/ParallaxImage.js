@@ -54,18 +54,63 @@ montigo.component.ParallaxImage = function(options, element) {
   this.initial_image_src = this.element.attr('data-image');
 
 
+  this.vertical_align = 'center';
+  this.horizontal_align = 'center';
+  this.scale_algorithm = 'best_fit';
+
+
+  this.is_pin_version = false;
+  this.is_no_scale_version = false;
+
+  if(this.element.hasClass('pin-version')){
+    this.is_pin_version = true;
+  }
+
+  if(this.element.hasClass('no-scale-version')){
+    this.is_no_scale_version = true;
+    this.scale_algorithm = 'best_fit_no_scale_down';
+  }
+  
+
+
+
+  var h_attr = this.element.attr('data-horizontal-crop');
+  var v_attr = this.element.attr('data-vertical-crop');
+
+  if (goog.isDefAndNotNull(h_attr)) {
+    this.horizontal_align = h_attr;
+  }
+  if (goog.isDefAndNotNull(v_attr)) {
+    this.vertical_align = v_attr;
+  }
+
+
+  console.log('this.horizontal_align: ' + this.horizontal_align);
+  console.log('this.vertical_align: ' + this.vertical_align);
+
+  
+
+  var text_container_max_x = (1280 - 60 - 100);
+  if (this.is_pin_version == true) {
+    text_container_max_x = 0;
+  }
+  
 
   // create elements
 
   this.manic_text_container = new manic.ui.TextContainer({
-    'max_x': (1280 - 60)
+    'max_x': text_container_max_x,
+    'min_y': 50,
+    'vertical_align': this.vertical_align,
+    'horizontal_align': this.horizontal_align,
+    'scale_mode': this.scale_algorithm
   },this.element.find('.parallax-section-text-container'));
 
   this.manic_image_container = new manic.ui.ImageContainer({
     'image_src': this.initial_image_src,
-
-    //'horizontal_align': 'right',
-
+    'vertical_align': this.vertical_align,
+    'horizontal_align': this.horizontal_align,
+    'scale_mode': this.scale_algorithm
   },this.element.find('.parallax-section-image-container'));
 
   

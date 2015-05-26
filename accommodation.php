@@ -1,8 +1,8 @@
 <?php include('header.php'); ?>  
 
 <div id="main-page-content">
-
-  <div id="rooms-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_villas_main_slider.jpg">
+  
+  <div id="rooms-slider" class="main-slider no-scale-version" data-image="images/main_slider/may22_accomodation_main_slider_v2.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -12,8 +12,8 @@
       <div class="text-container" data-width="1408" data-height="830">
         <div class="text white-version" data-x="704" data-y="232">
 
-          <h3>Accommodating Generations</h3>
-          <p>A blissful getaway awaits at Montigo Resorts, Nongsa, barely 30 minutes away from Singapore. Scenic landscapes ensconce spacious villas and contemporary residences to delight every patron – from lively tots to their doting grandparents, and couples in search of some precious seclusion to groups of close friends.</p>
+          <h3 class="fadeout">Accommodating Generations</h3>
+          <p class="fadeout">A blissful getaway awaits at Montigo Resorts, Nongsa, barely 30 minutes away from Singapore. Scenic landscapes ensconce spacious villas and contemporary residences to delight every patron – from lively tots to their doting grandparents, and couples in search of some precious seclusion to groups of close friends.</p>
 
         </div>
       </div>
@@ -94,7 +94,7 @@
                  -->
                 <div class="panel">
                   <div class="manic-image-container">
-                    <img src="images/rooms/rooms_villa_05.jpg">
+                    <img src="images/rooms/may22_rooms_villa_05.jpg">
                   </div>
                 </div>
               </div>
@@ -112,7 +112,7 @@
             <div id="room-villas-sidebar">
 
               <h3>Our Villas</h3>
-              <hr class="short-hr"></hr>
+              <hr class="short-hr">
 
               <div id="room-villas-text-panel-container" class="panel-container">
 
@@ -239,14 +239,14 @@
               <li>Open-air master bathroom features oversized bathtub and separate rain shower</li>
               <!-- <li>Argan bath amenities</li> -->
               <li>Guest Bedroom with twin beds and en-suite bathroom</li>
-              <li>Superior beds with fine linen</li>
+              <li>Superior beds with fine linen and down feather liners</li>
               <li>Superior bath amenities including plush terry bathrobes and towels</li>
               <li>Spacious wardrobes</li>
               <li>Al fresco dining terrace</li>
               
             </ul>
 
-            <a href="faq.php" class="cta-button">see our commonly asked questions<span class="fa fa-chevron-circle-right"></span></a>
+            <a href="faq.php#accommodations" class="cta-button">see our commonly asked questions<span class="fa fa-chevron-circle-right"></span></a>
           </div>
 
         </div>
@@ -283,23 +283,16 @@
                                                               
    -->
   <div class="scroll-target" data-value="residences"></div>
-  <div id="rooms-residences-section" class="parallax-section" data-image="images/parallax/rooms_residences_parallax_balcony_01c.jpg">
-
-    <ul class="data-container">
-      <li>images/asdf/asdf.jpg</li>
-      <li>images/asdf/asdf.jpg</li>
-      <li>images/asdf/asdf.jpg</li>
-      <li>images/asdf/asdf.jpg</li>
-      <li>images/asdf/asdf.jpg</li>
-    </ul>
-
+  <div id="rooms-residences-section" class="parallax-section pin-version" data-image="images/parallax/may20_accomodation_residences_parallax_events.jpg"  data-horizontal-crop="right" data-vertical-crop="center">
+    
     <div class="parallax-section-image-container">
       <img src="">
     </div>
 
     <div class="parallax-section-text-container">
-      <div class="text-container" data-width="1877" data-height="1147">
-        <div id="rooms-residences-text" class="parallax-section-text text" data-x="1462" data-y="416">
+      <div class="text-container" data-width="1440" data-height="900">
+        <!-- <div id="rooms-residences-text" class="parallax-section-text text" data-x="1166" data-y="291"> -->
+        <div id="rooms-residences-text" class="parallax-section-text text" data-x="1196" data-y="331">
 
           <h3 class="fadein-top">The Residences</h3>
           <hr class="short-hr fadein-top">
@@ -307,7 +300,7 @@
 
           <p class="fadein-top">Exclusive and exquisite, the Montigo Residences are ideal destinations for your next holiday. Each well-appointed residence a unique configuration, it features three modern en-suite bedrooms, along with a living and dining room, kitchen, powder room, and an expansive terrace with multiple plunge pools and cabanas.</p>
           <p class="fadein-top">Each area is separate enough to offer privacy, yet interlinked to provide an inviting warmth and the utmost comfort. With unobstructed views of the magnificent South China Sea from every room, this idyllic and relaxing retreat will lure you into the rhythm of island life and the sound of the waves.</p>
-          <a href="#" class="cta-button fadein-top">get in touch with montigo<span class="fa fa-chevron-circle-right"></span></a>
+          <a href="mailto:info@montigoresorts.com?subject=Montigo%20Accommodation%3A%20The%20Residences%20Enquiry" class="cta-button fadein-top">get in touch with montigo<span class="fa fa-chevron-circle-right"></span></a>
 
         </div>
       </div>
@@ -341,6 +334,7 @@
 <?php if(DEBUG): ?>
   <script type="text/javascript">
     goog.require('montigo.page.Rooms');
+    //goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -352,14 +346,12 @@
     $.manic_preloader({
       asset_array: [
         "json/accomodation_map.json",
-        "images/main_slider/may6_villas_main_slider.jpg",
-        "images/parallax/rooms_residences_parallax_balcony_01c.jpg",
-        "images/rooms/_temp_map.png",
-        "images/rooms/rooms_villas_image_01.jpg",
-        "images/rooms/rooms_villas_image_01.jpg",
-        "images/rooms/rooms_villas_image_01.jpg",
-        "images/rooms/rooms_villas_image_01.jpg",
-        "images/rooms/rooms_villas_image_01.jpg",
+        "images/main_slider/may22_accomodation_main_slider_v2.jpg",
+        "images/parallax/may20_accomodation_residences_parallax_events.jpg",
+        "images/rooms/rooms_villa_01.jpg",
+        "images/rooms/rooms_villa_02.jpg",
+        "images/rooms/rooms_villa_03.jpg",
+        "images/rooms/may22_rooms_villa_05.jpg",
         "images/rooms/rooms_amenities_header_image_01.jpg",
         "images/rooms/rooms_amenities_image_01.jpg",
         "images/rooms/rooms_amenities_image_02.jpg"
@@ -384,6 +376,7 @@
       ],
       on_desktop_complete: function(){
         page = new montigo.page.Rooms();
+        //page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
         console.log('no mobile code yet');

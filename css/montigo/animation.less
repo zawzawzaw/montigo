@@ -1,0 +1,113 @@
+// animations must be declared on top as per websites's instructions
+// http://www.markskowrondesign.com/blog/are-your-css3-animations-broken-in-ie10-and-ie11/
+
+
+
+
+// images.less
+
+@-webkit-keyframes scroll_for_more_animation {
+  0%, 80%, 100% { .opacity(0.3) }
+  40% { .opacity(1.0) }
+}
+@keyframes scroll_for_more_animation {
+  0%, 80%, 100% { .opacity(0.3) } 
+  40% { .opacity(1.0) }
+}
+
+
+// preloader.less
+
+
+@-webkit-keyframes alphaScaleIn {
+  0% { .transform( scale3d(0.5,0.5,1) ); .opacity(0) }
+  100% { .transform( scale3d(1,1,1) ); .opacity(1) }
+}
+@keyframes alphaScaleIn {
+  0% { .transform( scale3d(0.5,0.5,1) ); .opacity(0) }
+  100% { .transform( scale3d(1,1,1) ); .opacity(1) }
+}
+
+
+@-webkit-keyframes moveToTop {
+  0% { .transform( translate3d(0,0%,0) );  }
+  100% { .transform( translate3d(0,-100%,0) );  }
+}
+@keyframes moveToTop {
+  0% { .transform( translate3d(0,0%,0) ); }
+  100% { .transform( translate3d(0,-100%,0) ); }
+}
+
+
+@-webkit-keyframes moveToTopPage {
+  0% { .transform( translate3d(0,100px,0) );   .filter( contrast(0.5) brightness(0.8) ); }                    // filter not supported by ie11, so it's okay.
+  100% { .transform( translate3d(0,0,0) );   .filter( contrast(1) brightness(1) ); }
+}
+@keyframes moveToTopPage {
+  0% { .transform( translate3d(0,100px,0) );   .filter( contrast(0.5) brightness(0.8) ); }
+  100% { .transform( translate3d(0,0,0) );   .filter( contrast(1) brightness(1) ); }
+}
+
+
+@-webkit-keyframes textFadeIn {
+  0% { .transform( scale3d(1.13,1.13,1) ); .opacity(0.0); }
+  100% { .transform( scale3d(1,1,1) ); .opacity(1); }
+}
+@keyframes textFadeIn {
+  0% { .transform( scale3d(1.13,1.13,1) ); .opacity(0.0); }
+  100% { .transform( scale3d(1,1,1) ); .opacity(1); }
+}
+
+
+@-webkit-keyframes menuPopDown {
+  0% { .transform( translate3d(0,-65px,0) ); }
+  100% { .transform( translate3d(0,0,0) ); }
+}
+@keyframes menuPopDown {
+  0% { .transform( translate3d(0,-65px,0) ); }
+  100% { .transform( translate3d(0,0,0) ); }
+}
+
+
+@-webkit-keyframes preloaderLogoScale{
+  0% { .transform( translate3d(0,0,0) scale3d(1,1,1) ); }
+  100% { .transform( translate3d(0,-300px,0) scale3d(0.0,0.0,1) ); }
+}
+@keyframes preloaderLogoScale{
+  0% { .transform( translate3d(0,0,0) scale3d(1,1,1) ); }
+  100% { .transform( translate3d(0,-300px,0) scale3d(0.0,0.0,1) ); }
+}
+
+
+// page_faq.less
+
+
+@-webkit-keyframes slightmovement {
+  0% { .transform( translate3d(0,20px,0) ); .opacity(0); }
+  100% { .transform( translate3d(0,0,0) ); .opacity(1); }
+}
+@keyframes slightmovement {
+  0% { .transform( translate3d(0,20px,0) ); .opacity(0); }
+  100% { .transform( translate3d(0,0,0) ); .opacity(1); }
+}
+
+
+@-webkit-keyframes slightmovementout {
+  0% { .transform( translate3d(0,0,0) ); }
+  100% { .transform( translate3d(0,20px,0) ); }
+}
+@keyframes slightmovementout {
+  0% { .transform( translate3d(0,0,0) ); }
+  100% { .transform( translate3d(0,20px,0) ); }
+}
+
+
+
+@-webkit-keyframes alphaintitle {
+  0% { .opacity(0); }
+  100% { .opacity(1); }
+}
+@keyframes alphaintitle {
+  0% { .opacity(0); }
+  100% { .opacity(1); }
+}

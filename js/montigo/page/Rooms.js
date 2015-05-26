@@ -4,8 +4,6 @@ goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
 goog.require('montigo.component.ParallaxImage');
-
-
 goog.require('montigo.component.AccomodationsMap');
 
 goog.require('manic.ui.PanelContainer');
@@ -48,7 +46,9 @@ montigo.page.Rooms = function(options, element) {
   
   this.create_panel_containers();
   this.create_parallax();
-  this.create_map();
+  //this.create_map();
+  
+  TweenMax.delayedCall(1.5,this.create_map,[],this);
 
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|

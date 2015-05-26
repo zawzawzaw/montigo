@@ -112,8 +112,8 @@ TODO AFTER LUNCH:
 FAQ
  //- back to top button
  //- on click of item, scroll to position (on detailed view)
-   - you can only select the first 4 buttons
-     doesn't matter which you click, it will be selected
+ ??  - you can only select the first 4 buttons
+ ??    doesn't matter which you click, it will be selected
 
  //- pinning header & sidebar on scroll
  //- change breadcrumb on item click
@@ -214,8 +214,7 @@ FEATURES:
      a. create a responsive header
      b. tweak footer to be centered
      c. modify main slider image & text to accomodate mobile style
-
-
+     
   3. cross-browser check
   6. social metadata.
 

@@ -3,8 +3,10 @@
 }
 
 #career-item-container{
-  padding-top: 82px;
-  margin-bottom: -35px;
+  //padding-top: 82px;
+  padding-top: 80px;
+  //margin-bottom: -35px;
+  margin-bottom: -50px;
 
 }
 
@@ -12,19 +14,25 @@
 .career-item{
   //margin-bottom: 102px;
   margin-bottom: 90px;
+  padding: 0 30px;
 
   h4{
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.1em;
+
+
   }
+  
   hr.short-hr{
     background: @light-blue;
     .opacity(0.2);
+    text-align: left;
     margin: 0;
     margin-top: 14px;
     margin-bottom: 22px;
   }
+
   ul{
     li{
       .brandon-light;
@@ -47,3 +55,33 @@
   }
 
 } // .career-item
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+@media only screen and (max-width: 769px) {
+  #career-item-container{
+    //padding-top: 30px;
+    padding-top: 50px;
+  }
+  .career-item{
+    padding: 0;
+    margin-bottom: 50px;
+
+    h4{
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    hr.short-hr{
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+
+  }
+}

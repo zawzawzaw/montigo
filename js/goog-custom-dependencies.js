@@ -7,7 +7,7 @@ goog.addDependency('../../../../js/manic/canvas/RaphaelContainer.js', ['manic.ca
 goog.addDependency('../../../../js/manic/framework/Fullpage.js', ['manic.framework.Fullpage', 'manic.framework.FullpageSection', 'manic.framework.FullpageSlide'], ['manic.framework.FullpageEvent']);
 goog.addDependency('../../../../js/manic/framework/FullpageEvent.js', ['manic.framework.FullpageEvent'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/google/Map.js', ['manic.google.Map'], ['goog.events.Event', 'goog.events.EventTarget']);
-goog.addDependency('../../../../js/manic/page/Page.js', ['manic.page.Page'], ['goog.events.Event', 'goog.events.EventTarget']);
+goog.addDependency('../../../../js/manic/page/Page.js', ['manic.page.Page'], ['goog.events.Event', 'goog.events.EventTarget', 'goog.userAgent', 'goog.userAgent.product']);
 goog.addDependency('../../../../js/manic/ui/DropDown.js', ['manic.ui.DropDown'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/ui/ImageContainer.js', ['manic.ui.ImageContainer'], ['goog.events.Event', 'goog.events.EventTarget']);
 goog.addDependency('../../../../js/manic/ui/ImageSlider.js', ['manic.ui.ImageSlider'], ['goog.events.Event', 'goog.events.EventTarget']);

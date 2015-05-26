@@ -12,7 +12,7 @@
       <div class="text-container" data-width="1280" data-height="500">
         <div id="terms-slider-text" class="text" data-x="640" data-y="169">
 
-          <h3>Terms &amp; Condition</h3>
+          <h3 class="fadeout">Terms &amp; Condition</h3>
 
         </div>
       </div>
@@ -67,7 +67,7 @@
         <div class="col-md-3">
           <div class="generic-text-sidebar">
 
-            <h3>Terms of Use</h3>
+            <!-- <h3>Terms of Use</h3> -->
 
             <ul>
               <li><a href="#registration">REGISTRATION</a></li>
@@ -344,7 +344,7 @@
             </div>
 
             <div class="generic-text-cta-container">
-              <a href="mailto:info@montigoresorts.com" class="cta-button">If you have any other questions about the use of this web site, <br>please refer to our User Term &amp; Conditions or e-mail info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
+              <a href="mailto:info@montigoresorts.com?subject=Montigo%20Terms%20and%20Conditions%20Enquiry" class="cta-button">If you have any other questions about the use of this web site, <br>please refer to our User Term &amp; Conditions or e-mail info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
             </div>
             
 

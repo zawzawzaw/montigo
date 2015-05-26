@@ -16,7 +16,8 @@
           <div class="group-landing-item-container">
             <div id="nongsa-group-landing-item" class="group-landing-item">
               <h4>nongsa, batam, indonesia</h4>
-              <p>Resort Stay&nbsp;&nbsp;|&nbsp;&nbsp;Ownership</p>
+              <p><a href="index.php">Resort Stay</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.montigoresortsnongsa.com/" target="_blank">Ownership</a></p>
+                            
               <div class="button-container">
                 <a href="index.php" class="cta-button">english<span class="fa fa-chevron-circle-right"></span></a>
                 <a href="#"  class="cta-button">简体中文<span class="fa fa-chevron-circle-right"></span></a>

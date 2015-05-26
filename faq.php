@@ -12,7 +12,7 @@
       <div class="text-container" data-width="1280" data-height="500">
         <div id="faq-slider-text" class="text" data-x="640" data-y="169">
 
-          <h3>Frequently Asked Questions</h3>
+          <h3 class="fadeout">Frequently Asked Questions</h3>
 
         </div>
       </div>
@@ -49,31 +49,25 @@
 
       <div class="row">
         <div class="col-md-3">
-          <div class="faq-detailed-view-sidebar">
 
-            <ul class="faq-detailed-view-navigation">
-              <!-- 
-              <li class="selected">Booking my Stay</li>
-              <li>getting to the resort</li>
-              <li>checking in</li>
-              <li>accommodations</li>
-              <li>at the resort</li>
-              <li>activities</li>
-              <li>payment</li>
-               -->
-            </ul>
+          <div class="faq-detailed-view-sidebar-container">
+            <div class="faq-detailed-view-sidebar">
 
-            
-            <!-- 
-            <div id="faq-back-to-top-button-container">
-              <div id="faq-back-to-top-button" class="back-to-top-button">
-                <span class="fa fa-chevron-up"></span>
-                <p>top</p>
-              </div>
-            </div>
-            -->
+              <ul class="faq-detailed-view-navigation">
+                <!-- 
+                <li class="selected">Booking my Stay</li>
+                <li>getting to the resort</li>
+                <li>checking in</li>
+                <li>accommodations</li>
+                <li>at the resort</li>
+                <li>activities</li>
+                <li>payment</li>
+                 -->
+              </ul>
+            </div> <!-- faq-detailed-view-sidebar -->
+          </div> <!-- faq-detailed-view-sidebar-container -->
 
-          </div> <!-- faq-detailed-view-sidebar -->
+
         </div>
         <div class="col-md-9">
 
@@ -112,12 +106,12 @@
                 </div>
                 <div class="faq-detailed-view-item">
                   <h6>There will be additional guests joining me but I have already made my booking. How do I make the changes?</h6>
-                  <p>Remember, the maximum occupancy is 5 guests per villa. To add more guests to your booking, please send us an email to reservations@montigoresorts.com, to notify us of the changes prior to your arrival. Payment for the additional guest(s) will be reflected on your final bill upon check-out.</p>
+                  <p>Remember, the maximum occupancy is 5 guests per villa. To add more guests to your booking, please send us an email to info@montigoresorts.com, to notify us of the changes prior to your arrival. Payment for the additional guest(s) will be reflected on your final bill upon check-out.</p>
                   <p>Additional 3rd & 4th guest: S$30++ per guest per villa per night <br>Additional 5th guest: S$100++ per villa per night</p>
                 </div>
                 <div class="faq-detailed-view-item">
                   <h6>I want to book for 5 people but your website only allows me to book for 4. What do I do?</h6>
-                  <p>As we do not encourage more than 4 guests for the optimal experience, our booking system only allows for 4. If you have a 5th person (adults or children over 3 years of age) joining, please inform us at reservations@montigoresorts.com prior to your arrival. We will make the arrangements and note it on your booking. The charge for the 5th person will be reflected on your final bill upon check-out.</p>
+                  <p>As we do not encourage more than 4 guests for the optimal experience, our booking system only allows for 4. If you have a 5th person (adults or children over 3 years of age) joining, please inform us at info@montigoresorts.com prior to your arrival. We will make the arrangements and note it on your booking. The charge for the 5th person will be reflected on your final bill upon check-out.</p>
                 </div>
                 <div class="faq-detailed-view-item">
                   <h6>What is the cancellation policy?</h6>

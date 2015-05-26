@@ -60,7 +60,10 @@ h4{
 
 
 
-
+.fadeout{
+  //.opacity(0);
+  .opacity(1);
+}
 
 
 .fadein-top{
@@ -111,6 +114,11 @@ body, html{
 }
 .no-left-margin{
   margin-left: -15px;
+  margin-right: 15px;
+}
+
+.no-left-right-margin{
+  margin-left: 15px;
   margin-right: 15px;
 }
 
@@ -373,3 +381,59 @@ hr.short-hr{
     
 }
 
+
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+
+
+@media only screen and (max-width: 769px) {
+
+
+  .margin-less-image{
+    margin: 0;
+  }
+
+  .no-right-margin{
+    margin: 0;
+  }
+  .no-left-margin{
+    margin: 0;
+  }
+
+  .no-left-right-margin{
+    margin: 0;
+  }
+  .manic-image-container{
+    margin: 0 -15px;
+    width: auto !important;
+  }
+
+
+  // animations
+  .fadeout{
+    .opacity(1);
+  }
+
+  .fadein-top{
+    position: relative;
+    top: 0px;
+    .opacity(1);
+  }
+
+  .fadein-left{
+    left: 0px;
+    .opacity(1);
+  }
+
+  .fadein-right{
+    left: 0px;
+    .opacity(1);
+  }
+}

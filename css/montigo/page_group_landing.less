@@ -19,7 +19,8 @@
   width: 800px;
 
   .montigo-landing-logo{
-    .logo_montigo_landing_brown;
+    //.logo_montigo_landing_brown;
+    .logo_montigo_landing_colored;
 
     margin: 0 auto;
     margin-bottom: 102px;
@@ -89,6 +90,18 @@
       letter-spacing: 0em;
 
       position: relative;
+
+      a{
+        .brandon-regular;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0em;
+        color: @dark-brown;
+
+        &:hover{
+          color: @light-blue;
+        }
+      }
     }
     .button-container{
       display: block;

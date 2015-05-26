@@ -46,15 +46,25 @@ montigo.page.Faq = function(options, element) {
   /**
    * @type {ScrollMagic.Scene}
    */
-  this.pinned_sidebar_scene =  new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
+  this.pinned_sidebar_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
     .triggerHook(0)
-    .setPin(".faq-detailed-view-sidebar")
+    //.setPin(".faq-detailed-view-sidebar")
+    .setPin(".faq-detailed-view-sidebar-container")
     .offset(-62)
     .addTo(this.controller);
 
 
 
-
+  /*
+  this.faq_sidebar_unpin_scene = new ScrollMagic.Scene({triggerElement: '#before-main-page-footer', duration: 300})
+    .addIndicators({name: "faq sidebar scene"})
+    .triggerHook(1)
+    //.setTween(TweenMax.to($('.faq-detailed-view-sidebar-container'), 1, {top:-300}))
+    //.setTween(TweenMax.to($('.faq-detailed-view-sidebar'), 1, {top:-300, ease: Linear.easeNone}))
+    .setPin('.faq-detailed-view-sidebar')
+    .offset(80)
+    .addTo(this.controller);
+  */
   
   //faq-detailed-view-content-container
 
@@ -167,6 +177,19 @@ montigo.page.Faq.prototype.on_window_hash_change = function(event) {
 };
 
 
+/**
+ * @inheritDoc
+ * @override
+ */
+montigo.page.Faq.prototype.initial_scrollto_hashtag = function() {
+
+
+  this.window_hash = window.location.hash.replace('#', '');
+
+  //this.scroll_to_target(this.window_hash);
+  this.faq_content.open_section_by_name(this.window_hash);
+
+};
 
 
 /**

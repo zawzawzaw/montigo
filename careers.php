@@ -12,8 +12,8 @@
       <div class="text-container" data-width="1280" data-height="500">
         <div class="text" data-x="640" data-y="216">
 
-          <h3>Careers</h3>
-          <p>The dynamic team at Montigo Resorts Nongsa, is looking for talents to fill the following positions. If you are passionate about service and looking to embark on a rewarding career, we invite you to discover your true potential with us.</p>
+          <h3 class="fadeout">Careers</h3>
+          <p class="fadeout">The dynamic team at Montigo Resorts Nongsa, is looking for talents to fill the following positions. If you are passionate about service and looking to embark on a rewarding career, we invite you to discover your true potential with us.</p>
 
         </div>
       </div>
@@ -53,7 +53,7 @@
               </ul>
               <a href="" class="cta-small-button">Please send your CV with photo, three <br>
 references, salary expectation, and notice period <br>
-to careers@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
+to info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
 
             </div>
           </div>
@@ -118,11 +118,26 @@ to careers@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-careers.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
         page = new montigo.page.Careers();
       },
       on_mobile_complete: function(){
+        page = new montigo.page.Careers();
         console.log('no mobile code yet');
       }
 

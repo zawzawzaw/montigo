@@ -1,7 +1,12 @@
 goog.provide('manic.page.Page');
 
+
+
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
+
+goog.require('goog.userAgent');
+goog.require('goog.userAgent.product');
 
 /**
  * The Page constructor
@@ -14,12 +19,24 @@ manic.page.Page = function(options) {
   goog.events.EventTarget.call(this);
   this.options = $.extend({}, manic.page.Page.DEFAULT, options);
 
+  
+
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
   //    | ||  \| || |  | |
   //    | || |\  || |  | |
   //   |___|_| \_|___| |_|
   //
+
+  this.body = $('body');
+
+  if (goog.userAgent.product.FIREFOX) { this.body.addClass('is-firefox') }
+  if (goog.userAgent.product.CHROME) { this.body.addClass('is-chrome') }
+  if (goog.userAgent.product.SAFARI) { this.body.addClass('is-safari') }
+  if (goog.userAgent.product.IE) { this.body.addClass('is-ie') }
+
+  if (goog.userAgent.product.IPHONE) { this.body.addClass('is-iphone') }
+  if (goog.userAgent.product.IPAD) { this.body.addClass('is-ipad') }
 
   console.log('init');
 };

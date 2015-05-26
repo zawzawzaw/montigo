@@ -19,12 +19,12 @@ We wish to ensure every guest has the best experience at Montigo Resorts, which 
 
 There will be additional guests joining me but I have already made my booking. How do I make the changes?
 Remember, the maximum occupancy is 5 guests per villa. 
-To add more guests to your booking, please send us an email to <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a>, to notify us of the changes prior to your arrival. Payment for the additional guest(s) will be reflected on your final bill upon check-out.
+To add more guests to your booking, please send us an email to <a href='mailto:info@montigoresorts.com'>info@montigoresorts.com</a>, to notify us of the changes prior to your arrival. Payment for the additional guest(s) will be reflected on your final bill upon check-out.
 Additional 3rd & 4th guest: S$30++ per guest per villa per night
 Additional 5th guest: S$100++ per villa per night
 
 I want to book for 5 people but your website only allows me to book for 4. What do I do?
-As we do not encourage more than 4 guests for the optimal experience, our booking system only allows for 4. If you have a 5th person (adults or children over 3 years of age) joining, please inform us at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> prior to your arrival.
+As we do not encourage more than 4 guests for the optimal experience, our booking system only allows for 4. If you have a 5th person (adults or children over 3 years of age) joining, please inform us at <a href='mailto:info@montigoresorts.com'>info@montigoresorts.com</a> prior to your arrival.
 We will make the arrangements and note it on your booking. The charge for the 5th person will be reflected on your final bill upon check-out.
 
 What is the cancellation policy?
@@ -45,7 +45,7 @@ Which is the nearest ferry terminal in Batam to Montigo Resorts?
 Nongsapura Ferry Terminal is the nearest ferry terminal to Montigo Resorts.
 
 How do I make my ferry booking? 
-Our Reservations colleagues can assist you with your ferry booking. Simply forward your passport details, villa confirmation number and preferred departure time to <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a>. Alternatively, you can easily book your tickets online at <a href='http://batamfast.com'>Batamfast</a>. 
+Our Reservations colleagues can assist you with your ferry booking. Simply forward your passport details, villa confirmation number and preferred departure time to <a href='mailto:info@montigoresorts.com'>info@montigoresorts.com</a>. Alternatively, you can easily book your tickets online at <a href='http://batamfast.com'>Batamfast</a>. 
 
 
 What is the ferry schedule?
@@ -61,7 +61,7 @@ How do I arrange the land transfer pick up from the Nongsapura Ferry Terminal ?
 
 
 
-To organise the pick-up arrangements, please write to us at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> and include your villa booking confirmation number and ferry ticket confirmation with the departure time. We can only arrange the pick-up after you have made all the bookings. 
+To organise the pick-up arrangements, please write to us at <a href='mailto:info@montigoresorts.com'>info@montigoresorts.com</a> and include your villa booking confirmation number and ferry ticket confirmation with the departure time. We can only arrange the pick-up after you have made all the bookings. 
 
 I am taking the ferry from Harbourfront Ferry Terminal to Batam Centre Ferry Terminal. How do I get to Montigo Resorts?
 Complimentary land transfers are only provided between Nongsapura Ferry Terminal and the resort. Should you be coming from the Batam Center Ferry Terminal, you can easily flag a local taxi to Montigo Resorts. The fare is generally about IR 200.000.
@@ -75,7 +75,7 @@ What time is check-in and check-out?
 The official check-in time is 15.00hrs and check-out is 12.00hrs, Batam time. Impromptu late check-outs will be subject to villa availability and a surcharge may be applied.
 
 I'm arriving early in the morning, can I request for an early check-in?
-The official check-in is at 1500hrs. If you would like to check in earlier, we are happy to make such arrangements for you, subject to the availability. In the scenario where no villa is available for early check-in, we welcome you to enjoy our facilities while waiting - pampering yourself at the <a href='spa.php'>Montigo Spa</a>, dine at our restaurants or go for a dip at the TADD’s Pool. To arrange an early check-in, please send us a request at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> prior to your arrival.
+The official check-in is at 1500hrs. If you would like to check in earlier, we are happy to make such arrangements for you, subject to the availability. In the scenario where no villa is available for early check-in, we welcome you to enjoy our facilities while waiting - pampering yourself at the <a href='spa.php'>Montigo Spa</a>, dine at our restaurants or go for a dip at the TADD’s Pool. To arrange an early check-in, please send us a request at <a href='mailto:info@montigoresorts.com'>info@montigoresorts.com</a> prior to your arrival.
 
 Can we request for villas to be arranged side by side?
 We appreciate that you may arrive together with friends and family and wish to stay in adjacent villas. We will try our best to make such arrangements, subject to villa availabilities at arrival.
@@ -102,7 +102,7 @@ Is there a fridge in the villa?
 We do not have a fridge in the villa but we do provide a mini bar. The canned drinks are provided on a complimentary basis and are replenished on a daily basis. 
 
 Does Montigo Resorts provide baby cots?
-We offer complimentary baby cots upon request (subject to availability). Please send us a request at <a href='mailto:reservations@montigoresorts.com'>reservations@montigoresorts.com</a> prior to your arrival should you require a cot.
+We offer complimentary baby cots upon request (subject to availability). Please send us a request at <a href='mailto:info@montigoresorts.com'>info@montigoresorts.com</a> prior to your arrival should you require a cot.
 
 What type of power point does Montigo Resorts use?
 We use a Type G plug (3 rectangular prongs). 

@@ -167,14 +167,17 @@
 
       margin-left: 10px;
       margin-top: 15px;
-      margin-bottom: 72px;
+      //margin-bottom: 72px;
+      margin-bottom: 67px;
     }
   }
 
   .cta-button-container-container{
     text-align: center;
+    padding-bottom: 40px;
+
     .cta-button-container{
-      text-align: left;
+      //text-align: left;
       .display-inline-block;
     }
   }
@@ -339,6 +342,7 @@
   hr.short-hr{
     background: @light-blue;
     .opacity(0.2);
+    text-align: left;
     margin: 0;
     margin-top: 9px;
     margin-bottom: 0px;
@@ -504,6 +508,10 @@ input[type="checkbox"]:checked + label span {
     color: @dark-grey;
 
     padding-left: 7px;
+
+    &::-ms-clear{
+      display: none;
+    }
 
     &::-webkit-input-placeholder{
       color: @dark-brown;   
