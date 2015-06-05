@@ -327,6 +327,10 @@
 
     } // .faq-detailed-view-item-container
 
+    .cta-back-button{
+      display: none;
+    }
+
   } // .faq-detailed-view-content
 
 
@@ -415,3 +419,47 @@
 .faq-detailed-view-item:nth-child(18){ .dd18; }
 .faq-detailed-view-item:nth-child(19){ .dd19; }
 .faq-detailed-view-item:nth-child(20){ .dd20; }
+
+
+
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+//@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
+
+  .faq-list-view-item{
+    padding: 0 15px;
+  }
+  .faq-detailed-view-sidebar-container{
+    display: none;
+  }
+  #faq-detailed-view .faq-detailed-view-content{
+    padding: 0 15px;
+
+    .faq-detailed-view-content-title{
+      padding-top: 30px;
+    }
+    .faq-detailed-view-item-container{
+      //padding-bottom: 96px;
+      padding-bottom: 30px;
+
+    }
+
+    .cta-back-button{
+      display: block;
+      padding-bottom: 30px;
+      text-align: right;
+    }
+
+  }
+
+
+
+}

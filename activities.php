@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="activities-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_activities_main_slider.jpg">
+  <div id="activities-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_activities_main_slider.jpg" data-mobile-image="images/main_slider_mobile/activities_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -49,7 +49,7 @@
 
           <div id="activities-favorite-item-container-row-container">
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4">
               <div class="activities-favorite-item">
                 <img class="img-full-width" src="images/activities/favorites_01.jpg">
                 
@@ -59,7 +59,7 @@
               </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4">
               <div class="activities-favorite-item">
                 
                 <img class="img-full-width" src="images/activities/favorites_02.jpg">
@@ -70,7 +70,7 @@
               </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4">
               <div class="activities-favorite-item">
                 
                 <img class="img-full-width" src="images/activities/favorites_03.jpg">
@@ -81,7 +81,7 @@
               </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4">
               <div class="activities-favorite-item">
                 
                 <img class="img-full-width" src="images/activities/favorites_04.jpg">
@@ -92,7 +92,7 @@
               </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4">
               <div class="activities-favorite-item">
                 
                 <img class="img-full-width" src="images/activities/favorites_05.jpg">
@@ -103,7 +103,7 @@
               </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4">
               <div class="activities-favorite-item">
                 
                 <img class="img-full-width" src="images/activities/favorites_06.jpg">
@@ -140,7 +140,7 @@
 
   <div class="scroll-target" data-value="outdoor"></div>
 
-  <div id="activities-terrestrial-section">
+  <div id="activities-terrestrial-section" class="activity-item-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
 
@@ -169,7 +169,7 @@
                       <h4>Sun, fun and games</h4>
 
                       <p>At Montigo Resorts, Nongsa, we also offer thrilling action on land – like the Nongsa beach bike tour, kampong bike tour and Batam tour. Fancy a local market visit? Sign up for our vintage car tour!</p>
-                      <a href="#" id="activities-terrestrial-text-button-01" class="cta-button">see more outdoor activities<span class="fa fa-chevron-circle-right"></span></a>
+                      <a href="#" id="activities-terrestrial-text-button-01" class="cta-button see-more-cta-button">see more outdoor activities<span class="fa fa-chevron-circle-right"></span></a>
                     </div>
                   </div>
 
@@ -217,11 +217,23 @@
 
   <div class="scroll-target" data-value="aquatic"></div>
 
-  <div id="activities-sea-section">
+  <div id="activities-sea-section" class="activity-item-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
+
+
+        <div class="col-md-6 col-md-push-6">
+
+          <div class="no-left-margin">
+            <div id="activities-sea-image-01" class="manic-image-container">
+              <!-- <img src="images/activities/sea_activities_01.jpg"> -->
+              <img src="images/activities/sea_activities_01b_yatch.jpg">
+            </div>
+          </div>
+
+        </div>
         
-        <div class="col-md-6">
+        <div class="col-md-6 col-md-pull-6">
 
           <!-- <div class="no-right-margin"> -->
             <div id="activities-sea-text-panel-container" class="panel-container description-list-panel-container">
@@ -237,7 +249,7 @@
                       <p>Amazing aquatic adventures are the hallmark of any internationally-acclaimed seaside resort, and Montigo proudly offers plenty of choices. Opt for a more laid back excursion such as the mangrove tour, firefly sighting or fishing trip. Or gear up for some action with wake boarding, water skiing, knee boarding, parasailing, windsurfing, kayaking, snorkeling and scuba diving.</p>
                       <p>Certified instructors are at hand, should you need them. Come on in, the water’s calling…</p>
                       
-                      <a href="#" id="activities-sea-text-button-01" class="cta-button">see more sea activities<span class="fa fa-chevron-circle-right"></span></a>
+                      <a href="#" id="activities-sea-text-button-01" class="cta-button see-more-cta-button">see more sea activities<span class="fa fa-chevron-circle-right"></span></a>
                     </div>
                   </div>
 
@@ -270,16 +282,7 @@
 
 
         </div>
-        <div class="col-md-6">
-
-          <div class="no-left-margin">
-            <div id="activities-sea-image-01" class="manic-image-container">
-              <!-- <img src="images/activities/sea_activities_01.jpg"> -->
-              <img src="images/activities/sea_activities_01b_yatch.jpg">
-            </div>
-          </div>
-
-        </div>
+        
         
       </div>
     </div>
@@ -298,7 +301,7 @@
 
   <div class="scroll-target" data-value="fitness"></div>
 
-  <div id="activities-fitness-section">
+  <div id="activities-fitness-section" class="activity-item-section">
     <div class="container-fluid has-breakpoint">
       <div class="row">
         <div class="col-md-6">
@@ -327,7 +330,7 @@
                       <p>If you’re looking to pack even more into your getaway, explore the resort’s sporting and fitness activities.Tee off at one of the 18-hole golf courses in the vicinity. Batam’s perennial blue skies and sprawling greens offer the perfect setting for a birdie.</p>
                       <p>Missing a ripple on those biceps? Offering an uninterrupted view of the Nongsa waters, the spacious gym houses some of the latest exercise machines for fitness enthusiasts and novices alike.</p>
                       <p>You can never get enough of a good thing, especially where yoga’s concerned. Certified instructors will have you twisting to a routine that will keep you fit, for years to come.</p>
-                      <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sport%20%26%20Fitness%20Activities" id="activities-fitness-text-button-01" class="cta-button">see more sports &amp; fitness<span class="fa fa-chevron-circle-right"></span></a>
+                      <a href="mailto:info@montigoresorts.com?subject=Enquiry%20-%20Sport%20%26%20Fitness%20Activities" id="activities-fitness-text-button-01" class="cta-button see-more-cta-button">see more sports &amp; fitness<span class="fa fa-chevron-circle-right"></span></a>
                     </div>
                   </div>
 
@@ -362,6 +365,10 @@
 
 
   <div class="scroll-target" data-value="olu"></div>
+
+  <div class="visible-xs-block visible-sm-block activities-parallax-seperator">
+    <div class="space50"></div>
+  </div>
 
   <div id="activities-parallax-01" class="parallax-section pin-version" data-image="images/parallax/may20_activities_parallax_olu.jpg"  data-horizontal-crop="left" data-vertical-crop="bottom">
     <div class="parallax-section-image-container">
@@ -399,7 +406,7 @@
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_01_chef"></div>
@@ -410,7 +417,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_02_paintball"></div>
@@ -421,7 +428,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_03_herbal_compress"></div>
@@ -432,7 +439,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_04_karaoke"></div>
@@ -446,7 +453,7 @@
         </div>
         <div class="row">
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_05_batik_painting"></div>
@@ -457,7 +464,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_06_dining"></div>
@@ -468,7 +475,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_07_treasure_hunt"></div>
@@ -479,7 +486,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon activities_icon_08_spa"></div>
@@ -525,7 +532,7 @@
 
 <?php if(DEBUG): ?>
   <script type="text/javascript">
-    goog.require('montigo.page.Activities');
+    goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -536,6 +543,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/activities_main_slider.jpg",
+        
         "images/main_slider/may6_activities_main_slider.jpg",
         "images/parallax/may20_activities_parallax_olu.jpg",
         "images/activities/favorites_01.jpg",
@@ -565,21 +574,35 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-activities.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-default.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
-        page = new montigo.page.Activities();
+        page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

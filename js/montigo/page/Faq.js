@@ -22,51 +22,21 @@ montigo.page.Faq = function(options, element) {
   montigo.page.Default.call(this, options);
   this.options = $.extend(this.options, montigo.page.Faq.DEFAULT, options);
 
-  
-  this.back_to_top_button = $('#faq-back-to-top-button');
-  this.back_to_top_button.click(this.on_back_to_top_button_click.bind(this));
-
-
-  
   /**
    * @type {montigo.content.Faq}
    */
-  this.faq_content = new montigo.content.Faq({},$('#main-page-content'));
-
+  this.faq_content = null;
 
   /**
    * @type {ScrollMagic.Scene}
    */
-  this.pinned_header_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
-    .triggerHook(0)
-    .setPin("#faq-detailed-view-header-container")
-    .offset(-62)
-    .addTo(this.controller);
-  
+  this.pinned_header_scene = null;
+
   /**
    * @type {ScrollMagic.Scene}
    */
-  this.pinned_sidebar_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
-    .triggerHook(0)
-    //.setPin(".faq-detailed-view-sidebar")
-    .setPin(".faq-detailed-view-sidebar-container")
-    .offset(-62)
-    .addTo(this.controller);
+  this.pinned_sidebar_scene = null;
 
-
-
-  /*
-  this.faq_sidebar_unpin_scene = new ScrollMagic.Scene({triggerElement: '#before-main-page-footer', duration: 300})
-    .addIndicators({name: "faq sidebar scene"})
-    .triggerHook(1)
-    //.setTween(TweenMax.to($('.faq-detailed-view-sidebar-container'), 1, {top:-300}))
-    //.setTween(TweenMax.to($('.faq-detailed-view-sidebar'), 1, {top:-300, ease: Linear.easeNone}))
-    .setPin('.faq-detailed-view-sidebar')
-    .offset(80)
-    .addTo(this.controller);
-  */
-  
-  //faq-detailed-view-content-container
 
   
   //    ___ _   _ ___ _____
@@ -105,6 +75,48 @@ montigo.page.Faq.DEFAULT = {
 
 
 
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Faq.prototype.init_desktop = function() {
+  montigo.page.Faq.superClass_.init_desktop.call(this);
+
+
+
+  this.faq_content = new montigo.content.Faq({},$('#main-page-content'));
+
+  this.pinned_header_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
+    .triggerHook(0)
+    .setPin("#faq-detailed-view-header-container")
+    .offset(-62)
+    .addTo(this.controller);
+  
+  this.pinned_sidebar_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
+    .triggerHook(0)
+    .setPin(".faq-detailed-view-sidebar-container")
+    .offset(-62)
+    .addTo(this.controller);
+
+
+  this.initial_scrollto_hashtag();
+
+};
+
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Faq.prototype.init_mobile = function() {
+  montigo.page.Faq.superClass_.init_mobile.call(this);
+
+  this.faq_content = new montigo.content.Faq({},$('#main-page-content'));
+
+  this.initial_scrollto_hashtag();
+};
+
+
+
 //    ____  _   _ ____  _     ___ ____
 //   |  _ \| | | | __ )| |   |_ _/ ___|
 //   | |_) | | | |  _ \| |    | | |
@@ -131,16 +143,13 @@ montigo.page.Faq.prototype.public_method_06 = function() {};
 //
 
 
-/**
- * event handler
- * @param  {object} event
- */
+/*
 montigo.page.Faq.prototype.on_back_to_top_button_click = function(event) {
   event['preventDefault']();
 
   console.log('on_back_to_top_button_click');
-
 };
+*/
 
 
 /**
@@ -169,10 +178,10 @@ montigo.page.Faq.prototype.on_window_hash_change = function(event) {
   //event['preventDefault']();
 
   this.window_hash = window.location.hash.replace('#', '');
-  
-  this.faq_content.open_section_by_name(this.window_hash);
-  
 
+  if (this.faq_content != null && this.faq_content != undefined) {
+    this.faq_content.open_section_by_name(this.window_hash);
+  }
 
 };
 
@@ -187,27 +196,11 @@ montigo.page.Faq.prototype.initial_scrollto_hashtag = function() {
   this.window_hash = window.location.hash.replace('#', '');
 
   //this.scroll_to_target(this.window_hash);
-  this.faq_content.open_section_by_name(this.window_hash);
+  if (this.faq_content != null && this.faq_content != undefined) {
+    this.faq_content.open_section_by_name(this.window_hash); 
+  }
 
 };
-
-
-/**
- * on window resize override
- * @override
- * @inheritDoc
- */
-montigo.page.Faq.prototype.on_window_resize = function(event){
-
-  montigo.page.Faq.superClass_.on_window_resize.call(this, event);
-
-  //this.pinned_header_scene.update();
-  //this.pinned_sidebar_scene.update();
-
-  //this.dispatchEvent(new goog.events.Event(montigo.page.Faq.EVENT_01));
-}
-
-
 
 
 // make it visible outside.

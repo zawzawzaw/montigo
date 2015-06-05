@@ -1,25 +1,99 @@
+
+
+===============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+current responsive pages:
+
+http://clients.manic.com.sg/montigo/07c/about.php
+http://clients.manic.com.sg/montigo/07c/offers.php
+http://clients.manic.com.sg/montigo/07c/dining.php
+http://clients.manic.com.sg/montigo/07c/spa.php
+http://clients.manic.com.sg/montigo/07c/activities.php
+http://clients.manic.com.sg/montigo/07c/terms.php
+http://clients.manic.com.sg/montigo/07c/privacy.php
+
+
+
+
+
+
+
 todo today:
 
 2 hrs morning:
- - js structure
- - panel container           (finish offers page v2)
- - manic-image-container
+ // - js structure
+ //- panel container           (finish offers page v2)   modify manic.ui.PanelContainer ? add resize_height on options
+
+
+ //- manic-image-container (css)
+
+
+
 
 2 hrs groggy after lunch
  - accomodation 2 slider
- - terms and conditions     (finish page)
- - privacy                  (finish page)
+// - terms and conditions     (finish page)
+// - privacy                  (finish page)
 
 3 hrs peak
  - icons look blurry (fonts and svg)
- - parallax section
+// - parallax section
 
 
 
-pre-requisites
- - default js (1)
+//pre-requisites
+// - default js (1)
 
 
+
+
+
+
+
+main slider is okay !
+
+
+image editing for all pages
+ - save on a higher image size (for fit 1242)
+
+
+
+
+
+how to preload mobile image?
+  - modify preloader to add mobile_asset_preloader
+
+for all mobile 
+  remove create_scene from any js
+
+
+// no need to create mobile page js
+ - use same code, just pass a variable on init on the php
+
+
+clean up code
+ - make sure there are no extra codes
+
+
+
+
+//create a variable in manic           // there was one already
+//manic.DESKTOP = true
+//manic.MOBILE = false
 
 
 <!-- 
@@ -34,9 +108,9 @@ pre-requisites
 1. icons look blurry
    - use vector graphics (fonts and svg)  - (2 hrs) + googling cause i haven't done this, ever.
 
-2. manic image container
-   - don't crop, use full width of the browser. auto height (15 mins)
-   - actually don't instaciate for mobile, just
+//2. manic image container
+//   - don't crop, use full width of the browser. auto height (15 mins)
+//   - actually don't instaciate for mobile, just
 
 3. panel container 
    - create auto-height resizing component  (needed for offers page)    (2-3 hrs)
@@ -198,24 +272,30 @@ TODO AFTER LUNCH:
 
 
 DEFAULT.JS
- - create 'create_parallax_section' function
-    - loop through 'parallax-section'
- - create 'create_book_promo_buttons' functions
-    - loop through '.promo-code-button' & use book_promo_code function
-      buttons has 'data-promo-code' attr
 
- - create 'book_promo_code' function
+// - create 'create_parallax_section' function
+//    - loop through 'parallax-section'
 
- - create 'create_career_content' function
 
- - ActivityItem (same as offer item)
+// - create 'create_book_promo_buttons' functions
+//    - loop through '.promo-code-button' & use book_promo_code function
+//      buttons has 'data-promo-code' attr
+
+// - create 'book_promo_code' function
+
+
+// - create 'create_career_content' function
+// - ActivityItem (same as offer item)
+
+
  - VillaItem - has 2 panel containers
 
 
- - remove activities.js
- - remove offers.js
- - remove dining.js
- - remove grouplanding.js
+// - remove activities.js
+// - remove offers.js
+// - remove dining.js
+// - remove grouplanding.js
+
  - remove rooms.js
 
 

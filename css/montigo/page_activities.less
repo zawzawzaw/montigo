@@ -363,3 +363,114 @@
 
 
 } // #activities-others
+
+
+
+.activities-parallax-seperator{
+  hr.short-hr{
+    background-color: @light-blue;
+    .opacity(0.2);
+  }
+}
+
+//@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
+
+  #activities-favorites-section{
+    margin-bottom: 0;
+    
+    #activities-favorites-title{ 
+      padding-top: 30px;
+      padding-bottom: 50px;
+
+      h3{
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0em;
+      }
+      hr.short-hr{
+        margin-top: 10px;
+        margin-bottom: 12px;
+      }
+      h4{
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 0;
+      }
+    }
+    .activities-favorite-item{
+      margin-bottom: 50px;
+
+      .img-full-width{
+        display: block;
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 13px;
+      }
+      //min-height: 450px;
+    }
+
+    #activities-favorite-item-container-row-container{
+      //margin: 0 5px;
+    }
+    #activities-favorite-item-container{
+      padding-bottom: 0px !important; 
+    }
+
+    #activities-favorite-cta-button-container{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+  }
+
+
+  #activities-terrestrial-section{
+    margin-bottom: 0;
+  }
+  #activities-sea-section{
+    margin-bottom: 0;
+  }
+  #activities-fitness-section{
+    margin-bottom: 0;
+  }
+
+
+  .description-list-panel-container .list-panel{
+
+    h4{
+      font-size: 14px;
+      line-height: 22px;
+
+    }
+    padding: 0 15px;
+
+    &:before{
+      content: "";
+      display: block;
+      height: 30px;
+    }
+    &:after{
+      content: "";
+      display: block;
+      height: 50px;
+    }
+    //margin-top: 30px;
+    //margin-bottom: 50px;
+    
+    .cta-back-button {
+      position: absolute;
+      top: 30px;
+      right: 15px;
+    }
+    
+  }
+
+
+  #activities-parallax-01-text .activities-white-tiggo-icon{
+    .temp_blue_tillo;
+    //display: none;
+    
+  }
+    
+}

@@ -13,15 +13,11 @@
 
   var defaults = {
 
-    asset_array:[
-
-    ],    
-    mobile_js_array:[
-
-    ],
-    desktop_js_array:[
-
-    ],
+    asset_array:[],    
+    mobile_only_asset_array:[],
+    desktop_only_asset_array:[],
+    mobile_js_array:[],
+    desktop_js_array:[],
     on_mobile_complete: function(){},
     on_desktop_complete: function(){}
 
@@ -34,8 +30,9 @@
   function ManicPreloader(settings) {
     this.settings = $.extend({}, defaults, settings);
 
-
+    console.log('asdfadsf asdf ads');
     this.is_desktop = false;
+    this.is_tablet = false;
 
     this.preloader = null;
     this.mobile_detect = null;
@@ -56,13 +53,19 @@
 
       this.preloader.addEventListener('complete', this.on_preload_complete.bind(this));
 
-      this.is_desktop = this.mobile_detect.mobile() == null;
+      //this.is_desktop = this.mobile_detect.mobile() == null;
+      //this.is_tablet = this.mobile_detect.tablet() != null;
       
-      this.preloader.loadManifest(this.settings['asset_array']);
 
+      this.is_desktop = $(window).width() >= 992;
+
+      this.preloader.loadManifest(this.settings['asset_array']);
+      
       if (this.is_desktop){
+        this.preloader.loadManifest(this.settings['desktop_only_asset_array']);
         this.preloader.loadManifest(this.settings['desktop_js_array']);
       } else {
+        this.preloader.loadManifest(this.settings['mobile_only_asset_array']);
         this.preloader.loadManifest(this.settings['mobile_js_array']);
       }
 
@@ -87,9 +90,10 @@
         fragment.append(js_element);
       }
 
-      setTimeout(this.on_preload_append_complete.bind(this),100);
 
       $('head').append(fragment);
+
+      setTimeout(this.on_preload_append_complete.bind(this),100);
     },
 
     on_preload_append_complete: function(){

@@ -5,8 +5,7 @@ java -jar "compiler.jar" ^
   --js=gsap\plugins\ScrollToPlugin.min.js ^
   --js=_js\glDatePicker.min.js ^
   --js=scrollmagic\iscroll-probe.js ^
-  --js=scrollmagic\ScrollMagic.min.js ^
+  --js=scrollmagic\ScrollMagic.js ^
   --js=scrollmagic\plugins\animation.gsap.min.js ^
-  --js=scrollmagic\plugins\debug.addIndicators.min.js ^
   --compilation_level WHITESPACE_ONLY ^
   --js_output_file=..\js\minified\montigo-page-libraries.min.js

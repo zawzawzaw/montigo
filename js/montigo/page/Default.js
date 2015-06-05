@@ -5,11 +5,23 @@ goog.provide('montigo.page.Default');
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
+goog.require('manic');
 goog.require('manic.page.Page');
 goog.require('manic.ui.ImageContainer');
 
 goog.require('montigo.component.Menu');
 goog.require('montigo.component.MainImage');
+goog.require('montigo.component.ParallaxImage');
+
+goog.require('montigo.component.MobileMenu');
+
+// page specific
+
+goog.require('montigo.component.InstagramSidebar');
+goog.require('montigo.component.ActivityItem');
+goog.require('montigo.component.OfferItem');
+goog.require('montigo.content.Careers');
+
 
 /**
  * The Default Page constructor
@@ -20,6 +32,13 @@ goog.require('montigo.component.MainImage');
 montigo.page.Default = function(options) {
   manic.page.Page.call(this, options);
   this.options = $.extend(this.options, montigo.page.Default.DEFAULT, options);
+
+
+  this.window = $(window);
+  this.window_hash = "";
+
+  this.is_mobile = this.options['is_mobile'];
+
 
   /**
    * @type {ScrollMagic.Controller}
@@ -60,15 +79,7 @@ montigo.page.Default = function(options) {
   /**
    * @type {Array.<montigo.component.ParallaxImage>}
    */
-  this.parallax_section_array = [];
-
-  
-
-  $('body').addClass('desktop-version');
-
-
-  
-
+  this.parallax_image_array = [];
 
   /**
    * @type {ScrollMagic.Scene}
@@ -88,67 +99,46 @@ montigo.page.Default = function(options) {
   this.scrolltarget_array = [];
   this.scrolltarget_name_array = [];
 
-  
-  //    ___ _   _ ___ _____
-  //   |_ _| \ | |_ _|_   _|
-  //    | ||  \| || |  | |
-  //    | || |\  || |  | |
-  //   |___|_| \_|___| |_|
-  //
 
 
-  this.check_query_variables();
-
-  this.check_svg_smil();
-  this.create_manic_image_container();
-  this.create_controller();                       // needed by menu
-
-  this.create_scrolltarget();
-
-  this.create_menu();
-  this.create_main_image();
-  this.create_scrolldown_button();
+  // page specific variable
 
 
+  /**
+   * @type {montigo.component.InstagramSidebar}
+   */
+  this.instagram_sidebar = null;
 
-  this.create_animation();                        // scrollmagic animation
+  /**
+   * @type {Array.<montigo.component.ActivityItem>}
+   */
+  this.activity_item_array = [];
 
+  /**
+   * @type {Array.<montigo.component.OfferItem>}
+   */
+  this.offer_item_array = [];
 
-  //tadds
-  //tiigo
+  /**
+   * @type {montigo.content.Careers}
+   */
+  this.career_content = null;
 
-
-  this.hide_preloader();                          // js and images are already loaded on instanciation...
-
-
-  this.window = $(window);
-  this.window.resize(this.on_window_resize.bind(this));
-  //this.window.unload(this.on_window_unload.bind(this));
-  //window.onbeforeunload = this.on_window_unload.bind(this);
-
-  this.window_hash = "";
-  this.window.on('hashchange', this.on_window_hash_change.bind(this));
-
-  this.on_window_resize(null);
 
   
-  /*
-  $('.back-to-top-button').click(function(event){
-    this.scroll_to(0);
-    //window.location.hash = '#';
-  }.bind(this))
-  
-
-  .generic-text-back-to-top-container
-  */
- 
-  
+  if (this.is_mobile == true) {
+    //this.init_mobile();
+    TweenMax.delayedCall(0.2,this.init_mobile,[],this);
+  } else {
+    //this.init_desktop();
+    TweenMax.delayedCall(0.2,this.init_desktop,[],this);
+  }
   
   
 
 
 
-  //console.log('init');
+
 };
 goog.inherits(montigo.page.Default, manic.page.Page);
 
@@ -162,7 +152,7 @@ goog.inherits(montigo.page.Default, manic.page.Page);
  * @const {object}
  */
 montigo.page.Default.DEFAULT = {
-  'option_01': '',
+  'is_mobile': false,
   'option_02': ''
 };
 
@@ -181,12 +171,96 @@ montigo.page.Default.EVENT_01 = '';
 montigo.page.Default.EVENT_02 = '';
 
 
-//    ____  ____  _____     ___  _____ _____
-//   |  _ \|  _ \|_ _\ \   / / \|_   _| ____|
-//   | |_) | |_) || | \ \ / / _ \ | | |  _|
-//   |  __/|  _ < | |  \ V / ___ \| | | |___
-//   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 
+//    ____  _____ ____  _  _______ ___  ____  
+//   |  _ \| ____/ ___|| |/ /_   _/ _ \|  _ \ 
+//   | | | |  _| \___ \| ' /  | || | | | |_) |
+//   | |_| | |___ ___) | . \  | || |_| |  __/ 
+//   |____/|_____|____/|_|\_\ |_| \___/|_|    
+//                                            
+
+// so it can be overriden by mobile page.
+// and avoid duplicate code.
+montigo.page.Default.prototype.init_desktop = function(){
+
+  $('body').addClass('desktop-version');          // IMPORTANT......
+
+
+  //this.check_query_variables();// too long ago
+  this.check_svg_smil();                          // TODO: must use for logo
+
+
+  this.create_controller();                       // needed by menu, main image, parallax image, instagram sidebar
+  this.create_manic_image_container();
+  this.create_scrolltarget();
+  this.create_menu();
+  this.create_main_image();
+  this.create_parallax_images();
+  this.create_scrolldown_button();
+
+
+  // optional
+  this.create_instagram_sidebar();
+  this.create_activity_items();
+  this.create_offer_items();
+  this.create_career_content();
+
+
+  this.create_manic_image_animation();                        // scrollmagic animation for elements with class 'fade-left' etc
+  this.hide_preloader();                          // 
+
+  this.window.resize(this.on_window_resize.bind(this));
+  this.window.on('hashchange', this.on_window_hash_change.bind(this));
+  this.on_window_resize(null);
+
+  console.log('init_desktop');
+
+};
+
+
+
+//    __  __  ___  ____ ___ _     _____ 
+//   |  \/  |/ _ \| __ )_ _| |   | ____|
+//   | |\/| | | | |  _ \| || |   |  _|  
+//   | |  | | |_| | |_) | || |___| |___ 
+//   |_|  |_|\___/|____/___|_____|_____|
+//                                      
+
+
+montigo.page.Default.prototype.init_mobile = function(){
+
+  manic.IS_MOBILE = true;
+
+  $('body').addClass('mobile-version');          // IMPORTANT......
+
+  this.check_svg_smil();                          // TODO: must use for logo
+  this.create_scrolltarget();
+  this.create_mobile_menu();
+  this.create_main_image();
+  this.create_mobile_parallax_images();
+  //this.create_parallax_images();      // not needed.
+
+  // optional
+  this.create_activity_items();
+  this.create_offer_items();
+  this.create_career_content();
+
+  this.hide_preloader();
+  this.window.resize(this.on_window_resize.bind(this));
+  this.window.on('hashchange', this.on_window_hash_change.bind(this));
+  this.on_window_resize(null);
+
+  console.log('init_mobile');
+};
+
+//     ____ _   _ _____ ____ _  __
+//    / ___| | | | ____/ ___| |/ /
+//   | |   | |_| |  _|| |   | ' / 
+//   | |___|  _  | |__| |___| . \ 
+//    \____|_| |_|_____\____|_|\_\
+//                                
+
+/*
 montigo.page.Default.prototype.check_query_variables = function(){
   var breakpoint = this.getQueryVariable('breakpoint');
 
@@ -194,6 +268,7 @@ montigo.page.Default.prototype.check_query_variables = function(){
     $('.container-fluid.has-breakpoint').removeClass('has-breakpoint');
   }
 };
+*/
 
 montigo.page.Default.prototype.check_svg_smil = function() {
   //console.log('check_svg_smil');
@@ -213,38 +288,13 @@ montigo.page.Default.prototype.check_svg_smil = function() {
   }
 };
 
-montigo.page.Default.prototype.create_controller = function() {
-  this.controller = new ScrollMagic.Controller();
 
-  this.controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-
-};
-montigo.page.Default.prototype.create_menu = function() {
-  this.menu = new montigo.component.Menu({
-  }, $('#main-page-header'));
-
-
-  this.menu.create_scene(this.controller);
-};
-
-montigo.page.Default.prototype.create_main_image = function(){
-  this.main_image = new montigo.component.MainImage({
-  },$('.main-slider'));
-
-  this.main_image.create_scene(this.controller);
-  
-};
-
-montigo.page.Default.prototype.create_scrolldown_button = function(){
-  this.scrolldown_button = $('.down-scroll-arrow');
-  this.scrolldown_button.click(this.on_scrolldown_button_click.bind(this));
-
-  var scrolldown_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold', offset: 10, duration:100})                        // #below-page-fold must be found on all pages.
-    //.addIndicators({name: "scrolldown button"}) // add indicators (requires plugin)
-    .triggerHook(1)
-    .setTween(TweenMax.to(this.scrolldown_button, 1, {autoAlpha:0}))
-    .addTo(this.controller);
-};
+//     ____ ____  _____    _  _____ _____ 
+//    / ___|  _ \| ____|  / \|_   _| ____|
+//   | |   | |_) |  _|   / _ \ | | |  _|  
+//   | |___|  _ <| |___ / ___ \| | | |___ 
+//    \____|_| \_\_____/_/   \_\_| |_____|
+//                                        
 
 montigo.page.Default.prototype.create_manic_image_container = function() {
   var arr = $('.manic-image-container');
@@ -262,8 +312,149 @@ montigo.page.Default.prototype.create_manic_image_container = function() {
 
 };
 
+montigo.page.Default.prototype.create_controller = function() {
+  this.controller = new ScrollMagic.Controller();
 
-montigo.page.Default.prototype.create_animation = function() {
+  this.controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+};
+
+montigo.page.Default.prototype.create_scrolltarget = function() {
+
+  /**
+   * @type {jQuery}
+   */
+  var scroll_target = null;
+
+  /**
+   * @type {String}
+   */
+  var scroll_target_str = "";
+  var arr = $('.scroll-target');
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+    scroll_target = $(arr[i]);
+    scroll_target_str = scroll_target.attr('data-value');
+    
+    this.scrolltarget_name_array[i] = scroll_target_str;
+    this.scrolltarget_array[i] = scroll_target;
+  }
+
+};
+
+montigo.page.Default.prototype.create_menu = function() {
+  this.menu = new montigo.component.Menu({
+  }, $('#main-page-header'));
+
+
+  this.menu.create_scene(this.controller);
+};
+
+montigo.page.Default.prototype.create_mobile_menu = function(){
+
+  this.mobile_menu = new montigo.component.MobileMenu({}, $('#main-page-header-mobile'));
+}
+
+
+montigo.page.Default.prototype.create_main_image = function(){
+  this.main_image = new montigo.component.MainImage({
+  },$('.main-slider'));
+
+  if (this.is_mobile == false) {
+    this.main_image.create_scene(this.controller);
+  }
+  
+};
+
+
+montigo.page.Default.prototype.create_scrolldown_button = function(){
+  this.scrolldown_button = $('.down-scroll-arrow');
+  this.scrolldown_button.click(this.on_scrolldown_button_click.bind(this));
+
+  var scrolldown_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold', offset: 10, duration:100})                        // #below-page-fold must be found on all pages.
+    //.addIndicators({name: "scrolldown button"}) // add indicators (requires plugin)
+    .triggerHook(1)
+    .setTween(TweenMax.to(this.scrolldown_button, 1, {autoAlpha:0}))
+    .addTo(this.controller);
+};
+
+
+montigo.page.Default.prototype.create_parallax_images = function(){
+
+  /**
+   * @type {montigo.component.ParallaxImage}
+   */
+  var parallax_image = null;
+
+  /**
+   * @type {jQuery}
+   */
+  var parallax_element = null;
+
+  var arr = $('.parallax-section');
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+    parallax_element = $(arr[i]);
+    parallax_image = new montigo.component.ParallaxImage({},parallax_element);
+
+    
+    parallax_image.create_text_scene(this.controller);
+    parallax_image.create_parallax_scene(this.controller2);
+    
+
+    this.parallax_image_array[i] = parallax_image;
+  }
+
+}; 
+
+montigo.page.Default.prototype.create_mobile_parallax_images = function(){
+  /**
+   * @type {jQuery}
+   */
+  var parallax_element = null;
+
+  var image_str = "";
+
+  /**
+   * @type {jQuery}
+   */
+  var temp_image = null;
+
+  /**
+   * @type {jQuery}
+   */
+  var temp_text = null;
+
+  var arr = $('.parallax-section');
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+    parallax_element = $(arr[i]);
+    image_str = parallax_element.attr('data-image');
+
+    temp_image = parallax_element.find('.parallax-section-image-container img');
+
+    temp_text = parallax_element.find('.parallax-section-text-container');
+
+    parallax_element.prepend(temp_text);
+    
+
+    if(temp_image.length != 0 && goog.isDefAndNotNull(image_str)){
+      temp_image.attr('src',image_str)
+    }
+    
+  }
+};
+
+//       _    _   _ ___ __  __    _  _____ ___ ___  _   _ 
+//      / \  | \ | |_ _|  \/  |  / \|_   _|_ _/ _ \| \ | |
+//     / _ \ |  \| || || |\/| | / _ \ | |  | | | | |  \| |
+//    / ___ \| |\  || || |  | |/ ___ \| |  | | |_| | |\  |
+//   /_/   \_\_| \_|___|_|  |_/_/   \_\_| |___\___/|_| \_|
+//                                                        
+
+
+
+montigo.page.Default.prototype.create_manic_image_animation = function() {
 
   var arr = $('.manic-image-container');
 
@@ -284,9 +475,6 @@ montigo.page.Default.prototype.create_animation = function() {
 
   var delay_attr = "";
   var delay_num = 0;
-
-
-  
 
   for (var i = 0, l = arr.length; i < l; i++) {
     item = $(arr[i]);
@@ -319,101 +507,108 @@ montigo.page.Default.prototype.create_animation = function() {
         .addTo(this.controller);
     }
   }
-  
-
-  /*
-  // RESTAURANT IMAGE
-  var home_restaurant_image_animation_01 = new TimelineMax();
-  home_restaurant_image_animation_01.add(TweenMax.to($('#home-restaurant-image-01'), 1, {opacity:1, left:0, ease:Back.easeOut}), 0);
-
-  var home_restaurant_image_01 = new ScrollMagic.Scene({triggerElement: "#home-restaurant-text-01", duration: 300})
-            .triggerHook(0.8)
-            .setTween(home_restaurant_image_animation_01)
-            .addTo(this.controller);
-  
-
-  var home_restaurant_image_animation_02 = new TimelineMax();
-  home_restaurant_image_animation_02.add(TweenMax.to($('#home-restaurant-image-03'), 1, {opacity:1, left:0, ease:Back.easeOut}), 0);
-  home_restaurant_image_animation_02.add(TweenMax.to($('#home-restaurant-image-02'), 1, {opacity:1, left:0, ease:Back.easeOut}), 0.3);
-
-  var home_restaurant_image_02 = new ScrollMagic.Scene({triggerElement: "#home-restaurant-text-02", duration: 300})
-            .triggerHook(0.8)
-            .setTween(home_restaurant_image_animation_02)
-            .addTo(this.controller);
-  */
-
-};
-
-montigo.page.Default.prototype.create_scrolltarget = function() {
-
-  /**
-   * @type {jQuery}
-   */
-  var scroll_target = null;
-
-  /**
-   * @type {String}
-   */
-  var scroll_target_str = "";
-
-
-  var arr = $('.scroll-target');
-
-  for (var i = 0, l = arr.length; i < l; i++) {
-    scroll_target = $(arr[i]);
-    scroll_target_str = scroll_target.attr('data-value');
-    
-    this.scrolltarget_name_array[i] = scroll_target_str;
-    this.scrolltarget_array[i] = scroll_target;
-  }
-
-
 };
 
 
 
+
+//     ___  ____ _____ ___ ___  _   _    _    _     
+//    / _ \|  _ \_   _|_ _/ _ \| \ | |  / \  | |    
+//   | | | | |_) || |  | | | | |  \| | / _ \ | |    
+//   | |_| |  __/ | |  | | |_| | |\  |/ ___ \| |___ 
+//    \___/|_|    |_| |___\___/|_| \_/_/   \_\_____|
+//                                                  
 
 montigo.page.Default.prototype.create_back_to_top_scene = function(){
 
-
-
-  
   this.has_back_to_top_button_scene = true;
 
-
   this.back_to_top_button.click(this.on_back_to_top_button_click.bind(this));
-
-
-  //console.log('TEST 01 ' + $('#back-to-top-button-container-container').offset().top);
 
   this.back_to_top_button_scene = new ScrollMagic.Scene({triggerElement: '#back-to-top-button-container'})  // previous duration 300
     .triggerHook(1)
     .setPin(".back-to-top-button")
     .offset(90)                              // = 90 - 40 PX (height of button) = 50 px from the bottom
-    //.offset(-62)
-    //.addIndicators({name: "back to top scene"}) // add indicators (requires plugin)
     .addTo(this.controller);
-    //.triggerHook(0.3)
-    //.setTween(this.text_animation)
-    //.addTo(controller_param);
-
-
-
-  
 
   var target_duration = $(document).height() - $('#main-page-footer').height() - $('#back-to-top-button-container-container').offset().top - 80 - 100;
   this.back_to_top_button_scene.duration(target_duration);
 
-    
 };
 
 
-/**
- * sample_method_calls
- */
-montigo.page.Default.prototype.sample_method_calls = function() {
-  montigo.page.Default.superClass_.method_02.call(this);                                    // call is important
-  this.dispatchEvent(new goog.events.Event(montigo.page.Default.EVENT_01));
+montigo.page.Default.prototype.create_instagram_sidebar = function() {
+
+  var instagram_element = $('#home-featured-sidebar');
+
+  if(instagram_element.length != 0){
+    this.instagram_sidebar = new montigo.component.InstagramSidebar({
+    }, $('#home-featured-sidebar'));
+
+    this.instagram_sidebar.create_scene(this.controller);
+  }
+
+};
+
+montigo.page.Default.prototype.create_activity_items = function(){
+  var arr = $('.activity-item-section');
+
+  /**
+   * @type {montigo.component.ActivityItem}
+   */
+  var activity_item = null;
+
+  /**
+   * @type {jQuery}
+   */
+  var activity_element = null;
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+
+    activity_element = $(arr[i]);
+    activity_item = new montigo.component.ActivityItem({}, activity_element);
+    
+    this.activity_item_array[i] = activity_item;
+  }
+  
+};
+
+montigo.page.Default.prototype.create_offer_items = function() {
+  var arr = $('.offer-list-item');
+
+  /**
+   * @type {jQuery}
+   */
+  var item = null;
+
+  /**
+   * @type {montigo.component.OfferItem}
+   */
+  var offer_item = null;
+
+  for (var i = 0, l = arr.length; i < l; i++) {
+    item = $(arr[i]);
+    offer_item = new montigo.component.OfferItem({},item);
+
+    this.offer_item_array[i] = offer_item;
+  
+  }
+
+};
+
+
+montigo.page.Default.prototype.create_career_content = function(){
+    
+  /**
+   * @type {jQuery}
+   */
+  var career_element = $('#career-classified-section');
+
+  if (career_element.length != 0){
+    
+    this.career_content = new montigo.content.Careers({},$('#career-classified-section'))
+  }
+
 };
 
 //    ____  _   _ ____  _     ___ ____
@@ -450,6 +645,27 @@ montigo.page.Default.prototype.on_hide_preloader_complete_02 = function(){
   $('body').removeClass('preload-complete-2');
 };
 
+
+
+montigo.page.Default.prototype.initial_scrollto_hashtag = function() {
+
+  this.window_hash = window.location.hash.replace('#', '');
+
+  //var initial_hash_tag = window.location.hash.substr(1);
+
+  //console.log('initial this.window_hash: ' + this.window_hash);
+
+  this.scroll_to_target(this.window_hash);
+
+};
+
+
+//    _   _ _____ ___ _     
+//   | | | |_   _|_ _| |    
+//   | | | | | |  | || |    
+//   | |_| | | |  | || |___ 
+//    \___/  |_| |___|_____|
+//                          
 
 /**
  * getQueryVariable description
@@ -525,18 +741,6 @@ montigo.page.Default.prototype.scroll_to = function(num_param) {
 
 
 
-montigo.page.Default.prototype.initial_scrollto_hashtag = function() {
-
-
-  this.window_hash = window.location.hash.replace('#', '');
-
-  //var initial_hash_tag = window.location.hash.substr(1);
-
-  //console.log('initial this.window_hash: ' + this.window_hash);
-
-  this.scroll_to_target(this.window_hash);
-
-};
 montigo.page.Default.prototype.public_method_05 = function() {};
 montigo.page.Default.prototype.public_method_06 = function() {};
 
@@ -598,12 +802,7 @@ montigo.page.Default.prototype.on_back_to_top_button_click = function(event) {
   this.scroll_to(0);
 };
 
-/**
- * event handler
- * @param  {object} event
- */
-montigo.page.Default.prototype.on_event_handler_04 = function(event) {
-};
+
 
 
 
@@ -612,19 +811,51 @@ montigo.page.Default.prototype.on_event_handler_04 = function(event) {
  * @param  {object} event
  */
 montigo.page.Default.prototype.on_window_resize = function(event) {
-  this.controller.update();
-  this.controller2.update();
+
+  if(this.is_mobile == false){
+    this.controller.update();
+    this.controller2.update();
+  }
+
+  console.log('on_window_resize: ')
+  console.log('this.is_mobile: ' + this.is_mobile);
+  console.log('this.window.width: ' + this.window.width());
+  if(this.is_mobile == true){
+
+    // if desktop size
+    if(this.window.width() >= 992){
+      // refresh
+      location.reload();
+      console.log('refresh...');
+    }
+
+  } else {
+
+    // if mobile size
+    if(this.window.width() < 992){
+      // refresh
+      location.reload();
+      console.log('refresh...');
+    }
+  }
+  
 
   if (this.has_back_to_top_button_scene == true) {
     $('#back-to-top-button-container-container').hide();
     var document_height = $(document).height();
     $('#back-to-top-button-container-container').show();
 
-    //console.log('TEST 02 ' + $('#back-to-top-button-container-container').offset().top);
-
     var target_duration = document_height - $('#main-page-footer').height() - $('#back-to-top-button-container-container').offset().top - 80 - 100; ///(NOT SURE WHY PLUS 100)
     this.back_to_top_button_scene.duration(target_duration);
   }
+};
+
+
+/**
+ * event handler
+ * @param  {object} event
+ */
+montigo.page.Default.prototype.on_event_handler_04 = function(event) {
 };
 
 

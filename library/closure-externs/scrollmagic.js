@@ -89,3 +89,6 @@ ScrollMagic.Scene.prototype.addIndicators = function(object_param){};
  */
 ScrollMagic.Scene.prototype.on = function(str_param, function_param){};
 
+
+ScrollMagic.Scene.prototype.update = function(){};
+

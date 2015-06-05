@@ -238,12 +238,12 @@ montigo.component.ParallaxImage.prototype.create_text_scene_2 = function(control
 montigo.component.ParallaxImage.prototype.create_parallax_scene = function(controller_param) {
   var trigger_element_str = "#" + this.element.attr('id');
   
-  TweenMax.to(this.manic_image_container.element, 0, {'y': -300});
+  TweenMax.to(this.manic_image_container.element, 0, {'y': -300,'z': 0.1});
 
   this.parallax_scene = new ScrollMagic.Scene({triggerElement: trigger_element_str, duration: "100%"})
     //.addIndicators({name: "parallax scene"}) // add indicators (requires plugin)
     //.setTween(TweenMax.to(this.manic_image_container.element, 1, {top: 300, ease: Linear.easeNone}))
-    .setTween(TweenMax.to(this.manic_image_container.element, 1, {'y': 300, ease: Linear.easeNone}))
+    .setTween(TweenMax.to(this.manic_image_container.element, 1, {'y': 300, 'z': 0.1, ease: Linear.easeNone}))
     .addTo(controller_param);
 
   

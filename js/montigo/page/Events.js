@@ -25,13 +25,6 @@ montigo.page.Events = function(options, element) {
    */
   this.booking_form = null;
   
-
-  
-  this.create_parallax();
-  this.create_event_booking_form();
-  this.create_event_booking_buttons();
-  
-
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
   //    | ||  \| || |  | |
@@ -55,6 +48,43 @@ montigo.page.Events.DEFAULT = {
 };
 
 
+//    ___ _   _ ___ _____ 
+//   |_ _| \ | |_ _|_   _|
+//    | ||  \| || |  | |  
+//    | || |\  || |  | |  
+//   |___|_| \_|___| |_|  
+//                        
+
+
+
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Events.prototype.init_desktop = function() {
+  montigo.page.Events.superClass_.init_desktop.call(this);
+
+  this.create_event_booking_form();
+  this.create_event_booking_buttons();
+
+  console.log('this has been called')
+
+};
+
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Events.prototype.init_mobile = function() {
+  montigo.page.Events.superClass_.init_mobile.call(this);
+
+  this.create_event_booking_form();
+  this.create_event_booking_buttons();
+  
+};
+
+
+
 //    ____  ____  _____     ___  _____ _____
 //   |  _ \|  _ \|_ _\ \   / / \|_   _| ____|
 //   | |_) | |_) || | \ \ / / _ \ | | |  _|
@@ -63,23 +93,23 @@ montigo.page.Events.DEFAULT = {
 //
 
 
-montigo.page.Events.prototype.create_parallax = function() {
-
-  this.parallax_01 = new montigo.component.ParallaxImage({
-  },$('#events-wedding-section'));
-
-  this.parallax_01.create_text_scene(this.controller);
-  this.parallax_01.create_parallax_scene(this.controller2);
-
-};
 
 
 montigo.page.Events.prototype.create_event_booking_form = function() {
   this.booking_form = new montigo.component.EventBookingForm({}, $('#events-booking-form-container'));
 
+
+  console.log('this.booking_form')
+  console.log(this.booking_form)
+
 };
 montigo.page.Events.prototype.create_event_booking_buttons = function() {
   var arr = $('.event-booking-cta-button');
+
+
+  console.log('>.asd f.asdf. ads.');
+  console.log(this);
+
 
   /**
    * @type {jQuery}
@@ -146,7 +176,11 @@ montigo.page.Events.prototype.on_event_handler_03 = function(event) {
  */
 montigo.page.Events.prototype.on_event_booking_button_click = function(event){
   event['preventDefault']();
-  
+    
+  console.log('this');
+  console.log(this)
+  console.log('this.booking_form')
+  console.log(this.booking_form)
   this.booking_form.show();
 
 };
@@ -157,10 +191,13 @@ montigo.page.Events.prototype.on_event_booking_button_click = function(event){
  */
 montigo.page.Events.prototype.on_floor_plan_button_click = function(event){
   event['preventDefault']();
+
+  console.log('on_floor_plan_button_click');
   
   var target_y = $('#events-space-section').position()['top'] - 62;
 
-  TweenMax.to($('body'), 1.5, {scrollTo:{y:target_y}, ease: Sine.easeInOut});
+  //TweenMax.to($('body'), 1.5, {scrollTo:{y:target_y}, ease: Sine.easeInOut});
+  TweenMax.to($(window), 1.5, {scrollTo:{y:target_y}, ease: Sine.easeInOut});
   
 
 };

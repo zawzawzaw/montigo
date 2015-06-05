@@ -63,7 +63,11 @@
       display: table-cell;
       vertical-align: middle;
 
-      padding: 0 15%;
+
+      .description-panel-text-container-container{
+        padding: 0 15%;
+      }
+      
     }
 
     h3{
@@ -231,7 +235,8 @@
 //   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
 //                                                               
 
-@media only screen and (max-width: 769px) {
+//@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
   #offer-slider{
     margin-bottom: 0px;
   }
@@ -241,7 +246,12 @@
   }
 
   .offer-list-panel-container{
-    height: 650px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .offer-list-panel-container{
+    //height: 650px;
 
     .description-panel{
       .description-panel-text-container{
@@ -263,7 +273,8 @@
       }
 
       .cta-back-button{
-        top: 23px;
+        top: 0px;
+        //top: 23px;
         right: 15px;
       }
       h4{

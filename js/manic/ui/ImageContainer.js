@@ -66,7 +66,7 @@ manic.ui.ImageContainer = function(options, element) {
   });
 
   this.image_element.css({
-    'display': 'block',
+    'display': 'block'
     //'position': 'absolute',
     //'top': '0px',
     //'left': '0px'

@@ -37,15 +37,34 @@ montigo.component.OfferItem = function(options, element) {
   this.back_button = this.element.find('.cta-back-button');
   this.tnc_button = this.element.find('.offer-item-tnc-button');
 
+  this.book_button = this.element.find('.book-button');
+  this.promo_code = '';
+  this.has_book_button = false;
+
+  if(this.book_button.length != 0){
+    this.has_book_button = true;
+
+    this.promo_code = this.book_button.attr('data-promo-code');
+
+    this.book_button.click(this.on_book_button_click.bind(this));
+  }
 
   this.learn_more_button.click(this.on_learn_more_button_click.bind(this));
   this.back_button.click(this.on_back_button_click.bind(this));
   this.tnc_button.click(this.on_tnc_button_click.bind(this));
 
 
+  if (manic.IS_MOBILE == true) {
+    //console.log('new panel containers')
+    this.panel_container = new manic.ui.PanelContainer({
+      'resize_height': true
+    }, this.element.find('.offer-list-panel-container'));
+  } else {
+    this.panel_container = new manic.ui.PanelContainer({
+    }, this.element.find('.offer-list-panel-container'));
+  }
 
-  this.panel_container = new manic.ui.PanelContainer({
-  }, this.element.find('.offer-list-panel-container'));
+  
 
 };
 goog.inherits(montigo.component.OfferItem, goog.events.EventTarget);
@@ -110,6 +129,46 @@ montigo.component.OfferItem.prototype.sample_method_calls = function() {
 //
 
 
+/**
+ * book_promo_code description
+ * @param  {string} str_param
+ */
+montigo.component.OfferItem.prototype.book_promo_code = function(str_param) {
+
+
+  var today = new Date();
+
+  var arrival_date = today.toLocaleDateString();
+  var departure_date = today.toLocaleDateString();
+
+  //console.log(arrival_date)
+
+  var arrival = arrival_date.split('/');
+  arrival = arrival[1]+'/'+arrival[0]+'/'+arrival[2];
+
+  var departure = departure_date.split('/');
+  departure = departure[1]+'/'+departure[0]+'/'+departure[2];
+
+  var nights = 0;
+  var rooms = 1;
+  var codeType = 'rateCode';      // see menu booking form js
+  var code = '' + str_param;
+
+  var params = '';
+      params+= '&arrivalDate='+arrival;
+      params+= '&departureDate='+departure;
+      params+= '&numberOfNights='+nights;
+      params+= '&rooms='+rooms;
+      //params+= '&numberOfAdults='+adults;
+      //params+= (child != 0) ? '&numberOfChildren='+child : '';
+      params+= (codeType != 0 && code != '') ? '&'+codeType+'='+code : '';
+      //params+= '&start=availresults';
+
+
+  console.log('https://www.phgsecure.com/IBE/bookingRedirect.ashx?propertyCode=SINMR' + params);
+  window.location.href = 'https://www.phgsecure.com/IBE/bookingRedirect.ashx?propertyCode=SINMR' + params;
+};
+
 montigo.component.OfferItem.prototype.public_method_01 = function() {};
 montigo.component.OfferItem.prototype.public_method_02 = function() {};
 montigo.component.OfferItem.prototype.public_method_03 = function() {};
@@ -161,6 +220,9 @@ montigo.component.OfferItem.prototype.on_back_button_click = function(event) {
  * event handler
  * @param  {object} event
  */
-montigo.component.OfferItem.prototype.on_event_handler_04 = function(event) {
+montigo.component.OfferItem.prototype.on_book_button_click = function(event) {
+  event['preventDefault']();
+  this.book_promo_code(this.promo_code);
+  
 };
 

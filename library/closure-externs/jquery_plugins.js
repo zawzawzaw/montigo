@@ -34,3 +34,17 @@ jQuery.prototype.sortable = function(arg1) {};
 jQuery.prototype.disableSelection = function() {};
 
 
+///////////////////////////////////////
+///////////////////////////////////////  //jquery.glDatePicker
+///////////////////////////////////////
+
+
+
+/**
+ * glDatePicker description
+ * @param  {object} object_param
+ * @return {jQuery|object}              [description]
+ */
+jQuery.prototype.glDatePicker = function(object_param) {};
+
+

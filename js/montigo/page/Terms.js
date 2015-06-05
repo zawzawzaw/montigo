@@ -32,27 +32,7 @@ montigo.page.Terms = function(options, element) {
   console.log('init');
 
 
-  this.sidebar_element = $('.generic-text-section .generic-text-sidebar');
-
-
-  /**
-   * @type {ScrollMagic.Scene}
-   */
-  this.pinned_header_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
-    .triggerHook(0)
-    .setPin(".breadcrumb-header-container")
-    .offset(-62)
-    .addTo(this.controller);
-
-
-  $('.breadcrumb-container .breadcrumb-01').click(this.on_breadcrumb_01_click.bind(this));
-
-  this.terms_content = new montigo.content.Terms({},$('.generic-text-section'));
-
-  //TweenMax.delayedCall(1, this.terms_content.create_item_scene, [this.controller], this.terms_content);
-  this.terms_content.create_item_scene(this.controller);
   
-  this.on_window_resize(null);
   
 };
 goog.inherits(montigo.page.Terms, montigo.page.Default);
@@ -79,9 +59,47 @@ montigo.page.Terms.DEFAULT = {
 //   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 //
 
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Terms.prototype.init_desktop = function() {
+  montigo.page.Terms.superClass_.init_desktop.call(this);
 
-montigo.page.Terms.prototype.private_method_05 = function() {};
-montigo.page.Terms.prototype.private_method_06 = function() {};
+
+  this.sidebar_element = $('.generic-text-section .generic-text-sidebar');
+
+
+  /**
+   * @type {ScrollMagic.Scene}
+   */
+  this.pinned_header_scene = new ScrollMagic.Scene({triggerElement: '#below-page-fold'})
+    .triggerHook(0)
+    .setPin(".breadcrumb-header-container")
+    .offset(-62)
+    .addTo(this.controller);
+
+
+  $('.breadcrumb-container .breadcrumb-01').click(this.on_breadcrumb_01_click.bind(this));
+
+  this.terms_content = new montigo.content.Terms({},$('.generic-text-section'));
+
+  //TweenMax.delayedCall(1, this.terms_content.create_item_scene, [this.controller], this.terms_content);
+  this.terms_content.create_item_scene(this.controller);
+  
+  this.on_window_resize(null);
+
+};
+
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Terms.prototype.init_mobile = function() {
+  montigo.page.Terms.superClass_.init_mobile.call(this);
+
+  // do nothing for mobile.
+};
 
 
 //    ____  _   _ ____  _     ___ ____
@@ -91,13 +109,6 @@ montigo.page.Terms.prototype.private_method_06 = function() {};
 //   |_|    \___/|____/|_____|___\____|
 //
 
-
-montigo.page.Terms.prototype.public_method_01 = function() {};
-montigo.page.Terms.prototype.public_method_02 = function() {};
-montigo.page.Terms.prototype.public_method_03 = function() {};
-montigo.page.Terms.prototype.public_method_04 = function() {};
-montigo.page.Terms.prototype.public_method_05 = function() {};
-montigo.page.Terms.prototype.public_method_06 = function() {};
 
 
 //    _______     _______ _   _ _____ ____
@@ -118,15 +129,6 @@ montigo.page.Terms.prototype.on_breadcrumb_01_click = function(event) {
   this.scroll_to(0);
 };
 
-/**
- * event handler
- * @param  {object} event
- */
-montigo.page.Terms.prototype.on_event_handler_04 = function(event) {
-};
-
-
-
 
 
 /**
@@ -134,6 +136,9 @@ montigo.page.Terms.prototype.on_event_handler_04 = function(event) {
  * @param  {object} event
  */
 montigo.page.Terms.prototype.on_window_resize = function(event) {
+
+  // this won't be called on mobile, because default doesn't call this on mobile
+
   montigo.page.Terms.superClass_.on_window_resize.call(this);
 
   if(goog.isDefAndNotNull(this.sidebar_element)){

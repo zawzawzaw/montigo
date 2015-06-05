@@ -32,6 +32,8 @@ montigo.content.Faq = function(options, element) {
   this.faq_breadcrumb_button = $('#faq-detailed-view-header .breadcrumb-01');
 
 
+  this.is_created = false;
+
   /**
    * @type {manic.util.JsonParser}
    */
@@ -91,6 +93,8 @@ montigo.content.Faq.EVENT_02 = '';
 
 montigo.content.Faq.prototype.create_objects = function() {
 
+  this.is_created = true;
+
   this.list_view = new montigo.component.FaqListView({
     'data_array': this.json_parser.data_array
   }, $('#faq-list-view'));
@@ -105,6 +109,7 @@ montigo.content.Faq.prototype.create_objects = function() {
 
 
   goog.events.listen(this.detail_view, montigo.component.FaqDetailView.ON_NAVIGATION_LI_CLICK, this.on_detail_view_navigation_click.bind(this));
+  goog.events.listen(this.detail_view, montigo.component.FaqDetailView.ON_CTA_BACK_CLICK, this.on_detail_view_back_click.bind(this));
   
 
 
@@ -141,22 +146,25 @@ montigo.content.Faq.prototype.sample_method_calls = function() {
  * @param  {String} str_param
  */
 montigo.content.Faq.prototype.open_section_by_name = function(str_param) {
-  this.list_view.close();
 
-  var is_name_available = this.detail_view.open_section_by_name(str_param);
+  if (this.is_created == true) {
+    this.list_view.close();
 
-  if(is_name_available != -1){
-    var target_y = this.detail_view.get_current_item_y();
-    //this.scroll_to();
-    
-    if (target_y != -1) {
-      this.scroll_to(target_y);
+    var is_name_available = this.detail_view.open_section_by_name(str_param);
+
+    if(is_name_available != -1){
+      var target_y = this.detail_view.get_current_item_y();
+      //this.scroll_to();
+      
+      if (target_y != -1) {
+        this.scroll_to(target_y);
+      }
+      
+    } else {
+
+      this.on_faq_breadcrumb_button_click(null);
+      
     }
-    
-  } else {
-
-    this.on_faq_breadcrumb_button_click(null);
-    
   }
 
 };
@@ -236,6 +244,10 @@ montigo.content.Faq.prototype.on_detail_view_navigation_click = function(event){
   }
 }
 
+montigo.content.Faq.prototype.on_detail_view_back_click = function(event){
+  this.on_faq_breadcrumb_button_click(null);
+};
+
 
 
 /**
@@ -273,8 +285,8 @@ montigo.content.Faq.prototype.on_list_view_li_click = function(event){
   this.list_view.close();
   this.detail_view.open_section(this.list_view.last_index_clicked);
 
-  var target_y = this.detail_view.get_current_li_y_at_index(this.list_view.last_li_index_clicked);
-
+  //var target_y = this.detail_view.get_current_li_y_at_index(this.list_view.last_li_index_clicked);      // last thing
+  var target_y = this.detail_view.get_current_item_y();
 
   //var header_height = 62;
   //var target_y = this.list_view.last_li_element_clicked.offset().top; // - header_height;

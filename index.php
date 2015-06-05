@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="home-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_home_main_slider.jpg">
+  <div id="home-slider" class="main-slider no-scale-version" data-image="images/main_slider/may6_home_main_slider.jpg" data-mobile-image="images/main_slider_mobile/home_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -13,7 +13,7 @@
         <!-- <div class="text" data-x="704" data-y="224"> -->
         <div class="text" data-x="704" data-y="204">
 
-          <h3 class="fadeout">For Generations to Come</h3>
+          <h3 class="fadeout">For Generations <br class="visible-xs-inline visible-sm-inline">to Come</h3>
           <p class="fadeout">Barely 30 minutes away from Singapore, our sprawling resort’s architectural expanse of white is breathtaking against the deep blue Nongsa waters. The accommodation’s spacious, and the surrounding landscape offers enough activity to thrill all generations.</p>
 
         </div>
@@ -260,7 +260,7 @@
       <div class="container-fluid has-breakpoint">
         <div class="row">
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_01_aquatic"></div>
@@ -271,7 +271,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_02_terra"></div>
@@ -282,7 +282,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_03_sport"></div>
@@ -293,7 +293,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <div class="icon-set-item">
               <div class="item-icon">
                 <div class="item-icon-icon home_activities_icon_04_olu"></div>
@@ -345,7 +345,7 @@
 
 <?php if(DEBUG): ?>
   <script type="text/javascript">
-    goog.require('montigo.page.Home');
+    goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -356,6 +356,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/home_main_slider.jpg",
+
         "images/main_slider/may6_home_main_slider.jpg",
         "images/parallax/may13_home_parallax_spa.jpg",
         "images/parallax/may18_home_parallax_events.jpg",
@@ -381,21 +383,35 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-home.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-default.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
-        page = new montigo.page.Home();
+        page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

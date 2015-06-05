@@ -87,7 +87,7 @@ to info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
 
 <?php if(DEBUG): ?>
   <script type="text/javascript">
-    goog.require('montigo.page.Careers');
+    goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -109,12 +109,12 @@ to info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-careers.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       mobile_js_array: [
@@ -125,20 +125,19 @@ to info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-careers.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       on_desktop_complete: function(){
-        page = new montigo.page.Careers();
+        page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        page = new montigo.page.Careers();
-        console.log('no mobile code yet');
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

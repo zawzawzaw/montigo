@@ -86,6 +86,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   &:after{
@@ -105,7 +108,11 @@
 
     //-webkit-animation: moveToCenter 0.7s both cubic-bezier(0.7,0,0.3,1);
     //animation: moveToCenter 0.7s both cubic-bezier(0.7,0,0.3,1);
+    
 
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    
     -webkit-animation: alphaScaleIn 0.8s both cubic-bezier(0.7,0,0.3,1);
     animation: alphaScaleIn 0.8s both cubic-bezier(0.7,0,0.3,1);
   }
@@ -115,9 +122,11 @@
 
 
 
-
+/*
 @media only screen and (max-width: 769px) {
   #page-preloader{
     //display: none;                                                  // temporary while i still have to program the mobile default.js
   }
 }
+
+*/

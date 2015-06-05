@@ -3,6 +3,7 @@ goog.provide('montigo.component.MainImage');
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
+goog.require('manic');
 goog.require('manic.ui.ImageContainer');
 goog.require('manic.ui.TextContainer');
 
@@ -46,14 +47,29 @@ montigo.component.MainImage = function(options, element) {
    */
   this.category = montigo.component.MainImage.DEFAULT_VERSION;
 
+  if (manic.IS_MOBILE == true) {
+    this.category = montigo.component.MainImage.MOBILE_VERSION;
 
-  if (this.element.hasClass(montigo.component.MainImage.SHORT_VERSION)) {
+    if(goog.isDefAndNotNull(this.element.attr('data-mobile-image'))){
+      this.initial_image_src = this.element.attr('data-mobile-image');
+    }
+
+    if (this.element.hasClass(montigo.component.MainImage.SHORT_VERSION)) {
+      this.category = montigo.component.MainImage.MOBILE_VERSION_SHORT_VERSION
+    }
+
+
+
+  } else if (this.element.hasClass(montigo.component.MainImage.SHORT_VERSION)) {
     this.category = montigo.component.MainImage.SHORT_VERSION;
   } else if (this.element.hasClass(montigo.component.MainImage.NO_SCALE_VERSION)) {
     this.category = montigo.component.MainImage.NO_SCALE_VERSION;
   }
 
-  // create containers
+  
+  console.log('this.category: ' + this.category);
+
+  
 
   if (this.category == montigo.component.MainImage.DEFAULT_VERSION) {
     this.image_container = new manic.ui.ImageContainer({
@@ -63,6 +79,40 @@ montigo.component.MainImage = function(options, element) {
 
     this.text_container = new manic.ui.TextContainer({
       'vertical_align': 'top'
+    }, this.element.find('.main-slider-text-container'));
+
+  } else if (this.category == montigo.component.MainImage.MOBILE_VERSION_SHORT_VERSION) {
+
+    $('body').addClass('has-main-slider-mobile-short-version');
+
+    this.image_container = new manic.ui.ImageContainer({
+      'vertical_align': 'top',
+      'image_src': this.initial_image_src,
+      'scale_mode': 'best_fit',
+      'has_window_height': false,
+      'fixed_height': 250
+    }, this.element.find('.main-slider-image-container'));
+
+    this.text_container = new manic.ui.TextContainer({
+      'vertical_align': 'top',
+      'scale_mode': 'best_fit',
+      'has_window_height': false,
+      'fixed_height': 250
+    }, this.element.find('.main-slider-text-container'));
+
+  } else if (this.category == montigo.component.MainImage.MOBILE_VERSION) {
+
+
+
+    this.image_container = new manic.ui.ImageContainer({
+      'vertical_align': 'top',
+      'image_src': this.initial_image_src,
+      'scale_mode': 'best_fit'
+    }, this.element.find('.main-slider-image-container'));
+
+    this.text_container = new manic.ui.TextContainer({
+      'vertical_align': 'top',
+      'scale_mode': 'best_fit'
     }, this.element.find('.main-slider-text-container'));
 
   } else if (this.category == montigo.component.MainImage.SHORT_VERSION) {
@@ -89,7 +139,7 @@ montigo.component.MainImage = function(options, element) {
     this.image_container = new manic.ui.ImageContainer({
       'vertical_align': 'top',
       'image_src': this.initial_image_src,
-      'scale_mode': 'best_fit_no_scale_down',
+      'scale_mode': 'best_fit_no_scale_down'
     }, this.element.find('.main-slider-image-container'));
 
     this.text_container = new manic.ui.TextContainer({
@@ -98,6 +148,9 @@ montigo.component.MainImage = function(options, element) {
     }, this.element.find('.main-slider-text-container'));
 
   }
+
+
+
 
 
 
@@ -118,6 +171,20 @@ goog.inherits(montigo.component.MainImage, goog.events.EventTarget);
 
 
 
+/**
+ * CLASSNAME Event Constant
+ * @const
+ * @type {string}
+ */
+montigo.component.MainImage.MOBILE_VERSION = 'mobile-version';
+
+
+/**
+ * CLASSNAME Event Constant
+ * @const
+ * @type {string}
+ */
+montigo.component.MainImage.MOBILE_VERSION_SHORT_VERSION = 'mobile-version-short';
 
 /**
  * CLASSNAME Event Constant
@@ -246,7 +313,8 @@ montigo.component.MainImage.prototype.create_parallax_scene = function(controlle
  */
 montigo.component.MainImage.prototype.on_window_resize = function(event) {
   var window_height = this.window.height();
-    
+  
   this.element.height(window_height);
 
+  
 };

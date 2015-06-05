@@ -2,8 +2,8 @@
 
 // emulate wordpress functions.php
 
-define('DEBUG', true);
-//define('DEBUG', false);
+//define('DEBUG', true);
+define('DEBUG', false);
 
 
 ?>
@@ -44,15 +44,19 @@ define('DEBUG', true);
     <link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script src="library/jquery/jquery-1.9.1.min.js"></script>
-    <script src="library/_js/preloadjs-0.4.0.min.js"></script>
-    <script src="library/_js/mobile-detect.min.js"></script>
-    <script src="library/_js/montigo_modernizr_custom.js"></script>
-    <script src="js/all.js"></script>
+    <?php if(DEBUG): ?>
 
-    <!-- basic preloader -->
-    <script src="library/jquery/jquery.manic.preloader.js"></script>
+      <script src="library/jquery/jquery-1.9.1.min.js"></script>
+      <script src="library/_js/preloadjs-0.4.0.min.js"></script>
+      <script src="library/_js/mobile-detect.min.js"></script>
+      <script src="library/_js/montigo_modernizr_custom.js"></script>
+      <script src="js/all.js"></script>
 
+      <!-- basic preloader -->
+      <script src="library/jquery/jquery.manic.preloader.js"></script>
+    <?php else: ?>
+      <script src="js/minified/montigo-head.min.js"></script>
+    <?php endif; ?>
 
     <?php if(DEBUG): ?>
       <script src="library/closure-library/closure/goog/base.js"></script>
@@ -74,6 +78,24 @@ define('DEBUG', true);
       
 
       <header id="main-page-header-mobile" class="visible-xs-block visible-sm-block">
+        <div class="menu-button">
+          <div class="fa fa-bars"></div>
+        </div>
+        <div class="menu-black-bg"></div>
+        <nav id="mobile-header-navigation">
+          <a href="index.php" id="header-logo">Montigo Resorts</a>
+          <ul>
+            <li><a href="about.php">About</a></li>
+            <li><a href="offers.php">Offers &amp; Packages</a></li>
+            <li><a href="accommodation.php">Accommodation</a></li>
+            <li><a href="dining.php">Dining</a></li>
+            <li><a href="spa.php">Spa</a></li>
+            <li><a href="activities.php">Activities</a></li>
+            <li><a href="events.php">Meetings &amp; Events</a></li>
+            <li><a href="faq.php">Faq</a></li>
+            <li><a href="http://www.montigoresortsnongsa.com/" target="_blank">Ownership</a></li>
+          </ul>
+        </nav>
       </header>
       
 

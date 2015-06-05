@@ -95,6 +95,13 @@ montigo.component.FaqDetailView.ON_NAVIGATION_LI_CLICK = 'on_navigation_li_click
 
 
 /**
+ * event constant
+ * @const
+ * @type {String}
+ */
+montigo.component.FaqDetailView.ON_CTA_BACK_CLICK = 'on_cta_back_click';
+
+/**
  * Detail View Constant
  * @const
  * @type {string}
@@ -119,6 +126,7 @@ montigo.component.FaqDetailView.DETAIL_TEMPLATE = [
     '</div>',
     '<div class="faq-detailed-view-item-container">',
     '</div>',
+    '<a href="#" class="cta-back-button"><span class="fa fa-chevron-circle-left"></span>back</a>',
   '</div>'
 ].join('');
 
@@ -195,6 +203,8 @@ montigo.component.FaqDetailView.prototype.create_html = function() {
     li_element.data('index', i);
     li_element.click(this.on_navigation_li_click.bind(this));
     
+
+    item_element.find('.cta-back-button').click(this.on_back_button_click.bind(this));
 
 
     this.item_array[i] = item_element;
@@ -512,14 +522,18 @@ montigo.component.FaqDetailView.prototype.on_navigation_li_click = function(even
 montigo.component.FaqDetailView.prototype.on_back_to_top_button = function(event) {
   event['preventDefault']();
 
-  TweenMax.to($('body'), 0.8, {scrollTo: {y:500 - 62}, ease: Sine.easeInOut});
+  //TweenMax.to($('body'), 0.8, {scrollTo: {y:500 - 62}, ease: Sine.easeInOut});
+  TweenMax.to($(window), 0.8, {scrollTo: {y:500 - 62}, ease: Sine.easeInOut});
 };
 
 /**
  * event handler
  * @param  {object} event
  */
-montigo.component.FaqDetailView.prototype.on_event_handler_03 = function(event) {
+montigo.component.FaqDetailView.prototype.on_back_button_click = function(event) {
+  event['preventDefault']();
+
+  this.dispatchEvent(new goog.events.Event(montigo.component.FaqDetailView.ON_CTA_BACK_CLICK));
 };
 
 /**

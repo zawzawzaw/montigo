@@ -72,6 +72,7 @@ montigo.content.Terms.EVENT_02 = '';
 //
 
 
+
 montigo.content.Terms.prototype.create_items = function() {
   var arr = this.element.find('.generic-text-item.scroll-target');
 

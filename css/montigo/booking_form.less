@@ -1,0 +1,586 @@
+
+//    ____   ___   ___  _  _____ _   _  ____   _____ ___  ____  __  __ 
+//   | __ ) / _ \ / _ \| |/ /_ _| \ | |/ ___| |  ___/ _ \|  _ \|  \/  |
+//   |  _ \| | | | | | | ' / | ||  \| | |  _  | |_ | | | | |_) | |\/| |
+//   | |_) | |_| | |_| | . \ | || |\  | |_| | |  _|| |_| |  _ <| |  | |
+//   |____/ \___/ \___/|_|\_\___|_| \_|\____| |_|   \___/|_| \_\_|  |_|
+//                                                                     
+
+
+
+
+
+.has-booking-form{
+  //overflow: hidden;
+  
+
+  #page-wrapper{
+    position: fixed;
+
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#events-booking-form-container{
+  //position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  //height: 100%;
+
+  z-index: 10000;
+
+  //display: none;
+  
+  visibility: hidden;
+  .opacity(0);
+
+  .black-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    .opacity(0.7);
+  }
+}
+
+#events-booking-form{
+  /*
+  position: absolute;
+  
+  top: 62px;
+  bottom: 62px;
+  width: 1030px;
+  left: 50%;
+  margin-left: -515px;
+  */
+ 
+  position: relative;
+  width: 1030px;
+
+  margin: 62px auto;
+  //padding-top: 62px;
+  //padding-bottom: 62px;
+
+
+  .white-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: @white;
+  }
+
+  #booking-form-close-button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #666666;
+
+    cursor: pointer;
+
+    .transition-in();
+
+    &:hover{
+      color: @light-blue;
+    }
+  }
+
+  .events-booking-form-scroll-container{
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    
+    //width: 100%;
+    //height: 100%;
+    //overflow: scroll;
+    
+    //overflow-x: hidden;
+    //overflow-y: scroll;
+
+    position: relative;
+
+    padding-left: 150px - 15px;
+    padding-right: 150px - 15px;
+
+    padding-top: 79px;
+    padding-bottom: 130px;
+
+    .events-booking-form-scroll-content{
+      //padd
+    }
+  }
+
+  .events-booking-form-title{
+    text-align: center;
+
+    
+    padding-bottom: 103px;
+
+    h3{
+      font-size: 60px;
+      line-height: 60px;
+      color: @light-blue;
+
+      letter-spacing: -0.02em;
+    }
+  }
+
+}
+
+
+//    ____   ___   ___  _  _____ _   _  ____   ___ _____ _____ __  __ 
+//   | __ ) / _ \ / _ \| |/ /_ _| \ | |/ ___| |_ _|_   _| ____|  \/  |
+//   |  _ \| | | | | | | ' / | ||  \| | |  _   | |  | | |  _| | |\/| |
+//   | |_) | |_| | |_| | . \ | || |\  | |_| |  | |  | | | |___| |  | |
+//   |____/ \___/ \___/|_|\_\___|_| \_|\____| |___| |_| |_____|_|  |_|
+//                                                                    
+
+.events-booking-form-item{
+
+  position: relative;
+
+
+  h4{
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+  }
+  hr.short-hr{
+    background: @light-blue;
+    .opacity(0.2);
+    text-align: left;
+    margin: 0;
+    margin-top: 9px;
+    margin-bottom: 0px;
+    //margin-bottom: 12px;
+  }
+
+  label{
+    display: block;
+    .brandon-bold;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+  }
+
+
+  &.form-group{
+
+    .brandon-light;
+    margin-bottom: 32px;
+
+    &.events-booking-form-item-title{
+      margin-bottom: 17px;
+    }
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+    .form-control{
+
+      &:focus{
+        border: 1px solid @dark-brown;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      color: @dark-brown;
+
+      height: 25px;
+      line-height: 25px;
+      border: 1px solid @dark-brown;
+
+      .round(0px);
+
+    }
+
+    textarea.form-control{
+      //height: auto;
+      height: 140px;
+      margin-bottom: 100px;
+      resize: none;
+    }
+  }
+
+
+  /*
+  .radio label, .checkbox label{
+    .brandon-light;
+    letter-spacing: 0;
+    font-size: 14px;
+    text-transform: none;
+    margin-bottom: 0;
+  }
+  */
+
+  .radio{
+    position: relative;
+    margin-bottom: 15px;
+    margin-right: -20px;
+    
+    label{
+      .brandon-light;
+      letter-spacing: 0;
+      font-size: 14px;
+      text-transform: none;
+      margin-bottom: 0;
+
+      padding-left: 24px;
+    }
+
+    input[type=radio]{
+      visibility: hidden;
+    }
+
+    input[type=radio] + span{
+
+      font: normal normal normal 14px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      font-size: 12px;
+      line-height: 18px;
+      color: @light-blue;
+
+      text-align: center;
+
+      &:before{
+        content: "\f10c";  
+      }
+
+      display: block;
+      width: 15px;
+      height: 18px; 
+      position: absolute;
+      top: 1px;
+      left: 0;
+    }
+
+
+
+    input[type=radio]:checked + span{
+      &:before{
+        content: "\f192";
+      }
+    }
+
+
+  }
+
+
+  /*
+  input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(check_radio_sheet.png) -19px top no-repeat;
+}
+
+
+   */
+
+
+
+
+  p{
+    .brandon-light;
+    letter-spacing: 0;
+    font-size: 14px;
+    text-transform: none;
+    margin-bottom: 0;
+  }
+
+
+  input[type=text]{
+    //.brandon-medium;
+    .brandon-light;
+    font-size: 14px;
+    line-height: 25px;
+    //text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: @dark-grey;
+
+    padding: 0;
+    padding-left: 7px;
+
+    &::-ms-clear{
+      display: none;
+    }
+
+    &::-webkit-input-placeholder{
+      color: @dark-brown;
+      line-height: 25px;
+      padding: 0;
+      padding-left: 7px;
+    }
+    &:-moz-placeholder{
+      color: @dark-brown;
+      line-height: 25px;
+    }
+    &::-moz-placeholder{
+      color: @dark-brown;
+      line-height: 25px;
+    }
+  }
+
+
+  .select-input{
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+
+    display: block;
+    outline: none;
+    border: none;
+    border: 1px solid @dark-brown;
+    background: transparent;
+
+    .fa{
+      font-size: 6px;
+      color: @dark-brown;
+      //color: @light-blue;
+
+      position: absolute;
+      //top: 7px;
+      //right: 7px;
+      top: 9px;
+      right: 9px;
+      .rotation(90deg);
+    }
+
+    select{
+      .brandon-light;
+      font-size: 14px;
+      line-height: 25px;
+      //text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: @dark-brown;
+
+      width: 120%;
+      height: 22px;
+
+      display: block;
+      border: none;
+      outline: none;
+      outline: 0px;
+      background: transparent;
+      padding-left: 3px;
+
+      -webkit-appearance:none;
+      
+      option{
+        //.brandon-bold;
+        //letter-spacing: 0.1em;
+        border: none;
+        outline: none;
+        outline: 0px;
+        color: @white;
+        background: @dark-brown;
+      }
+
+      
+    }
+  }
+
+  
+
+  .submit-button{
+    .brandon-bold;
+    font-size: 12px;
+    line-height: 60px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: @white;
+    
+    position: absolute;
+    width: 128px;
+    height: 60px;
+    right: 0;
+    top: 0;
+
+    background: @light-blue;
+
+    &:hover{
+      background: @dark-brown;
+    }
+
+  }
+
+
+  &.single-digit-version{
+
+    input[type=text]{
+      width: 46px;
+      text-align: center;
+    }
+
+    .select-input{
+      width: 46px;
+
+      select{
+        padding-left: 8px;
+        width: 80px;
+      }
+    }
+
+    .manic-dropdown{
+      width: 46px;
+      span{
+        padding-left: 14px;
+      }
+      ul{
+        li{
+          //text-align: center;
+          padding-left: 14px;
+        }
+      }
+    }
+
+  }
+
+  &.number-of-people-version{
+
+    input[type=text]{
+      padding-right: 7px;
+    }
+
+    p{
+      position: absolute;
+      top: 25px;
+      left: 53px;
+    }
+  }
+
+  &.calendar-version{
+
+    .fa.fa-calendar-o{
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 11px;
+
+      font-size: 11px;
+      //color: @dark-brown;
+      color: @light-blue;
+
+      pointer-events: none;
+    }
+    //fa-calendar-o
+    
+
+    .events-booking-form-calendar-container{
+      display: none;
+      position: absolute;
+      top: 23px;
+      right: -174px;
+
+      width: 166px;
+      height: 157px + 17px;
+
+      border: 1px solid @dark-brown;
+
+      .events-booking-form-calendar-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: @white;
+
+      }
+      .events-booking-form-calendar,
+      .gldp-menu-booking-calendar{
+        position: absolute;
+        width: 138px;
+        height: 125px;
+        top: 17px !important;
+        left: 15px !important;
+      }
+    } // .events-booking-form-calendar-container
+
+  }
+
+  &.submit-version{
+    height: 60px;
+  }
+
+
+} // .events-booking-form-item
+
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+//@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
+
+  #events-booking-form-container{
+    width: 100%;
+
+    .black-bg{
+      display: none;  
+    }
+  }
+
+  #events-booking-form{
+    width: 100%;
+    margin: 0;
+
+    .events-booking-form-scroll-container{
+      padding: 0 15px;
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+
+    .events-booking-form-title{
+
+      h3{
+        font-size: 30px;
+        line-height: 40px;
+      }
+      padding-bottom: 50px;
+    }
+  }
+
+  .events-booking-form-item{
+    h4{
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+  .events-booking-form-item.form-group textarea.form-control{
+    margin-bottom: 50px;
+  }
+
+}

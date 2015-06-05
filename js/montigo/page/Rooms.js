@@ -23,11 +23,6 @@ montigo.page.Rooms = function(options, element) {
   this.options = $.extend(this.options, montigo.page.Rooms.DEFAULT, options);
 
   /**
-   * @type {montigo.component.ParallaxImage}
-   */
-  this.parallax_01 = null;
-
-  /**
    * @type {manic.ui.PanelContainer}
    */
   this.villa_image_panel_container = null;
@@ -37,18 +32,13 @@ montigo.page.Rooms = function(options, element) {
    */
   this.villa_text_panel_container = null;
 
-
   /**
    * @type {montigo.component.AccomodationsMap}
    */
   this.map = null;
 
   
-  this.create_panel_containers();
-  this.create_parallax();
-  //this.create_map();
   
-  TweenMax.delayedCall(1.5,this.create_map,[],this);
 
   //    ___ _   _ ___ _____
   //   |_ _| \ | |_ _|_   _|
@@ -78,6 +68,35 @@ montigo.page.Rooms.DEFAULT = {
 
 
 
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Rooms.prototype.init_desktop = function() {
+  montigo.page.Rooms.superClass_.init_desktop.call(this);
+
+  this.create_panel_containers();
+  TweenMax.delayedCall(1.5,this.create_map,[],this);
+
+};
+
+/**
+ * @override
+ * @inheritDoc
+ */
+montigo.page.Rooms.prototype.init_mobile = function() {
+  montigo.page.Rooms.superClass_.init_mobile.call(this);
+
+
+  $('#rooms-map-section').prepend($('#rooms-map-text'));
+  
+};
+
+
+
+
+
+
 //    ____  ____  _____     ___  _____ _____
 //   |  _ \|  _ \|_ _\ \   / / \|_   _| ____|
 //   | |_) | |_) || | \ \ / / _ \ | | |  _|
@@ -85,13 +104,7 @@ montigo.page.Rooms.DEFAULT = {
 //   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 //
 
-montigo.page.Rooms.prototype.create_parallax = function() {
-  this.parallax_01 = new montigo.component.ParallaxImage({
-  },$('#rooms-residences-section'));
 
-  this.parallax_01.create_text_scene(this.controller);
-  this.parallax_01.create_parallax_scene(this.controller2);
-};
 
 montigo.page.Rooms.prototype.create_panel_containers = function() {
 
@@ -115,7 +128,8 @@ montigo.page.Rooms.prototype.create_map = function() {
 
   this.map.create_map_scene(this.controller);
 };
-montigo.page.Rooms.prototype.private_method_06 = function() {};
+
+
 
 
 //    ____  _   _ ____  _     ___ ____

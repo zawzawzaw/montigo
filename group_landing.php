@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="group-landing-slider" class="main-slider no-scale-version" data-image="images/main_slider/may15_group_landing_main_slider.jpg">
+  <div id="group-landing-slider" class="main-slider no-scale-version" data-image="images/main_slider/may15_group_landing_main_slider.jpg" data-mobile-image="images/main_slider_mobile/group_landing_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -72,6 +72,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/group_landing_main_slider.jpg",
+        
         "images/main_slider/may15_group_landing_main_slider.jpg"
       ],
       desktop_js_array: [
@@ -82,7 +84,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -91,12 +93,26 @@
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-default.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
         page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

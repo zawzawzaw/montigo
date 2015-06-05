@@ -3,7 +3,7 @@
 <div id="main-page-content">
 
 
-  <div id="dining-slider" class="main-slider no-scale-version" data-image="images/main_slider/may20_dining_main_slider.jpg">
+  <div id="dining-slider" class="main-slider no-scale-version" data-image="images/main_slider/may20_dining_main_slider.jpg" data-mobile-image="images/main_slider_mobile/dining_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -60,6 +60,41 @@
                   <a target="_blank" href="pdf/Beverages_160415_no pics.pdf" class="cta-button">See our full drink menu<span class="fa fa-chevron-circle-right"></span></a>
                 </div>
               </div>
+
+              <div class="visible-xs visible-sm mobile-dining-list">
+                <div class="dining-list">
+                  <h4>opening hours</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Lunch: 11:30 – 17:00</li>
+                    <li>Dinner: 18:00 – 22:00</li>
+                  </ul>
+                </div>
+
+                <div class="dining-list">
+                  <h4>breakfast hours</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Weekdays: 07:00 – 10:00</li>
+                    <li>Weekends: 07:00 – 11:00</li>
+                  </ul>
+                </div>
+
+                <div class="dining-list">
+                  <h4>featured dishes</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Traditional Gado-Gado Salad</li>
+                    <li>Smoked Salmon Caesar Salad</li>
+                    <li>Tadd’s Club Sandwich</li>
+                    <li>Nongsa Nasi Goreng</li>
+                    <li>Coconut Creme Brûlée</li>
+                  </ul>
+                </div>
+
+
+              </div>
+
             </div> <!-- .montigo-image-description -->
           <!-- </div> -->
 
@@ -182,6 +217,30 @@
 
               </div>
             </div> <!-- .montigo-image-description -->
+
+            <div class="visible-xs visible-sm mobile-dining-list">
+              <div class="dining-list">
+                  <h4>opening hours</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Dinner: 18:00 – 22:00</li>
+                    <li>Weekend Lunch: 12:00 – 15:00</li>
+                  </ul>
+                  
+                </div>
+                <div class="dining-list">
+                  <h4>featured dishes</h4>
+                  <hr class="short-hr">
+                  <ul>
+                    <li>Catch of The Day ‘Nyonya Style’</li>
+                    <li>‘Mongolian Style’ Beef </li>
+                    <li>Deep Fried Crispy Cuttlefish</li>
+                    <li>Braised Fish Maw &amp; Mushrooms </li>
+                    <li>Wok Fried Crab</li>
+                  </ul>
+                </div>
+            </div>
+
           <!-- </div> -->
 
 
@@ -256,17 +315,8 @@
     <div class="container-fluid has-breakpoint">
 
       <div class="row">
-        <div class="col-md-8">
-
-          <div class="no-right-margin">
-            <div id="dining-tiigo-image-01" class="manic-image-container fadein-left">
-              <img src="images/dining/dining_tiigo_image_01b.jpg">
-            </div>
-          </div>
-
-
-        </div>
-        <div class="col-md-4">
+        
+        <div class="col-md-4 col-md-push-8">
 
           <!-- <div class="no-left-margin"> -->
             <div id="dining-tiigo-text-01" class="montigo-image-description">
@@ -286,8 +336,48 @@
           <!-- </div> -->
 
 
+          <div class="visible-xs visible-sm mobile-dining-list">
+            <div class="dining-list">
+              <h4>opening hours</h4>
+              <hr class="short-hr">
+              <ul>
+                <li>Friday: 11:00 – 22:00</li>
+                <li>Saturday: 11:00 – 24:00</li>
+                <li>Sunday: 11:00 – 15:00</li>
+              </ul>
+
+              <div class="dining-list-special">
+                <div class="title">BBQ on Saturday</div>
+                <div class="time">Saturday: 18:00 – 22:00</div>
+              </div>
+            </div>
+            <div class="dining-list">
+              <h4>featured dishes</h4>
+              <hr class="short-hr">
+              <ul>
+                <li>Tiigo Rib Eye</li>
+                <li>Lamb Shoulder</li>
+                <li>Tiigo Club Sandwich</li>
+                <li>Rendang Padang Quesadillas</li>
+                <li>Tofu Burger</li>
+              </ul>
+            </div>
+          </div>
+
 
         </div>
+
+        <div class="col-md-8 col-md-pull-4">
+
+          <div class="no-right-margin">
+            <div id="dining-tiigo-image-01" class="manic-image-container fadein-left">
+              <img src="images/dining/dining_tiigo_image_01b.jpg">
+            </div>
+          </div>
+
+
+        </div>
+        
       </div> <!-- row -->
 
       <div class="row">
@@ -457,7 +547,7 @@
 
 <?php if(DEBUG): ?>
   <script type="text/javascript">
-    goog.require('montigo.page.Dining');
+    goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -468,6 +558,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/dining_main_slider.jpg",
+
         "images/main_slider/may20_dining_main_slider.jpg",
         "images/parallax/may20_dining_parallax_private_dining_beach.jpg",
         "images/parallax/may20_dining_parallax_invilla_dining_table.jpg",
@@ -486,21 +578,35 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-dining.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-default.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
-        page = new montigo.page.Dining();
+        page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

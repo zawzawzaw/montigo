@@ -19,6 +19,11 @@ manic.ui.PanelContainer = function(options, element) {
   this.element_width = this.element.width();
   this.element_height = this.element.height();
 
+  this.resize_height = this.options['resize_height'];
+  if(this.resize_height){
+    this.element.addClass('resize-height-version')
+  }
+
   this.index = 0;
   this.max_index = 0;
   this.current_panel = null;
@@ -51,7 +56,8 @@ manic.ui.PanelContainer.DEFAULT = {
   'initial_index': 0,
   'panel_selector': '.panel',
   'container_selector': '.panel-container-container',
-  'duration': 0.8
+  'duration': 0.8,
+  'resize_height': false
 };
 
 /**
@@ -91,6 +97,8 @@ manic.ui.PanelContainer.prototype.create_panels = function() {
 
   this.max_index = this.panel_array.length;
 
+  this.current_panel = this.panel_array[0];     // default panel is first panel
+
   this.dispatchEvent(new goog.events.Event(manic.ui.PanelContainer.ON_CREATE));
 
 };
@@ -110,6 +118,11 @@ manic.ui.PanelContainer.prototype.update_layout = function() {
   this.element_width = this.element.width();
   this.element_height = this.element.height();
 
+  if(this.resize_height){
+    this.element_height = this.current_panel.height();
+    TweenMax.to(this.element, 0.8, {height: this.element_height});
+  }
+
   
   TweenLite.killTweensOf(this.container);
   TweenLite.to(this.container, 0, {left: (-1 * this.index * this.element_width)});  // instant
@@ -119,6 +132,9 @@ manic.ui.PanelContainer.prototype.update_layout = function() {
       left: (this.element_width * i) + 'px'
     });
   }
+
+
+
 };
 
 /**
@@ -144,6 +160,11 @@ manic.ui.PanelContainer.prototype.goto_index = function(index_param) {
     this.update_position();
 
     this.current_panel = this.panel_array[this.index];
+
+    if(this.resize_height){
+      this.element_height = this.current_panel.height();
+      TweenMax.to(this.element, 0.8, {height: this.element_height});
+    }
 
     this.dispatchEvent(new goog.events.Event(manic.ui.PanelContainer.ON_CHANGE));
   }

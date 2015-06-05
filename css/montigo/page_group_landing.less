@@ -143,3 +143,63 @@
   } // .group-landing-item{
 
 } // .main-slider .text
+
+
+
+
+//    ____  _____ ____  ____   ___  _   _ ____ _____     _______ 
+//   |  _ \| ____/ ___||  _ \ / _ \| \ | / ___|_ _\ \   / / ____|
+//   | |_) |  _| \___ \| |_) | | | |  \| \___ \| | \ \ / /|  _|  
+//   |  _ <| |___ ___) |  __/| |_| | |\  |___) | |  \ V / | |___ 
+//   |_| \_\_____|____/|_|    \___/|_| \_|____/___|  \_/  |_____|
+//                                                               
+
+//@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
+  #group-landing-slider-text .montigo-landing-logo{
+    //.scale(0.5);
+    .logo_montigo_landing_colored_half;
+    //top: -20px;
+    left: -10;
+    margin-bottom: 0;
+
+    margin-top: 50px;
+    //margin-bottom: 30px;
+    margin-bottom: 50px;
+  }
+
+  #group-landing-slider-text{
+    position: fixed !important;
+    left: 0px !important;
+    top: 0px !important;
+    width: 100%;
+  }
+  #group-landing-slider-text .group-landing-item-container{
+    width: 100%;
+  }
+
+  #group-landing-slider-text .group-landing-item-container .group-landing-item{
+    display: block;
+    //width: 100%;
+    width: auto;
+    margin: 0 30px;
+    margin-bottom: 30px;
+
+
+    height: 145px;
+    padding-top: 27px;
+
+    &:before{
+      .opacity(0.7);
+    }
+
+    .button-container{
+      padding-top: 20px;
+    }
+    
+  }
+  #group-landing-slider-text .group-landing-item-container .group-landing-item:last-child{
+    margin-right: 30px;
+  }
+
+}

@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="spa-slider" class="main-slider no-scale-version" data-image="images/main_slider/may15_spa_main_slider.jpg">
+  <div id="spa-slider" class="main-slider no-scale-version" data-image="images/main_slider/may15_spa_main_slider.jpg" data-mobile-image="images/main_slider_mobile/spa_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -39,7 +39,7 @@
       <div class="row">
         
 
-        <div class="col-md-6 col-sm-6 col-md-push-6 col-sm-push-6">
+        <div class="col-md-6 col-md-push-6">
 
           <!-- <div class="no-left-margin"> -->
             <div id="spa-experience-text-01" class="montigo-image-description">
@@ -57,7 +57,7 @@
 
         </div>
 
-        <div class="col-md-6 col-sm-6 col-md-pull-6 col-sm-pull-6">
+        <div class="col-md-6 col-md-pull-6">
 
           <div class="no-right-margin">
             <div id="spa-experience-image-01" class="manic-image-container fadein-left">
@@ -69,7 +69,7 @@
 
       </div> <!-- row -->
       <div class="row">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6">
 
           <!-- <div class="no-right-margin"> -->
             <div id="spa-experience-text-02" class="montigo-image-description">
@@ -90,7 +90,7 @@
 
           
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6">
 
           <div class="no-left-margin">
             <div id="spa-experience-image-02" class="manic-image-container fadein-right">
@@ -257,6 +257,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/spa_main_slider.jpg",
+
         "images/main_slider/may15_spa_main_slider.jpg",
         "images/spa/spa_experience_image_01.jpg",
         "images/spa/spa_experience_image_02.jpg",
@@ -277,7 +279,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -293,7 +295,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -305,8 +307,7 @@
         page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
-        page = new montigo.page.Default();
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

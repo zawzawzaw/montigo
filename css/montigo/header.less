@@ -20,6 +20,9 @@
   height: @desktop-header-height;
   z-index: 9999;
 
+  -webkit-transform: translateZ(0);       // for firefox optimization
+  transform: translateZ(0);
+
   /*
   .blue-bg{
     position: absolute;
@@ -679,6 +682,7 @@
 //      \_/\_/  |_| |_|___| |_| |_____|    \_/  |_____|_| \_\____/___\___/|_| \_|
 //                                                                               
 
+.has-booking-form #main-page-header,      // apparently this works ^_^
 #main-page-header.white-version{
 
   .box-shadow (0, 0, 9px, #ebebeb);

@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="terms-slider" class="main-slider short-version" data-image="images/main_slider/may15_terms_main_slider.jpg">
+  <div id="terms-slider" class="main-slider short-version" data-image="images/main_slider/may15_terms_main_slider.jpg" data-mobile-image="images/main_slider/may15_terms_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -22,7 +22,7 @@
 
 
 
-  <div id="terms-breadcrumb-header-container" class="breadcrumb-header-container">
+  <div id="terms-breadcrumb-header-container" class="breadcrumb-header-container visible-md-block visible-lg-block">
     <div id="terms-breadcrumb-header"  class="breadcrumb-header">
       
       <div class="container-fluid has-breakpoint">
@@ -65,7 +65,7 @@
     <div class="container-fluid has-breakpoint">
       <div class="row">
         <div class="col-md-3">
-          <div class="generic-text-sidebar">
+          <div class="generic-text-sidebar visible-md-block visible-lg-block">
 
             <!-- <h3>Terms of Use</h3> -->
 
@@ -344,7 +344,7 @@
             </div>
 
             <div class="generic-text-cta-container">
-              <a href="mailto:info@montigoresorts.com?subject=Montigo%20Terms%20and%20Conditions%20Enquiry" class="cta-button">If you have any other questions about the use of this web site, <br>please refer to our User Term &amp; Conditions or e-mail info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
+              <a href="mailto:info@montigoresorts.com?subject=Montigo%20Terms%20and%20Conditions%20Enquiry" class="cta-button">If you have any other questions about the use of this web site, <br class="hidden-xs">please refer to our User Term &amp; Conditions or e-mail info@montigoresorts.com<span class="fa fa-chevron-circle-right"></span></a>
             </div>
             
 
@@ -386,7 +386,7 @@
   
   var page = null;
 
-  $('body').addClass('page-faq');  // important
+  $('body').addClass('page-terms');  // important
 
   jQuery(document).ready(function($) {
     $.manic_preloader({
@@ -401,7 +401,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -410,12 +410,26 @@
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-terms.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
         page = new montigo.page.Terms();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
+        page = new montigo.page.Terms({is_mobile:true});
       }
 
     });

@@ -54,6 +54,8 @@ montigo.component.MenuBookingForm = function(options, element) {
   this.booking_form_cancel_button.click(this.on_booking_form_cancel_button_click.bind(this));
 
 
+  
+
 
   this.create_date_picker();
   this.create_dropdown();
@@ -337,7 +339,19 @@ montigo.component.MenuBookingForm.prototype.on_booking_form_cancel_button_click 
 };
 
 
+/**
+ * mouse event handler
+ * @param  {object} event
+ */
+montigo.component.MenuBookingForm.prototype.on_close_button_click = function(event) {
 
+  /*
+  console.log('on_close_button_click');
+
+  event['preventDefault']();
+  this.hide();
+  */
+};
 
 /**
  * event handler

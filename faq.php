@@ -22,7 +22,7 @@
 
   <div id="faq-top-position"></div>
 
-  <div id="faq-detailed-view-header-container" class="breadcrumb-header-container">
+  <div id="faq-detailed-view-header-container" class="breadcrumb-header-container visible-md-block visible-lg-block">
     <div id="faq-detailed-view-header"  class="breadcrumb-header closed-version">
       
       <div class="container-fluid has-breakpoint">
@@ -287,7 +287,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -296,12 +296,26 @@
         <?php endif; ?>
       ],
       mobile_js_array: [
+        <?php if(DEBUG): ?>
+          "library/gsap/TweenMax.min.js",
+          "library/gsap/TimelineMax.min.js",
+          "library/gsap/easing/EasePack.min.js",
+          "library/gsap/plugins/ScrollToPlugin.min.js",
+          "library/_js/glDatePicker.min.js",
+          "library/scrollmagic/iscroll-probe.js",
+          "library/scrollmagic/ScrollMagic.js",
+          "library/scrollmagic/plugins/animation.gsap.min.js",
+          "library/scrollmagic/plugins/debug.addIndicators.min.js"
+        <?php else: ?>
+          "js/minified/montigo-page-libraries.min.js",
+          "js/minified/montigo-page-faq.min.js"
+        <?php endif; ?>
       ],
       on_desktop_complete: function(){
         page = new montigo.page.Faq();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
+        page = new montigo.page.Faq({is_mobile:true});
       }
 
     });

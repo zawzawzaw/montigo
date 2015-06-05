@@ -363,3 +363,24 @@ var marginBottom = {};
 var marginTop = {};
 var scrollTo = {};
 var percent = {};
+
+
+//    ______        _____ _____ _______   __
+//   / ___\ \      / /_ _|  ___|  ___\ \ / /
+//   \___ \\ \ /\ / / | || |_  | |_   \ V / 
+//    ___) |\ V  V /  | ||  _| |  _|   | |  
+//   |____/  \_/\_/  |___|_|   |_|     |_|  
+//                                          
+
+var swiffy = {};
+
+
+/**
+ * Stage description
+ * @constructor
+ * @param {element} element_param [description]
+ * @param {object|array} data_param    [description]
+ */
+swiffy.Stage = function(element_param, data_param, object_param){};
+
+//swiffy.Stage.prototype.

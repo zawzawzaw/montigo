@@ -3,6 +3,8 @@ goog.provide('montigo.content.Careers');
 goog.require('goog.events.Event');
 goog.require('goog.events.EventTarget');
 
+goog.require('manic.util.JsonParser');
+
 /**
  * The Career Content constructor
  * @param {object} options The object extendable like jquery plugins

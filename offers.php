@@ -3,7 +3,7 @@
 <div id="main-page-content">
 
 
-  <div id="offer-slider" class="main-slider no-scale-version" data-image="images/main_slider/may22_offers_main_slider.jpg">
+  <div id="offer-slider" class="main-slider no-scale-version" data-image="images/main_slider/may22_offers_main_slider.jpg" data-mobile-image="images/main_slider_mobile/offers_main_slider.jpg">
     <div class="main-slider-image-container">
       <img src="">
     </div>
@@ -48,14 +48,16 @@
                   <div class="description-panel panel">
 
                     <div class="description-panel-text-container">
-                      <h3>Montigo Resorts</h3>
-                      <hr class="short-hr">
-                      <h4>Advanced purchase offer</h4>
-                      <p>Book in advance and take advantage of reduced Advance Purchase rates. Book 14 days ahead or more for a 15% discount off our Best Available Rate, or 30 days ahead or more for a 20% discount.</p>
-                      <p class="offer-disclaimer">Valid Dates: Until 31 December 2015 <br>No minimum stay required</p>
+                      <div class="description-panel-text-container-container">
+                        <h3>Montigo Resorts</h3>
+                        <hr class="short-hr">
+                        <h4>Advanced purchase offer</h4>
+                        <p>Book in advance and take advantage of reduced Advance Purchase rates. Book 14 days ahead or more for a 15% discount off our Best Available Rate, or 30 days ahead or more for a 20% discount.</p>
+                        <p class="offer-disclaimer">Valid Dates: Until 31 December 2015 <br>No minimum stay required</p>
 
-                      <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
-                      <a href="#" class="cta-solid-button" id="advance-purchase-book-button">book now</a>
+                        <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
+                        <a href="#" class="cta-solid-button book-button" id="advance-purchase-book-button" data-promo-code="AdvancePurchase">book now</a>
+                      </div>
                     </div>
 
 
@@ -134,7 +136,7 @@
 
 
           
-          <div class="col-md-6 col-sm-6 col-md-push-6 col-sm-push-6">
+          <div class="col-md-6 col-md-push-6">
 
             <!-- <div class="no-left-margin"> -->
               <div class="offer-list-panel-container panel-container">
@@ -142,15 +144,19 @@
                   <div class="description-panel panel">
 
                     <div class="description-panel-text-container">
-                      <h3>Fun for Four</h3>
-                      <hr class="short-hr">
-                      <h4>Your perfect holiday</h4>
+                      <div class="description-panel-text-container-container">
+                        <h3>Fun for Four</h3>
+                        <hr class="short-hr">
+                        <h4>Your perfect holiday</h4>
 
-                      <p>Your perfect holiday is just a click away! Whether you’re travelling as a family of four or checking in with your best friends, we’ve got something for you. So pack your bags, book your spa session, and get ready for some quality time with your favourite loved ones.</p>
-                      <p class="offer-disclaimer">Valid Dates: 1st Apr to 31st May 2015 <br>No minimum stay required</p>
+                        <p>Your perfect holiday is just a click away! Whether you’re travelling as a family of four or checking in with your best friends, we’ve got something for you. So pack your bags, book your spa session, and get ready for some quality time with your favourite loved ones.</p>
+                        <p class="offer-disclaimer">Valid Dates: 1st Apr to 31st May 2015 <br>No minimum stay required</p>
 
-                      <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
-                      <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20Fun%20for%20Four%20Enquiry" class="cta-solid-button">Contact for details</a>
+                        <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
+                        <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20Fun%20for%20Four%20Enquiry" class="cta-solid-button">Contact for details</a>
+                      </div>
+                      
+
                     </div>
 
 
@@ -222,7 +228,7 @@
           </div>
 
 
-          <div class="col-md-6 col-sm-6 col-md-pull-6 col-sm-pull-6">
+          <div class="col-md-6 col-md-pull-6">
 
             <div class="no-right-margin">
               <div id="offer-list-item-image-02" class="offer-list-item-image manic-image-container fadein-left">
@@ -262,15 +268,18 @@
                   <div class="description-panel panel">
 
                     <div class="description-panel-text-container">
-                      <h3>Spa Getaway</h3>
-                      <hr class="short-hr">
-                      <h4>THE ULTIMATE SPA DAY</h4>
+                      <div class="description-panel-text-container-container">
+                        <h3>Spa Getaway</h3>
+                        <hr class="short-hr">
+                        <h4>THE ULTIMATE SPA DAY</h4>
 
-                      <p>Want to get away but need to be home on time? Montigo Resorts is the perfect short escape from the city, replete with a relaxing massage, a rejuvenating body scrub or facial and a delicious lunch. Perfect!</p>
-                      <p class="offer-disclaimer">Valid Dates: N/A <br>No minimum stay required</p>
+                        <p>Want to get away but need to be home on time? Montigo Resorts is the perfect short escape from the city, replete with a relaxing massage, a rejuvenating body scrub or facial and a delicious lunch. Perfect!</p>
+                        <p class="offer-disclaimer">Valid Dates: N/A <br>No minimum stay required</p>
 
-                      <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
-                      <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20Spa%20Getaway%20Enquiry" class="cta-solid-button">Contact for details</a>
+                        <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
+                        <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20Spa%20Getaway%20Enquiry" class="cta-solid-button">Contact for details</a>
+                      </div>
+                      
                     </div>
 
 
@@ -387,7 +396,7 @@
       <div class="container-fluid has-breakpoint">
         <div class="row">
           
-          <div class="col-md-6 col-sm-6 col-md-push-6 col-sm-push-6">
+          <div class="col-md-6 col-md-push-6">
 
             <!-- <div class="no-left-margin"> -->
               <div class="offer-list-panel-container panel-container">
@@ -395,15 +404,18 @@
                   <div class="description-panel panel">
 
                     <div class="description-panel-text-container">
-                      <h3>Family Times</h3>
-                      <hr class="short-hr">
-                      <h4>SCHOOL HOLIDAY FAMILY RETREAT</h4>
+                      <div class="description-panel-text-container-container">
+                        <h3>Family Times</h3>
+                        <hr class="short-hr">
+                        <h4>SCHOOL HOLIDAY FAMILY RETREAT</h4>
 
-                      <p>This summer, forget about homework, emails and routines. Take a Montigo Family Retreat to rekindle the joy, fun and spark of being with your loved ones.</p>
-                      <p class="offer-disclaimer">Valid Dates: 25 May to 31 August 2015 <br>No minimum stay required</p>
+                        <p>This summer, forget about homework, emails and routines. Take a Montigo Family Retreat to rekindle the joy, fun and spark of being with your loved ones.</p>
+                        <p class="offer-disclaimer">Valid Dates: 25 May to 31 August 2015 <br>No minimum stay required</p>
 
-                      <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
-                      <a href="#" class="cta-solid-button" id="family-times-book-button">book now</a>
+                        <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
+                        <a href="#" class="cta-solid-button book-button" id="family-times-book-button" data-promo-code="FAMRETREAT">book now</a>
+                      </div>
+                      
                     </div>
 
 
@@ -476,7 +488,7 @@
 
           </div>
 
-          <div class="col-md-6 col-sm-6 col-md-pull-6 col-sm-pull-6">
+          <div class="col-md-6 col-md-pull-6">
 
             <div class="no-right-margin">
               <div id="offer-list-item-image-04" class="offer-list-item-image manic-image-container fadein-left">
@@ -514,14 +526,17 @@
                   <div class="description-panel panel">
 
                     <div class="description-panel-text-container">
-                      <h3>Montigo Dining</h3>
-                      <hr class="short-hr">
-                      <h4>SIZZLING HOT AT TIIGO</h4>
-                      <p>Come down to Tiigo bar every Saturday evening for a night of sunset drinks, great music, a sizzling barbecue on the grill and a whole lot of fun!</p>
-                      <p class="offer-disclaimer">Valid Dates: N/A <br>No minimum stay required</p>
+                      <div class="description-panel-text-container-container">
+                        <h3>Montigo Dining</h3>
+                        <hr class="short-hr">
+                        <h4>SIZZLING HOT AT TIIGO</h4>
+                        <p>Come down to Tiigo bar every Saturday evening for a night of sunset drinks, great music, a sizzling barbecue on the grill and a whole lot of fun!</p>
+                        <p class="offer-disclaimer">Valid Dates: N/A <br>No minimum stay required</p>
 
-                      <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
-                      <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20Montigo%20Dining%20Enquiry" class="cta-solid-button">Contact for details</a>
+                        <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
+                        <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20Montigo%20Dining%20Enquiry" class="cta-solid-button">Contact for details</a>
+                      </div>
+                      
                     </div>
 
 
@@ -592,7 +607,7 @@
 
           
           
-          <div class="col-md-6 col-sm-6 col-md-push-6 col-sm-push-6">
+          <div class="col-md-6 col-md-push-6">
 
             <!-- <div class="no-left-margin"> -->
               <div class="offer-list-panel-container panel-container">
@@ -600,14 +615,17 @@
                   <div class="description-panel panel">
 
                     <div class="description-panel-text-container">
-                      <h3>High Tea</h3>
-                      <hr class="short-hr">
-                      <h4>HIGH TEA IN YOUR VILLA</h4>
-                      <p>Love the idea of High Tea but want it brought right to your doorstep. We’ve got you covered. Let us bring you all the tea time classics and set up by the pool-side, in your living room or anywhere else you please. Go ahead, have your cake and eat it too.</p>
-                      <p class="offer-disclaimer">Valid Dates: 25 May to 31 August 2015 <br>No minimum stay required</p>
+                      <div class="description-panel-text-container-container">
+                        <h3>High Tea</h3>
+                        <hr class="short-hr">
+                        <h4>HIGH TEA IN YOUR VILLA</h4>
+                        <p>Love the idea of High Tea but want it brought right to your doorstep. We’ve got you covered. Let us bring you all the tea time classics and set up by the pool-side, in your living room or anywhere else you please. Go ahead, have your cake and eat it too.</p>
+                        <p class="offer-disclaimer">Valid Dates: 25 May to 31 August 2015 <br>No minimum stay required</p>
 
-                      <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
-                      <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20High%20Tea%20Enquiry" class="cta-solid-button">Contact for details</a>
+                        <a href="#" class="offer-item-learn-more-button cta-button">learn more<span class="fa fa-chevron-circle-right"></span></a>
+                        <a href="mailto:info@montigoresorts.com?subject=Montigo%20Offers%3A%20High%20Tea%20Enquiry" class="cta-solid-button">Contact for details</a>
+                      </div>
+                      
                     </div>
 
 
@@ -649,7 +667,7 @@
 
 
 
-          <div class="col-md-6 col-sm-6 col-md-pull-6 col-sm-pull-6">
+          <div class="col-md-6 col-md-pull-6">
             <div class="no-right-margin">
               <div id="offer-list-item-image-06" class="offer-list-item-image manic-image-container fadein-left">
                 <img src="images/offers/may25_offer_list_item_image_06.jpg">
@@ -692,7 +710,7 @@
 
 <?php if(DEBUG): ?>
   <script type="text/javascript">
-    goog.require('montigo.page.Offers');
+    goog.require('montigo.page.Default');
   </script>
 <?php endif; ?>
 
@@ -703,6 +721,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/offers_main_slider.jpg",
+        
         "images/main_slider/may22_offers_main_slider.jpg",
         "images/offers/offer_list_item_image_01.jpg",
         "images/offers/offer_list_item_image_02.jpg",
@@ -719,12 +739,12 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-offers.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       mobile_js_array: [
@@ -735,20 +755,19 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
           "js/minified/montigo-page-libraries.min.js",
-          "js/minified/montigo-page-offers.min.js"
+          "js/minified/montigo-page-default.min.js"
         <?php endif; ?>
       ],
       on_desktop_complete: function(){
-        page = new montigo.page.Offers();
+        page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        page = new montigo.page.Offers();
-        console.log('no mobile code yet');
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

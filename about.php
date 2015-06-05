@@ -2,7 +2,7 @@
 
 <div id="main-page-content">
 
-  <div id="spa-slider" class="main-slider no-scale-version" data-image="images/main_slider/may20_about_main_slider.jpg">
+  <div id="spa-slider" class="main-slider no-scale-version" data-image="images/main_slider/may20_about_main_slider.jpg" data-mobile-image="images/main_slider_mobile/about_main_slider.jpg">
 
     <div class="main-slider-image-container">
       <img src="">
@@ -26,7 +26,7 @@
 
       <div class="row">
 
-        <div class="col-md-5 col-sm-5 col-md-push-7 col-sm-push-7">
+        <div class="col-md-5 col-md-push-7">
 
           <div id="about-nongsa-text-01" class="montigo-image-description">
             <div class="montigo-image-description-container">
@@ -39,7 +39,7 @@
 
         </div>
 
-        <div class="col-md-7 col-sm-7 col-md-pull-5 col-sm-pull-5">
+        <div class="col-md-7 col-md-pull-5">
 
           <div class="no-right-margin">
             <div id="about-nongsa-image-01" class="manic-image-container fadein-left">
@@ -202,6 +202,8 @@
   jQuery(document).ready(function($) {
     $.manic_preloader({
       asset_array: [
+        "images/main_slider_mobile/about_main_slider.jpg",
+
         "images/main_slider/may20_about_main_slider.jpg",
         "images/about/may22_about_nongsa_image_01.jpg",
         "images/about/about_nongsa_image_02.jpg",
@@ -222,7 +224,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -238,7 +240,7 @@
           "library/gsap/plugins/ScrollToPlugin.min.js",
           "library/_js/glDatePicker.min.js",
           "library/scrollmagic/iscroll-probe.js",
-          "library/scrollmagic/ScrollMagic.min.js",
+          "library/scrollmagic/ScrollMagic.js",
           "library/scrollmagic/plugins/animation.gsap.min.js",
           "library/scrollmagic/plugins/debug.addIndicators.min.js"
         <?php else: ?>
@@ -250,8 +252,7 @@
         page = new montigo.page.Default();
       },
       on_mobile_complete: function(){
-        console.log('no mobile code yet');
-        page = new montigo.page.Default();
+        page = new montigo.page.Default({is_mobile:true});
       }
 
     });

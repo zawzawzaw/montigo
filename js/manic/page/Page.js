@@ -1,3 +1,7 @@
+/**
+ * todo: place things from default.js here...
+ */
+
 goog.provide('manic.page.Page');
 
 
@@ -30,15 +34,19 @@ manic.page.Page = function(options) {
 
   this.body = $('body');
 
+
+  if(goog.userAgent.WINDOWS) { this.body.addClass('is-windows') }
+  if(goog.userAgent.MAC) { this.body.addClass('is-mac') }
+
   if (goog.userAgent.product.FIREFOX) { this.body.addClass('is-firefox') }
   if (goog.userAgent.product.CHROME) { this.body.addClass('is-chrome') }
   if (goog.userAgent.product.SAFARI) { this.body.addClass('is-safari') }
   if (goog.userAgent.product.IE) { this.body.addClass('is-ie') }
 
   if (goog.userAgent.product.IPHONE) { this.body.addClass('is-iphone') }
-  if (goog.userAgent.product.IPAD) { this.body.addClass('is-ipad') }
+  if (goog.userAgent.product.IPAD) { this.body.addClass('is-ipad') }                                          // lol, this is redaundant to mobile checker outside :D
 
-  console.log('init');
+  //console.log('init');
 };
 goog.inherits(manic.page.Page, goog.events.EventTarget);
 
@@ -78,14 +86,14 @@ manic.page.Page.EVENT_02 = '';
 //   |_|   |_| \_\___|  \_/_/   \_\_| |_____|
 //
 
-
+/*
 manic.page.Page.prototype.private_method_01 = function() {};
 manic.page.Page.prototype.private_method_02 = function() {};
 manic.page.Page.prototype.private_method_03 = function() {};
 manic.page.Page.prototype.private_method_04 = function() {};
 manic.page.Page.prototype.private_method_05 = function() {};
 manic.page.Page.prototype.private_method_06 = function() {};
-
+*/
 
 /**
  * sample_method_calls
@@ -102,14 +110,14 @@ manic.page.Page.prototype.sample_method_calls = function() {
 //   |_|    \___/|____/|_____|___\____|
 //
 
-
+/*
 manic.page.Page.prototype.public_method_01 = function() {};
 manic.page.Page.prototype.public_method_02 = function() {};
 manic.page.Page.prototype.public_method_03 = function() {};
 manic.page.Page.prototype.public_method_04 = function() {};
 manic.page.Page.prototype.public_method_05 = function() {};
 manic.page.Page.prototype.public_method_06 = function() {};
-
+*/
 
 //    _______     _______ _   _ _____ ____
 //   | ____\ \   / / ____| \ | |_   _/ ___|
@@ -117,33 +125,5 @@ manic.page.Page.prototype.public_method_06 = function() {};
 //   | |___  \ V / | |___| |\  | | |  ___) |
 //   |_____|  \_/  |_____|_| \_| |_| |____/
 //
-
-/**
- * event handler
- * @param  {object} event
- */
-manic.page.Page.prototype.on_event_handler_01 = function(event) {
-};
-
-/**
- * event handler
- * @param  {object} event
- */
-manic.page.Page.prototype.on_event_handler_02 = function(event) {
-};
-
-/**
- * event handler
- * @param  {object} event
- */
-manic.page.Page.prototype.on_event_handler_03 = function(event) {
-};
-
-/**
- * event handler
- * @param  {object} event
- */
-manic.page.Page.prototype.on_event_handler_04 = function(event) {
-};
 
 goog.exportSymbol('manic.page.Page', manic.page.Page);
